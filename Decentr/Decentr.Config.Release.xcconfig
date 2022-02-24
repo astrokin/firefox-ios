@@ -1,0 +1,16 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Decentr.Config.xcconfig"
+
+DEVELOPMENT_TEAM = 6FTDXZ346N
+PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.appstore
+CODE_SIGN_IDENTITY = Apple Distribution: Nikita Anikeev
+OTHER_SWIFT_FLAGS = $(OTHER_SWIFT_FLAGS_common) -DMOZ_CHANNEL_FENNEC
+GCC_PREPROCESSOR_DEFINITIONS = RELEASE=1
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE
+GOOGLE_SERVICE_PLIST_FILENAME=GoogleService-Info.plist

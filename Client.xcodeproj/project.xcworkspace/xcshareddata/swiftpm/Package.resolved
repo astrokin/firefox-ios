@@ -11,6 +11,33 @@
         }
       },
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
+          "version": "5.5.0"
+        }
+      },
+      {
+        "package": "Bagel",
+        "repositoryURL": "https://github.com/swhitty/Bagel",
+        "state": {
+          "branch": "spm",
+          "revision": "23dde73fff4ea68474c08d6d9e02f02642c8cb4f",
+          "version": null
+        }
+      },
+      {
+        "package": "CocoaAsyncSocket",
+        "repositoryURL": "https://github.com/robbiehanson/CocoaAsyncSocket.git",
+        "state": {
+          "branch": null,
+          "revision": "dbdc00669c1ced63b27c3c5f052ee4d28f10150c",
+          "version": "7.6.5"
+        }
+      },
+      {
         "package": "Fuzi",
         "repositoryURL": "https://github.com/nbhasin2/Fuzi.git",
         "state": {

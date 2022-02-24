@@ -15,6 +15,11 @@ import Sync
 import CoreSpotlight
 import UserNotifications
 import Account
+import DecentrAPI
+
+#if DEBUG && DECENTR
+import Bagel
+#endif
 
 #if canImport(BackgroundTasks)
  import BackgroundTasks
@@ -203,6 +208,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+#if DEBUG && DECENTR
+        let bagelConfig = BagelConfiguration()
+        bagelConfig.project.projectName = "Decentr iOS Browser"
+        bagelConfig.device.deviceName = UIDevice.modelName
+        bagelConfig.device.deviceDescription = "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
+        
+        //        bagelConfig.netservicePort = 43434
+        //        bagelConfig.netserviceDomain = ""
+        //        bagelConfig.netserviceType = "_Bagel._tcp"
+        //        bagelConfig.netserviceName = ""
+        
+        Bagel.start(bagelConfig)
+#endif
+        
         // Override point for customization after application launch.
         var shouldPerformAdditionalDelegateHandling = true
 
