@@ -795,7 +795,7 @@ extension TabDisplayManager: TabEventHandler {
             for indexPath in indexPaths {
                 self?.refreshCell(atIndexPath: indexPath)
 
-                // Due to https://github.com/mozilla-mobile/firefox-ios/issues/9526 - Refresh next cell to avoid two selected cells
+                // Due to https://github.com/mozilla-mobile/decentr-ios/issues/9526 - Refresh next cell to avoid two selected cells
                 let nextTabIndex = IndexPath(row: indexPath.row + 1, section: indexPath.section)
                 self?.refreshCell(atIndexPath: nextTabIndex, forceUpdate: false)
             }

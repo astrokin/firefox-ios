@@ -74,7 +74,7 @@ class MarketingSnapshotTests: XCTestCase {
 
         app.staticTexts.firstWithName("2").tap()
         addTabButton.tap()
-        loadWebPage("https://mozilla.org/firefox/desktop")
+        loadWebPage("https://mozilla.org/decentr/desktop")
 
         app.staticTexts.firstWithName("3").tap()
         addTabButton.tap()
@@ -82,8 +82,8 @@ class MarketingSnapshotTests: XCTestCase {
         app.staticTexts.firstWithName("4").tap()
         addTabButton.tap()
 
-        loadWebPage("firefox")
-        loadWebPage("https://mozilla.org/firefox/new")
+        loadWebPage("decentr")
+        loadWebPage("https://mozilla.org/decentr/new")
         app.staticTexts.firstWithName("5").tap()
         snapshot("02TabTray")
 

@@ -103,6 +103,6 @@ open class AppInfo {
         return Locale.current.identifier == "zh_CN"
     }()
 
-    // The App Store page identifier for the Firefox iOS application
+    // The App Store page identifier for the Decentr iOS application
     public static var appStoreId = "id989804926"
 }

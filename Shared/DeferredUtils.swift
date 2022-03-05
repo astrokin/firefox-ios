@@ -61,7 +61,7 @@ public func deferMaybe<T>(_ s: T) -> Deferred<Maybe<T>> {
 }
 
 // This specific overload prevents Strings, which conform to MaybeErrorType, from
-// always matching the failure case. See <https://github.com/mozilla-mobile/firefox-ios/issues/7791>.
+// always matching the failure case. See <https://github.com/mozilla-mobile/decentr-ios/issues/7791>.
 public func deferMaybe(_ s: String) -> Deferred<Maybe<String>> {
     return Deferred(value: Maybe(success: s))
 }

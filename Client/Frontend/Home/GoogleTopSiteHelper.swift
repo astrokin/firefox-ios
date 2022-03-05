@@ -10,8 +10,8 @@ struct GoogleTopSiteConstants {
     // A guid is required in the case the site might become a pinned site
     public static let googleGUID = "DefaultGoogleGUID"
     // US and rest of the world google urls
-    public static let usUrl = "https://www.google.com/webhp?client=firefox-b-1-m&channel=ts"
-    public static let rowUrl = "https://www.google.com/webhp?client=firefox-b-m&channel=ts"
+    public static let usUrl = "https://www.google.com/webhp?client=decentr-b-1-m&channel=ts"
+    public static let rowUrl = "https://www.google.com/webhp?client=decentr-b-m&channel=ts"
 }
 
 class GoogleTopSiteHelper {

@@ -33,9 +33,9 @@ enum ReaderModeTheme: String {
     static func preferredTheme(for theme: ReaderModeTheme? = nil) -> ReaderModeTheme {
         // If there is no reader theme provided than we default to light theme
         let readerTheme = theme ?? .light
-        // Get current Firefox theme (Dark vs Normal)
+        // Get current Decentr theme (Dark vs Normal)
         // Normal means light theme. This is the overall theme used
-        // by Firefox iOS app
+        // by Decentr iOS app
         let appWideTheme = LegacyThemeManager.instance.currentName
         // We check for 3 basic themes we have Light / Dark / Sepia
         // Theme: Dark - app-wide dark overrides all

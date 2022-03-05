@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "يتيح لك هذا أخذ الصور و رفعها.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "يطلب Firefox تفعيل Face ID للوصول إلى جلسات الولوج المحفوظة لديك.";
+"NSFaceIDUsageDescription" = "يطلب Decentr تفعيل Face ID للوصول إلى جلسات الولوج المحفوظة لديك.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "المواقع التي تزورها يمكن أن تطلب معرفة مكانك.";

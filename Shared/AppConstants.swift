@@ -5,8 +5,8 @@
 import UIKit
 
 public enum AppName: String, CustomStringConvertible {
-    case shortName = "Firefox"
-    case longName = "Firefox Daylight"
+    case shortName = "Decentr"
+    case longName = "Decentr Daylight"
 
     public var description: String {
         return self.rawValue
@@ -86,13 +86,13 @@ public struct AppConstants {
         #endif
     }()
 
-    /// The maximum length of a URL stored by Firefox. Shared with Places on desktop.
+    /// The maximum length of a URL stored by Decentr. Shared with Places on desktop.
     public static let DB_URL_LENGTH_MAX = 65536
 
-    /// The maximum length of a page title stored by Firefox. Shared with Places on desktop.
+    /// The maximum length of a page title stored by Decentr. Shared with Places on desktop.
     public static let DB_TITLE_LENGTH_MAX = 4096
 
-    /// The maximum length of a bookmark description stored by Firefox. Shared with Places on desktop.
+    /// The maximum length of a bookmark description stored by Decentr. Shared with Places on desktop.
     public static let DB_DESCRIPTION_LENGTH_MAX = 1024
     
     /// Fixed short version for nightly builds

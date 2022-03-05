@@ -12,7 +12,7 @@ struct FxHomeHorizontalCellUX {
     static let interItemSpacing = NSCollectionLayoutSpacing.fixed(8)
     static let interGroupSpacing: CGFloat = 8
     static let generalCornerRadius: CGFloat = 12
-    // TODO: Limiting font size to xxLarge until we use compositional layout in all Firefox HomePage. Should be AX5.
+    // TODO: Limiting font size to xxLarge until we use compositional layout in all Decentr HomePage. Should be AX5.
     static let titleFontSize: CGFloat = 19 // Style subheadline - xxLarge
     static let siteFontSize: CGFloat = 16 // Style caption1 - xxLarge
     static let stackViewShadowRadius: CGFloat = 4

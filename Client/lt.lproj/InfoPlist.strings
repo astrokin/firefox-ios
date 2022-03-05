@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Tai leidžia jums daryti ir išsiųsti nuotraukas.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Norint pasiekti jūsų įrašytus prisijungimus, „Firefox“ reikalingas „Face ID“.";
+"NSFaceIDUsageDescription" = "Norint pasiekti jūsų įrašytus prisijungimus, „Decentr“ reikalingas „Face ID“.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Svetainės gali teirautis jūsų buvimo vietos.";

@@ -26,16 +26,16 @@ class L10nMktSuiteSnapshotTests: L10nBaseSnapshotTests {
     }
     
     func testAwesemoBarWithResults() {
-        navigator.openURL("firefox.com")
+        navigator.openURL("decentr.com")
         sleep(2)
         waitUntilPageLoad()
         
         navigator.openNewURL(urlString: "mozilla.com")
         sleep(2)
         
-        userState.url = "firefox"
+        userState.url = "decentr"
         navigator.performAction(Action.SetURLByTyping)
-        snapshot("Awesomebar-results-firefox")
+        snapshot("Awesomebar-results-decentr")
     }
 
     // DarkMode for these tests
@@ -121,7 +121,7 @@ class L10nMktSuiteSnapshotTests: L10nBaseSnapshotTests {
         // Dismiss the edit mode
         element.tap()
             
-        // Wait for the Search in Firefox widget and tap on it
+        // Wait for the Search in Decentr widget and tap on it
         sleep(1)
         snapshot("Widget-01")
         // Tap on Edit and then on Add to Widget
@@ -166,7 +166,7 @@ class L10nMktSuiteSnapshotTests: L10nBaseSnapshotTests {
     }
 
     func testTabTrayOpen() {
-        navigator.openURL("firefox.com")
+        navigator.openURL("decentr.com")
         waitUntilPageLoad()
         navigator.goto(TabTray)
         navigator.performAction(Action.OpenNewTabFromTabTray)

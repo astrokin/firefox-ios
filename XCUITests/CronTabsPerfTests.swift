@@ -104,7 +104,7 @@ class CronTabsPerformanceTest: BaseTestCase {
     /*
     func testTabs5Setup() {
         let archiveSize = 1080
-        let fileName = "/Users/rpappalax/git/firefox-ios-TABS-PERF-WIP/Client/Assets/topdomains.txt"
+        let fileName = "/Users/rpappalax/git/decentr-ios-TABS-PERF-WIP/Client/Assets/topdomains.txt"
         var contents = ""
         var urls = [String]()
 

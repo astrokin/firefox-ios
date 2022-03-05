@@ -116,7 +116,7 @@ class TrackingProtectionTests: KIFTestCase, TabEventHandler {
         openTPSetting()
         tester().tapView(withAccessibilityIdentifier: "prefkey.trackingprotection.normalbrowsing")
         // Lets enable Strict mode to block the image this is fixed:
-        // https://github.com/mozilla-mobile/firefox-ios/pull/5274#issuecomment-516111508
+        // https://github.com/mozilla-mobile/decentr-ios/pull/5274#issuecomment-516111508
 
         tester().tapView(withAccessibilityIdentifier: "Settings.TrackingProtectionOption.BlockListStrict")
 

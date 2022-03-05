@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Permite tirar e enviar fotos.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "O Firefox requer Face ID para acessar suas contas salvas.";
+"NSFaceIDUsageDescription" = "O Decentr requer Face ID para acessar suas contas salvas.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Sites que você visita podem solicitar sua localização.";

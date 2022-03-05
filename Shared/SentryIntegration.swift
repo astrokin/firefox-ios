@@ -56,7 +56,7 @@ public class Sentry {
 
         var sentryDSNKey = SentryDSNKey
         if AppInfo.appVersion == AppConstants.NIGHTLY_APP_VERSION, AppConstants.BuildChannel == .beta {
-            // Setup sentry for Nightly Firefox Beta
+            // Setup sentry for Nightly Decentr Beta
             sentryDSNKey = SentryNightlyDSNKey
         }
 

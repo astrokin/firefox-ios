@@ -22,8 +22,8 @@
 /* Quick Actions drop down menu item for new search when widget enters edit mode and drop down menu expands */
 "TodayWidget.DropDownMenuItemNewSearch" = "Яңа эзләү";
 
-/* Description for medium size widget to add Firefox Shortcut to home screen */
-"TodayWidget.FirefoxShortcutGalleryDescription" = "Өй экранына Firefox ярлыкларын өстәгез.";
+/* Description for medium size widget to add Decentr Shortcut to home screen */
+"TodayWidget.FirefoxShortcutGalleryDescription" = "Өй экранына Decentr ярлыкларын өстәгез.";
 
 /* Go to link pasted on the clipboard */
 "TodayWidget.GoToCopiedLinkLabelV1" = "Копияләнгән сылтамага күчү";
@@ -44,7 +44,7 @@
 "TodayWidget.NewPrivateTabButtonLabelV2" = "Хосусый табта эзләү";
 
 /* Open New Tab button label */
-"TodayWidget.NewSearchButtonLabelV1" = "Firefox-та эзләү";
+"TodayWidget.NewSearchButtonLabelV1" = "Decentr-та эзләү";
 
 /* Open New Tab button label */
 "TodayWidget.NewTabButtonLabelV1" = "Яңа эзләү";
@@ -55,13 +55,13 @@
 /* Label that is shown when there are no tabs opened in tab tray i.e. Empty State */
 "TodayWidget.NoOpenTabsLabelV2" = "Ачык таблар юк";
 
-/* Open Firefox when there are no tabs opened in tab tray i.e. Empty State */
-"TodayWidget.OpenFirefoxLabel" = "Firefox-ны ачу";
+/* Open Decentr when there are no tabs opened in tab tray i.e. Empty State */
+"TodayWidget.OpenFirefoxLabel" = "Decentr-ны ачу";
 
-/* Sub label for medium size Firefox Pocket stories widge widget. Pocket is the name of another app. */
-"TodayWidget.PocketWidgetSubLabel" = "Firefox - Pocket тарафыннан тәкъдим ителә";
+/* Sub label for medium size Decentr Pocket stories widge widget. Pocket is the name of another app. */
+"TodayWidget.PocketWidgetSubLabel" = "Decentr - Pocket тарафыннан тәкъдим ителә";
 
-/* Title for Firefox Pocket stories widget in Gallery View where user can add it to home screen. Pocket is the name of another app. */
+/* Title for Decentr Pocket stories widget in Gallery View where user can add it to home screen. Pocket is the name of another app. */
 "TodayWidget.PocketWidgetTitle" = "Pocket тарафыннан тәкъдим ителә";
 
 /* Open New Private Tab button label */
@@ -73,11 +73,11 @@
 /* Quick Actions title when widget enters edit mode */
 "TodayWidget.QuickActionsGalleryTitle" = "Тиз гамәлләр";
 
-/* Firefox shortcuts title when widget enters edit mode. Do not translate the word Firefox. */
-"TodayWidget.QuickActionsGalleryTitleV2" = "Firefox ярлыклары";
+/* Decentr shortcuts title when widget enters edit mode. Do not translate the word Decentr. */
+"TodayWidget.QuickActionsGalleryTitleV2" = "Decentr ярлыклары";
 
 /* Sub label for medium size quick action widget */
-"TodayWidget.QuickActionsSubLabel" = "Firefox - Тиз гамәлләр";
+"TodayWidget.QuickActionsSubLabel" = "Decentr - Тиз гамәлләр";
 
 /* Description for Quick View widget in Gallery View where user can add it to home screen */
 "TodayWidget.QuickViewGalleryDescriptionV2" = "Ачык табларыгызга ярлыклар өстәгез.";
@@ -89,26 +89,26 @@
 "TodayWidget.QuickViewLargeGalleryDescription" = "Ачык табларыгызга ярлыклар өстәгез.";
 
 /* Sub label for Top Sites widget */
-"TodayWidget.QuickViewOpenTabsSubLabel" = "Firefox - Ачык таблар";
+"TodayWidget.QuickViewOpenTabsSubLabel" = "Decentr - Ачык таблар";
 
-/* Title for small size widget which allows users to search in Firefox. Do not translate the word Firefox. */
-"TodayWidget.SearchInFirefoxTitle" = "Firefox-та эзләү";
+/* Title for small size widget which allows users to search in Decentr. Do not translate the word Decentr. */
+"TodayWidget.SearchInFirefoxTitle" = "Decentr-та эзләү";
 
-/* Search in Firefox. Do not translate the word Firefox */
-"TodayWidget.SearchInFirefoxV2" = "Firefox-та\nэзләү";
+/* Search in Decentr. Do not translate the word Decentr */
+"TodayWidget.SearchInFirefoxV2" = "Decentr-та\nэзләү";
 
 /* Search in private tab */
 "TodayWidget.SearchInPrivateTabLabelV2" = "Хосусый\nтабта эзләү";
 
-/* Title for top sites widget to add Firefox top sites shotcuts to home screen */
+/* Title for top sites widget to add Decentr top sites shotcuts to home screen */
 "TodayWidget.TopSitesGalleryTitle" = "Төп сайтлар";
 
 /* Sub label for Top Sites widget */
-"TodayWidget.TopSitesSubLabel" = "Firefox - Төп сайтлар";
+"TodayWidget.TopSitesSubLabel" = "Decentr - Төп сайтлар";
 
 /* View More for Quick View widget in Gallery View where we don't know how many tabs might be opened */
 "TodayWidget.ViewMore" = "Күбрәк карау";
 
-/* View More… for Firefox Pocket stories widget where we don't know how many articles are available. */
+/* View More… for Decentr Pocket stories widget where we don't know how many articles are available. */
 "TodayWidget.ViewMoreDots" = "Күбрәк карау…";
 

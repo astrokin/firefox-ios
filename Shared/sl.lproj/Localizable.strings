@@ -43,10 +43,10 @@
 /* Title for the Jump Back In section. This section allows users to jump back in to a recently viewed tab */
 "ActivityStream.JumpBackIn.SectionTitle" = "Skoči nazaj";
 
-/* On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar. */
+/* On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar. */
 "ActivityStream.JumpBackIn.TabGroup.SiteCount" = "Zavihki: %d";
 
-/* On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did. */
+/* On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did. */
 "ActivityStream.JumpBackIn.TabGroup.Title" = "Vaše iskanje \"%@\"";
 
 /* A string used to signify the start of the Recently Saved section in Home Screen. */
@@ -206,7 +206,7 @@
 /* Description of what a breach is */
 "BreachAlerts.Description" = "Gesla so bila izpostavljena ali ukradena, odkar ste nazadnje spremenili svoje geslo. Če želite zaščititi ta račun, se prijavite na spletno stran in spremenite geslo.";
 
-/* Link to monitor.firefox.com to learn more about breached passwords */
+/* Link to monitor.decentr.com to learn more about breached passwords */
 "BreachAlerts.LearnMoreButton" = "Več o tem";
 
 /* Leads to a link to the breached website */
@@ -300,7 +300,7 @@
 "Could not load page." = "Ni bilo mogoče naložiti strani.";
 
 /* Description for the new dark mode change in the version 22 app release. It describes the new automatic dark theme and how to change the theme settings. */
-"CoverSheet.v22.DarkMode.Description" = "V sistemu iOS 13 Firefox sedaj samodejno preklopi na temno temo, če je telefon nastavljen na temen način. To lahko spremenite v meniju Nastavitve > Tema.";
+"CoverSheet.v22.DarkMode.Description" = "V sistemu iOS 13 Decentr sedaj samodejno preklopi na temno temo, če je telefon nastavljen na temen način. To lahko spremenite v meniju Nastavitve > Tema.";
 
 /* Title for the new dark mode change in the version 22 app release. */
 "CoverSheet.v22.DarkMode.Title" = "Temna tema zdaj vključuje temno tipkovnico in temen pozdravni zaslon.";
@@ -355,7 +355,7 @@
 /* Alert dialog title when the user taps the cancel download icon. */
 "Downloads.CancelDialog.Title" = "Prekliči prenos";
 
-/* The message displayed to a user when they try and perform the download of an asset that Firefox cannot currently handle. */
+/* The message displayed to a user when they try and perform the download of an asset that Decentr cannot currently handle. */
 "Downloads.Error.Message" = "Prenosi v Firefoxu še niso podprti.";
 
 /* The label text in the Download Cancelled toast for showing confirmation that the download was cancelled. */
@@ -401,7 +401,7 @@
 "ErrorPages.AdvancedWarning2.Text" = "Lahko gre za napačne nastavitve ali poseg napadalca. Nadaljujte, če ste pripravljeni tvegati.";
 
 /* Warning text on the certificate error page */
-"ErrorPages.CertWarning.Description" = "Lastnik %@ je nepravilno nastavil svojo spletno stran. Firefox se ni povezal nanjo, da bi preprečil krajo vaših podatkov.";
+"ErrorPages.CertWarning.Description" = "Lastnik %@ je nepravilno nastavil svojo spletno stran. Decentr se ni povezal nanjo, da bi preprečil krajo vaših podatkov.";
 
 /* Title on the certificate error page */
 "ErrorPages.CertWarning.Title" = "Vaša povezava ni zasebna";
@@ -421,10 +421,10 @@
 /* Tile title for Facebook */
 "Facebook" = "Facebook";
 
-/* Title for firefox about:home page in tab history list */
-"Firefox.HomePage.Title" = "Domača stran Firefoxa";
+/* Title for decentr about:home page in tab history list */
+"Decentr.HomePage.Title" = "Domača stran Firefoxa";
 
-/* A button at bottom of the Firefox homepage that, when clicked, takes users straight to the settings options, where they can customize the Firefox Home page */
+/* A button at bottom of the Decentr homepage that, when clicked, takes users straight to the settings options, where they can customize the Decentr Home page */
 "FirefoxHome.CustomizeHomeButton.Title" = "Prilagodi domačo stran";
 
 /* Accessibility Label for the tab toolbar Forward button */
@@ -436,16 +436,16 @@
 /* Label stating your account is not verified */
 "FxA.AccountVerificationRequired" = "Zahtevana je potrditev računa";
 
-/* Message explaining that user needs to check email for Firefox Account verfication link. */
+/* Message explaining that user needs to check email for Decentr Account verfication link. */
 "FxA.AccountVerificationRequiredSurface" = "%@ morate potrditi. V svojem e-poštnem predalu poiščite Firefoxovo sporočilo s potrditveno povezavo.";
 
 /* Button label to connect another device to Sync */
 "FxA.ConnectAnotherDevice" = "Poveži drugo napravo";
 
-/* Settings section title for Firefox Account */
-"FxA.FirefoxAccount" = "Firefox Račun";
+/* Settings section title for Decentr Account */
+"FxA.FirefoxAccount" = "Decentr Račun";
 
-/* Button label to go to Firefox Account settings */
+/* Button label to go to Decentr Account settings */
 "FxA.ManageAccount" = "Upravljanje računa in naprav";
 
 /* Label when no internet is present */
@@ -455,15 +455,15 @@
 "FxA.OpenSyncPreferences" = "Odpri nastavitve Synca";
 
 /* Instructions shown on qr code scanning view */
-"fxa.qr-scanning-view.instructions" = "Skenirajte QR-kodo na strani firefox.com/pair";
+"fxa.qr-scanning-view.instructions" = "Skenirajte QR-kodo na strani decentr.com/pair";
 
-/* Remove button is displayed on firefox account page under certain scenarios where user would like to remove their account. */
+/* Remove button is displayed on decentr account page under certain scenarios where user would like to remove their account. */
 "FxA.RemoveAccount" = "Odstrani";
 
 /* Description string for alert view that gets presented when user tries to remove an account. */
-"FxA.RemoveAccountAlertMessage" = "Odstranite Firefox Račun, povezan s to napravo, da se prijavite kot drug uporabnik.";
+"FxA.RemoveAccountAlertMessage" = "Odstranite Decentr Račun, povezan s to napravo, da se prijavite kot drug uporabnik.";
 
-/* Remove account alert is the final confirmation before user removes their firefox account */
+/* Remove account alert is the final confirmation before user removes their decentr account */
 "FxA.RemoveAccountAlertTitle" = "Odstrani račun";
 
 /* Button label to resend email */
@@ -473,13 +473,13 @@
 "fxa.signin.camera-signin" = "Prijavite se s kamero";
 
 /* FxA sign in create account label. */
-"fxa.signin.create-account-pt-1" = "Sinhronizirajte Firefox med napravami z računom.";
+"fxa.signin.create-account-pt-1" = "Sinhronizirajte Decentr med napravami z računom.";
 
 /* FxA sign in create account label. This will be linked to the site to create an account. */
-"fxa.signin.create-account-pt-2" = "Ustvarite Firefox Račun.";
+"fxa.signin.create-account-pt-2" = "Ustvarite Decentr Račun.";
 
 /* FxA sign in view qr code instructions */
-"fxa.signin.qr-link-instruction" = "Na računalniku odprite Firefox in obiščite firefox.com/pair";
+"fxa.signin.qr-link-instruction" = "Na računalniku odprite Decentr in obiščite decentr.com/pair";
 
 /* FxA sign in view qr code scan button */
 "fxa.signin.ready-to-scan" = "Pripravljeno za skeniranje";
@@ -496,14 +496,14 @@
 /* Label explaining what sync does */
 "FxA.SyncExplain" = "Uporabite zavihke, zaznamke in gesla iz svojih drugih naprav.";
 
-/* Button label to Sync your Firefox Account */
+/* Button label to Sync your Decentr Account */
 "FxA.SyncNow" = "Sinhroniziraj zdaj";
 
 /* Call to action for sign into sync button */
 "FxA.TakeYourWebWithYou" = "Ponesite svoj splet s seboj";
 
 /* Title of a notification displayed when another device has connected to FxA. %@ refers to the name of the newly connected device. */
-"FxAPush_DeviceConnected_body" = "Firefox Sync se je povezal z %@";
+"FxAPush_DeviceConnected_body" = "Decentr Sync se je povezal z %@";
 
 /* Title of a notification displayed when another device has connected to FxA. */
 "FxAPush_DeviceConnected_title" = "Sync je povezan";
@@ -512,7 +512,7 @@
 "FxAPush_DeviceDisconnected_body" = "Naprava %@ je bila uspešno odklopljena.";
 
 /* Body of a notification displayed when this device has been disconnected from FxA by another device. */
-"FxAPush_DeviceDisconnected_ThisDevice_body" = "Ta naprava ni več povezana s Firefox Sync.";
+"FxAPush_DeviceDisconnected_ThisDevice_body" = "Ta naprava ni več povezana s Decentr Sync.";
 
 /* Title of a notification displayed when this device has been disconnected by another device. */
 "FxAPush_DeviceDisconnected_ThisDevice_title" = "Sync je prekinjen";
@@ -521,7 +521,7 @@
 "FxAPush_DeviceDisconnected_title" = "Sync je prekinjen";
 
 /* Body of a notification displayed when unnamed device has been disconnected from FxA. */
-"FxAPush_DeviceDisconnected_UnknownDevice_body" = "Naprava je bila odklopljena iz Firefox Sync";
+"FxAPush_DeviceDisconnected_UnknownDevice_body" = "Naprava je bila odklopljena iz Decentr Sync";
 
 /* A re-worded offer about Sync, displayed when the Sync home panel is empty, that emphasizes one-way data transfer, not syncing. */
 "Get your open tabs, bookmarks, and passwords from your other devices." = "Uporabite odprte zavihke, zaznamke in gesla iz svojih drugih naprav.";
@@ -569,7 +569,7 @@
 "HistoryPanel.EmptySyncedTabsPanelTabSyncDisabledState.Description" = "Vključite sinhronizacijo zavihkov za ogled seznama zavihkov drugih naprav.";
 
 /* Title for the empty synced tabs state in the History Panel */
-"HistoryPanel.EmptySyncedTabsState.Title" = "Firefox Sync";
+"HistoryPanel.EmptySyncedTabsState.Title" = "Decentr Sync";
 
 /* Title for the Back to History button in the History Panel */
 "HistoryPanel.HistoryBackButton.Title" = "Zgodovina";
@@ -659,7 +659,7 @@
 "InactiveTabs.TabTray.AutoClosePrompt.ButtonTitle" = "Vklopi samodejno zapiranje";
 
 /* In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This string describes what happens if you elect to turn on this option. */
-"InactiveTabs.TabTray.AutoClosePrompt.Content" = "Firefox bo zaprl zavihke, ki si jih niste ogledali v zadnjem mesecu.";
+"InactiveTabs.TabTray.AutoClosePrompt.Content" = "Decentr bo zaprl zavihke, ki si jih niste ogledali v zadnjem mesecu.";
 
 /* In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This is the title of that Auto Close prompt */
 "InactiveTabs.TabTray.AutoClosePrompt.Title" = "Samodejno zapri po enem mesecu?";
@@ -760,10 +760,10 @@
 /* Light theme setting in Reading View settings */
 "Light" = "Svetlo";
 
-/* Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Decentr reader mode from another app. */
 "Load original page" = "Naloži izvirno stran";
 
-/* Message displayed when the reader mode page is loading. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Message displayed when the reader mode page is loading. This message will appear only when sharing to Decentr reader mode from another app. */
 "Loading content…" = "Nalaganje vsebine …";
 
 /* Authentication prompt log in button */
@@ -827,7 +827,7 @@
 "LoginsList.LoginsListSearchPlaceholder" = "Filter";
 
 /* Label shown when there are no logins to list */
-"LoginsList.NoLoginsFound.Description" = "Tukaj se bodo prikazale shranjene prijave. Če ste prijave shranili v Firefox na drugi napravi, se prijavite v Firefox Račun.";
+"LoginsList.NoLoginsFound.Description" = "Tukaj se bodo prikazale shranjene prijave. Če ste prijave shranili v Decentr na drugi napravi, se prijavite v Decentr Račun.";
 
 /* Label shown when there are no logins saved */
 "LoginsList.NoLoginsFound.Title" = "Ni prijav";
@@ -851,7 +851,7 @@
 "LoginsList.Title" = "SHRANJENE PRIJAVE";
 
 /* Restore Tabs Prompt Description */
-"Looks like Firefox crashed previously. Would you like to restore your tabs?" = "Očitno se je Firefox predhodno sesul. Želite obnoviti zavihke?";
+"Looks like Decentr crashed previously. Would you like to restore your tabs?" = "Očitno se je Decentr predhodno sesul. Želite obnoviti zavihke?";
 
 /* Name for Mark as read button in reader mode
    Title for the button that marks a reading list item as read */
@@ -895,10 +895,10 @@
 "Menu.EnhancedTrackingProtectionOn.Title" = "Izboljšana zaščita pred sledenjem je VKLJUČENA za to stran.";
 
 /* Description for having standard ETP protection with ITP offered in iOS14+ */
-"Menu.EnhancedTrackingProtectionStandardWithITP.Title" = "Firefox zavrača spletne sledilce, sledilce družbenih omrežij, kriptorudarje in sledilce prstnih odtisov.";
+"Menu.EnhancedTrackingProtectionStandardWithITP.Title" = "Decentr zavrača spletne sledilce, sledilce družbenih omrežij, kriptorudarje in sledilce prstnih odtisov.";
 
 /* Description for having strict ETP protection with ITP offered in iOS14+ */
-"Menu.EnhancedTrackingProtectionStrictWithITP.Title" = "Firefox zavrača spletne sledilce, sledilce družbenih omrežij, kriptorudarje, sledilce prstnih odtisov in sledilno vsebino.";
+"Menu.EnhancedTrackingProtectionStrictWithITP.Title" = "Decentr zavrača spletne sledilce, sledilce družbenih omrežij, kriptorudarje, sledilce prstnih odtisov in sledilno vsebino.";
 
 /* Label for the button, displayed in the menu, takes you to to History screen when pressed. */
 "Menu.History.Label" = "Zgodovina";
@@ -964,7 +964,7 @@
 "Menu.TrackingProtection.Details.Verifier" = "Overil %@";
 
 /* Message in menu when no trackers blocked. */
-"Menu.TrackingProtection.NoTrackersBlockedTitle" = "Firefox na strani ni zaznal znanih sledilcev.";
+"Menu.TrackingProtection.NoTrackersBlockedTitle" = "Decentr na strani ni zaznal znanih sledilcev.";
 
 /* The title for tracking protection settings */
 "Menu.TrackingProtection.ProtectionSettings.Title" = "Nastavitve zaščite";
@@ -979,7 +979,7 @@
 "Menu.TrackingProtectionBlockedSocial.Title" = "Družbeni sledilci";
 
 /* Description of the Tracking protection menu when TP is blocking parts of the page */
-"Menu.TrackingProtectionBlocking.Description" = "Firefox zavrača dele strani, ki lahko sledijo vašemu brskanju.";
+"Menu.TrackingProtectionBlocking.Description" = "Decentr zavrača dele strani, ki lahko sledijo vašemu brskanju.";
 
 /* The description of the Tracking Protection menu item when tracking is enabled */
 "Menu.TrackingProtectionBlockingDisabled.Description" = "Zavračaj spletne sledilce";
@@ -1081,24 +1081,24 @@
 /* Restore Tabs Affirmative Action */
 "Okay" = "V redu";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the title for the button, on the bottom of the card, used to get back to browsing on Firefox by dismissing the onboarding card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the title for the button, on the bottom of the card, used to get back to browsing on Decentr by dismissing the onboarding card */
 "Onboarding.WhatsNew.Button.Title" = "Začnite z brskanjem";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the title for the Recent Searches bullet point on the card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the title for the Recent Searches bullet point on the card */
 "Onboarding.WhatsNew.RecentSearches.Title" = "Nedavna iskanja";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the description for the Tab Group bullet point on the card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the description for the Tab Group bullet point on the card */
 "Onboarding.WhatsNew.TabGroups.Description" = "Strani z istega iskanja se združijo v skupine.";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is the title for the Tab Group bullet point on the card */
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is the title for the Tab Group bullet point on the card */
 "Onboarding.WhatsNew.TabGroups.Title" = "Bolj urejene skupine zavihkov";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is the title for the Jump Back In bullet point on the card
-   The title for the new onboarding card letting users know what is new in Firefox iOS */
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is the title for the Jump Back In bullet point on the card
+   The title for the new onboarding card letting users know what is new in Decentr iOS */
 "Onboarding.WhatsNew.Title" = "Kaj je novega v Firefoxu";
 
 /* Title for prompt displayed to user after the app crashes */
-"Oops! Firefox crashed" = "Ups! Firefox se je sesul";
+"Oops! Decentr crashed" = "Ups! Decentr se je sesul";
 
 /* See http://mzl.la/1LXbDOL */
 "Open articles in Reader View by tapping the book icon when it appears in the title bar." = "Odprite članke v bralnem pogledu, tako da tapnete ikono knjige, ko se pojavi v naslovni vrstici.";
@@ -1109,8 +1109,8 @@
 /* Toggle tabs syncing setting */
 "Open Tabs" = "Odprte zavihke";
 
-/* The message displayed to a user when they try to open a URL that cannot be handled by Firefox, or any external app. */
-"OpenURL.Error.Message" = "Firefox ne more odpreti strani, ker je njen naslov neveljaven.";
+/* The message displayed to a user when they try to open a URL that cannot be handled by Decentr, or any external app. */
+"OpenURL.Error.Message" = "Decentr ne more odpreti strani, ker je njen naslov neveljaven.";
 
 /* Title of the message shown when the user attempts to navigate to an invalid link. */
 "OpenURL.Error.Title" = "Strani ni mogoče odpreti";
@@ -1125,19 +1125,19 @@
 "Password" = "Geslo";
 
 /* Error message shown in the remote tabs panel */
-"PasswordAutoFill.NoPasswordsFoundTitle" = "Nimate prijavnih podatkov, sinhroniziranih iz Firefox Accounts";
+"PasswordAutoFill.NoPasswordsFoundTitle" = "Nimate prijavnih podatkov, sinhroniziranih iz Decentr Accounts";
 
 /* Header for the list of credentials table */
 "PasswordAutoFill.PasswordsListTitle" = "Prijavni podatki na voljo:";
 
-/* Title of the extension that shows firefox passwords */
-"PasswordAutoFill.SectionTitle" = "Prijavni podatki za Firefox";
+/* Title of the extension that shows decentr passwords */
+"PasswordAutoFill.SectionTitle" = "Prijavni podatki za Decentr";
 
 /* See http://mzl.la/1G7uHo7 */
 "PhotoLibrary.FirefoxWouldLikeAccessMessage" = "To vam omogoča, da shranite sliko v Camera Roll.";
 
 /* See http://mzl.la/1G7uHo7 */
-"PhotoLibrary.FirefoxWouldLikeAccessTitle" = "Firefox želi dostop do vaših slik";
+"PhotoLibrary.FirefoxWouldLikeAccessTitle" = "Decentr želi dostop do vaših slik";
 
 /* Button for closing the menu action sheet */
 "PhotonMenu.close" = "Zapri";
@@ -1145,7 +1145,7 @@
 /* Privacy section title */
 "Privacy" = "Zasebnost";
 
-/* Show Firefox Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/firefox/ */
+/* Show Decentr Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/decentr/ */
 "Privacy Policy" = "Politika zasebnosti";
 
 /* This is the value for a label that indicates if a user is on an unencrypted website. */
@@ -1157,7 +1157,7 @@
 /* Title for quick-search engines settings section. */
 "Quick-Search Engines" = "Hitri iskalniki";
 
-/* A label indicating the action that a user can rate the Firefox app in the App store. */
+/* A label indicating the action that a user can rate the Decentr app in the App store. */
 "Ratings.Settings.RateOnAppStore" = "Oceni v trgovini App Store";
 
 /* Accessibility label for read article in reading list. It's a past participle - functions as an adjective. */
@@ -1305,19 +1305,19 @@
 "SendTo.NavBar.Title" = "Pošlji zavihek";
 
 /* Error message shown in the remote tabs panel */
-"SendTo.NoDevicesFound.Message" = "S tem Firefox Računom nimate povezanih drugih naprav na voljo za sinhronizacijo.";
+"SendTo.NoDevicesFound.Message" = "S tem Decentr Računom nimate povezanih drugih naprav na voljo za sinhronizacijo.";
 
 /* See http://mzl.la/1ISlXnU */
-"SendTo.NotSignedIn.Message" = "Odprite Firefox, pojdite v Nastavitve in se prijavite za nadaljevanje.";
+"SendTo.NotSignedIn.Message" = "Odprite Decentr, pojdite v Nastavitve in se prijavite za nadaljevanje.";
 
 /* See http://mzl.la/1ISlXnU */
-"SendTo.NotSignedIn.Title" = "Niste prijavljeni v vaš Firefox Račun.";
+"SendTo.NotSignedIn.Title" = "Niste prijavljeni v vaš Decentr Račun.";
 
 /* Navigation bar button to Send the current page to a device */
 "SendTo.SendAction.Text" = "Pošlji";
 
-/* The text for the button on the Send to Device page if you are not signed in to Firefox Accounts. */
-"SendTo.SignIn.Button" = "Prijavite se v Firefox";
+/* The text for the button on the Send to Device page if you are not signed in to Decentr Accounts. */
+"SendTo.SignIn.Button" = "Prijavite se v Decentr";
 
 /* Body of notification shown when the device is sent one or more tabs from an unnamed device. */
 "SentTab_TabArrivingNotification_NoDevice_body" = "Nov zavihek je prispel iz druge naprave.";
@@ -1341,7 +1341,7 @@
 "SentTab.NoTabArrivingNotification.body" = "Tapnite za začetek";
 
 /* Title of notification received after a spurious message from FxA has been received. */
-"SentTab.NoTabArrivingNotification.title" = "Firefox Sync";
+"SentTab.NoTabArrivingNotification.title" = "Decentr Sync";
 
 /* Label for an action used to view one or more tabs from a notification. */
 "SentTab.ViewAction.title" = "Prikaži";
@@ -1404,7 +1404,7 @@
 "Settings.DataManagement.Title" = "Upravljanje s podatki";
 
 /* Body of the alert when prompting the user asking to disconnect. */
-"Settings.Disconnect.Body" = "Firefox se bo prenehal sinhronizirati z vašim računom, vendar ne bo izbrisal podatkov o brskanju na tej napravi.";
+"Settings.Disconnect.Body" = "Decentr se bo prenehal sinhronizirati z vašim računom, vendar ne bo izbrisal podatkov o brskanju na tej napravi.";
 
 /* Button displayed at the bottom of settings page allowing users to Disconnect from FxA */
 "Settings.Disconnect.Button" = "Prekini povezavo";
@@ -1473,52 +1473,52 @@
 /* Label used for the device name settings section. */
 "Settings.FxA.DeviceName" = "Ime naprave";
 
-/* Label used as a section title in the Firefox Accounts Settings screen. */
+/* Label used as a section title in the Decentr Accounts Settings screen. */
 "Settings.FxA.Sync.SectionName" = "Nastavitve Synca";
 
 /* Title displayed in header of the FxA settings panel. */
-"Settings.FxA.Title" = "Firefox Račun";
+"Settings.FxA.Title" = "Decentr Račun";
 
 /* General settings section title */
 "Settings.General.SectionName" = "Splošno";
 
-/* In the settings menu, on the Firefox homepage customization section, this is the description below the section, describing what the options in the section are for. */
+/* In the settings menu, on the Decentr homepage customization section, this is the description below the section, describing what the options in the section are for. */
 "Settings.Home.Option.Description" = "Izberite vsebino, ki jo želite videti na Firefoxovi domači strani.";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off */
 "Settings.Home.Option.JumpBackIn" = "Skoči nazaj";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Decentr homepage on or off */
 "Settings.Home.Option.Pocket" = "Priporoča Pocket";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Decentr homepage on or off */
 "Settings.Home.Option.RecentlySaved" = "Nedavno shranjeno";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off */
 "Settings.Home.Option.RecentlyVisited" = "Nedavno obiskano";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Decentr homepage on or off */
 "Settings.Home.Option.RecentSearches" = "Nedavna iskanja";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Decentr homepage on or off */
 "Settings.Home.Option.Shortcuts" = "Bližnjice";
 
 /* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage after four hours of inactivity. */
 "Settings.Home.Option.StartAtHome.AfterFourHours" = "Domača stran po štirih urah nedejavnosti";
 
-/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Firefox */
+/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Decentr */
 "Settings.Home.Option.StartAtHome.Always" = "Domača stran";
 
 /* In the settings menu, in the Start at Home customization options, this is text that appears below the section, describing what the section settings do. */
-"Settings.Home.Option.StartAtHome.Description" = "Izberite, kaj naj se prikaže, ko se vrnete v Firefox.";
+"Settings.Home.Option.StartAtHome.Description" = "Izberite, kaj naj se prikaže, ko se vrnete v Decentr.";
 
-/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Firefox */
+/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Decentr */
 "Settings.Home.Option.StartAtHome.Never" = "Zadnji zavihek";
 
-/* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Firefox Homepage. */
+/* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Decentr Homepage. */
 "Settings.Home.Option.StartAtHome.Title" = "Uvodni zaslon";
 
-/* In the settings menu, this is the title of the Firefox Homepage customization settings section */
+/* In the settings menu, this is the title of the Decentr Homepage customization settings section */
 "Settings.Home.Option.Title" = "Domača stran Firefoxa";
 
 /* Button in settings to clear the home page. */
@@ -1572,7 +1572,7 @@
 /* The title for the section to customize top sites in the new tab settings page. */
 "Settings.NewTab.Option.CustomizeTitle" = "Prilagodite domačo stran Firefoxa";
 
-/* Option in settings to show Firefox Home when you open a new tab */
+/* Option in settings to show Decentr Home when you open a new tab */
 "Settings.NewTab.Option.FirefoxHome" = "Domača stran Firefoxa";
 
 /* Option in the settings to turn off recent bookmarks in the Highlights section */
@@ -1615,7 +1615,7 @@
 "Settings.NewTab.TopSectionNameFooter" = "Izberite, kaj naj se naloži, ko odprete nov zavihek";
 
 /* Description displayed under the ”Offer to Open Copied Link” option. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349 */
-"Settings.OfferClipboardBar.Status" = "Ko odprete Firefox";
+"Settings.OfferClipboardBar.Status" = "Ko odprete Decentr";
 
 /* Title of setting to enable the Go to Copied URL feature. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349 */
 "Settings.OfferClipboardBar.Title" = "Ponudi odpiranje kopiranih povezav";
@@ -1681,7 +1681,7 @@
 "Settings.Studies.Toggle.Link" = "Več o tem.";
 
 /* A short description that explains that Mozilla is running studies */
-"Settings.Studies.Toggle.Message" = "Firefox lahko občasno namesti in zažene raziskave.";
+"Settings.Studies.Toggle.Message" = "Decentr lahko občasno namesti in zažene raziskave.";
 
 /* Toggled OFF to opt-out of studies */
 "Settings.Studies.Toggle.Off" = "Izklopljeno";
@@ -1698,7 +1698,7 @@
 /* In the settings menu, in the Tabs customization section, this is the title for the setting that toggles the Tab Groups feature - where tabs from related searches are grouped - on or off */
 "Settings.Tabs.CustomizeTabsSection.TabGroups" = "Skupine zavihkov";
 
-/* In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from firefox hompage */
+/* In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from decentr hompage */
 "Settings.Tabs.CustomizeTabsSection.Title" = "Prilagodi pladenj z zavihki";
 
 /* In the settings menu, this is the title for the Tabs customization section option */
@@ -1714,7 +1714,7 @@
 "Settings.TrackingProtection.Alert.Title" = "Pozor!";
 
 /* Header description for tracking protection options section where Basic/Strict block list can be selected */
-"Settings.TrackingProtection.BlockListsHeader" = "Izberite, kateri seznam naj Firefox uporablja za zavračanje elementov, ki bi lahko sledili vašim aktivnostim na spletu.";
+"Settings.TrackingProtection.BlockListsHeader" = "Izberite, kateri seznam naj Decentr uporablja za zavračanje elementov, ki bi lahko sledili vašim aktivnostim na spletu.";
 
 /* Explanation of basic mode. */
 "Settings.TrackingProtection.Info.BasicTitle" = "Uravnoteženo za zaščito in učinkovitost delovanja.";
@@ -1809,31 +1809,31 @@
 /* Title displayed in header of the Data Management panel. */
 "Settings.WebsiteData.Title" = "Podatki spletne strani";
 
-/* Action label on share extension to add page to the Firefox reading list. */
+/* Action label on share extension to add page to the Decentr reading list. */
 "ShareExtension.AddToReadingListAction.Title" = "Dodaj na bralni seznam";
 
 /* Share extension label shown after user has performed 'Add to Reading List' action. */
 "ShareExtension.AddToReadingListActionDone.Title" = "Dodano na bralni seznam";
 
-/* Action label on share extension to bookmark the page in Firefox. */
+/* Action label on share extension to bookmark the page in Decentr. */
 "ShareExtension.BookmarkThisPageAction.Title" = "Dodaj stran med zaznamke";
 
 /* Share extension label shown after user has performed 'Bookmark this Page' action. */
 "ShareExtension.BookmarkThisPageActionDone.Title" = "Dodano med zaznamke";
 
-/* Action label on share extension to load the page in Firefox when user switches apps to bring it to foreground. */
+/* Action label on share extension to load the page in Decentr when user switches apps to bring it to foreground. */
 "ShareExtension.LoadInBackgroundAction.Title" = "Naloži v ozadju";
 
 /* Share extension label shown after user has performed 'Load in Background' action. */
 "ShareExtension.LoadInBackgroundActionDone.Title" = "Nalaganje v Firefoxu";
 
-/* Action label on share extension to immediately open page in Firefox. */
+/* Action label on share extension to immediately open page in Decentr. */
 "ShareExtension.OpenInFirefoxAction.Title" = "Odpri v Firefoxu";
 
-/* Action label on share extension to immediately open page in Firefox in private mode. */
+/* Action label on share extension to immediately open page in Decentr in private mode. */
 "ShareExtension.OpenInPrivateModeAction.Title" = "Odpri v zasebnem načinu";
 
-/* Action label on share extension to search for the selected text in Firefox. */
+/* Action label on share extension to search for the selected text in Decentr. */
 "ShareExtension.SeachInFirefoxAction.Title" = "Išči v Firefoxu";
 
 /* Label for show search suggestions setting. */
@@ -1996,7 +1996,7 @@
 /* The section header for tabs opened yesterday */
 "TabTray.Yesterday.Header" = "Včeraj";
 
-/* Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Decentr reader mode from another app. */
 "The page could not be displayed in Reader View." = "Strani ni mogoče prikazati v bralnem pogledu.";
 
 /* Error message in the remote tabs panel */
@@ -2060,7 +2060,7 @@
 "unread" = "neprebrano";
 
 /* Text message in the settings table view */
-"Upgrade Firefox to connect" = "Za povezavo nadgradite Firefox";
+"Upgrade Decentr to connect" = "Za povezavo nadgradite Decentr";
 
 /* Debug option */
 "Use stage servers" = "Uporabi testne strežnike";
@@ -2071,7 +2071,7 @@
 /* Text message in the settings table view */
 "Verify your email address" = "Potrdite svoj e-poštni naslov";
 
-/* Version number of Firefox shown in settings */
+/* Version number of Decentr shown in settings */
 "Version %@ (%@)" = "Različica %1$@ (%2$@)";
 
 /* Accessibility label for the main web content view */
@@ -2093,7 +2093,7 @@
 "Yesterday" = "Včeraj";
 
 /* Error message in the remote tabs panel */
-"You don’t have any tabs open in Firefox on your other devices." = "V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.";
+"You don’t have any tabs open in Decentr on your other devices." = "V Firefoxu na drugih napravah nimate odprtih drugih zavihkov.";
 
 /* Your Rights settings section title */
 "Your Rights" = "Vaše pravice";

@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Fotoğraf çekmenizi ve yüklemenizi sağlar.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Firefox, kayıtlı hesaplarınıza erişmek için Face ID gerektirir.";
+"NSFaceIDUsageDescription" = "Decentr, kayıtlı hesaplarınıza erişmek için Face ID gerektirir.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Ziyaret ettiğiniz web siteleri konumunuzu isteyebilir.";

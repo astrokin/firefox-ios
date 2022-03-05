@@ -128,7 +128,7 @@ public class RustPlaces {
         // already exists AND the new Rust places.db file does NOT exist yet.
         // This is to ensure that we only ever run this migration ONCE. In
         // addition, it is the caller's (Profile.swift) responsibility to NOT
-        // use this migration API for users signed into a Firefox Account.
+        // use this migration API for users signed into a Decentr Account.
         // Those users will automatically get all their bookmarks on next Sync.
         guard FileManager.default.fileExists(atPath: browserDB.databasePath),
             !FileManager.default.fileExists(atPath: databasePath) else {

@@ -5,7 +5,7 @@
 import UIKit
 
 extension UIColor {
-    struct Firefox {
+    struct Decentr {
         static let DarkGrey10 = UIColor(rgb: 0x242327)
     }
 }

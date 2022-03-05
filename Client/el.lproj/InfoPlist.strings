@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Επιτρέπει τη λήψη και μεταφόρτωση φωτογραφιών.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Το Firefox απαιτεί το Face ID για πρόσβαση στις αποθηκευμένες συνδέσεις σας.";
+"NSFaceIDUsageDescription" = "Το Decentr απαιτεί το Face ID για πρόσβαση στις αποθηκευμένες συνδέσεις σας.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Οι ιστοσελίδες που επισκέπτεστε ίσως απαιτήσουν την τοποθεσία σας.";

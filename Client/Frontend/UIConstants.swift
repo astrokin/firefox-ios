@@ -6,7 +6,7 @@ import UIKit
 import Shared
 
 extension UIColor {
-    // These are defaults from http://design.firefox.com/photon/visuals/color.html
+    // These are defaults from http://design.decentr.com/photon/visuals/color.html
     struct Defaults {
         static let MobileGreyF = UIColor(rgb: 0x636369)
         static let iOSTextHighlightBlue = UIColor(rgb: 0xccdded) // This color should exactly match the ios text highlight

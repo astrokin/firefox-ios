@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Це дозволяє вам знімати й вивантажувати фото.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Firefox вимагає Face ID для доступу до збережених паролів.";
+"NSFaceIDUsageDescription" = "Decentr вимагає Face ID для доступу до збережених паролів.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Відвідувані вами сайти можуть запитувати ваше розташування.";

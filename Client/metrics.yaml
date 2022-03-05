@@ -19,10 +19,10 @@ app_menu:
     description: |
         Counts the number of times a user taps Library in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/1544
+      - https://github.com/mozilla-mobile/decentr-ios/issues/1544
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -31,10 +31,10 @@ app_menu:
     description: |
         Counts the number of times a user taps Home in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -44,10 +44,10 @@ app_menu:
         Counts the number of times a user enables Block Images
         in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -57,10 +57,10 @@ app_menu:
         Counts the number of times a user disables Block Images
         in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -70,10 +70,10 @@ app_menu:
         Counts the number of times a user taps Enable Night Mode
         in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -83,10 +83,10 @@ app_menu:
         Counts the number of times a user taps Disable Night Mode
         in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -95,10 +95,10 @@ app_menu:
     description: |
         Counts the number of times a user taps What's New in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -107,10 +107,10 @@ app_menu:
     description: |
         Counts the number of times a user taps Settings in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -120,10 +120,10 @@ app_menu:
         Counts the number of times a user taps Logins & Passwords
         in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/1544
+      - https://github.com/mozilla-mobile/decentr-ios/issues/1544
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -133,10 +133,10 @@ app_menu:
         Counts the number of times a user taps Sign Into Sync
         in the app menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/1544
+      - https://github.com/mozilla-mobile/decentr-ios/issues/1544
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -151,7 +151,7 @@ application_services:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -169,7 +169,7 @@ bookmarks:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -189,7 +189,7 @@ bookmarks:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -209,7 +209,7 @@ bookmarks:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -224,10 +224,10 @@ bookmarks:
       - add-bookmark-toast
       - bookmarks-panel
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7464
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7464
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8675
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8675
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -245,7 +245,7 @@ bookmarks:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -257,10 +257,10 @@ default_browser_card:
     description: |
       Counts the number of times default browser card is dismissed.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7151
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7151
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7245
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7245
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -270,10 +270,10 @@ default_browser_card:
       Counts the number of times the Go To Settings button on
       default browser card is clicked.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7151
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7151
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7245
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7245
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -285,10 +285,10 @@ default_browser_onboarding:
     description: |
       Counts the number of times default browser onboarding is dismissed.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7870
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7870
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7245
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7245
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -298,10 +298,10 @@ default_browser_onboarding:
       Counts the number of times the Go To Settings button on
       default browser onboarding is clicked.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7870
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7870
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7245
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7245
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -311,15 +311,15 @@ app:
     type: counter
     description: |
       Counts the number of times the app is opened from an external
-      link, implying the client has Firefox set as a default browser.
+      link, implying the client has Decentr set as a default browser.
 
       Currently this is our most accurate way of measuring how
-      often Firefox is set as the default browser.
+      often Decentr is set as the default browser.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7151
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7151
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7245
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7245
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -333,8 +333,8 @@ onboarding:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/SDK-321
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8904
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8904
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     data_sensitivity:
       - interaction
     notification_emails:
@@ -355,8 +355,8 @@ onboarding:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3011
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9016
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9016
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -368,8 +368,8 @@ onboarding:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3011
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9016
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9016
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -381,8 +381,8 @@ onboarding:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3011
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9016
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9016
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -394,8 +394,8 @@ onboarding:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3011
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9016
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9016
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -407,8 +407,8 @@ onboarding:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3011
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9016
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9016
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -420,8 +420,8 @@ onboarding:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3011
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9016
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9016
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -433,8 +433,8 @@ onboarding:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3011
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9016
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9016
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -446,8 +446,8 @@ onboarding:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3011
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9016
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9016
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -469,10 +469,10 @@ top_site:
         description: |
           Position of top site.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8501
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8501
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8662
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8662
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -485,10 +485,10 @@ top_site:
       - zero-search
       - origin-other
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9308
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9308
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9494
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9494
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -506,37 +506,37 @@ firefox_home_page:
       - reading-list-panel
       - downloads-panel
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8503
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8503
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8544
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8544
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
   open_from_menu_home_button:
     type: counter
     description: |
-        Counts when user opens Firefox Home from
+        Counts when user opens Decentr Home from
         bottom right hamburger menu Home button
         and New Tab button.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8481
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8481
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8662
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8662
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
   open_from_awesomebar:
     type: counter
     description: |
-        Counts when a user opens Firefox Home
+        Counts when a user opens Decentr Home
         from awesomebar.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8481
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8481
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8662
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8662
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -548,8 +548,8 @@ firefox_home_page:
     bugs:
       - https://jira.mozilla.com/browse/FXIOS-1807
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8656
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8656
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -563,10 +563,10 @@ firefox_home_page:
       - zero-search
       - origin-other
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9308
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9308
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9494
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9494
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -578,8 +578,8 @@ firefox_home_page:
     bugs:
       - https://jira.mozilla.com/browse/FXIOS-1807
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8656
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8656
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -593,10 +593,10 @@ firefox_home_page:
       - zero-search
       - origin-other
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9308
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9308
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9494
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9494
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -614,8 +614,8 @@ firefox_home_page:
     bugs:
       - https://jira.mozilla.com/browse/FXIOS-1807
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8656
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8656
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -624,7 +624,7 @@ firefox_home_page:
     description: |
       Counts the number of reading list items
       appearing in the Recently Saved section
-      on the Firefox home page.
+      on the Decentr home page.
     extra_keys:
       reading_list_count:
         type: string
@@ -634,8 +634,8 @@ firefox_home_page:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1808
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8753
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8753
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -647,8 +647,8 @@ firefox_home_page:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1808
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8753
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8753
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -662,10 +662,10 @@ firefox_home_page:
       - zero-search
       - origin-other
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9308
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9308
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9494
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9494
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -677,8 +677,8 @@ firefox_home_page:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1806
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8905
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8905
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -692,10 +692,10 @@ firefox_home_page:
       - zero-search
       - origin-other
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9308
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9308
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9494
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9494
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -707,8 +707,8 @@ firefox_home_page:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1806
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8905
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8905
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -720,8 +720,8 @@ firefox_home_page:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1806
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8905
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8905
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -735,10 +735,10 @@ firefox_home_page:
       - zero-search
       - origin-other
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9308
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9308
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9494
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9494
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -750,8 +750,8 @@ firefox_home_page:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-2907
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8905
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8905
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -765,10 +765,10 @@ firefox_home_page:
       - zero-search
       - origin-other
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9308
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9308
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9494
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9494
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -776,40 +776,40 @@ firefox_home_page:
     type: counter
     description: |
       Counts the number of times a user taps to open the
-      settings menu to customize the Firefox Homepage
+      settings menu to customize the Decentr Homepage
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3151
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9272
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9272
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
   firefox_homepage_view:
     type: counter
     description: |
-      The number of times a user sees the Firefox Homepage
+      The number of times a user sees the Decentr Homepage
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3250
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9405
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9405
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
   firefox_homepage_origin:
     type: labeled_counter
     description: |
-      The number of times a user sees the Firefox Homepage,
+      The number of times a user sees the Decentr Homepage,
       with a home page origin.
     labels:
       - zero-search
       - origin-other
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9308
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9308
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9494
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9494
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -821,8 +821,8 @@ firefox_home_page:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3470
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9563
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9563
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -834,8 +834,8 @@ firefox_home_page:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3470
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9563
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9563
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -847,8 +847,8 @@ firefox_home_page:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3470
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9563
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9563
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -868,10 +868,10 @@ library:
       - downloads-panel
       - sync-panel
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8035
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8035
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8152
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8152
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -891,7 +891,7 @@ legacy.ids:
       - https://jira.mozilla.com/browse/FXIOS-1415
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1635427
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8522#issuecomment-846313960
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8522#issuecomment-846313960
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: never
@@ -905,9 +905,9 @@ deletion:
     send_in_pings:
       - deletion-request
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/6933
+      - https://github.com/mozilla-mobile/decentr-ios/issues/6933
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7629#issuecomment-723312428
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7629#issuecomment-723312428
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: never
@@ -920,10 +920,10 @@ page_action_menu:
         Counts the number of times a user taps Share Page With in the
         page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -933,10 +933,10 @@ page_action_menu:
         Counts the number of times a user taps Add to Reading List
         in the page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -946,10 +946,10 @@ page_action_menu:
         Counts the number of times a user taps Send to Device
         in the page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -959,10 +959,10 @@ page_action_menu:
         Counts the number of times a user taps Copy Address
         in the page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -972,10 +972,10 @@ page_action_menu:
         Counts the number of times a user taps Report Site Issue
         in the page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -985,10 +985,10 @@ page_action_menu:
         Counts the number of times a user taps Find in Page
         in the page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -998,10 +998,10 @@ page_action_menu:
         Counts the number of times a user taps Request Desktop Site
         in the page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1011,10 +1011,10 @@ page_action_menu:
         Counts the number of times a user taps Request Mobile Site
         in the page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1024,10 +1024,10 @@ page_action_menu:
         Counts the number of times a user taps Pin to Top Sites
         in the page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1037,10 +1037,10 @@ page_action_menu:
         Counts the number of times a user taps Pin to Top Sites
         in the page action menu
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8147
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8147
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8167
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8167
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1051,13 +1051,13 @@ pocket:
     type: labeled_counter
     description: |
         Counts when a user opens Pocket article from
-        Firefox Home Pocket feed.
+        Decentr Home Pocket feed.
         The label is position of tile i.e. 0,1,2...
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8481
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8481
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8662
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8662
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1065,12 +1065,12 @@ pocket:
     type: counter
     description: |
         Counts when a user gets to pocket section
-        on Firefox Home
+        on Decentr Home
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8481
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8481
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8662
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8662
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1078,15 +1078,15 @@ pocket:
     type: labeled_counter
     description: |
       Records when a user opens Pocket article from
-      Firefox Home Pocket feed, with a home page origin.
+      Decentr Home Pocket feed, with a home page origin.
     labels:
       - zero-search
       - origin-other
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9308
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9308
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9494
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9494
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1112,7 +1112,7 @@ preferences:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1128,7 +1128,7 @@ preferences:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1136,12 +1136,12 @@ preferences:
     type: string
     description: |
       The setting a user chooses as their Home page. By default,
-      it is initially set to Firefox Home.
+      it is initially set to Decentr Home.
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1739
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8887
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8887
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1153,7 +1153,7 @@ preferences:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1165,7 +1165,7 @@ preferences:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1177,7 +1177,7 @@ preferences:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1192,7 +1192,7 @@ qr_code:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1215,7 +1215,7 @@ reading_list:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1228,7 +1228,7 @@ reading_list:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1246,7 +1246,7 @@ reading_list:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1261,7 +1261,7 @@ reader_mode:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1273,7 +1273,7 @@ reader_mode:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1286,10 +1286,10 @@ settings_menu:
       Counts the number of times setting as default
       browser menu option is tapped.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7090
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7090
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7090
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7090
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1301,7 +1301,7 @@ search:
     description: |
       The labels for this counter are `{search-engine-name}.{source}`
 
-      If the search engine is bundled with Firefox-iOS, then
+      If the search engine is bundled with Decentr-iOS, then
       `search-engine-name` will be the name of the search engine. If
       it is a custom search engine, the value will be `custom`.
 
@@ -1314,7 +1314,7 @@ search:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1323,13 +1323,13 @@ search:
     lifetime: application
     description: |
       The default search engine identifier if the search engine is
-      pre-loaded with Firefox-iOS.  If it's a custom search engine,
+      pre-loaded with Decentr-iOS.  If it's a custom search engine,
       then the value will be 'custom'.
     bugs:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1342,7 +1342,7 @@ search:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1351,10 +1351,10 @@ search:
     description: |
       Records the type of interaction a user has on SERP pages.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7602
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7602
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7702
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7702
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1367,7 +1367,7 @@ search:
       - https://jira.mozilla.com/browse/FXIOS-1223
     data_reviews:
       - https://jira.mozilla.com/browse/FXIOS-1223
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1380,10 +1380,10 @@ sync:
         Counts the number of times a user opens
         synced tab
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8035
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8035
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8152
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8152
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1394,10 +1394,10 @@ sync:
         on sign in to sync button in sync
         library view
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8035
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8035
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8152
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8152
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1407,10 +1407,10 @@ sync:
         Counts the number of times a user taps
         on create account button in sync library view
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/8035
+      - https://github.com/mozilla-mobile/decentr-ios/issues/8035
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8152
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8152
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1433,7 +1433,7 @@ tabs:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1450,7 +1450,7 @@ tabs:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1467,7 +1467,7 @@ tabs:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1481,10 +1481,10 @@ tabs:
       - normal-tab
       - private-tab
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7008
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7008
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7008
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7008
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1494,10 +1494,10 @@ tabs:
       Counts the number of times the add new tab button is
       pressed
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/6886
+      - https://github.com/mozilla-mobile/decentr-ios/issues/6886
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/6886
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/issues/6886
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1506,10 +1506,10 @@ tabs:
     description: |
       Recorded when a user clicks an open tab
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7526
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7526
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7635
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7635
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1518,10 +1518,10 @@ tabs:
     description: |
       Recorded when a user opens the tab tray
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7526
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7526
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7635
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7635
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1530,10 +1530,10 @@ tabs:
     description: |
       Recorded when a user closes the tab tray
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7526
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7526
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7635
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7635
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1545,8 +1545,8 @@ tabs:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3166
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9136
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9136
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1555,9 +1555,9 @@ tabs:
     description: |
       Record the number of URI's visited by the user.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9158
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9158
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9504
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9504
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: never
@@ -1568,8 +1568,8 @@ tabs:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-2906
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9134
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9134
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     extra_keys:
@@ -1601,8 +1601,8 @@ tabs:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-2906
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9134
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9134
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1614,8 +1614,8 @@ tabs:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3141
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9267
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9267
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1625,9 +1625,9 @@ tabs:
       This counts the number of times a user taps the back
       button on a tab's toolbar.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9278
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9278
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9785
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9785
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1637,9 +1637,9 @@ tabs:
       This counts the number of times a user navigates back in tab
       history by swiping from the left edge of the device to the right.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9278
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9278
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9785
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9785
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1649,9 +1649,9 @@ tabs:
       This counts the number of times a user taps the forward
       button on a tab's toolbar.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9278
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9278
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9785
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9785
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1661,9 +1661,9 @@ tabs:
       This counts the number of times a user taps the reload
       button in the URL bar.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9278
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9278
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9785
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9785
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1679,7 +1679,7 @@ theme:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1695,7 +1695,7 @@ tracking_protection:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1710,7 +1710,7 @@ tracking_protection:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
     data_reviews:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1644846
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1723,10 +1723,10 @@ widget:
     description: |
       Counts how many times the medium tabs widget opens url
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7097
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7097
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7681
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7681
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1735,10 +1735,10 @@ widget:
     description: |
       Counts how many times the large tabs widget opens url
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7097
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7097
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7681
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7681
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1746,12 +1746,12 @@ widget:
     type: counter
     description: |
       Counts how many times small quick action
-      widget opens firefox for regular search
+      widget opens decentr for regular search
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7097
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7097
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7681
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7681
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1759,12 +1759,12 @@ widget:
     type: counter
     description: |
       Counts how many times medium quick action
-      widget opens firefox for regular search
+      widget opens decentr for regular search
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7097
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7097
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7681
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7681
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1772,12 +1772,12 @@ widget:
     type: counter
     description: |
        Counts how many times medium quick action
-       widget opens firefox for private search
+       widget opens decentr for private search
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7097
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7097
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7681
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7681
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1787,10 +1787,10 @@ widget:
       Counts how many times medium quick action
       widget opens copied links
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7097
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7097
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7681
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7681
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1800,10 +1800,10 @@ widget:
       Counts how many times medium quick action
       widget closes private tabs
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7097
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7097
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7681
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7681
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1812,10 +1812,10 @@ widget:
     description: |
       Counts how many times user opens top site tabs
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7097
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7097
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/7681
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/7681
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1837,7 +1837,7 @@ wallpaper_analytics:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3487
     data_reviews:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3487
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9930
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9930
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1860,7 +1860,7 @@ wallpaper_analytics:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3487
     data_reviews:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3487
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9930
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9930
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1883,7 +1883,7 @@ wallpaper_analytics:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3487
     data_reviews:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-3487
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9930
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9930
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1901,8 +1901,8 @@ inactive_tabs_tray:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1738
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8799
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8799
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1913,8 +1913,8 @@ inactive_tabs_tray:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1738
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8799
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8799
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1926,8 +1926,8 @@ inactive_tabs_tray:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1942
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8799
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8799
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1939,8 +1939,8 @@ inactive_tabs_tray:
     bugs:
       - https://mozilla-hub.atlassian.net/browse/FXIOS-1877
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8799
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8799
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1954,10 +1954,10 @@ browser_search:
     send_in_pings:
       - metrics
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7616
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7616
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8970
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8970
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1969,10 +1969,10 @@ browser_search:
     send_in_pings:
       - metrics
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/7616
+      - https://github.com/mozilla-mobile/decentr-ios/issues/7616
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/8970
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9673
+      - https://github.com/mozilla-mobile/decentr-ios/pull/8970
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9673
     notification_emails:
       - fx-ios-data-stewards@mozilla.com
     expires: "2022-07-01"
@@ -1984,9 +1984,9 @@ installed_mozilla_products:
     description: |
        If Klar is installed on the users's device.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9089
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9089
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9090
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9090
     data_sensitivity:
       - technical
       - interaction
@@ -1999,9 +1999,9 @@ installed_mozilla_products:
     description: |
        If Focus is installed on the users's device.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9089
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9089
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9090
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9090
     data_sensitivity:
       - technical
       - interaction
@@ -2019,9 +2019,9 @@ device:
        True if the device support device owner authentication
        with either biometrics or a passcode.
     bugs:
-      - https://github.com/mozilla-mobile/firefox-ios/issues/9374
+      - https://github.com/mozilla-mobile/decentr-ios/issues/9374
     data_reviews:
-      - https://github.com/mozilla-mobile/firefox-ios/pull/9376
+      - https://github.com/mozilla-mobile/decentr-ios/pull/9376
     data_sensitivity:
       - technical
     notification_emails:

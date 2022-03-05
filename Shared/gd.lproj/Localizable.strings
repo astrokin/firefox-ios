@@ -43,10 +43,10 @@
 /* Title for the Jump Back In section. This section allows users to jump back in to a recently viewed tab */
 "ActivityStream.JumpBackIn.SectionTitle" = "Till gu far an robh thu";
 
-/* On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar. */
+/* On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar. */
 "ActivityStream.JumpBackIn.TabGroup.SiteCount" = "Tabaichean: %d";
 
-/* On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did. */
+/* On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did. */
 "ActivityStream.JumpBackIn.TabGroup.Title" = "Lorg a rinn thu airson “%@”";
 
 /* A string used to signify the start of the Recently Saved section in Home Screen. */
@@ -191,7 +191,7 @@
 /* Description of what a breach is */
 "BreachAlerts.Description" = "Chaidh faclan-faire a ghoid no leigeil air èalaidh on turas mu dheireadh a dh’atharraich thu am facal-faire agad. Airson an cunntas seo a dhìon, clàraich a-steach dhan làrach agus atharraich am facal-faire agad.";
 
-/* Link to monitor.firefox.com to learn more about breached passwords */
+/* Link to monitor.decentr.com to learn more about breached passwords */
 "BreachAlerts.LearnMoreButton" = "Barrachd fiosrachaidh";
 
 /* Leads to a link to the breached website */
@@ -270,7 +270,7 @@
 "ContextMenu.ShareLinkButtonTitle" = "Co-roinn an ceangal";
 
 /* Contextual hints are little popups that appear for the users informing them of new features. This one talks about the more personalized home feature. */
-"ContextualHints.Homepage.PersonalizedHome" = "Leis gu bheil duilleag-dhachaigh phearsantaichte agad ann am Firefox a-nis, tha e nas fhasa cumail a’ dol far an do stad thu roimhe. Faigh greim air na tabaichean, comharran-lìn is toraidhean-luirg a bh’ agad o chionn goirid.";
+"ContextualHints.Homepage.PersonalizedHome" = "Leis gu bheil duilleag-dhachaigh phearsantaichte agad ann am Decentr a-nis, tha e nas fhasa cumail a’ dol far an do stad thu roimhe. Faigh greim air na tabaichean, comharran-lìn is toraidhean-luirg a bh’ agad o chionn goirid.";
 
 /* Contextual hints are little popups that appear for the users informing them of new features. This one talks about the inactive tabs feature. */
 "ContextualHints.TabTray.InactiveTabs" = "Thèid tabaichean nach tug thu sùil orra fad cola-deug a ghluasad an-seo.";
@@ -285,7 +285,7 @@
 "Could not load page." = "Cha b’ urrainn dhuinn an duilleag a luchdadh.";
 
 /* Description for the new dark mode change in the version 22 app release. It describes the new automatic dark theme and how to change the theme settings. */
-"CoverSheet.v22.DarkMode.Description" = "Dùisgidh Firefox an t-ùrlar dorcha gu fèin-obrachail a-nis air iOS 13 ma bhios am fòn agad sa mhodh dorcha. Airson an giùlan seo atharrachadh, tadhail air “Roghainnean” > “An t-ùrlar”.";
+"CoverSheet.v22.DarkMode.Description" = "Dùisgidh Decentr an t-ùrlar dorcha gu fèin-obrachail a-nis air iOS 13 ma bhios am fòn agad sa mhodh dorcha. Airson an giùlan seo atharrachadh, tadhail air “Roghainnean” > “An t-ùrlar”.";
 
 /* Title for the new dark mode change in the version 22 app release. */
 "CoverSheet.v22.DarkMode.Title" = "Tha an t-ùrlar dorcha a’ gabhail a-staigh meur-chlàr dorcha agus sgrìn spladh dorch a-nis.";
@@ -340,8 +340,8 @@
 /* Alert dialog title when the user taps the cancel download icon. */
 "Downloads.CancelDialog.Title" = "Sguir dhen luchdadh a-nuas";
 
-/* The message displayed to a user when they try and perform the download of an asset that Firefox cannot currently handle. */
-"Downloads.Error.Message" = "Chan urrainnear luchdadh a-nuas ann am Firefox fhathast.";
+/* The message displayed to a user when they try and perform the download of an asset that Decentr cannot currently handle. */
+"Downloads.Error.Message" = "Chan urrainnear luchdadh a-nuas ann am Decentr fhathast.";
 
 /* The label text in the Download Cancelled toast for showing confirmation that the download was cancelled. */
 "Downloads.Toast.Cancelled.LabelText" = "Sguireadh dhen luchdadh a-nuas";
@@ -386,7 +386,7 @@
 "ErrorPages.AdvancedWarning2.Text" = "Dh’fhaoidte gu bheil e air a dhroch-rèiteachadh no gu bheil cuideigin a’ toirt ionnsaigh air. Lean air d’ adhart ma tha thu leagte ris a leithid a chunnart.";
 
 /* Warning text on the certificate error page */
-"ErrorPages.CertWarning.Description" = "Rinn an neach aig a bheil %@ droch-rèiteachadh air an làrach-lìn aca. Cha do rinn Firefox ceangal ris an làrach-lìn seo air eagal ’s gun rachadh dàta a ghoid ort.";
+"ErrorPages.CertWarning.Description" = "Rinn an neach aig a bheil %@ droch-rèiteachadh air an làrach-lìn aca. Cha do rinn Decentr ceangal ris an làrach-lìn seo air eagal ’s gun rachadh dàta a ghoid ort.";
 
 /* Title on the certificate error page */
 "ErrorPages.CertWarning.Title" = "Chan eil earbsa sa cheangal";
@@ -406,10 +406,10 @@
 /* Tile title for Facebook */
 "Facebook" = "Facebook";
 
-/* Title for firefox about:home page in tab history list */
-"Firefox.HomePage.Title" = "Duilleag mhòr Firefox";
+/* Title for decentr about:home page in tab history list */
+"Decentr.HomePage.Title" = "Duilleag mhòr Decentr";
 
-/* A button at bottom of the Firefox homepage that, when clicked, takes users straight to the settings options, where they can customize the Firefox Home page */
+/* A button at bottom of the Decentr homepage that, when clicked, takes users straight to the settings options, where they can customize the Decentr Home page */
 "FirefoxHome.CustomizeHomeButton.Title" = "Gnàthaich an duilleag-dhachaigh";
 
 /* Accessibility Label for the tab toolbar Forward button */
@@ -421,16 +421,16 @@
 /* Label stating your account is not verified */
 "FxA.AccountVerificationRequired" = "Feum air dearbhadh a’ chunntais";
 
-/* Message explaining that user needs to check email for Firefox Account verfication link. */
-"FxA.AccountVerificationRequiredSurface" = "Feumaidh tu %@ a dhearbhadh. Thoir sùil air a’ phost-d agad airson a’ cheangail dearbhaidh o Firefox.";
+/* Message explaining that user needs to check email for Decentr Account verfication link. */
+"FxA.AccountVerificationRequiredSurface" = "Feumaidh tu %@ a dhearbhadh. Thoir sùil air a’ phost-d agad airson a’ cheangail dearbhaidh o Decentr.";
 
 /* Button label to connect another device to Sync */
 "FxA.ConnectAnotherDevice" = "Ceangail uidheam eile ris";
 
-/* Settings section title for Firefox Account */
-"FxA.FirefoxAccount" = "Cunntas Firefox";
+/* Settings section title for Decentr Account */
+"FxA.FirefoxAccount" = "Cunntas Decentr";
 
-/* Button label to go to Firefox Account settings */
+/* Button label to go to Decentr Account settings */
 "FxA.ManageAccount" = "Stiùirich an cunntas ⁊ na h-uidheaman";
 
 /* Label when no internet is present */
@@ -440,15 +440,15 @@
 "FxA.OpenSyncPreferences" = "Fosgail na roghainnean sioncronachaidh";
 
 /* Instructions shown on qr code scanning view */
-"fxa.qr-scanning-view.instructions" = "Sganaich an còd QR a chì thu aig firefox.com/pair";
+"fxa.qr-scanning-view.instructions" = "Sganaich an còd QR a chì thu aig decentr.com/pair";
 
-/* Remove button is displayed on firefox account page under certain scenarios where user would like to remove their account. */
+/* Remove button is displayed on decentr account page under certain scenarios where user would like to remove their account. */
 "FxA.RemoveAccount" = "Thoir air falbh";
 
 /* Description string for alert view that gets presented when user tries to remove an account. */
-"FxA.RemoveAccountAlertMessage" = "Thoir air falbh an cunntas Firefox a tha co-cheangailte ris an uidheam seo airson clàradh a-steach mar chleachdaiche eile.";
+"FxA.RemoveAccountAlertMessage" = "Thoir air falbh an cunntas Decentr a tha co-cheangailte ris an uidheam seo airson clàradh a-steach mar chleachdaiche eile.";
 
-/* Remove account alert is the final confirmation before user removes their firefox account */
+/* Remove account alert is the final confirmation before user removes their decentr account */
 "FxA.RemoveAccountAlertTitle" = "Thoir an cunntas air falbh";
 
 /* Button label to resend email */
@@ -458,13 +458,13 @@
 "fxa.signin.camera-signin" = "Clàraich a-steach leis a’ chamara agad";
 
 /* FxA sign in create account label. */
-"fxa.signin.create-account-pt-1" = "Sioncronaich Firefox eadar uidheaman le cunntas.";
+"fxa.signin.create-account-pt-1" = "Sioncronaich Decentr eadar uidheaman le cunntas.";
 
 /* FxA sign in create account label. This will be linked to the site to create an account. */
-"fxa.signin.create-account-pt-2" = "Cruthaich cunntas Firefox.";
+"fxa.signin.create-account-pt-2" = "Cruthaich cunntas Decentr.";
 
 /* FxA sign in view qr code instructions */
-"fxa.signin.qr-link-instruction" = "Fosgail Firefox air a’ choimpiutair agad is tadhail air firefox.com/pair";
+"fxa.signin.qr-link-instruction" = "Fosgail Decentr air a’ choimpiutair agad is tadhail air decentr.com/pair";
 
 /* FxA sign in view qr code scan button */
 "fxa.signin.ready-to-scan" = "Deiseil airson sganadh";
@@ -481,14 +481,14 @@
 /* Label explaining what sync does */
 "FxA.SyncExplain" = "Faigh na tabaichean, comharran-lìn is faclan-faire o na h-uidheaman eile agad.";
 
-/* Button label to Sync your Firefox Account */
+/* Button label to Sync your Decentr Account */
 "FxA.SyncNow" = "Sioncronaich an-dràsta";
 
 /* Call to action for sign into sync button */
 "FxA.TakeYourWebWithYou" = "Thoir leat an lìon";
 
 /* Title of a notification displayed when another device has connected to FxA. %@ refers to the name of the newly connected device. */
-"FxAPush_DeviceConnected_body" = "Cheangail gleus sioncronachadh Firefox ri %@";
+"FxAPush_DeviceConnected_body" = "Cheangail gleus sioncronachadh Decentr ri %@";
 
 /* Title of a notification displayed when another device has connected to FxA. */
 "FxAPush_DeviceConnected_title" = "Rinn gleus an t-sioncronachaidh ceangal";
@@ -497,7 +497,7 @@
 "FxAPush_DeviceDisconnected_body" = "Chaidh %@ a dhì-cheangal.";
 
 /* Body of a notification displayed when this device has been disconnected from FxA by another device. */
-"FxAPush_DeviceDisconnected_ThisDevice_body" = "Chaidh an t-uidheam seo a dhì-cheangal o ghleus sioncronachadh Firefox.";
+"FxAPush_DeviceDisconnected_ThisDevice_body" = "Chaidh an t-uidheam seo a dhì-cheangal o ghleus sioncronachadh Decentr.";
 
 /* Title of a notification displayed when this device has been disconnected by another device. */
 "FxAPush_DeviceDisconnected_ThisDevice_title" = "Chaidh gleus an t-sioncronachaidh a dhì-cheangal";
@@ -506,7 +506,7 @@
 "FxAPush_DeviceDisconnected_title" = "Chaidh gleus an t-sioncronachaidh a dhì-cheangal";
 
 /* Body of a notification displayed when unnamed device has been disconnected from FxA. */
-"FxAPush_DeviceDisconnected_UnknownDevice_body" = "Dhì-cheangail uidheam o ghleus sioncronachadh Firefox";
+"FxAPush_DeviceDisconnected_UnknownDevice_body" = "Dhì-cheangail uidheam o ghleus sioncronachadh Decentr";
 
 /* A re-worded offer about Sync, displayed when the Sync home panel is empty, that emphasizes one-way data transfer, not syncing. */
 "Get your open tabs, bookmarks, and passwords from your other devices." = "Faigh tabaichean fosgailte, comharran-lìn is faclan-faire o uidheaman eile agad.";
@@ -554,7 +554,7 @@
 "HistoryPanel.EmptySyncedTabsPanelTabSyncDisabledState.Description" = "Cuir air sioncronachadh nan tabaichean airson cothrom fhaighinn air na tabaichean agad o uidheaman eile.";
 
 /* Title for the empty synced tabs state in the History Panel */
-"HistoryPanel.EmptySyncedTabsState.Title" = "Sioncronachadh Firefox";
+"HistoryPanel.EmptySyncedTabsState.Title" = "Sioncronachadh Decentr";
 
 /* Title for the Back to History button in the History Panel */
 "HistoryPanel.HistoryBackButton.Title" = "An eachdraidh";
@@ -644,7 +644,7 @@
 "InactiveTabs.TabTray.AutoClosePrompt.ButtonTitle" = "Cuir gleus an fhèin-dùnaidh air";
 
 /* In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This string describes what happens if you elect to turn on this option. */
-"InactiveTabs.TabTray.AutoClosePrompt.Content" = "Dùnaidh Firefox tabaichean nach tug thu sùil orra thairis air a’ mhìos seo chaidh.";
+"InactiveTabs.TabTray.AutoClosePrompt.Content" = "Dùnaidh Decentr tabaichean nach tug thu sùil orra thairis air a’ mhìos seo chaidh.";
 
 /* In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This is the title of that Auto Close prompt */
 "InactiveTabs.TabTray.AutoClosePrompt.Title" = "A bheil thu airson an dùnadh an dèidh mìos?";
@@ -673,10 +673,10 @@
 /* Light theme setting in Reading View settings */
 "Light" = "Sorcha";
 
-/* Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Decentr reader mode from another app. */
 "Load original page" = "Luchdaich an duilleag thùsail";
 
-/* Message displayed when the reader mode page is loading. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Message displayed when the reader mode page is loading. This message will appear only when sharing to Decentr reader mode from another app. */
 "Loading content…" = "A’ luchdadh na susbaint…";
 
 /* Authentication prompt log in button */
@@ -701,13 +701,13 @@
 "Logins.Onboarding.Message" = "Tha na clàraidhean a-steach is faclan-faire agad gan dìon le ID aodainn, ID suathaidh no còd-faire uidheim a-nis.";
 
 /* Warning message shown when you try to enable or use native AutoFill without a device passcode setup */
-"Logins.PasscodeRequirement.Warning" = "Feumaidh còd-faire uidheim a bhith an comas agad mus urrainn dhut gleus an fhèin-lìonaidh aig Firefox a chleachdadh.";
+"Logins.PasscodeRequirement.Warning" = "Feumaidh còd-faire uidheim a bhith an comas agad mus urrainn dhut gleus an fhèin-lìonaidh aig Decentr a chleachdadh.";
 
 /* Label displaying welcome view tagline under the title */
 "Logins.WelcomeView.Tagline" = "Thoir leat na faclan-faire agad ge be càit an tèid thu";
 
 /* Label displaying welcome view title */
-"Logins.WelcomeView.Title2" = "Fèin-lìon faclan-faire Firefox";
+"Logins.WelcomeView.Title2" = "Fèin-lìon faclan-faire Decentr";
 
 /* Title of the big blue button to enable AutoFill */
 "Logins.WelcomeView.TurnOnAutoFill" = "Cuir gleus an fhèin-lìonaidh air";
@@ -755,7 +755,7 @@
 "LoginsList.LoginsListSearchPlaceholder" = "Criathrag";
 
 /* Label shown when there are no logins to list */
-"LoginsList.NoLoginsFound.Description" = "Nochdaidh clàraidhean a-steach a shàbhail thu an-seo. Ma shàbhail thu clàradh a-steach ann am Firefox air uidheam eile, clàraich a-steach dhan chunntas Firefox agad.";
+"LoginsList.NoLoginsFound.Description" = "Nochdaidh clàraidhean a-steach a shàbhail thu an-seo. Ma shàbhail thu clàradh a-steach ann am Decentr air uidheam eile, clàraich a-steach dhan chunntas Decentr agad.";
 
 /* Label shown when there are no logins saved */
 "LoginsList.NoLoginsFound.Title" = "Cha deach clàradh a-steach a lorg";
@@ -779,7 +779,7 @@
 "LoginsList.Title" = "CLÀRAIDHEAN A-STEACH A SHÀBHAILEADH";
 
 /* Restore Tabs Prompt Description */
-"Looks like Firefox crashed previously. Would you like to restore your tabs?" = "Tha coltas gun do thuislich Firefox roimhe. A bheil thu ag iarraidh nan tabaichean air ais?";
+"Looks like Decentr crashed previously. Would you like to restore your tabs?" = "Tha coltas gun do thuislich Decentr roimhe. A bheil thu ag iarraidh nan tabaichean air ais?";
 
 /* Name for Mark as read button in reader mode
    Title for the button that marks a reading list item as read */
@@ -823,10 +823,10 @@
 "Menu.EnhancedTrackingProtectionOn.Title" = "Tha an dìon adhartach o thracadh air air an làrach seo.";
 
 /* Description for having standard ETP protection with ITP offered in iOS14+ */
-"Menu.EnhancedTrackingProtectionStandardWithITP.Title" = "Bacaidh Firefox tracaichean thar-làraich, tracaichean sòisealta, criopto-mhèinneadairean agus lorgaichean-meòir.";
+"Menu.EnhancedTrackingProtectionStandardWithITP.Title" = "Bacaidh Decentr tracaichean thar-làraich, tracaichean sòisealta, criopto-mhèinneadairean agus lorgaichean-meòir.";
 
 /* Description for having strict ETP protection with ITP offered in iOS14+ */
-"Menu.EnhancedTrackingProtectionStrictWithITP.Title" = "Bacaidh Firefox tracaichean thar-làraich, tracaichean sòisealta, criopto-mhèinneadairean, lorgaichean-meòir agus susbaint tracaidh.";
+"Menu.EnhancedTrackingProtectionStrictWithITP.Title" = "Bacaidh Decentr tracaichean thar-làraich, tracaichean sòisealta, criopto-mhèinneadairean, lorgaichean-meòir agus susbaint tracaidh.";
 
 /* Label for the button, displayed in the menu, takes you to to History screen when pressed. */
 "Menu.History.Label" = "An eachdraidh";
@@ -892,7 +892,7 @@
 "Menu.TrackingProtection.Details.Verifier" = "Air a dhearbhadh le %@";
 
 /* Message in menu when no trackers blocked. */
-"Menu.TrackingProtection.NoTrackersBlockedTitle" = "Cha do mhothaich sinn do thracaiche as aithne dha Firefox air an duilleag seo.";
+"Menu.TrackingProtection.NoTrackersBlockedTitle" = "Cha do mhothaich sinn do thracaiche as aithne dha Decentr air an duilleag seo.";
 
 /* The title for tracking protection settings */
 "Menu.TrackingProtection.ProtectionSettings.Title" = "Roghainnean an dìon";
@@ -907,7 +907,7 @@
 "Menu.TrackingProtectionBlockedSocial.Title" = "Tracaichean sòisealta";
 
 /* Description of the Tracking protection menu when TP is blocking parts of the page */
-"Menu.TrackingProtectionBlocking.Description" = "Tha Firefox a’ bacadh nan rudan air an duilleag a dhèanadh tracadh ort.";
+"Menu.TrackingProtectionBlocking.Description" = "Tha Decentr a’ bacadh nan rudan air an duilleag a dhèanadh tracadh ort.";
 
 /* The description of the Tracking Protection menu item when tracking is enabled */
 "Menu.TrackingProtectionBlockingDisabled.Description" = "Bac tracaichean air loidhne";
@@ -1009,33 +1009,33 @@
 /* Restore Tabs Affirmative Action */
 "Okay" = "Ceart ma-thà";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the title for the button, on the bottom of the card, used to get back to browsing on Firefox by dismissing the onboarding card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the title for the button, on the bottom of the card, used to get back to browsing on Decentr by dismissing the onboarding card */
 "Onboarding.WhatsNew.Button.Title" = "Tòisich air brabhsadh";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is a general description that appears under the title for what the card is about. */
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is a general description that appears under the title for what the card is about. */
 "Onboarding.WhatsNew.Description" = "Tha e nas fhasa a-nis leantainn ort far an robh thu roimhe.";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is the description for the Jump Back In bullet point */
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is the description for the Jump Back In bullet point */
 "Onboarding.WhatsNew.PersonalizedHome.Description" = "Leum gu na tabaichean fosgailte, comharran-lìn is eachdraidh a’ bhrabhsaidh agad.";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the descripion of the Recent Searches bullet point on the card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the descripion of the Recent Searches bullet point on the card */
 "Onboarding.WhatsNew.RecentSearches.Description" = "Ath-thadhail air na luirg a rinn thu o chionn goirid air an duilleag-dhachaigh agad.";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the title for the Recent Searches bullet point on the card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the title for the Recent Searches bullet point on the card */
 "Onboarding.WhatsNew.RecentSearches.Title" = "Luirg o chionn goirid";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the description for the Tab Group bullet point on the card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the description for the Tab Group bullet point on the card */
 "Onboarding.WhatsNew.TabGroups.Description" = "Duilleagan on aon lorg còmhla ann am buidheann.";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is the title for the Tab Group bullet point on the card */
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is the title for the Tab Group bullet point on the card */
 "Onboarding.WhatsNew.TabGroups.Title" = "Buidhnean thabaichean nas sgiobalta";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is the title for the Jump Back In bullet point on the card
-   The title for the new onboarding card letting users know what is new in Firefox iOS */
-"Onboarding.WhatsNew.Title" = "Na tha ùr ann am Firefox";
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is the title for the Jump Back In bullet point on the card
+   The title for the new onboarding card letting users know what is new in Decentr iOS */
+"Onboarding.WhatsNew.Title" = "Na tha ùr ann am Decentr";
 
 /* Title for prompt displayed to user after the app crashes */
-"Oops! Firefox crashed" = "Ìoc! Thuislich Firefox";
+"Oops! Decentr crashed" = "Ìoc! Thuislich Decentr";
 
 /* See http://mzl.la/1LXbDOL */
 "Open articles in Reader View by tapping the book icon when it appears in the title bar." = "Fosgail artaigilean san t-sealladh leughaidh le gnogag air ìomhaigheag an leabhair nuair a nochdas e ann am bàr an tiotail.";
@@ -1046,8 +1046,8 @@
 /* Toggle tabs syncing setting */
 "Open Tabs" = "Tabaichean fosgailte";
 
-/* The message displayed to a user when they try to open a URL that cannot be handled by Firefox, or any external app. */
-"OpenURL.Error.Message" = "Chan urrainn dha Firefox an duilleag fhosgladh a chionn ’s gu bheul an seòladh cearr.";
+/* The message displayed to a user when they try to open a URL that cannot be handled by Decentr, or any external app. */
+"OpenURL.Error.Message" = "Chan urrainn dha Decentr an duilleag fhosgladh a chionn ’s gu bheul an seòladh cearr.";
 
 /* Title of the message shown when the user attempts to navigate to an invalid link. */
 "OpenURL.Error.Title" = "Cha ghabh an duilleag fhosgladh";
@@ -1062,19 +1062,19 @@
 "Password" = "Facal-faire";
 
 /* Error message shown in the remote tabs panel */
-"PasswordAutoFill.NoPasswordsFoundTitle" = "Chan eil ainm-cleachdaiche ’s facal-faire sam bith ann a chaidh a shioncronachadh a-nall on chunntas Firefox agad";
+"PasswordAutoFill.NoPasswordsFoundTitle" = "Chan eil ainm-cleachdaiche ’s facal-faire sam bith ann a chaidh a shioncronachadh a-nall on chunntas Decentr agad";
 
 /* Header for the list of credentials table */
 "PasswordAutoFill.PasswordsListTitle" = "Teisteasan a tha ri làimh:";
 
-/* Title of the extension that shows firefox passwords */
-"PasswordAutoFill.SectionTitle" = "Teisteasan Firefox";
+/* Title of the extension that shows decentr passwords */
+"PasswordAutoFill.SectionTitle" = "Teisteasan Decentr";
 
 /* See http://mzl.la/1G7uHo7 */
 "PhotoLibrary.FirefoxWouldLikeAccessMessage" = "Bheir seo comas dhut an dealbh a shàbhaladh ann an albam a’ chamara agad.";
 
 /* See http://mzl.la/1G7uHo7 */
-"PhotoLibrary.FirefoxWouldLikeAccessTitle" = "Bu mhath le Firefox cothrom air na dealbhan agad";
+"PhotoLibrary.FirefoxWouldLikeAccessTitle" = "Bu mhath le Decentr cothrom air na dealbhan agad";
 
 /* Button for closing the menu action sheet */
 "PhotonMenu.close" = "Dùin";
@@ -1082,7 +1082,7 @@
 /* Privacy section title */
 "Privacy" = "Prìobhaideachd";
 
-/* Show Firefox Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/firefox/ */
+/* Show Decentr Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/decentr/ */
 "Privacy Policy" = "Am poileasaidh prìobhaideachd";
 
 /* This is the value for a label that indicates if a user is on an unencrypted website. */
@@ -1155,7 +1155,7 @@
 "ScanQRCode.InvalidDataError.Message" = "Tha an dàta mì-dhligheach";
 
 /* Text of the prompt user to setup the camera authorization. */
-"ScanQRCode.PermissionError.Message" = "Thoir inntrigeadh do chamara an uidheim agad dha Firefox ann an “Roghainnean” » “Prìobhaideachd” » “Camara”.";
+"ScanQRCode.PermissionError.Message" = "Thoir inntrigeadh do chamara an uidheim agad dha Decentr ann an “Roghainnean” » “Prìobhaideachd” » “Camara”.";
 
 /* Title for the QR code scanner view. */
 "ScanQRCode.View.Title" = "Sganaich an còd QR";
@@ -1239,19 +1239,19 @@
 "SendTo.NavBar.Title" = "Cuir an taba";
 
 /* Error message shown in the remote tabs panel */
-"SendTo.NoDevicesFound.Message" = "Cha do cheangail thu uidheam sam bith eile ris a’ chunntas Firefox seo as urrainn dhut sioncronachadh.";
+"SendTo.NoDevicesFound.Message" = "Cha do cheangail thu uidheam sam bith eile ris a’ chunntas Decentr seo as urrainn dhut sioncronachadh.";
 
 /* See http://mzl.la/1ISlXnU */
-"SendTo.NotSignedIn.Message" = "Fosgail na roghainnean ann am Firefox is clàraich a-steach a leantainn air adhart.";
+"SendTo.NotSignedIn.Message" = "Fosgail na roghainnean ann am Decentr is clàraich a-steach a leantainn air adhart.";
 
 /* See http://mzl.la/1ISlXnU */
-"SendTo.NotSignedIn.Title" = "Cha do rinn thu clàradh a-steach dhan chunntas Firefox agad.";
+"SendTo.NotSignedIn.Title" = "Cha do rinn thu clàradh a-steach dhan chunntas Decentr agad.";
 
 /* Navigation bar button to Send the current page to a device */
 "SendTo.SendAction.Text" = "Cuir";
 
-/* The text for the button on the Send to Device page if you are not signed in to Firefox Accounts. */
-"SendTo.SignIn.Button" = "Clàraich a-steach gu Firefox";
+/* The text for the button on the Send to Device page if you are not signed in to Decentr Accounts. */
+"SendTo.SignIn.Button" = "Clàraich a-steach gu Decentr";
 
 /* Body of notification shown when the device is sent one or more tabs from an unnamed device. */
 "SentTab_TabArrivingNotification_NoDevice_body" = "Ràinig taba ùr o uidheam eile.";
@@ -1275,7 +1275,7 @@
 "SentTab.NoTabArrivingNotification.body" = "Thoir gnogag airson tòiseachadh";
 
 /* Title of notification received after a spurious message from FxA has been received. */
-"SentTab.NoTabArrivingNotification.title" = "Sioncronachadh Firefox";
+"SentTab.NoTabArrivingNotification.title" = "Sioncronachadh Decentr";
 
 /* Label for an action used to view one or more tabs from a notification. */
 "SentTab.ViewAction.title" = "Sealladh";
@@ -1338,7 +1338,7 @@
 "Settings.DataManagement.Title" = "Stiùireadh dàta";
 
 /* Body of the alert when prompting the user asking to disconnect. */
-"Settings.Disconnect.Body" = "Sguiridh Firefox de shioncronachadh a’ chunntais agad ach cha sguab e às gin dhen dàta brabhsaidh agad air an uidheam seo.";
+"Settings.Disconnect.Body" = "Sguiridh Decentr de shioncronachadh a’ chunntais agad ach cha sguab e às gin dhen dàta brabhsaidh agad air an uidheam seo.";
 
 /* Button displayed at the bottom of settings page allowing users to Disconnect from FxA */
 "Settings.Disconnect.Button" = "Dì-cheangail gleus an t-sioncronachaidh";
@@ -1407,53 +1407,53 @@
 /* Label used for the device name settings section. */
 "Settings.FxA.DeviceName" = "Ainm an uidheim";
 
-/* Label used as a section title in the Firefox Accounts Settings screen. */
+/* Label used as a section title in the Decentr Accounts Settings screen. */
 "Settings.FxA.Sync.SectionName" = "Roghainnean sioncronachaidh";
 
 /* Title displayed in header of the FxA settings panel. */
-"Settings.FxA.Title" = "Cunntas Firefox";
+"Settings.FxA.Title" = "Cunntas Decentr";
 
 /* General settings section title */
 "Settings.General.SectionName" = "Coitcheann";
 
-/* In the settings menu, on the Firefox homepage customization section, this is the description below the section, describing what the options in the section are for. */
-"Settings.Home.Option.Description" = "Tagh susbaint a chì thu air duilleag-dhachaigh Firefox.";
+/* In the settings menu, on the Decentr homepage customization section, this is the description below the section, describing what the options in the section are for. */
+"Settings.Home.Option.Description" = "Tagh susbaint a chì thu air duilleag-dhachaigh Decentr.";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off */
 "Settings.Home.Option.JumpBackIn" = "Till gu far an robh thu";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Decentr homepage on or off */
 "Settings.Home.Option.Pocket" = "Air a mholadh le Pocket";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Decentr homepage on or off */
 "Settings.Home.Option.RecentlySaved" = "Air a shàbhaladh o chionn goirid";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off */
 "Settings.Home.Option.RecentlyVisited" = "Air tadhal orra o chionn goirid";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Decentr homepage on or off */
 "Settings.Home.Option.RecentSearches" = "Luirg o chionn goirid";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Decentr homepage on or off */
 "Settings.Home.Option.Shortcuts" = "Ath-ghoiridean";
 
 /* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage after four hours of inactivity. */
 "Settings.Home.Option.StartAtHome.AfterFourHours" = "An duilleag-dhachaigh an dèidh ceithir uairean a thìde gun ghnìomhachd";
 
-/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Firefox */
+/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Decentr */
 "Settings.Home.Option.StartAtHome.Always" = "Duilleag-dhachaigh";
 
 /* In the settings menu, in the Start at Home customization options, this is text that appears below the section, describing what the section settings do. */
-"Settings.Home.Option.StartAtHome.Description" = "Tagh na chì thu nuair a thilleas tu gu Firefox.";
+"Settings.Home.Option.StartAtHome.Description" = "Tagh na chì thu nuair a thilleas tu gu Decentr.";
 
-/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Firefox */
+/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Decentr */
 "Settings.Home.Option.StartAtHome.Never" = "An taba mu dheireadh";
 
-/* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Firefox Homepage. */
+/* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Decentr Homepage. */
 "Settings.Home.Option.StartAtHome.Title" = "An sgrìn fosglaidh";
 
-/* In the settings menu, this is the title of the Firefox Homepage customization settings section */
-"Settings.Home.Option.Title" = "Duilleag-dhachaigh Firefox";
+/* In the settings menu, this is the title of the Decentr Homepage customization settings section */
+"Settings.Home.Option.Title" = "Duilleag-dhachaigh Decentr";
 
 /* Button in settings to clear the home page. */
 "Settings.HomePage.Clear.Button" = "Falamhaich";
@@ -1504,10 +1504,10 @@
 "Settings.NewTab.Option.CustomizeFooter2" = "Làraichean a shàbhail thu no a thadhail thu orra";
 
 /* The title for the section to customize top sites in the new tab settings page. */
-"Settings.NewTab.Option.CustomizeTitle" = "Gnàthaich dachaigh Firefox";
+"Settings.NewTab.Option.CustomizeTitle" = "Gnàthaich dachaigh Decentr";
 
-/* Option in settings to show Firefox Home when you open a new tab */
-"Settings.NewTab.Option.FirefoxHome" = "Dachaigh Firefox";
+/* Option in settings to show Decentr Home when you open a new tab */
+"Settings.NewTab.Option.FirefoxHome" = "Dachaigh Decentr";
 
 /* Option in the settings to turn off recent bookmarks in the Highlights section */
 "Settings.NewTab.Option.HighlightsBookmarks" = "Comharran-lìn ùra";
@@ -1549,7 +1549,7 @@
 "Settings.NewTab.TopSectionNameFooter" = "Tagh na thèid fhosgladh nuair a dh’fhosglas tu taba ùr";
 
 /* Description displayed under the ”Offer to Open Copied Link” option. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349 */
-"Settings.OfferClipboardBar.Status" = "Nuair a dh’fhosglas mi Firefox";
+"Settings.OfferClipboardBar.Status" = "Nuair a dh’fhosglas mi Decentr";
 
 /* Title of setting to enable the Go to Copied URL feature. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349 */
 "Settings.OfferClipboardBar.Title" = "faighnich a bheil mi airson ceangal a rinn mi lethbhreac dheth fhosgladh";
@@ -1573,7 +1573,7 @@
 "Settings.SendUsage.Link" = "Barrachd fiosrachaidh.";
 
 /* A short description that explains why mozilla collects usage data. */
-"Settings.SendUsage.Message" = "Tha Mozilla an dealas dìreach an dàta a chruinneachadh a dh’fheumas sinn airson Firefox a sholar is a leasachadh dhan a h-uile duine.";
+"Settings.SendUsage.Message" = "Tha Mozilla an dealas dìreach an dàta a chruinneachadh a dh’fheumas sinn airson Decentr a sholar is a leasachadh dhan a h-uile duine.";
 
 /* The title for the setting to send usage data. */
 "Settings.SendUsage.Title" = "Cuir an dàta cleachdaidh";
@@ -1591,7 +1591,7 @@
 "Settings.Siri.OpenTabShortcut" = "Fosgail taba ùr";
 
 /* The description that describes what siri shortcuts are */
-"Settings.Siri.SectionDescription" = "Cleachd ath-ghoiridean Siri airson Firefox fhosgladh gu luath le Siri";
+"Settings.Siri.SectionDescription" = "Cleachd ath-ghoiridean Siri airson Decentr fhosgladh gu luath le Siri";
 
 /* The option that takes you to the siri shortcuts settings page */
 "Settings.Siri.SectionName" = "Ath-ghoiridean Siri";
@@ -1615,7 +1615,7 @@
 "Settings.Studies.Toggle.Link" = "Barrachd fiosrachaidh.";
 
 /* A short description that explains that Mozilla is running studies */
-"Settings.Studies.Toggle.Message" = "Dh’fhaoidte gun stàlaich is ruith Firefox rannsachadh o àm gu àm.";
+"Settings.Studies.Toggle.Message" = "Dh’fhaoidte gun stàlaich is ruith Decentr rannsachadh o àm gu àm.";
 
 /* Toggled OFF to opt-out of studies */
 "Settings.Studies.Toggle.Off" = "Dheth";
@@ -1632,7 +1632,7 @@
 /* In the settings menu, in the Tabs customization section, this is the title for the setting that toggles the Tab Groups feature - where tabs from related searches are grouped - on or off */
 "Settings.Tabs.CustomizeTabsSection.TabGroups" = "Buidhnean thabaichean";
 
-/* In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from firefox hompage */
+/* In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from decentr hompage */
 "Settings.Tabs.CustomizeTabsSection.Title" = "Gnàthaich treidhe nan taba";
 
 /* In the settings menu, this is the title for the Tabs customization section option */
@@ -1648,7 +1648,7 @@
 "Settings.TrackingProtection.Alert.Title" = "An aire!";
 
 /* Header description for tracking protection options section where Basic/Strict block list can be selected */
-"Settings.TrackingProtection.BlockListsHeader" = "’S urrainn dhut fhèin taghadh dè an liosta a chleachdadh Firefox gus eileamaidean-lìn a bhacadh a thracaicheas na nì thu air loidhne ma dh’fhaoidte.";
+"Settings.TrackingProtection.BlockListsHeader" = "’S urrainn dhut fhèin taghadh dè an liosta a chleachdadh Decentr gus eileamaidean-lìn a bhacadh a thracaicheas na nì thu air loidhne ma dh’fhaoidte.";
 
 /* Explanation of basic mode. */
 "Settings.TrackingProtection.Info.BasicTitle" = "Cothromachadh eadar dìon is dèanadas.";
@@ -1743,32 +1743,32 @@
 /* Title displayed in header of the Data Management panel. */
 "Settings.WebsiteData.Title" = "Dàta nan làraichean-lìn";
 
-/* Action label on share extension to add page to the Firefox reading list. */
+/* Action label on share extension to add page to the Decentr reading list. */
 "ShareExtension.AddToReadingListAction.Title" = "Cuir ris an liosta-leughaidh";
 
 /* Share extension label shown after user has performed 'Add to Reading List' action. */
 "ShareExtension.AddToReadingListActionDone.Title" = "Air a chur ris an liosta-leughaidh";
 
-/* Action label on share extension to bookmark the page in Firefox. */
+/* Action label on share extension to bookmark the page in Decentr. */
 "ShareExtension.BookmarkThisPageAction.Title" = "Cruthaich comharra-lìn dhan duilleag seo";
 
 /* Share extension label shown after user has performed 'Bookmark this Page' action. */
 "ShareExtension.BookmarkThisPageActionDone.Title" = "Na chomharra-lìn";
 
-/* Action label on share extension to load the page in Firefox when user switches apps to bring it to foreground. */
+/* Action label on share extension to load the page in Decentr when user switches apps to bring it to foreground. */
 "ShareExtension.LoadInBackgroundAction.Title" = "Luchdaich sa chùlaibh";
 
 /* Share extension label shown after user has performed 'Load in Background' action. */
-"ShareExtension.LoadInBackgroundActionDone.Title" = "Ga luchdadh ann am Firefox";
+"ShareExtension.LoadInBackgroundActionDone.Title" = "Ga luchdadh ann am Decentr";
 
-/* Action label on share extension to immediately open page in Firefox. */
-"ShareExtension.OpenInFirefoxAction.Title" = "Fosgail ann am Firefox";
+/* Action label on share extension to immediately open page in Decentr. */
+"ShareExtension.OpenInFirefoxAction.Title" = "Fosgail ann am Decentr";
 
-/* Action label on share extension to immediately open page in Firefox in private mode. */
+/* Action label on share extension to immediately open page in Decentr in private mode. */
 "ShareExtension.OpenInPrivateModeAction.Title" = "Fosgail sa mhodh phrìobhaideach";
 
-/* Action label on share extension to search for the selected text in Firefox. */
-"ShareExtension.SeachInFirefoxAction.Title" = "Lorg ann am Firefox";
+/* Action label on share extension to search for the selected text in Decentr. */
+"ShareExtension.SeachInFirefoxAction.Title" = "Lorg ann am Decentr";
 
 /* Label for show search suggestions setting. */
 "Show Search Suggestions" = "Seall molaidhean-luirg";
@@ -1805,7 +1805,7 @@
 "Sync.FirstTimeMessage.Label" = "Dhʼfhaoidte gun doir aʼ chiad sionsronachadh greiseig mhath.";
 
 /* String displayed on Sign In to Sync page that allows the user to create a new account. */
-"Sync.NoAccount.Description" = "Nach eil cunntas agad? Cruthaich fear airson Firefox a shioncronachadh eadar uidheaman.";
+"Sync.NoAccount.Description" = "Nach eil cunntas agad? Cruthaich fear airson Decentr a shioncronachadh eadar uidheaman.";
 
 /* Message displayed when the user's account is syncing with no ellipsis */
 "Sync.Syncing.Label" = "ʼGa shioncronachadh";
@@ -1930,7 +1930,7 @@
 /* The section header for tabs opened yesterday */
 "TabTray.Yesterday.Header" = "An-dè";
 
-/* Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Decentr reader mode from another app. */
 "The page could not be displayed in Reader View." = "Cha b’ urrainn dhuinn an duilleag a thaisbeanadh ann an sealladh an leughadair.";
 
 /* Error message in the remote tabs panel */
@@ -1988,13 +1988,13 @@
 "UIMenuItem.PasteGo" = "Cuir ann ⁊ tadhail air";
 
 /* Search in New Tab Text selection menu item */
-"UIMenuItem.SearchWithFirefox" = "Lorg le Firefox";
+"UIMenuItem.SearchWithFirefox" = "Lorg le Decentr";
 
 /* Accessibility label for unread article in reading list. It's a past participle - functions as an adjective. */
 "unread" = "gun leughadh";
 
 /* Text message in the settings table view */
-"Upgrade Firefox to connect" = "Àrdaich Firefox ma tha thu airson ceangal";
+"Upgrade Decentr to connect" = "Àrdaich Decentr ma tha thu airson ceangal";
 
 /* Debug option */
 "Use stage servers" = "Cleachd frithealaichean stèidse";
@@ -2005,7 +2005,7 @@
 /* Text message in the settings table view */
 "Verify your email address" = "Dealbh am post-d agad";
 
-/* Version number of Firefox shown in settings */
+/* Version number of Decentr shown in settings */
 "Version %@ (%@)" = "Tionndadh %1$@ (%2$@)";
 
 /* Accessibility label for the main web content view */
@@ -2027,7 +2027,7 @@
 "Yesterday" = "An-dè";
 
 /* Error message in the remote tabs panel */
-"You don’t have any tabs open in Firefox on your other devices." = "Chan eil taba sam bith fosgailte agad ann am Firefox air uidheaman eile.";
+"You don’t have any tabs open in Decentr on your other devices." = "Chan eil taba sam bith fosgailte agad ann am Decentr air uidheaman eile.";
 
 /* Your Rights settings section title */
 "Your Rights" = "Do chòraichean";

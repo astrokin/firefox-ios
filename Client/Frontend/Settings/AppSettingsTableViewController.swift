@@ -109,10 +109,10 @@ class AppSettingsTableViewController: SettingsTableViewController, FeatureFlagsP
         let footerText = !profile.hasAccount() ? NSAttributedString(string: .FxASyncUsageDetails) : nil
         settings += [
             SettingSection(title: accountSectionTitle, footerTitle: footerText, children: [
-                // Without a Firefox Account:
+                // Without a Decentr Account:
                 ConnectSetting(settings: self),
                 AdvancedAccountSetting(settings: self),
-                // With a Firefox Account:
+                // With a Decentr Account:
                 AccountStatusSetting(settings: self),
                 SyncNowSetting(settings: self)
             ] + accountChinaSyncSetting )]

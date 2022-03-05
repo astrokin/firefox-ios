@@ -27,7 +27,7 @@ fileprivate func MZLocalizedString(_ key: String, tableName: String? = nil, valu
     return NSLocalizedString(key, tableName: tableName, bundle: Strings.bundle, value: value, comment: comment)
 }
 
-/// This file contains all strings for Firefox iOS.
+/// This file contains all strings for Decentr iOS.
 ///
 /// As we continue to update strings, old strings may be present at the bottom of this
 /// file. To preserve a clean implementation of strings, this file should be organized
@@ -100,7 +100,7 @@ extension String {
         
         public struct FirefoxHomepage {
             public struct JumpBackIn {
-                public static let PersonalizedHome = MZLocalizedString("ContextualHints.Homepage.PersonalizedHome", value: "Your personalized Firefox homepage now makes it easier to pick up where you left off. Find your recent tabs, bookmarks, and search results.", comment: "Contextual hints are little popups that appear for the users informing them of new features. This one talks about the more personalized home feature.", lastUpdated: .v39)
+                public static let PersonalizedHome = MZLocalizedString("ContextualHints.Homepage.PersonalizedHome", value: "Your personalized Decentr homepage now makes it easier to pick up where you left off. Find your recent tabs, bookmarks, and search results.", comment: "Contextual hints are little popups that appear for the users informing them of new features. This one talks about the more personalized home feature.", lastUpdated: .v39)
             }
         }
         
@@ -127,23 +127,23 @@ extension String {
     }
 }
 
-// MARK: - Firefox Homepage
+// MARK: - Decentr Homepage
 extension String {
     /// Identifiers of all new strings should begin with `FirefoxHome.`
     public struct FirefoxHomepage {
 
         public struct CustomizeHomepage {
-            public static let ButtonTitle = MZLocalizedString("FirefoxHome.CustomizeHomeButton.Title", value: "Customize Homepage", comment: "A button at bottom of the Firefox homepage that, when clicked, takes users straight to the settings options, where they can customize the Firefox Home page", lastUpdated: .v39)
+            public static let ButtonTitle = MZLocalizedString("FirefoxHome.CustomizeHomeButton.Title", value: "Customize Homepage", comment: "A button at bottom of the Decentr homepage that, when clicked, takes users straight to the settings options, where they can customize the Decentr Home page", lastUpdated: .v39)
         }
 
         public struct JumpBackIn {
-            public static let GroupSiteCount = MZLocalizedString("ActivityStream.JumpBackIn.TabGroup.SiteCount", value: "Tabs: %d", comment: "On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar.", lastUpdated: .v39)
-            public static let GroupTitle = MZLocalizedString("ActivityStream.JumpBackIn.TabGroup.Title", value: "Your search for \"%@\"", comment: "On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did.", lastUpdated: .v39)
+            public static let GroupSiteCount = MZLocalizedString("ActivityStream.JumpBackIn.TabGroup.SiteCount", value: "Tabs: %d", comment: "On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar.", lastUpdated: .v39)
+            public static let GroupTitle = MZLocalizedString("ActivityStream.JumpBackIn.TabGroup.Title", value: "Your search for \"%@\"", comment: "On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did.", lastUpdated: .v39)
         }
 
         public struct Pocket {
-            public static let SectionTitle = MZLocalizedString("FirefoxHome.Pocket.SectionTitle", value: "Thought-Provoking Stories", comment: "This is the title of the Pocket section on Firefox Homepage.", lastUpdated: .v98)
-            public static let DiscoverMore = MZLocalizedString("FirefoxHome.Pocket.DiscoverMore", value: "Discover more", comment: "At the end of the Pocket section on the Firefox Homepage, this button appears and indicates tapping it will navigate the user to more Pocket Stories.", lastUpdated: .v98)
+            public static let SectionTitle = MZLocalizedString("FirefoxHome.Pocket.SectionTitle", value: "Thought-Provoking Stories", comment: "This is the title of the Pocket section on Decentr Homepage.", lastUpdated: .v98)
+            public static let DiscoverMore = MZLocalizedString("FirefoxHome.Pocket.DiscoverMore", value: "Discover more", comment: "At the end of the Pocket section on the Decentr Homepage, this button appears and indicates tapping it will navigate the user to more Pocket Stories.", lastUpdated: .v98)
         }
 
         public struct RecentlySaved {
@@ -237,7 +237,7 @@ extension String {
 
         public struct History {
             public static let SearchHistory = MZLocalizedString("LibraryPanel.History.SearchHistoryPlaceholder", value: "Search History", comment: "In the history panel, this placeholder text inside the search component will indicate that a user can search through their browsing history.", lastUpdated: .v98)
-            public static let SyncedHistory = MZLocalizedString("LibraryPanel.History.SyncedHistory", value: "Synced History", comment: "In the history panel, this label indicates that tapping on this item will navigate the user to a screen showing only browser history from other devices that are synced with the user's Firefox account.", lastUpdated: .v98)
+            public static let SyncedHistory = MZLocalizedString("LibraryPanel.History.SyncedHistory", value: "Synced History", comment: "In the history panel, this label indicates that tapping on this item will navigate the user to a screen showing only browser history from other devices that are synced with the user's Decentr account.", lastUpdated: .v98)
         }
 
         public struct ReadingList {
@@ -269,7 +269,7 @@ extension String {
     public struct RatingsPrompt {
         
         public struct Settings {
-            public static let RateOnAppStore = MZLocalizedString("Ratings.Settings.RateOnAppStore", value: "Rate on App Store", comment: "A label indicating the action that a user can rate the Firefox app in the App store.", lastUpdated: .v96)
+            public static let RateOnAppStore = MZLocalizedString("Ratings.Settings.RateOnAppStore", value: "Rate on App Store", comment: "A label indicating the action that a user can rate the Decentr app in the App store.", lastUpdated: .v96)
         }
     
     }
@@ -286,46 +286,46 @@ extension String {
         public struct Homepage {
             
             public struct CustomizeFirefoxHome {
-                public static let JumpBackIn = MZLocalizedString("Settings.Home.Option.JumpBackIn", value: "Jump Back In", comment: "In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off", lastUpdated: .v39)
-                public static let RecentlyVisited = MZLocalizedString("Settings.Home.Option.RecentlyVisited", value: "Recently Visited", comment: "In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off", lastUpdated: .v39)
-                public static let RecentlySaved = MZLocalizedString("Settings.Home.Option.RecentlySaved", value: "Recently Saved", comment: "In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Firefox homepage on or off", lastUpdated: .v39)
-                public static let RecentSearches = MZLocalizedString("Settings.Home.Option.RecentSearches", value: "Recent Searches", comment: "In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Firefox homepage on or off", lastUpdated: .v39)
-                public static let Shortcuts = MZLocalizedString("Settings.Home.Option.Shortcuts", value: "Shortcuts", comment: "In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Firefox homepage on or off", lastUpdated: .v39)
-                public static let Pocket = MZLocalizedString("Settings.Home.Option.Pocket", value: "Recommended by Pocket", comment: "In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Firefox homepage on or off", lastUpdated: .v39)
-                public static let Description = MZLocalizedString("Settings.Home.Option.Description", value: "Choose content you see on the Firefox homepage.", comment: "In the settings menu, on the Firefox homepage customization section, this is the description below the section, describing what the options in the section are for.", lastUpdated: .v39)
-                public static let Wallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper", value: "Wallpaper", comment: "In the settings menu, on the Firefox homepage customization section, this is the title for the option that allows users to access the wallpaper settings for the application.", lastUpdated: .v98)
+                public static let JumpBackIn = MZLocalizedString("Settings.Home.Option.JumpBackIn", value: "Jump Back In", comment: "In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off", lastUpdated: .v39)
+                public static let RecentlyVisited = MZLocalizedString("Settings.Home.Option.RecentlyVisited", value: "Recently Visited", comment: "In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off", lastUpdated: .v39)
+                public static let RecentlySaved = MZLocalizedString("Settings.Home.Option.RecentlySaved", value: "Recently Saved", comment: "In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Decentr homepage on or off", lastUpdated: .v39)
+                public static let RecentSearches = MZLocalizedString("Settings.Home.Option.RecentSearches", value: "Recent Searches", comment: "In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Decentr homepage on or off", lastUpdated: .v39)
+                public static let Shortcuts = MZLocalizedString("Settings.Home.Option.Shortcuts", value: "Shortcuts", comment: "In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Decentr homepage on or off", lastUpdated: .v39)
+                public static let Pocket = MZLocalizedString("Settings.Home.Option.Pocket", value: "Recommended by Pocket", comment: "In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Decentr homepage on or off", lastUpdated: .v39)
+                public static let Description = MZLocalizedString("Settings.Home.Option.Description", value: "Choose content you see on the Decentr homepage.", comment: "In the settings menu, on the Decentr homepage customization section, this is the description below the section, describing what the options in the section are for.", lastUpdated: .v39)
+                public static let Wallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper", value: "Wallpaper", comment: "In the settings menu, on the Decentr homepage customization section, this is the title for the option that allows users to access the wallpaper settings for the application.", lastUpdated: .v98)
             }
             
             public struct StartAtHome {
-                public static let SectionTitle = MZLocalizedString("Settings.Home.Option.StartAtHome.Title", value: "Opening screen", comment: "Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Firefox Homepage.", lastUpdated: .v39)
-                public static let SectionDescription = MZLocalizedString("Settings.Home.Option.StartAtHome.Description", value: "Choose what you see when you return to Firefox.", comment: "In the settings menu, in the Start at Home customization options, this is text that appears below the section, describing what the section settings do.", lastUpdated: .v39)
+                public static let SectionTitle = MZLocalizedString("Settings.Home.Option.StartAtHome.Title", value: "Opening screen", comment: "Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Decentr Homepage.", lastUpdated: .v39)
+                public static let SectionDescription = MZLocalizedString("Settings.Home.Option.StartAtHome.Description", value: "Choose what you see when you return to Decentr.", comment: "In the settings menu, in the Start at Home customization options, this is text that appears below the section, describing what the section settings do.", lastUpdated: .v39)
                 public static let AfterFourHours = MZLocalizedString("Settings.Home.Option.StartAtHome.AfterFourHours", value: "Homepage after four hours of inactivity", comment: "In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage after four hours of inactivity.", lastUpdated: .v39)
-                public static let Always = MZLocalizedString("Settings.Home.Option.StartAtHome.Always", value: "Homepage", comment: "In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Firefox", lastUpdated: .v39)
-                public static let Never = MZLocalizedString("Settings.Home.Option.StartAtHome.Never", value: "Last tab", comment: "In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Firefox", lastUpdated: .v39)
+                public static let Always = MZLocalizedString("Settings.Home.Option.StartAtHome.Always", value: "Homepage", comment: "In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Decentr", lastUpdated: .v39)
+                public static let Never = MZLocalizedString("Settings.Home.Option.StartAtHome.Never", value: "Last tab", comment: "In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Decentr", lastUpdated: .v39)
             }
             
             public struct Wallpaper {
-                public static let PageTitle = MZLocalizedString("Settings.Home.Option.Wallpaper.Title", value: "Wallpaper", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the title of that screen, which allows users to change the wallpaper settings for the application.", lastUpdated: .v98)
-                public static let CollectionTitle = MZLocalizedString("Settings.Home.Option.Wallpaper.CollectionTitle", value: "OPENING SCREEN", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the title of the section that allows users to change the wallpaper settings for the application.", lastUpdated: .v98)
-                public static let SwitchTitle = MZLocalizedString("Settings.Home.Option.Wallpaper.SwitchTitle", value: "Tap logo to change wallpaper", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the string titling the switch button's function, which allows a user to toggle wallpaper switching from the homepage logo on or off.", lastUpdated: .v98)
-                public static let SwitchDescription = MZLocalizedString("Settings.Home.Option.Wallpaper.SwitchDescription", value: "Cycle through and update image without leaving the homepage.", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the string describing the switch button's function, which allows a user to toggle wallpaper switching from the homepage logo on or off.", lastUpdated: .v98)
-                public static let WallpaperUpdatedToastLabel = MZLocalizedString("Settings.Home.Option.Wallpaper.UpdatedToast", value: "Wallpaper Updated!", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the title of toast that comes up when the user changes wallpaper, which lets them know that the wallpaper has been updated.", lastUpdated: .v98)
-                public static let WallpaperUpdatedToastButton = MZLocalizedString("Settings.Home.Option.Wallpaper.UpdatedToastButton", value: "View", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the title of the button found on the toast that comes up once the user changes wallpaper, and allows users to dismiss the settings page. In this case, consider View as a verb - the action of dismissing settings and seeing the wallpaper.", lastUpdated: .v98)
+                public static let PageTitle = MZLocalizedString("Settings.Home.Option.Wallpaper.Title", value: "Wallpaper", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the title of that screen, which allows users to change the wallpaper settings for the application.", lastUpdated: .v98)
+                public static let CollectionTitle = MZLocalizedString("Settings.Home.Option.Wallpaper.CollectionTitle", value: "OPENING SCREEN", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the title of the section that allows users to change the wallpaper settings for the application.", lastUpdated: .v98)
+                public static let SwitchTitle = MZLocalizedString("Settings.Home.Option.Wallpaper.SwitchTitle", value: "Tap logo to change wallpaper", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the string titling the switch button's function, which allows a user to toggle wallpaper switching from the homepage logo on or off.", lastUpdated: .v98)
+                public static let SwitchDescription = MZLocalizedString("Settings.Home.Option.Wallpaper.SwitchDescription", value: "Cycle through and update image without leaving the homepage.", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the string describing the switch button's function, which allows a user to toggle wallpaper switching from the homepage logo on or off.", lastUpdated: .v98)
+                public static let WallpaperUpdatedToastLabel = MZLocalizedString("Settings.Home.Option.Wallpaper.UpdatedToast", value: "Wallpaper Updated!", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the title of toast that comes up when the user changes wallpaper, which lets them know that the wallpaper has been updated.", lastUpdated: .v98)
+                public static let WallpaperUpdatedToastButton = MZLocalizedString("Settings.Home.Option.Wallpaper.UpdatedToastButton", value: "View", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the title of the button found on the toast that comes up once the user changes wallpaper, and allows users to dismiss the settings page. In this case, consider View as a verb - the action of dismissing settings and seeing the wallpaper.", lastUpdated: .v98)
                 
                 // Accessibilitiy
                 struct AccessibilityLabels {
-                    public static let FxHomepageWallpaperButton = MZLocalizedString("FxHomepage.Wallpaper.ButtonLabel", value: "Firefox logo, change the wallpaper, button", comment: "On the firefox homepage, the string read by the voice over prompt for accessibility, for the button which changes the wallpaper", lastUpdated: .v98)
-                    public static let ToggleButton = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.ToggleButton", value: "Homepage wallpaper cycle toggle", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the accessibility string of the toggle for turning wallpaper cycling shortcut on or off on the homepage.", lastUpdated: .v98)
-                    public static let DefaultWallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.DefaultWallpaper", value: "Default clear wallpaper, button", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the accessibility string for the default wallpaper.", lastUpdated: .v98)
-                    public static let FxAmethystWallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.AmethystWallpaper", value: "Firefox wallpaper, amethyst pattern, button", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the accessibility string for the amethyst firefox wallpaper.", lastUpdated: .v98)
-                    public static let FxSunriseWallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.SunriseWallpaper", value: "Firefox wallpaper, sunrise pattern, button", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the sunrise firefox wallpaper.", lastUpdated: .v98)
-                    public static let FxCeruleanWallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.CeruleanWallpaper", value: "Firefox wallpaper, cerulean pattern, button", comment: "In the settings menu, on the Firefox wallpaper customization screen, this is the title accessibility string for the cerulean firefox wallpaper.", lastUpdated: .v98)
+                    public static let FxHomepageWallpaperButton = MZLocalizedString("FxHomepage.Wallpaper.ButtonLabel", value: "Decentr logo, change the wallpaper, button", comment: "On the decentr homepage, the string read by the voice over prompt for accessibility, for the button which changes the wallpaper", lastUpdated: .v98)
+                    public static let ToggleButton = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.ToggleButton", value: "Homepage wallpaper cycle toggle", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the accessibility string of the toggle for turning wallpaper cycling shortcut on or off on the homepage.", lastUpdated: .v98)
+                    public static let DefaultWallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.DefaultWallpaper", value: "Default clear wallpaper, button", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the accessibility string for the default wallpaper.", lastUpdated: .v98)
+                    public static let FxAmethystWallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.AmethystWallpaper", value: "Decentr wallpaper, amethyst pattern, button", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the accessibility string for the amethyst decentr wallpaper.", lastUpdated: .v98)
+                    public static let FxSunriseWallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.SunriseWallpaper", value: "Decentr wallpaper, sunrise pattern, button", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the title accessibility string for the sunrise decentr wallpaper.", lastUpdated: .v98)
+                    public static let FxCeruleanWallpaper = MZLocalizedString("Settings.Home.Option.Wallpaper.Accessibility.CeruleanWallpaper", value: "Decentr wallpaper, cerulean pattern, button", comment: "In the settings menu, on the Decentr wallpaper customization screen, this is the title accessibility string for the cerulean decentr wallpaper.", lastUpdated: .v98)
                 }
             }
         }
         
         public struct Tabs {
-            public static let TabsSectionTitle = MZLocalizedString("Settings.Tabs.CustomizeTabsSection.Title", value: "Customize Tab Tray", comment: "In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from firefox hompage", lastUpdated: .v39)
+            public static let TabsSectionTitle = MZLocalizedString("Settings.Tabs.CustomizeTabsSection.Title", value: "Customize Tab Tray", comment: "In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from decentr hompage", lastUpdated: .v39)
             public static let InactiveTabs = MZLocalizedString("Settings.Tabs.CustomizeTabsSection.InactiveTabs", value: "Inactive Tabs", comment: "In the settings menu, in the Tabs customization section, this is the title for the setting that toggles the Inactive Tabs feature, a separate section of inactive tabs that appears in the Tab Tray, on or off", lastUpdated: .v39)
             public static let TabGroups = MZLocalizedString("Settings.Tabs.CustomizeTabsSection.TabGroups", value: "Tab Groups", comment: "In the settings menu, in the Tabs customization section, this is the title for the setting that toggles the Tab Groups feature - where tabs from related searches are grouped - on or off", lastUpdated: .v39)
         }
@@ -373,7 +373,7 @@ extension String {
 
             public struct AutoClose {
                 public static let PromptTitle = MZLocalizedString("InactiveTabs.TabTray.AutoClosePrompt.Title", value: "Auto-close after one month?", comment: "In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This is the title of that Auto Close prompt", lastUpdated: .v39)
-                public static let PromptContent = MZLocalizedString("InactiveTabs.TabTray.AutoClosePrompt.Content", value: "Firefox will close tabs you haven’t viewed over the past month.", comment: "In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This string describes what happens if you elect to turn on this option.", lastUpdated: .v39)
+                public static let PromptContent = MZLocalizedString("InactiveTabs.TabTray.AutoClosePrompt.Content", value: "Decentr will close tabs you haven’t viewed over the past month.", comment: "In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This string describes what happens if you elect to turn on this option.", lastUpdated: .v39)
                 public static let PromptButton = MZLocalizedString("InactiveTabs.TabTray.AutoClosePrompt.ButtonTitle", value: "Turn on Auto Close", comment: "In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This string is for the button the user must tap in order to turn on the Auto close feature", lastUpdated: .v39)
             }
         }
@@ -384,15 +384,15 @@ extension String {
 extension String {
     /// The text for the What's New onboarding card
     public struct WhatsNew {
-        public static let Title = MZLocalizedString("Onboarding.WhatsNew.Title", value: "What’s New in Firefox", comment: "The title for the new onboarding card letting users know what is new in Firefox iOS", lastUpdated: .v39)
-        public static let GeneralDescription = MZLocalizedString("Onboarding.WhatsNew.Description", value: "It’s now easier to pick up where you left off.", comment: "On the onboarding card, letting users know what's new in this version of Firefox, this is a general description that appears under the title for what the card is about.", lastUpdated: .v39)
-        public static let PersonalizedHomeTitle = MZLocalizedString("Onboarding.WhatsNew.Title", value: "Personalized Firefox Homepage", comment: "On the onboarding card, letting users know what's new in this version of Firefox, this is the title for the Jump Back In bullet point on the card", lastUpdated: .v39)
-        public static let PersonalizedHomeDescription = MZLocalizedString("Onboarding.WhatsNew.PersonalizedHome.Description", value: "Jump to your open tabs, bookmarks, and browsing history.", comment: "On the onboarding card, letting users know what's new in this version of Firefox, this is the description for the Jump Back In bullet point", lastUpdated: .v39)
-        public static let TabGroupsTitle = MZLocalizedString("Onboarding.WhatsNew.TabGroups.Title", value: "Tidier Tab Groups", comment: "On the onboarding card, letting users know what's new in this version of Firefox, this is the title for the Tab Group bullet point on the card", lastUpdated: .v39)
-        public static let TabGroupsDescription = MZLocalizedString("Onboarding.WhatsNew.TabGroups.Description", value: "Pages from the same search get grouped together.", comment: "On the onboarding card letting users know what's new in this version of Firefox, this is the description for the Tab Group bullet point on the card", lastUpdated: .v39)
-        public static let RecentSearchesTitle = MZLocalizedString("Onboarding.WhatsNew.RecentSearches.Title", value: "Recent Searches", comment: "On the onboarding card letting users know what's new in this version of Firefox, this is the title for the Recent Searches bullet point on the card", lastUpdated: .v39)
-        public static let RecentSearchesDescription = MZLocalizedString("Onboarding.WhatsNew.RecentSearches.Description", value: "Revisit your latest searches from your homepage.", comment: "On the onboarding card letting users know what's new in this version of Firefox, this is the descripion of the Recent Searches bullet point on the card", lastUpdated: .v39)
-        public static let RecentButtonTitle = MZLocalizedString("Onboarding.WhatsNew.Button.Title", value: "Start Browsing", comment: "On the onboarding card letting users know what's new in this version of Firefox, this is the title for the button, on the bottom of the card, used to get back to browsing on Firefox by dismissing the onboarding card", lastUpdated: .v39)
+        public static let Title = MZLocalizedString("Onboarding.WhatsNew.Title", value: "What’s New in Decentr", comment: "The title for the new onboarding card letting users know what is new in Decentr iOS", lastUpdated: .v39)
+        public static let GeneralDescription = MZLocalizedString("Onboarding.WhatsNew.Description", value: "It’s now easier to pick up where you left off.", comment: "On the onboarding card, letting users know what's new in this version of Decentr, this is a general description that appears under the title for what the card is about.", lastUpdated: .v39)
+        public static let PersonalizedHomeTitle = MZLocalizedString("Onboarding.WhatsNew.Title", value: "Personalized Decentr Homepage", comment: "On the onboarding card, letting users know what's new in this version of Decentr, this is the title for the Jump Back In bullet point on the card", lastUpdated: .v39)
+        public static let PersonalizedHomeDescription = MZLocalizedString("Onboarding.WhatsNew.PersonalizedHome.Description", value: "Jump to your open tabs, bookmarks, and browsing history.", comment: "On the onboarding card, letting users know what's new in this version of Decentr, this is the description for the Jump Back In bullet point", lastUpdated: .v39)
+        public static let TabGroupsTitle = MZLocalizedString("Onboarding.WhatsNew.TabGroups.Title", value: "Tidier Tab Groups", comment: "On the onboarding card, letting users know what's new in this version of Decentr, this is the title for the Tab Group bullet point on the card", lastUpdated: .v39)
+        public static let TabGroupsDescription = MZLocalizedString("Onboarding.WhatsNew.TabGroups.Description", value: "Pages from the same search get grouped together.", comment: "On the onboarding card letting users know what's new in this version of Decentr, this is the description for the Tab Group bullet point on the card", lastUpdated: .v39)
+        public static let RecentSearchesTitle = MZLocalizedString("Onboarding.WhatsNew.RecentSearches.Title", value: "Recent Searches", comment: "On the onboarding card letting users know what's new in this version of Decentr, this is the title for the Recent Searches bullet point on the card", lastUpdated: .v39)
+        public static let RecentSearchesDescription = MZLocalizedString("Onboarding.WhatsNew.RecentSearches.Description", value: "Revisit your latest searches from your homepage.", comment: "On the onboarding card letting users know what's new in this version of Decentr, this is the descripion of the Recent Searches bullet point on the card", lastUpdated: .v39)
+        public static let RecentButtonTitle = MZLocalizedString("Onboarding.WhatsNew.Button.Title", value: "Start Browsing", comment: "On the onboarding card letting users know what's new in this version of Decentr, this is the title for the button, on the bottom of the card, used to get back to browsing on Decentr by dismissing the onboarding card", lastUpdated: .v39)
     }
 }
 
@@ -502,7 +502,7 @@ extension String {
     public static let SettingsDeleteWebsiteSearchButton = MZLocalizedString("Settings.WebsiteData.ButtonDelete", value: "Delete", comment: "Button to delete website in search results", lastUpdated: .unknown)
     public static let SettingsDoneWebsiteSearchButton = MZLocalizedString("Settings.WebsiteData.ButtonDone", value: "Done", comment: "Button to exit edit website search results", lastUpdated: .unknown)
     public static let SettingsDisconnectSyncAlertTitle = MZLocalizedString("Settings.Disconnect.Title", value: "Disconnect Sync?", comment: "Title of the alert when prompting the user asking to disconnect.", lastUpdated: .unknown)
-    public static let SettingsDisconnectSyncAlertBody = MZLocalizedString("Settings.Disconnect.Body", value: "Firefox will stop syncing with your account, but won’t delete any of your browsing data on this device.", comment: "Body of the alert when prompting the user asking to disconnect.", lastUpdated: .unknown)
+    public static let SettingsDisconnectSyncAlertBody = MZLocalizedString("Settings.Disconnect.Body", value: "Decentr will stop syncing with your account, but won’t delete any of your browsing data on this device.", comment: "Body of the alert when prompting the user asking to disconnect.", lastUpdated: .unknown)
     public static let SettingsDisconnectSyncButton = MZLocalizedString("Settings.Disconnect.Button", value: "Disconnect Sync", comment: "Button displayed at the bottom of settings page allowing users to Disconnect from FxA", lastUpdated: .unknown)
     public static let SettingsDisconnectCancelAction = MZLocalizedString("Settings.Disconnect.CancelButton", value: "Cancel", comment: "Cancel action button in alert when user is prompted for disconnect", lastUpdated: .unknown)
     public static let SettingsDisconnectDestructiveAction = MZLocalizedString("Settings.Disconnect.DestructiveButton", value: "Disconnect", comment: "Destructive action button in alert when user is prompted for disconnect", lastUpdated: .unknown)
@@ -518,7 +518,7 @@ extension String {
     public static let ErrorPagesAdvancedButton = MZLocalizedString("ErrorPages.Advanced.Button", value: "Advanced", comment: "Label for button to perform advanced actions on the error page", lastUpdated: .unknown)
     public static let ErrorPagesAdvancedWarning1 = MZLocalizedString("ErrorPages.AdvancedWarning1.Text", value: "Warning: we can’t confirm your connection to this website is secure.", comment: "Warning text when clicking the Advanced button on error pages", lastUpdated: .unknown)
     public static let ErrorPagesAdvancedWarning2 = MZLocalizedString("ErrorPages.AdvancedWarning2.Text", value: "It may be a misconfiguration or tampering by an attacker. Proceed if you accept the potential risk.", comment: "Additional warning text when clicking the Advanced button on error pages", lastUpdated: .unknown)
-    public static let ErrorPagesCertWarningDescription = MZLocalizedString("ErrorPages.CertWarning.Description", value: "The owner of %@ has configured their website improperly. To protect your information from being stolen, Firefox has not connected to this website.", comment: "Warning text on the certificate error page", lastUpdated: .unknown)
+    public static let ErrorPagesCertWarningDescription = MZLocalizedString("ErrorPages.CertWarning.Description", value: "The owner of %@ has configured their website improperly. To protect your information from being stolen, Decentr has not connected to this website.", comment: "Warning text on the certificate error page", lastUpdated: .unknown)
     public static let ErrorPagesCertWarningTitle = MZLocalizedString("ErrorPages.CertWarning.Title", value: "This Connection is Untrusted", comment: "Title on the certificate error page", lastUpdated: .unknown)
     public static let ErrorPagesGoBackButton = MZLocalizedString("ErrorPages.GoBack.Button", value: "Go Back", comment: "Label for button to go back from the error page", lastUpdated: .unknown)
     public static let ErrorPagesVisitOnceButton = MZLocalizedString("ErrorPages.VisitOnce.Button", value: "Visit site anyway", comment: "Button label to temporarily continue to the site from the certificate error page", lastUpdated: .unknown)
@@ -543,7 +543,7 @@ extension String {
 extension String {
     public static let SyncedTabsTableViewCellTitle = MZLocalizedString("HistoryPanel.SyncedTabsCell.Title", value: "Synced Devices", comment: "Title for the Synced Tabs Cell in the History Panel", lastUpdated: .unknown)
     public static let HistoryBackButtonTitle = MZLocalizedString("HistoryPanel.HistoryBackButton.Title", value: "History", comment: "Title for the Back to History button in the History Panel", lastUpdated: .unknown)
-    public static let EmptySyncedTabsPanelStateTitle = MZLocalizedString("HistoryPanel.EmptySyncedTabsState.Title", value: "Firefox Sync", comment: "Title for the empty synced tabs state in the History Panel", lastUpdated: .unknown)
+    public static let EmptySyncedTabsPanelStateTitle = MZLocalizedString("HistoryPanel.EmptySyncedTabsState.Title", value: "Decentr Sync", comment: "Title for the empty synced tabs state in the History Panel", lastUpdated: .unknown)
     public static let EmptySyncedTabsPanelNotSignedInStateDescription = MZLocalizedString("HistoryPanel.EmptySyncedTabsPanelNotSignedInState.Description", value: "Sign in to view a list of tabs from your other devices.", comment: "Description for the empty synced tabs 'not signed in' state in the History Panel", lastUpdated: .unknown)
     public static let EmptySyncedTabsPanelNotYetVerifiedStateDescription = MZLocalizedString("HistoryPanel.EmptySyncedTabsPanelNotYetVerifiedState.Description", value: "Your account needs to be verified.", comment: "Description for the empty synced tabs 'not yet verified' state in the History Panel", lastUpdated: .unknown)
     public static let EmptySyncedTabsPanelSingleDeviceSyncStateDescription = MZLocalizedString("HistoryPanel.EmptySyncedTabsPanelSingleDeviceSyncState.Description", value: "Want to see your tabs from other devices here?", comment: "Description for the empty synced tabs 'single device Sync' state in the History Panel", lastUpdated: .unknown)
@@ -554,7 +554,7 @@ extension String {
     public static let RecentlyClosedTabsButtonTitle = MZLocalizedString("HistoryPanel.RecentlyClosedTabsButton.Title", value: "Recently Closed", comment: "Title for the Recently Closed button in the History Panel", lastUpdated: .unknown)
     public static let RecentlyClosedTabsPanelTitle = MZLocalizedString("RecentlyClosedTabsPanel.Title", value: "Recently Closed", comment: "Title for the Recently Closed Tabs Panel", lastUpdated: .unknown)
     public static let HistoryPanelClearHistoryButtonTitle = MZLocalizedString("HistoryPanel.ClearHistoryButtonTitle", value: "Clear Recent History…", comment: "Title for button in the history panel to clear recent history", lastUpdated: .unknown)
-    public static let FirefoxHomePage = MZLocalizedString("Firefox.HomePage.Title", value: "Firefox Home Page", comment: "Title for firefox about:home page in tab history list", lastUpdated: .unknown)
+    public static let FirefoxHomePage = MZLocalizedString("Decentr.HomePage.Title", value: "Decentr Home Page", comment: "Title for decentr about:home page in tab history list", lastUpdated: .unknown)
     public static let HistoryPanelDelete = MZLocalizedString("Delete", tableName: "HistoryPanel", comment: "Action button for deleting history entries in the history panel.", lastUpdated: .unknown)
 }
 
@@ -579,7 +579,7 @@ extension String {
     public static let FirefoxSyncPartialTitle = MZLocalizedString("SyncState.Partial.Title", value: "Sync is experiencing issues syncing %@", comment: "Title for Sync status message when a component of Sync failed to complete, where %@ represents the name of the component, i.e. Sync is experiencing issues syncing Bookmarks", lastUpdated: .unknown)
     public static let FirefoxSyncFailedTitle = MZLocalizedString("SyncState.Failed.Title", value: "Syncing has failed", comment: "Title for Sync status message when synchronization failed to complete", lastUpdated: .unknown)
     public static let FirefoxSyncTroubleshootTitle = MZLocalizedString("Settings.TroubleShootSync.Title", value: "Troubleshoot", comment: "Title of link to help page to find out how to solve Sync issues", lastUpdated: .unknown)
-    public static let FirefoxSyncCreateAccount = MZLocalizedString("Sync.NoAccount.Description", value: "No account? Create one to sync Firefox between devices.", comment: "String displayed on Sign In to Sync page that allows the user to create a new account.", lastUpdated: .unknown)
+    public static let FirefoxSyncCreateAccount = MZLocalizedString("Sync.NoAccount.Description", value: "No account? Create one to sync Decentr between devices.", comment: "String displayed on Sign In to Sync page that allows the user to create a new account.", lastUpdated: .unknown)
 
     public static let FirefoxSyncBookmarksEngine = MZLocalizedString("Bookmarks", comment: "Toggle bookmarks syncing setting", lastUpdated: .unknown)
     public static let FirefoxSyncHistoryEngine = MZLocalizedString("History", comment: "Toggle history syncing setting", lastUpdated: .unknown)
@@ -603,7 +603,7 @@ extension String {
     }
 }
 
-// MARK: - Firefox Logins
+// MARK: - Decentr Logins
 extension String {
     public static let LoginsAndPasswordsTitle = MZLocalizedString("Settings.LoginsAndPasswordsTitle", value: "Logins & Passwords", comment: "Title for the logins and passwords screen. Translation could just use 'Logins' if the title is too long", lastUpdated: .unknown)
 
@@ -630,7 +630,7 @@ extension String {
 
     // Breach Alerts
     public static let BreachAlertsTitle = MZLocalizedString("BreachAlerts.Title", value: "Website Breach", comment: "Title for the Breached Login Detail View.", lastUpdated: .unknown)
-    public static let BreachAlertsLearnMore = MZLocalizedString("BreachAlerts.LearnMoreButton", value: "Learn more", comment: "Link to monitor.firefox.com to learn more about breached passwords", lastUpdated: .unknown)
+    public static let BreachAlertsLearnMore = MZLocalizedString("BreachAlerts.LearnMoreButton", value: "Learn more", comment: "Link to monitor.decentr.com to learn more about breached passwords", lastUpdated: .unknown)
     public static let BreachAlertsBreachDate = MZLocalizedString("BreachAlerts.BreachDate", value: "This breach occurred on", comment: "Describes the date on which the breach occurred", lastUpdated: .unknown)
     public static let BreachAlertsDescription = MZLocalizedString("BreachAlerts.Description", value: "Passwords were leaked or stolen since you last changed your password. To protect this account, log in to the site and change your password.", comment: "Description of what a breach is", lastUpdated: .unknown)
     public static let BreachAlertsLink = MZLocalizedString("BreachAlerts.Link", value: "Go to", comment: "Leads to a link to the breached website", lastUpdated: .unknown)
@@ -645,33 +645,33 @@ extension String {
     public static let LoginsOnboardingContinueButtonTitle = MZLocalizedString("Logins.Onboarding.ContinueButtonTitle", value: "Continue", comment: "Title of the Continue button.", lastUpdated: .unknown)
 }
 
-// MARK: - Firefox Account
+// MARK: - Decentr Account
 extension String {
     // Settings strings
-    public static let FxAFirefoxAccount = MZLocalizedString("FxA.FirefoxAccount", value: "Firefox Account", comment: "Settings section title for Firefox Account", lastUpdated: .unknown)
+    public static let FxAFirefoxAccount = MZLocalizedString("FxA.FirefoxAccount", value: "Decentr Account", comment: "Settings section title for Decentr Account", lastUpdated: .unknown)
     public static let FxASignInToSync = MZLocalizedString("FxA.SignIntoSync", value: "Sign in to Sync", comment: "Button label to sign into Sync", lastUpdated: .unknown)
     public static let FxATakeYourWebWithYou = MZLocalizedString("FxA.TakeYourWebWithYou", value: "Take Your Web With You", comment: "Call to action for sign into sync button", lastUpdated: .unknown)
     public static let FxASyncUsageDetails = MZLocalizedString("FxA.SyncExplain", value: "Get your tabs, bookmarks, and passwords from your other devices.", comment: "Label explaining what sync does", lastUpdated: .unknown)
     public static let FxAAccountVerificationRequired = MZLocalizedString("FxA.AccountVerificationRequired", value: "Account Verification Required", comment: "Label stating your account is not verified", lastUpdated: .unknown)
     public static let FxAAccountVerificationDetails = MZLocalizedString("FxA.AccountVerificationDetails", value: "Wrong email? Disconnect below to start over.", comment: "Label stating how to disconnect account", lastUpdated: .unknown)
-    public static let FxAManageAccount = MZLocalizedString("FxA.ManageAccount", value: "Manage Account & Devices", comment: "Button label to go to Firefox Account settings", lastUpdated: .unknown)
-    public static let FxASyncNow = MZLocalizedString("FxA.SyncNow", value: "Sync Now", comment: "Button label to Sync your Firefox Account", lastUpdated: .unknown)
+    public static let FxAManageAccount = MZLocalizedString("FxA.ManageAccount", value: "Manage Account & Devices", comment: "Button label to go to Decentr Account settings", lastUpdated: .unknown)
+    public static let FxASyncNow = MZLocalizedString("FxA.SyncNow", value: "Sync Now", comment: "Button label to Sync your Decentr Account", lastUpdated: .unknown)
     public static let FxANoInternetConnection = MZLocalizedString("FxA.NoInternetConnection", value: "No Internet Connection", comment: "Label when no internet is present", lastUpdated: .unknown)
-    public static let FxASettingsTitle = MZLocalizedString("Settings.FxA.Title", value: "Firefox Account", comment: "Title displayed in header of the FxA settings panel.", lastUpdated: .unknown)
-    public static let FxASettingsSyncSettings = MZLocalizedString("Settings.FxA.Sync.SectionName", value: "Sync Settings", comment: "Label used as a section title in the Firefox Accounts Settings screen.", lastUpdated: .unknown)
+    public static let FxASettingsTitle = MZLocalizedString("Settings.FxA.Title", value: "Decentr Account", comment: "Title displayed in header of the FxA settings panel.", lastUpdated: .unknown)
+    public static let FxASettingsSyncSettings = MZLocalizedString("Settings.FxA.Sync.SectionName", value: "Sync Settings", comment: "Label used as a section title in the Decentr Accounts Settings screen.", lastUpdated: .unknown)
     public static let FxASettingsDeviceName = MZLocalizedString("Settings.FxA.DeviceName", value: "Device Name", comment: "Label used for the device name settings section.", lastUpdated: .unknown)
     public static let FxAOpenSyncPreferences = MZLocalizedString("FxA.OpenSyncPreferences", value: "Open Sync Preferences", comment: "Button label to open Sync preferences", lastUpdated: .unknown)
     public static let FxAConnectAnotherDevice = MZLocalizedString("FxA.ConnectAnotherDevice", value: "Connect Another Device", comment: "Button label to connect another device to Sync", lastUpdated: .unknown)
-    public static let FxARemoveAccountButton = MZLocalizedString("FxA.RemoveAccount", value: "Remove", comment: "Remove button is displayed on firefox account page under certain scenarios where user would like to remove their account.", lastUpdated: .unknown)
-    public static let FxARemoveAccountAlertTitle = MZLocalizedString("FxA.RemoveAccountAlertTitle", value: "Remove Account", comment: "Remove account alert is the final confirmation before user removes their firefox account", lastUpdated: .unknown)
-    public static let FxARemoveAccountAlertMessage = MZLocalizedString("FxA.RemoveAccountAlertMessage", value: "Remove the Firefox Account associated with this device to sign in as a different user.", comment: "Description string for alert view that gets presented when user tries to remove an account.", lastUpdated: .unknown)
+    public static let FxARemoveAccountButton = MZLocalizedString("FxA.RemoveAccount", value: "Remove", comment: "Remove button is displayed on decentr account page under certain scenarios where user would like to remove their account.", lastUpdated: .unknown)
+    public static let FxARemoveAccountAlertTitle = MZLocalizedString("FxA.RemoveAccountAlertTitle", value: "Remove Account", comment: "Remove account alert is the final confirmation before user removes their decentr account", lastUpdated: .unknown)
+    public static let FxARemoveAccountAlertMessage = MZLocalizedString("FxA.RemoveAccountAlertMessage", value: "Remove the Decentr Account associated with this device to sign in as a different user.", comment: "Description string for alert view that gets presented when user tries to remove an account.", lastUpdated: .unknown)
 
     // Surface error strings
-    public static let FxAAccountVerificationRequiredSurface = MZLocalizedString("FxA.AccountVerificationRequiredSurface", value: "You need to verify %@. Check your email for the verification link from Firefox.", comment: "Message explaining that user needs to check email for Firefox Account verfication link.", lastUpdated: .unknown)
+    public static let FxAAccountVerificationRequiredSurface = MZLocalizedString("FxA.AccountVerificationRequiredSurface", value: "You need to verify %@. Check your email for the verification link from Decentr.", comment: "Message explaining that user needs to check email for Decentr Account verfication link.", lastUpdated: .unknown)
     public static let FxAResendEmail = MZLocalizedString("FxA.ResendEmail", value: "Resend Email", comment: "Button label to resend email", lastUpdated: .unknown)
     public static let FxAAccountVerifyEmail = MZLocalizedString("Verify your email address", comment: "Text message in the settings table view", lastUpdated: .unknown)
     public static let FxAAccountVerifyPassword = MZLocalizedString("Enter your password to connect", comment: "Text message in the settings table view", lastUpdated: .unknown)
-    public static let FxAAccountUpgradeFirefox = MZLocalizedString("Upgrade Firefox to connect", comment: "Text message in the settings table view", lastUpdated: .unknown)
+    public static let FxAAccountUpgradeFirefox = MZLocalizedString("Upgrade Decentr to connect", comment: "Text message in the settings table view", lastUpdated: .unknown)
 }
 
 // MARK: - New tab choice settings
@@ -683,7 +683,7 @@ extension String {
     public static let SettingsNewTabTitle = MZLocalizedString("Settings.NewTab.Title", value: "New Tab", comment: "Title displayed in header of the setting panel.", lastUpdated: .unknown)
     public static let NewTabSectionNameFooter =
         MZLocalizedString("Settings.NewTab.TopSectionNameFooter", value: "Choose what to load when opening a new tab", comment: "Footer at the bottom of the New Tab screen after entering New Tab in settings", lastUpdated: .unknown)
-    public static let SettingsNewTabTopSites = MZLocalizedString("Settings.NewTab.Option.FirefoxHome", value: "Firefox Home", comment: "Option in settings to show Firefox Home when you open a new tab", lastUpdated: .unknown)
+    public static let SettingsNewTabTopSites = MZLocalizedString("Settings.NewTab.Option.FirefoxHome", value: "Decentr Home", comment: "Option in settings to show Decentr Home when you open a new tab", lastUpdated: .unknown)
     public static let SettingsNewTabBookmarks = MZLocalizedString("Settings.NewTab.Option.Bookmarks", value: "Bookmarks", comment: "Option in settings to show bookmarks when you open a new tab", lastUpdated: .unknown)
     public static let SettingsNewTabHistory = MZLocalizedString("Settings.NewTab.Option.History", value: "History", comment: "Option in settings to show history when you open a new tab", lastUpdated: .unknown)
     public static let SettingsNewTabReadingList = MZLocalizedString("Settings.NewTab.Option.ReadingList", value: "Show your Reading List", comment: "Option in settings to show reading list when you open a new tab", lastUpdated: .unknown)
@@ -698,7 +698,7 @@ extension String {
     public static let SettingsNewTabPocketFooter = MZLocalizedString("Settings.NewTab.Option.PocketFooter", value: "Great content from around the web.", comment: "Footer caption for pocket settings", lastUpdated: .unknown)
     public static let SettingsNewTabHiglightsHistory = MZLocalizedString("Settings.NewTab.Option.HighlightsHistory", value: "Visited", comment: "Option in settings to turn off history in the highlights section", lastUpdated: .unknown)
     public static let SettingsNewTabHighlightsBookmarks = MZLocalizedString("Settings.NewTab.Option.HighlightsBookmarks", value: "Recent Bookmarks", comment: "Option in the settings to turn off recent bookmarks in the Highlights section", lastUpdated: .unknown)
-    public static let SettingsTopSitesCustomizeTitle = MZLocalizedString("Settings.NewTab.Option.CustomizeTitle", value: "Customize Firefox Home", comment: "The title for the section to customize top sites in the new tab settings page.", lastUpdated: .unknown)
+    public static let SettingsTopSitesCustomizeTitle = MZLocalizedString("Settings.NewTab.Option.CustomizeTitle", value: "Customize Decentr Home", comment: "The title for the section to customize top sites in the new tab settings page.", lastUpdated: .unknown)
     public static let SettingsTopSitesCustomizeFooter = MZLocalizedString("Settings.NewTab.Option.CustomizeFooter", value: "The sites you visit most", comment: "The footer for the section to customize top sites in the new tab settings page.", lastUpdated: .unknown)
     public static let SettingsTopSitesCustomizeFooter2 = MZLocalizedString("Settings.NewTab.Option.CustomizeFooter2", value: "Sites you save or visit", comment: "The footer for the section to customize top sites in the new tab settings page.", lastUpdated: .unknown)
 }
@@ -707,7 +707,7 @@ extension String {
 // For 'Advanced Sync Settings' view, which is a debug setting. English only, there is little value in maintaining L10N strings for these.
 extension String {
     public static let SettingsAdvancedAccountTitle = "Advanced Sync Settings"
-    public static let SettingsAdvancedAccountCustomFxAContentServerURI = "Custom Firefox Account Content Server URI"
+    public static let SettingsAdvancedAccountCustomFxAContentServerURI = "Custom Decentr Account Content Server URI"
     public static let SettingsAdvancedAccountUseCustomFxAContentServerURITitle = "Use Custom FxA Content Server"
     public static let SettingsAdvancedAccountCustomSyncTokenServerURI = "Custom Sync Token Server URI"
     public static let SettingsAdvancedAccountUseCustomSyncTokenServerTitle = "Use Custom Sync Token Server"
@@ -797,7 +797,7 @@ extension String {
     public static let GoButtonTittle = MZLocalizedString("ClipboardToast.GoToCopiedLink.Button", value: "Go", comment: "The button to open a new tab with the copied link", lastUpdated: .unknown)
 
     public static let SettingsOfferClipboardBarTitle = MZLocalizedString("Settings.OfferClipboardBar.Title", value: "Offer to Open Copied Links", comment: "Title of setting to enable the Go to Copied URL feature. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349", lastUpdated: .unknown)
-    public static let SettingsOfferClipboardBarStatus = MZLocalizedString("Settings.OfferClipboardBar.Status", value: "When Opening Firefox", comment: "Description displayed under the ”Offer to Open Copied Link” option. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349", lastUpdated: .unknown)
+    public static let SettingsOfferClipboardBarStatus = MZLocalizedString("Settings.OfferClipboardBar.Status", value: "When Opening Decentr", comment: "Description displayed under the ”Offer to Open Copied Link” option. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349", lastUpdated: .unknown)
 }
 
 // MARK: - Link Previews
@@ -808,11 +808,11 @@ extension String {
 
 // MARK: - Errors
 extension String {
-    public static let UnableToDownloadError = MZLocalizedString("Downloads.Error.Message", value: "Downloads aren’t supported in Firefox yet.", comment: "The message displayed to a user when they try and perform the download of an asset that Firefox cannot currently handle.", lastUpdated: .unknown)
+    public static let UnableToDownloadError = MZLocalizedString("Downloads.Error.Message", value: "Downloads aren’t supported in Decentr yet.", comment: "The message displayed to a user when they try and perform the download of an asset that Decentr cannot currently handle.", lastUpdated: .unknown)
     public static let UnableToAddPassErrorTitle = MZLocalizedString("AddPass.Error.Title", value: "Failed to Add Pass", comment: "Title of the 'Add Pass Failed' alert. See https://support.apple.com/HT204003 for context on Wallet.", lastUpdated: .unknown)
     public static let UnableToAddPassErrorMessage = MZLocalizedString("AddPass.Error.Message", value: "An error occured while adding the pass to Wallet. Please try again later.", comment: "Text of the 'Add Pass Failed' alert.  See https://support.apple.com/HT204003 for context on Wallet.", lastUpdated: .unknown)
     public static let UnableToAddPassErrorDismiss = MZLocalizedString("AddPass.Error.Dismiss", value: "OK", comment: "Button to dismiss the 'Add Pass Failed' alert.  See https://support.apple.com/HT204003 for context on Wallet.", lastUpdated: .unknown)
-    public static let UnableToOpenURLError = MZLocalizedString("OpenURL.Error.Message", value: "Firefox cannot open the page because it has an invalid address.", comment: "The message displayed to a user when they try to open a URL that cannot be handled by Firefox, or any external app.", lastUpdated: .unknown)
+    public static let UnableToOpenURLError = MZLocalizedString("OpenURL.Error.Message", value: "Decentr cannot open the page because it has an invalid address.", comment: "The message displayed to a user when they try to open a URL that cannot be handled by Decentr, or any external app.", lastUpdated: .unknown)
     public static let UnableToOpenURLErrorTitle = MZLocalizedString("OpenURL.Error.Title", value: "Cannot Open Page", comment: "Title of the message shown when the user attempts to navigate to an invalid link.", lastUpdated: .unknown)
 }
 
@@ -870,7 +870,7 @@ extension String {
 
 // MARK: - Photo Library access
 extension String {
-    public static let PhotoLibraryFirefoxWouldLikeAccessTitle = MZLocalizedString("PhotoLibrary.FirefoxWouldLikeAccessTitle", value: "Firefox would like to access your Photos", comment: "See http://mzl.la/1G7uHo7", lastUpdated: .unknown)
+    public static let PhotoLibraryFirefoxWouldLikeAccessTitle = MZLocalizedString("PhotoLibrary.FirefoxWouldLikeAccessTitle", value: "Decentr would like to access your Photos", comment: "See http://mzl.la/1G7uHo7", lastUpdated: .unknown)
     public static let PhotoLibraryFirefoxWouldLikeAccessMessage = MZLocalizedString("PhotoLibrary.FirefoxWouldLikeAccessMessage", value: "This allows you to save the image to your Camera Roll.", comment: "See http://mzl.la/1G7uHo7", lastUpdated: .unknown)
 }
 
@@ -878,7 +878,7 @@ extension String {
 // These are displayed when the app is backgrounded or the device is locked.
 extension String {
     // zero tabs
-    public static let SentTab_NoTabArrivingNotification_title = MZLocalizedString("SentTab.NoTabArrivingNotification.title", value: "Firefox Sync", comment: "Title of notification received after a spurious message from FxA has been received.", lastUpdated: .unknown)
+    public static let SentTab_NoTabArrivingNotification_title = MZLocalizedString("SentTab.NoTabArrivingNotification.title", value: "Decentr Sync", comment: "Title of notification received after a spurious message from FxA has been received.", lastUpdated: .unknown)
     public static let SentTab_NoTabArrivingNotification_body =
         MZLocalizedString("SentTab.NoTabArrivingNotification.body", value: "Tap to begin", comment: "Body of notification received after a spurious message from FxA has been received.", lastUpdated: .unknown)
 
@@ -897,14 +897,14 @@ extension String {
 // MARK: - Additional messages sent via Push from FxA
 extension String {
     public static let FxAPush_DeviceDisconnected_ThisDevice_title = MZLocalizedString("FxAPush_DeviceDisconnected_ThisDevice_title", value: "Sync Disconnected", comment: "Title of a notification displayed when this device has been disconnected by another device.", lastUpdated: .unknown)
-    public static let FxAPush_DeviceDisconnected_ThisDevice_body = MZLocalizedString("FxAPush_DeviceDisconnected_ThisDevice_body", value: "This device has been successfully disconnected from Firefox Sync.", comment: "Body of a notification displayed when this device has been disconnected from FxA by another device.", lastUpdated: .unknown)
+    public static let FxAPush_DeviceDisconnected_ThisDevice_body = MZLocalizedString("FxAPush_DeviceDisconnected_ThisDevice_body", value: "This device has been successfully disconnected from Decentr Sync.", comment: "Body of a notification displayed when this device has been disconnected from FxA by another device.", lastUpdated: .unknown)
     public static let FxAPush_DeviceDisconnected_title = MZLocalizedString("FxAPush_DeviceDisconnected_title", value: "Sync Disconnected", comment: "Title of a notification displayed when named device has been disconnected from FxA.", lastUpdated: .unknown)
     public static let FxAPush_DeviceDisconnected_body = MZLocalizedString("FxAPush_DeviceDisconnected_body", value: "%@ has been successfully disconnected.", comment: "Body of a notification displayed when named device has been disconnected from FxA. %@ refers to the name of the disconnected device.", lastUpdated: .unknown)
 
-    public static let FxAPush_DeviceDisconnected_UnknownDevice_body = MZLocalizedString("FxAPush_DeviceDisconnected_UnknownDevice_body", value: "A device has disconnected from Firefox Sync", comment: "Body of a notification displayed when unnamed device has been disconnected from FxA.", lastUpdated: .unknown)
+    public static let FxAPush_DeviceDisconnected_UnknownDevice_body = MZLocalizedString("FxAPush_DeviceDisconnected_UnknownDevice_body", value: "A device has disconnected from Decentr Sync", comment: "Body of a notification displayed when unnamed device has been disconnected from FxA.", lastUpdated: .unknown)
 
     public static let FxAPush_DeviceConnected_title = MZLocalizedString("FxAPush_DeviceConnected_title", value: "Sync Connected", comment: "Title of a notification displayed when another device has connected to FxA.", lastUpdated: .unknown)
-    public static let FxAPush_DeviceConnected_body = MZLocalizedString("FxAPush_DeviceConnected_body", value: "Firefox Sync has connected to %@", comment: "Title of a notification displayed when another device has connected to FxA. %@ refers to the name of the newly connected device.", lastUpdated: .unknown)
+    public static let FxAPush_DeviceConnected_body = MZLocalizedString("FxAPush_DeviceConnected_body", value: "Decentr Sync has connected to %@", comment: "Title of a notification displayed when another device has connected to FxA. %@ refers to the name of the newly connected device.", lastUpdated: .unknown)
 }
 
 // MARK: - Reader Mode
@@ -918,7 +918,7 @@ extension String {
     public static let ScanQRCodeViewTitle = MZLocalizedString("ScanQRCode.View.Title", value: "Scan QR Code", comment: "Title for the QR code scanner view.", lastUpdated: .unknown)
     public static let ScanQRCodeInstructionsLabel = MZLocalizedString("ScanQRCode.Instructions.Label", value: "Align QR code within frame to scan", comment: "Text for the instructions label, displayed in the QR scanner view", lastUpdated: .unknown)
     public static let ScanQRCodeInvalidDataErrorMessage = MZLocalizedString("ScanQRCode.InvalidDataError.Message", value: "The data is invalid", comment: "Text of the prompt that is shown to the user when the data is invalid", lastUpdated: .unknown)
-    public static let ScanQRCodePermissionErrorMessage = MZLocalizedString("ScanQRCode.PermissionError.Message", value: "Please allow Firefox to access your device’s camera in ‘Settings’ -> ‘Privacy’ -> ‘Camera’.", comment: "Text of the prompt user to setup the camera authorization.", lastUpdated: .unknown)
+    public static let ScanQRCodePermissionErrorMessage = MZLocalizedString("ScanQRCode.PermissionError.Message", value: "Please allow Decentr to access your device’s camera in ‘Settings’ -> ‘Privacy’ -> ‘Camera’.", comment: "Text of the prompt user to setup the camera authorization.", lastUpdated: .unknown)
     public static let ScanQRCodeErrorOKButton = MZLocalizedString("ScanQRCode.Error.OK.Button", value: "OK", comment: "OK button to dismiss the error prompt.", lastUpdated: .unknown)
 }
 
@@ -953,7 +953,7 @@ extension String {
     public static let AppMenuHistoryTitleString = MZLocalizedString("Menu.OpenHistoryAction.AccessibilityLabel.v2", tableName: "Menu", value: "History", comment: "Accessibility label for the button, displayed in the menu, used to open the History home panel. Please keep as short as possible, <15 chars of space available.", lastUpdated: .unknown)
     public static let AppMenuDownloadsTitleString = MZLocalizedString("Menu.OpenDownloadsAction.AccessibilityLabel.v2", tableName: "Menu", value: "Downloads", comment: "Accessibility label for the button, displayed in the menu, used to open the Downloads home panel. Please keep as short as possible, <15 chars of space available.", lastUpdated: .unknown)
     public static let AppMenuSyncedTabsTitleString = MZLocalizedString("Menu.OpenSyncedTabsAction.AccessibilityLabel.v2", tableName: "Menu", value: "Synced Tabs", comment: "Accessibility label for the button, displayed in the menu, used to open the Synced Tabs home panel. Please keep as short as possible, <15 chars of space available.", lastUpdated: .unknown)
-    public static let AppMenuLibrarySeeAllTitleString = MZLocalizedString("Menu.SeeAllAction.Title", tableName: "Menu", value: "See All", comment: "Label for the button, displayed in Firefox Home, used to see all Library panels.", lastUpdated: .unknown)
+    public static let AppMenuLibrarySeeAllTitleString = MZLocalizedString("Menu.SeeAllAction.Title", tableName: "Menu", value: "See All", comment: "Label for the button, displayed in Decentr Home, used to see all Library panels.", lastUpdated: .unknown)
     public static let AppMenuButtonAccessibilityLabel = MZLocalizedString("Toolbar.Menu.AccessibilityLabel", value: "Menu", comment: "Accessibility label for the Menu button.", lastUpdated: .unknown)
     public static let TabTrayDeleteMenuButtonAccessibilityLabel = MZLocalizedString("Toolbar.Menu.CloseAllTabs", value: "Close All Tabs", comment: "Accessibility label for the Close All Tabs menu button.", lastUpdated: .unknown)
     public static let AppMenuNightMode = MZLocalizedString("Menu.NightModeTurnOn.Label", value: "Enable Night Mode", comment: "Label for the button, displayed in the menu, turns on night mode.", lastUpdated: .unknown)
@@ -999,7 +999,7 @@ extension String {
 
     public static let TrackingProtectionOptionOnOffFooter = MZLocalizedString("Settings.TrackingProtectionOption.EnabledStateFooterLabel", value: "Tracking is the collection of your browsing data across multiple websites.", comment: "Description label shown on tracking protection options screen.", lastUpdated: .unknown)
     public static let TrackingProtectionOptionProtectionLevelTitle = MZLocalizedString("Settings.TrackingProtection.ProtectionLevelTitle", value: "Protection Level", comment: "Title for tracking protection options section where level can be selected.", lastUpdated: .unknown)
-    public static let TrackingProtectionOptionBlockListsHeader = MZLocalizedString("Settings.TrackingProtection.BlockListsHeader", value: "You can choose which list Firefox will use to block Web elements that may track your browsing activity.", comment: "Header description for tracking protection options section where Basic/Strict block list can be selected", lastUpdated: .unknown)
+    public static let TrackingProtectionOptionBlockListsHeader = MZLocalizedString("Settings.TrackingProtection.BlockListsHeader", value: "You can choose which list Decentr will use to block Web elements that may track your browsing activity.", comment: "Header description for tracking protection options section where Basic/Strict block list can be selected", lastUpdated: .unknown)
     public static let TrackingProtectionOptionBlockListLevelStandard = MZLocalizedString("Settings.TrackingProtectionOption.BasicBlockList", value: "Standard (default)", comment: "Tracking protection settings option for using the basic blocklist.", lastUpdated: .unknown)
     public static let TrackingProtectionOptionBlockListLevelStrict = MZLocalizedString("Settings.TrackingProtectionOption.BlockListStrict", value: "Strict", comment: "Tracking protection settings option for using the strict blocklist.", lastUpdated: .unknown)
     public static let TrackingProtectionReloadWithout = MZLocalizedString("Menu.ReloadWithoutTrackingProtection.Title", value: "Reload Without Tracking Protection", comment: "Label for the button, displayed in the menu, used to reload the current website without Tracking Protection", lastUpdated: .unknown)
@@ -1018,7 +1018,7 @@ extension String {
 
 // MARK: - Tracking Protection menu
 extension String {
-    public static let TPBlockingDescription = MZLocalizedString("Menu.TrackingProtectionBlocking.Description", value: "Firefox is blocking parts of the page that may track your browsing.", comment: "Description of the Tracking protection menu when TP is blocking parts of the page", lastUpdated: .unknown)
+    public static let TPBlockingDescription = MZLocalizedString("Menu.TrackingProtectionBlocking.Description", value: "Decentr is blocking parts of the page that may track your browsing.", comment: "Description of the Tracking protection menu when TP is blocking parts of the page", lastUpdated: .unknown)
     public static let TPNoBlockingDescription = MZLocalizedString("Menu.TrackingProtectionNoBlocking.Description", value: "No tracking elements detected on this page.", comment: "The description of the Tracking Protection menu item when no scripts are blocked but tracking protection is enabled.", lastUpdated: .unknown)
     public static let TPBlockingDisabledDescription = MZLocalizedString("Menu.TrackingProtectionBlockingDisabled.Description", value: "Block online trackers", comment: "The description of the Tracking Protection menu item when tracking is enabled", lastUpdated: .unknown)
     public static let TPBlockingMoreInfo = MZLocalizedString("Menu.TrackingProtectionMoreInfo.Description", value: "Learn more about how Tracking Protection blocks online trackers that collect your browsing data across multiple websites.", comment: "more info about what tracking protection is about", lastUpdated: .unknown)
@@ -1029,12 +1029,12 @@ extension String {
     public static let TPBlockingSiteDisabled = MZLocalizedString("Menu.TrackingProtectionDisable1.Title", value: "Disabled for this site", comment: "The button that disabled TP for a site.", lastUpdated: .unknown)
     public static let ETPOn = MZLocalizedString("Menu.EnhancedTrackingProtectionOn.Title", value: "Protections are ON for this site", comment: "A switch to enable enhanced tracking protection inside the menu.", lastUpdated: .unknown)
     public static let ETPOff = MZLocalizedString("Menu.EnhancedTrackingProtectionOff.Title", value: "Protections are OFF for this site", comment: "A switch to disable enhanced tracking protection inside the menu.", lastUpdated: .unknown)
-    public static let StrictETPWithITP = MZLocalizedString("Menu.EnhancedTrackingProtectionStrictWithITP.Title", value: "Firefox blocks cross-site trackers, social trackers, cryptominers, fingerprinters, and tracking content.", comment: "Description for having strict ETP protection with ITP offered in iOS14+", lastUpdated: .unknown)
-    public static let StandardETPWithITP = MZLocalizedString("Menu.EnhancedTrackingProtectionStandardWithITP.Title", value: "Firefox blocks cross-site trackers, social trackers, cryptominers, and fingerprinters.", comment: "Description for having standard ETP protection with ITP offered in iOS14+", lastUpdated: .unknown)
+    public static let StrictETPWithITP = MZLocalizedString("Menu.EnhancedTrackingProtectionStrictWithITP.Title", value: "Decentr blocks cross-site trackers, social trackers, cryptominers, fingerprinters, and tracking content.", comment: "Description for having strict ETP protection with ITP offered in iOS14+", lastUpdated: .unknown)
+    public static let StandardETPWithITP = MZLocalizedString("Menu.EnhancedTrackingProtectionStandardWithITP.Title", value: "Decentr blocks cross-site trackers, social trackers, cryptominers, and fingerprinters.", comment: "Description for having standard ETP protection with ITP offered in iOS14+", lastUpdated: .unknown)
 
     // TP Page menu title
     public static let TPPageMenuTitle = MZLocalizedString("Menu.TrackingProtection.TitlePrefix", value: "Protections for %@", comment: "Title on tracking protection menu showing the domain. eg. Protections for mozilla.org", lastUpdated: .unknown)
-    public static let TPPageMenuNoTrackersBlocked = MZLocalizedString("Menu.TrackingProtection.NoTrackersBlockedTitle", value: "No trackers known to Firefox were detected on this page.", comment: "Message in menu when no trackers blocked.", lastUpdated: .unknown)
+    public static let TPPageMenuNoTrackersBlocked = MZLocalizedString("Menu.TrackingProtection.NoTrackersBlockedTitle", value: "No trackers known to Decentr were detected on this page.", comment: "Message in menu when no trackers blocked.", lastUpdated: .unknown)
     public static let TPPageMenuBlockedTitle = MZLocalizedString("Menu.TrackingProtection.BlockedTitle", value: "Blocked", comment: "Title on tracking protection menu for blocked items.", lastUpdated: .unknown)
 
     public static let TPDetailsVerifiedBy = MZLocalizedString("Menu.TrackingProtection.Details.Verifier", value: "Verified by %@", comment: "String to let users know the site verifier, where the placeholder represents the SSL certificate signer.", lastUpdated: .unknown)
@@ -1086,9 +1086,9 @@ extension String {
 extension String {
     public static let SendUsageSettingTitle = MZLocalizedString("Settings.SendUsage.Title", value: "Send Usage Data", comment: "The title for the setting to send usage data.", lastUpdated: .unknown)
     public static let SendUsageSettingLink = MZLocalizedString("Settings.SendUsage.Link", value: "Learn More.", comment: "title for a link that explains how mozilla collects telemetry", lastUpdated: .unknown)
-    public static let SendUsageSettingMessage = MZLocalizedString("Settings.SendUsage.Message", value: "Mozilla strives to only collect what we need to provide and improve Firefox for everyone.", comment: "A short description that explains why mozilla collects usage data.", lastUpdated: .unknown)
+    public static let SendUsageSettingMessage = MZLocalizedString("Settings.SendUsage.Message", value: "Mozilla strives to only collect what we need to provide and improve Decentr for everyone.", comment: "A short description that explains why mozilla collects usage data.", lastUpdated: .unknown)
     public static let SettingsSiriSectionName = MZLocalizedString("Settings.Siri.SectionName", value: "Siri Shortcuts", comment: "The option that takes you to the siri shortcuts settings page", lastUpdated: .unknown)
-    public static let SettingsSiriSectionDescription = MZLocalizedString("Settings.Siri.SectionDescription", value: "Use Siri shortcuts to quickly open Firefox via Siri", comment: "The description that describes what siri shortcuts are", lastUpdated: .unknown)
+    public static let SettingsSiriSectionDescription = MZLocalizedString("Settings.Siri.SectionDescription", value: "Use Siri shortcuts to quickly open Decentr via Siri", comment: "The description that describes what siri shortcuts are", lastUpdated: .unknown)
     public static let SettingsSiriOpenURL = MZLocalizedString("Settings.Siri.OpenTabShortcut", value: "Open New Tab", comment: "The description of the open new tab siri shortcut", lastUpdated: .unknown)
 }
 
@@ -1102,7 +1102,7 @@ extension String {
 
     public static let SettingsStudiesToggleTitle = MZLocalizedString("Settings.Studies.Toggle.Title", value: "Studies", comment: "Label used as a toggle item in Settings. When this is off, the user is opting out of all studies.", lastUpdated: .unknown)
     public static let SettingsStudiesToggleLink = MZLocalizedString("Settings.Studies.Toggle.Link", value: "Learn More.", comment: "Title for a link that explains what Mozilla means by Studies", lastUpdated: .unknown)
-    public static let SettingsStudiesToggleMessage = MZLocalizedString("Settings.Studies.Toggle.Message", value: "Firefox may install and run studies from time to time.", comment: "A short description that explains that Mozilla is running studies", lastUpdated: .unknown)
+    public static let SettingsStudiesToggleMessage = MZLocalizedString("Settings.Studies.Toggle.Message", value: "Decentr may install and run studies from time to time.", comment: "A short description that explains that Mozilla is running studies", lastUpdated: .unknown)
 
     public static let SettingsStudiesToggleValueOn = MZLocalizedString("Settings.Studies.Toggle.On", value: "On", comment: "Toggled ON to participate in studies", lastUpdated: .unknown)
     public static let SettingsStudiesToggleValueOff = MZLocalizedString("Settings.Studies.Toggle.Off", value: "Off", comment: "Toggled OFF to opt-out of studies", lastUpdated: .unknown)
@@ -1118,17 +1118,17 @@ extension String {
 // MARK: - Intro Onboarding slides
 extension String {
     // First Card
-    public static let CardTitleWelcome = MZLocalizedString("Intro.Slides.Welcome.Title.v2", tableName: "Intro", value: "Welcome to Firefox", comment: "Title for the first panel 'Welcome' in the First Run tour.", lastUpdated: .unknown)
+    public static let CardTitleWelcome = MZLocalizedString("Intro.Slides.Welcome.Title.v2", tableName: "Intro", value: "Welcome to Decentr", comment: "Title for the first panel 'Welcome' in the First Run tour.", lastUpdated: .unknown)
     public static let CardTitleAutomaticPrivacy = MZLocalizedString("Intro.Slides.Automatic.Privacy.Title", tableName: "Intro", value: "Automatic Privacy", comment: "Title for the first item in the table related to automatic privacy", lastUpdated: .unknown)
     public static let CardDescriptionAutomaticPrivacy = MZLocalizedString("Intro.Slides.Automatic.Privacy.Description", tableName: "Intro", value: "Enhanced Tracking Protection blocks malware and stops trackers.", comment: "Description for the first item in the table related to automatic privacy", lastUpdated: .unknown)
     public static let CardTitleFastSearch = MZLocalizedString("Intro.Slides.Fast.Search.Title", tableName: "Intro", value: "Fast Search", comment: "Title for the second item in the table related to fast searching via address bar", lastUpdated: .unknown)
     public static let CardDescriptionFastSearch = MZLocalizedString("Intro.Slides.Fast.Search.Description", tableName: "Intro", value: "Search suggestions get you to websites faster.", comment: "Description for the second item in the table related to fast searching via address bar", lastUpdated: .unknown)
-    public static let CardTitleSafeSync = MZLocalizedString("Intro.Slides.Safe.Sync.Title", tableName: "Intro", value: "Safe Sync", comment: "Title for the third item in the table related to safe syncing with a firefox account", lastUpdated: .unknown)
-    public static let CardDescriptionSafeSync = MZLocalizedString("Intro.Slides.Safe.Sync.Description", tableName: "Intro", value: "Protect your logins and data everywhere you use Firefox.", comment: "Description for the third item in the table related to safe syncing with a firefox account", lastUpdated: .unknown)
+    public static let CardTitleSafeSync = MZLocalizedString("Intro.Slides.Safe.Sync.Title", tableName: "Intro", value: "Safe Sync", comment: "Title for the third item in the table related to safe syncing with a decentr account", lastUpdated: .unknown)
+    public static let CardDescriptionSafeSync = MZLocalizedString("Intro.Slides.Safe.Sync.Description", tableName: "Intro", value: "Protect your logins and data everywhere you use Decentr.", comment: "Description for the third item in the table related to safe syncing with a decentr account", lastUpdated: .unknown)
 
     // Second Card
-    public static let CardTitleFxASyncDevices = MZLocalizedString("Intro.Slides.Firefox.Account.Sync.Title", tableName: "Intro", value: "Sync Firefox Between Devices", comment: "Title for the first item in the table related to syncing data (bookmarks, history) via firefox account between devices", lastUpdated: .unknown)
-    public static let CardDescriptionFxASyncDevices = MZLocalizedString("Intro.Slides.Firefox.Account.Sync.Description", tableName: "Intro", value: "Bring bookmarks, history, and passwords to Firefox on this device.", comment: "Description for the first item in the table related to syncing data (bookmarks, history) via firefox account between devices", lastUpdated: .unknown)
+    public static let CardTitleFxASyncDevices = MZLocalizedString("Intro.Slides.Decentr.Account.Sync.Title", tableName: "Intro", value: "Sync Decentr Between Devices", comment: "Title for the first item in the table related to syncing data (bookmarks, history) via decentr account between devices", lastUpdated: .unknown)
+    public static let CardDescriptionFxASyncDevices = MZLocalizedString("Intro.Slides.Decentr.Account.Sync.Description", tableName: "Intro", value: "Bring bookmarks, history, and passwords to Decentr on this device.", comment: "Description for the first item in the table related to syncing data (bookmarks, history) via decentr account between devices", lastUpdated: .unknown)
 
     //----Other----//
     public static let CardTitleSearch = MZLocalizedString("Intro.Slides.Search.Title", tableName: "Intro", value: "Your search, your way", comment: "Title for the second  panel 'Search' in the First Run tour.", lastUpdated: .unknown)
@@ -1139,13 +1139,13 @@ extension String {
     public static let CardTextWelcome = MZLocalizedString("Intro.Slides.Welcome.Description.v2", tableName: "Intro", value: "Fast, private, and on your side.", comment: "Description for the 'Welcome' panel in the First Run tour.", lastUpdated: .unknown)
     public static let CardTextSearch = MZLocalizedString("Intro.Slides.Search.Description", tableName: "Intro", value: "Searching for something different? Choose another default search engine (or add your own) in Settings.", comment: "Description for the 'Favorite Search Engine' panel in the First Run tour.", lastUpdated: .unknown)
     public static let CardTextPrivate = MZLocalizedString("Intro.Slides.Private.Description", tableName: "Intro", value: "Tap the mask icon to slip into Private Browsing mode.", comment: "Description for the 'Private Browsing' panel in the First Run tour.", lastUpdated: .unknown)
-    public static let CardTextMail = MZLocalizedString("Intro.Slides.Mail.Description", tableName: "Intro", value: "Use any email app — not just Mail — with Firefox.", comment: "Description for the 'Mail' panel in the First Run tour.", lastUpdated: .unknown)
+    public static let CardTextMail = MZLocalizedString("Intro.Slides.Mail.Description", tableName: "Intro", value: "Use any email app — not just Mail — with Decentr.", comment: "Description for the 'Mail' panel in the First Run tour.", lastUpdated: .unknown)
     public static let CardTextSync = MZLocalizedString("Intro.Slides.TrailheadSync.Description", tableName: "Intro", value: "Sign in to your account to sync and access more features.", comment: "Description for the 'Sync' panel in the First Run tour.", lastUpdated: .unknown)
     public static let SignInButtonTitle = MZLocalizedString("Turn on Sync…", tableName: "Intro", comment: "The button that opens the sign in page for sync. See http://mzl.la/1T8gxwo", lastUpdated: .unknown)
     public static let StartBrowsingButtonTitle = MZLocalizedString("Start Browsing", tableName: "Intro", comment: "See http://mzl.la/1T8gxwo", lastUpdated: .unknown)
     public static let IntroNextButtonTitle = MZLocalizedString("Intro.Slides.Button.Next", tableName: "Intro", value: "Next", comment: "Next button on the first intro screen.", lastUpdated: .unknown)
-    public static let IntroSignInButtonTitle = MZLocalizedString("Intro.Slides.Button.SignIn", tableName: "Intro", value: "Sign In", comment: "Sign in to Firefox account button on second intro screen.", lastUpdated: .unknown)
-    public static let IntroSignUpButtonTitle = MZLocalizedString("Intro.Slides.Button.SignUp", tableName: "Intro", value: "Sign Up", comment: "Sign up to Firefox account button on second intro screen.", lastUpdated: .unknown)
+    public static let IntroSignInButtonTitle = MZLocalizedString("Intro.Slides.Button.SignIn", tableName: "Intro", value: "Sign In", comment: "Sign in to Decentr account button on second intro screen.", lastUpdated: .unknown)
+    public static let IntroSignUpButtonTitle = MZLocalizedString("Intro.Slides.Button.SignUp", tableName: "Intro", value: "Sign Up", comment: "Sign up to Decentr account button on second intro screen.", lastUpdated: .unknown)
 }
 
 // MARK: - Share extension
@@ -1155,10 +1155,10 @@ extension String {
     public static let SendToErrorTitle = MZLocalizedString("SendTo.Error.Title", value: "The link you are trying to share cannot be shared.", comment: "Title of error prompt displayed when an invalid URL is shared.", lastUpdated: .unknown)
     public static let SendToErrorMessage = MZLocalizedString("SendTo.Error.Message", value: "Only HTTP and HTTPS links can be shared.", comment: "Message in error prompt explaining why the URL is invalid.", lastUpdated: .unknown)
     public static let SendToCloseButton = MZLocalizedString("SendTo.Cancel.Button", value: "Close", comment: "Close button in top navigation bar", lastUpdated: .unknown)
-    public static let SendToNotSignedInText = MZLocalizedString("SendTo.NotSignedIn.Title", value: "You are not signed in to your Firefox Account.", comment: "See http://mzl.la/1ISlXnU", lastUpdated: .unknown)
-    public static let SendToNotSignedInMessage = MZLocalizedString("SendTo.NotSignedIn.Message", value: "Please open Firefox, go to Settings and sign in to continue.", comment: "See http://mzl.la/1ISlXnU", lastUpdated: .unknown)
-    public static let SendToSignInButton = MZLocalizedString("SendTo.SignIn.Button", value: "Sign In to Firefox", comment: "The text for the button on the Send to Device page if you are not signed in to Firefox Accounts.", lastUpdated: .unknown)
-    public static let SendToNoDevicesFound = MZLocalizedString("SendTo.NoDevicesFound.Message", value: "You don’t have any other devices connected to this Firefox Account available to sync.", comment: "Error message shown in the remote tabs panel", lastUpdated: .unknown)
+    public static let SendToNotSignedInText = MZLocalizedString("SendTo.NotSignedIn.Title", value: "You are not signed in to your Decentr Account.", comment: "See http://mzl.la/1ISlXnU", lastUpdated: .unknown)
+    public static let SendToNotSignedInMessage = MZLocalizedString("SendTo.NotSignedIn.Message", value: "Please open Decentr, go to Settings and sign in to continue.", comment: "See http://mzl.la/1ISlXnU", lastUpdated: .unknown)
+    public static let SendToSignInButton = MZLocalizedString("SendTo.SignIn.Button", value: "Sign In to Decentr", comment: "The text for the button on the Send to Device page if you are not signed in to Decentr Accounts.", lastUpdated: .unknown)
+    public static let SendToNoDevicesFound = MZLocalizedString("SendTo.NoDevicesFound.Message", value: "You don’t have any other devices connected to this Decentr Account available to sync.", comment: "Error message shown in the remote tabs panel", lastUpdated: .unknown)
     public static let SendToTitle = MZLocalizedString("SendTo.NavBar.Title", value: "Send Tab", comment: "Title of the dialog that allows you to send a tab to a different device", lastUpdated: .unknown)
     public static let SendToSendButtonTitle = MZLocalizedString("SendTo.SendAction.Text", value: "Send", comment: "Navigation bar button to Send the current page to a device", lastUpdated: .unknown)
     public static let SendToDevicesListTitle = MZLocalizedString("SendTo.DeviceList.Text", value: "Available devices:", comment: "Header for the list of devices table", lastUpdated: .unknown)
@@ -1166,24 +1166,24 @@ extension String {
 
     // The above items are re-used strings from the old extension. New strings below.
 
-    public static let ShareAddToReadingList = MZLocalizedString("ShareExtension.AddToReadingListAction.Title", value: "Add to Reading List", comment: "Action label on share extension to add page to the Firefox reading list.", lastUpdated: .unknown)
+    public static let ShareAddToReadingList = MZLocalizedString("ShareExtension.AddToReadingListAction.Title", value: "Add to Reading List", comment: "Action label on share extension to add page to the Decentr reading list.", lastUpdated: .unknown)
     public static let ShareAddToReadingListDone = MZLocalizedString("ShareExtension.AddToReadingListActionDone.Title", value: "Added to Reading List", comment: "Share extension label shown after user has performed 'Add to Reading List' action.", lastUpdated: .unknown)
-    public static let ShareBookmarkThisPage = MZLocalizedString("ShareExtension.BookmarkThisPageAction.Title", value: "Bookmark This Page", comment: "Action label on share extension to bookmark the page in Firefox.", lastUpdated: .unknown)
+    public static let ShareBookmarkThisPage = MZLocalizedString("ShareExtension.BookmarkThisPageAction.Title", value: "Bookmark This Page", comment: "Action label on share extension to bookmark the page in Decentr.", lastUpdated: .unknown)
     public static let ShareBookmarkThisPageDone = MZLocalizedString("ShareExtension.BookmarkThisPageActionDone.Title", value: "Bookmarked", comment: "Share extension label shown after user has performed 'Bookmark this Page' action.", lastUpdated: .unknown)
 
-    public static let ShareOpenInFirefox = MZLocalizedString("ShareExtension.OpenInFirefoxAction.Title", value: "Open in Firefox", comment: "Action label on share extension to immediately open page in Firefox.", lastUpdated: .unknown)
-    public static let ShareSearchInFirefox = MZLocalizedString("ShareExtension.SeachInFirefoxAction.Title", value: "Search in Firefox", comment: "Action label on share extension to search for the selected text in Firefox.", lastUpdated: .unknown)
-    public static let ShareOpenInPrivateModeNow = MZLocalizedString("ShareExtension.OpenInPrivateModeAction.Title", value: "Open in Private Mode", comment: "Action label on share extension to immediately open page in Firefox in private mode.", lastUpdated: .unknown)
+    public static let ShareOpenInFirefox = MZLocalizedString("ShareExtension.OpenInFirefoxAction.Title", value: "Open in Decentr", comment: "Action label on share extension to immediately open page in Decentr.", lastUpdated: .unknown)
+    public static let ShareSearchInFirefox = MZLocalizedString("ShareExtension.SeachInFirefoxAction.Title", value: "Search in Decentr", comment: "Action label on share extension to search for the selected text in Decentr.", lastUpdated: .unknown)
+    public static let ShareOpenInPrivateModeNow = MZLocalizedString("ShareExtension.OpenInPrivateModeAction.Title", value: "Open in Private Mode", comment: "Action label on share extension to immediately open page in Decentr in private mode.", lastUpdated: .unknown)
 
-    public static let ShareLoadInBackground = MZLocalizedString("ShareExtension.LoadInBackgroundAction.Title", value: "Load in Background", comment: "Action label on share extension to load the page in Firefox when user switches apps to bring it to foreground.", lastUpdated: .unknown)
-    public static let ShareLoadInBackgroundDone = MZLocalizedString("ShareExtension.LoadInBackgroundActionDone.Title", value: "Loading in Firefox", comment: "Share extension label shown after user has performed 'Load in Background' action.", lastUpdated: .unknown)
+    public static let ShareLoadInBackground = MZLocalizedString("ShareExtension.LoadInBackgroundAction.Title", value: "Load in Background", comment: "Action label on share extension to load the page in Decentr when user switches apps to bring it to foreground.", lastUpdated: .unknown)
+    public static let ShareLoadInBackgroundDone = MZLocalizedString("ShareExtension.LoadInBackgroundActionDone.Title", value: "Loading in Decentr", comment: "Share extension label shown after user has performed 'Load in Background' action.", lastUpdated: .unknown)
 
 }
 
 // MARK: - PasswordAutofill extension
 extension String {
-    public static let PasswordAutofillTitle = MZLocalizedString("PasswordAutoFill.SectionTitle", value: "Firefox Credentials", comment: "Title of the extension that shows firefox passwords", lastUpdated: .unknown)
-    public static let CredentialProviderNoCredentialError = MZLocalizedString("PasswordAutoFill.NoPasswordsFoundTitle", value: "You don’t have any credentials synced from your Firefox Account", comment: "Error message shown in the remote tabs panel", lastUpdated: .unknown)
+    public static let PasswordAutofillTitle = MZLocalizedString("PasswordAutoFill.SectionTitle", value: "Decentr Credentials", comment: "Title of the extension that shows decentr passwords", lastUpdated: .unknown)
+    public static let CredentialProviderNoCredentialError = MZLocalizedString("PasswordAutoFill.NoPasswordsFoundTitle", value: "You don’t have any credentials synced from your Decentr Account", comment: "Error message shown in the remote tabs panel", lastUpdated: .unknown)
     public static let AvailableCredentialsHeader = MZLocalizedString("PasswordAutoFill.PasswordsListTitle", value: "Available Credentials:", comment: "Header for the list of credentials table", lastUpdated: .unknown)
 }
 
@@ -1227,7 +1227,7 @@ extension String {
 extension String {
     // Dark Mode Cover Sheet
     public static let CoverSheetV22DarkModeTitle = MZLocalizedString("CoverSheet.v22.DarkMode.Title", value: "Dark theme now includes a dark keyboard and dark splash screen.", comment: "Title for the new dark mode change in the version 22 app release.", lastUpdated: .unknown)
-    public static let CoverSheetV22DarkModeDescription = MZLocalizedString("CoverSheet.v22.DarkMode.Description", value: "For iOS 13 users, Firefox now automatically switches to a dark theme when your phone is set to Dark Mode. To change this behavior, go to Settings > Theme.", comment: "Description for the new dark mode change in the version 22 app release. It describes the new automatic dark theme and how to change the theme settings.", lastUpdated: .unknown)
+    public static let CoverSheetV22DarkModeDescription = MZLocalizedString("CoverSheet.v22.DarkMode.Description", value: "For iOS 13 users, Decentr now automatically switches to a dark theme when your phone is set to Dark Mode. To change this behavior, go to Settings > Theme.", comment: "Description for the new dark mode change in the version 22 app release. It describes the new automatic dark theme and how to change the theme settings.", lastUpdated: .unknown)
 
     // ETP Cover Sheet
     public static let CoverSheetETPTitle = MZLocalizedString("CoverSheet.v24.ETP.Title", value: "Protection Against Ad Tracking", comment: "Title for the new ETP mode i.e. standard vs strict", lastUpdated: .unknown)
@@ -1239,16 +1239,16 @@ extension String {
 extension String {
     public static let FxASignin_Title = MZLocalizedString("fxa.signin.turn-on-sync", value: "Turn on Sync", comment: "FxA sign in view title", lastUpdated: .unknown)
     public static let FxASignin_Subtitle = MZLocalizedString("fxa.signin.camera-signin", value: "Sign In with Your Camera", comment: "FxA sign in view subtitle", lastUpdated: .unknown)
-    public static let FxASignin_QRInstructions = MZLocalizedString("fxa.signin.qr-link-instruction", value: "On your computer open Firefox and go to firefox.com/pair", comment: "FxA sign in view qr code instructions", lastUpdated: .unknown)
+    public static let FxASignin_QRInstructions = MZLocalizedString("fxa.signin.qr-link-instruction", value: "On your computer open Decentr and go to decentr.com/pair", comment: "FxA sign in view qr code instructions", lastUpdated: .unknown)
     public static let FxASignin_QRScanSignin = MZLocalizedString("fxa.signin.ready-to-scan", value: "Ready to Scan", comment: "FxA sign in view qr code scan button", lastUpdated: .unknown)
     public static let FxASignin_EmailSignin = MZLocalizedString("fxa.signin.use-email-instead", value: "Use Email Instead", comment: "FxA sign in view email login button", lastUpdated: .unknown)
-    public static let FxASignin_CreateAccountPt1 = MZLocalizedString("fxa.signin.create-account-pt-1", value: "Sync Firefox between devices with an account.", comment: "FxA sign in create account label.", lastUpdated: .unknown)
-    public static let FxASignin_CreateAccountPt2 = MZLocalizedString("fxa.signin.create-account-pt-2", value: "Create Firefox account.", comment: "FxA sign in create account label. This will be linked to the site to create an account.", lastUpdated: .unknown)
+    public static let FxASignin_CreateAccountPt1 = MZLocalizedString("fxa.signin.create-account-pt-1", value: "Sync Decentr between devices with an account.", comment: "FxA sign in create account label.", lastUpdated: .unknown)
+    public static let FxASignin_CreateAccountPt2 = MZLocalizedString("fxa.signin.create-account-pt-2", value: "Create Decentr account.", comment: "FxA sign in create account label. This will be linked to the site to create an account.", lastUpdated: .unknown)
 }
 
 // MARK: - FxA QR code scanning screen
 extension String {
-    public static let FxAQRCode_Instructions = MZLocalizedString("fxa.qr-scanning-view.instructions", value: "Scan the QR code shown at firefox.com/pair", comment: "Instructions shown on qr code scanning view", lastUpdated: .unknown)
+    public static let FxAQRCode_Instructions = MZLocalizedString("fxa.qr-scanning-view.instructions", value: "Scan the QR code shown at decentr.com/pair", comment: "Instructions shown on qr code scanning view", lastUpdated: .unknown)
 }
 
 // MARK: - Today Widget Strings - [New Search - Private Search]
@@ -1260,14 +1260,14 @@ extension String {
     // Widget - Shared
 
     public static let QuickActionsGalleryTitle = MZLocalizedString("TodayWidget.QuickActionsGalleryTitle", tableName: "Today", value: "Quick Actions", comment: "Quick Actions title when widget enters edit mode", lastUpdated: .unknown)
-    public static let QuickActionsGalleryTitlev2 = MZLocalizedString("TodayWidget.QuickActionsGalleryTitleV2", tableName: "Today", value: "Firefox Shortcuts", comment: "Firefox shortcuts title when widget enters edit mode. Do not translate the word Firefox.", lastUpdated: .unknown)
+    public static let QuickActionsGalleryTitlev2 = MZLocalizedString("TodayWidget.QuickActionsGalleryTitleV2", tableName: "Today", value: "Decentr Shortcuts", comment: "Decentr shortcuts title when widget enters edit mode. Do not translate the word Decentr.", lastUpdated: .unknown)
 
     // Quick View - Gallery View
     public static let QuickViewGalleryTile = MZLocalizedString("TodayWidget.QuickViewGalleryTitle", tableName: "Today", value: "Quick View", comment: "Quick View title user is picking a widget to add.", lastUpdated: .unknown)
 
     // Quick Action - Medium Size Quick Action
-    public static let QuickActionsSubLabel = MZLocalizedString("TodayWidget.QuickActionsSubLabel", tableName: "Today", value: "Firefox - Quick Actions", comment: "Sub label for medium size quick action widget", lastUpdated: .unknown)
-    public static let NewSearchButtonLabel = MZLocalizedString("TodayWidget.NewSearchButtonLabelV1", tableName: "Today", value: "Search in Firefox", comment: "Open New Tab button label", lastUpdated: .unknown)
+    public static let QuickActionsSubLabel = MZLocalizedString("TodayWidget.QuickActionsSubLabel", tableName: "Today", value: "Decentr - Quick Actions", comment: "Sub label for medium size quick action widget", lastUpdated: .unknown)
+    public static let NewSearchButtonLabel = MZLocalizedString("TodayWidget.NewSearchButtonLabelV1", tableName: "Today", value: "Search in Decentr", comment: "Open New Tab button label", lastUpdated: .unknown)
     public static let NewPrivateTabButtonLabelV2 = MZLocalizedString("TodayWidget.NewPrivateTabButtonLabelV2", tableName: "Today", value: "Search in Private Tab", comment: "Open New Private Tab button label for medium size action", lastUpdated: .unknown)
     public static let GoToCopiedLinkLabel = MZLocalizedString("TodayWidget.GoToCopiedLinkLabelV1", tableName: "Today", value: "Go to copied link", comment: "Go to link pasted on the clipboard", lastUpdated: .unknown)
     public static let GoToCopiedLinkLabelV2 = MZLocalizedString("TodayWidget.GoToCopiedLinkLabelV2", tableName: "Today", value: "Go to\nCopied Link", comment: "Go to copied link", lastUpdated: .unknown)
@@ -1275,18 +1275,18 @@ extension String {
     public static let ClosePrivateTab = MZLocalizedString("TodayWidget.ClosePrivateTabsButton", tableName: "Today", value: "Close Private Tabs", comment: "Close Private Tabs button label", lastUpdated: .unknown)
 
     // Quick Action - Medium Size - Gallery View
-    public static let FirefoxShortcutGalleryDescription = MZLocalizedString("TodayWidget.FirefoxShortcutGalleryDescription", tableName: "Today", value: "Add Firefox shortcuts to your Home screen.", comment: "Description for medium size widget to add Firefox Shortcut to home screen", lastUpdated: .unknown)
+    public static let FirefoxShortcutGalleryDescription = MZLocalizedString("TodayWidget.FirefoxShortcutGalleryDescription", tableName: "Today", value: "Add Decentr shortcuts to your Home screen.", comment: "Description for medium size widget to add Decentr Shortcut to home screen", lastUpdated: .unknown)
 
     // Quick Action - Small Size Widget
-    public static let SearchInFirefoxTitle = MZLocalizedString("TodayWidget.SearchInFirefoxTitle", tableName: "Today", value: "Search in Firefox", comment: "Title for small size widget which allows users to search in Firefox. Do not translate the word Firefox.", lastUpdated: .unknown)
+    public static let SearchInFirefoxTitle = MZLocalizedString("TodayWidget.SearchInFirefoxTitle", tableName: "Today", value: "Search in Decentr", comment: "Title for small size widget which allows users to search in Decentr. Do not translate the word Decentr.", lastUpdated: .unknown)
     public static let SearchInPrivateTabLabelV2 = MZLocalizedString("TodayWidget.SearchInPrivateTabLabelV2", tableName: "Today", value: "Search in\nPrivate Tab", comment: "Search in private tab", lastUpdated: .unknown)
-    public static let SearchInFirefoxV2 = MZLocalizedString("TodayWidget.SearchInFirefoxV2", tableName: "Today", value: "Search in\nFirefox", comment: "Search in Firefox. Do not translate the word Firefox", lastUpdated: .unknown)
+    public static let SearchInFirefoxV2 = MZLocalizedString("TodayWidget.SearchInFirefoxV2", tableName: "Today", value: "Search in\nFirefox", comment: "Search in Decentr. Do not translate the word Decentr", lastUpdated: .unknown)
     public static let ClosePrivateTabsLabelV2 = MZLocalizedString("TodayWidget.ClosePrivateTabsLabelV2", tableName: "Today", value: "Close\nPrivate Tabs", comment: "Close Private Tabs", lastUpdated: .unknown)
     public static let ClosePrivateTabsLabelV3 = MZLocalizedString("TodayWidget.ClosePrivateTabsLabelV3", tableName: "Today", value: "Close\nPrivate\nTabs", comment: "Close Private Tabs", lastUpdated: .unknown)
     public static let GoToCopiedLinkLabelV4 = MZLocalizedString("TodayWidget.GoToCopiedLinkLabelV4", tableName: "Today", value: "Go to\nCopied\nLink", comment: "Go to copied link", lastUpdated: .unknown)
 
     // Quick Action - Small Size Widget - Edit Mode
-    public static let QuickActionDescription = MZLocalizedString("TodayWidget.QuickActionDescription", tableName: "Today", value: "Select a Firefox shortcut to add to your Home screen.", comment: "Quick action description when widget enters edit mode", lastUpdated: .unknown)
+    public static let QuickActionDescription = MZLocalizedString("TodayWidget.QuickActionDescription", tableName: "Today", value: "Select a Decentr shortcut to add to your Home screen.", comment: "Quick action description when widget enters edit mode", lastUpdated: .unknown)
     public static let QuickActionDropDownMenu = MZLocalizedString("TodayWidget.QuickActionDropDownMenu", tableName: "Today", value: "Quick action", comment: "Quick Actions left label text for dropdown menu when widget enters edit mode", lastUpdated: .unknown)
     public static let DropDownMenuItemNewSearch = MZLocalizedString("TodayWidget.DropDownMenuItemNewSearch", tableName: "Today", value: "New Search", comment: "Quick Actions drop down menu item for new search when widget enters edit mode and drop down menu expands", lastUpdated: .unknown)
     public static let DropDownMenuItemNewPrivateSearch = MZLocalizedString("TodayWidget.DropDownMenuItemNewPrivateSearch", tableName: "Today", value: "New Private Search", comment: "Quick Actions drop down menu item for new private search when widget enters edit mode and drop down menu expands", lastUpdated: .unknown)
@@ -1294,21 +1294,21 @@ extension String {
     public static let DropDownMenuItemClearPrivateTabs = MZLocalizedString("TodayWidget.DropDownMenuItemClearPrivateTabs", tableName: "Today", value: "Clear Private Tabs", comment: "Quick Actions drop down menu item for lear Private Tabs when widget enters edit mode and drop down menu expands", lastUpdated: .unknown)
 
     // Quick Action - Small Size - Gallery View
-    public static let QuickActionGalleryDescription = MZLocalizedString("TodayWidget.QuickActionGalleryDescription", tableName: "Today", value: "Add a Firefox shortcut to your Home screen. After adding the widget, touch and hold to edit it and select a different shortcut.", comment: "Description for small size widget to add it to home screen", lastUpdated: .unknown)
+    public static let QuickActionGalleryDescription = MZLocalizedString("TodayWidget.QuickActionGalleryDescription", tableName: "Today", value: "Add a Decentr shortcut to your Home screen. After adding the widget, touch and hold to edit it and select a different shortcut.", comment: "Description for small size widget to add it to home screen", lastUpdated: .unknown)
 
     // Top Sites - Medium Size Widget
-    public static let TopSitesSubLabel = MZLocalizedString("TodayWidget.TopSitesSubLabel", tableName: "Today", value: "Firefox - Top Sites", comment: "Sub label for Top Sites widget", lastUpdated: .unknown)
-    public static let TopSitesSubLabel2 = MZLocalizedString("TodayWidget.TopSitesSubLabel2", tableName: "Today", value: "Firefox - Website Shortcuts", comment: "Sub label for Shortcuts widget", lastUpdated: .unknown)
+    public static let TopSitesSubLabel = MZLocalizedString("TodayWidget.TopSitesSubLabel", tableName: "Today", value: "Decentr - Top Sites", comment: "Sub label for Top Sites widget", lastUpdated: .unknown)
+    public static let TopSitesSubLabel2 = MZLocalizedString("TodayWidget.TopSitesSubLabel2", tableName: "Today", value: "Decentr - Website Shortcuts", comment: "Sub label for Shortcuts widget", lastUpdated: .unknown)
 
     // Top Sites - Medium Size - Gallery View
-    public static let TopSitesGalleryTitle = MZLocalizedString("TodayWidget.TopSitesGalleryTitle", tableName: "Today", value: "Top Sites", comment: "Title for top sites widget to add Firefox top sites shotcuts to home screen", lastUpdated: .unknown)
-    public static let TopSitesGalleryTitleV2 = MZLocalizedString("TodayWidget.TopSitesGalleryTitleV2", tableName: "Today", value: "Website Shortcuts", comment: "Title for top sites widget to add Firefox top sites shotcuts to home screen", lastUpdated: .unknown)
-    public static let TopSitesGalleryDescription = MZLocalizedString("TodayWidget.TopSitesGalleryDescription", tableName: "Today", value: "Add shortcuts to frequently and recently visited sites.", comment: "Description for top sites widget to add Firefox top sites shotcuts to home screen", lastUpdated: .unknown)
+    public static let TopSitesGalleryTitle = MZLocalizedString("TodayWidget.TopSitesGalleryTitle", tableName: "Today", value: "Top Sites", comment: "Title for top sites widget to add Decentr top sites shotcuts to home screen", lastUpdated: .unknown)
+    public static let TopSitesGalleryTitleV2 = MZLocalizedString("TodayWidget.TopSitesGalleryTitleV2", tableName: "Today", value: "Website Shortcuts", comment: "Title for top sites widget to add Decentr top sites shotcuts to home screen", lastUpdated: .unknown)
+    public static let TopSitesGalleryDescription = MZLocalizedString("TodayWidget.TopSitesGalleryDescription", tableName: "Today", value: "Add shortcuts to frequently and recently visited sites.", comment: "Description for top sites widget to add Decentr top sites shotcuts to home screen", lastUpdated: .unknown)
 
     // Quick View Open Tabs - Medium Size Widget
-    public static let QuickViewOpenTabsSubLabel = MZLocalizedString("TodayWidget.QuickViewOpenTabsSubLabel", tableName: "Today", value: "Firefox - Open Tabs", comment: "Sub label for Top Sites widget", lastUpdated: .unknown)
+    public static let QuickViewOpenTabsSubLabel = MZLocalizedString("TodayWidget.QuickViewOpenTabsSubLabel", tableName: "Today", value: "Decentr - Open Tabs", comment: "Sub label for Top Sites widget", lastUpdated: .unknown)
     public static let MoreTabsLabel = MZLocalizedString("TodayWidget.MoreTabsLabel", tableName: "Today", value: "+%d More…", comment: "%d represents number and it becomes something like +5 more where 5 is the number of open tabs in tab tray beyond what is displayed in the widget", lastUpdated: .unknown)
-    public static let OpenFirefoxLabel = MZLocalizedString("TodayWidget.OpenFirefoxLabel", tableName: "Today", value: "Open Firefox", comment: "Open Firefox when there are no tabs opened in tab tray i.e. Empty State", lastUpdated: .unknown)
+    public static let OpenFirefoxLabel = MZLocalizedString("TodayWidget.OpenFirefoxLabel", tableName: "Today", value: "Open Decentr", comment: "Open Decentr when there are no tabs opened in tab tray i.e. Empty State", lastUpdated: .unknown)
     public static let NoOpenTabsLabel = MZLocalizedString("TodayWidget.NoOpenTabsLabel", tableName: "Today", value: "No open tabs.", comment: "Label that is shown when there are no tabs opened in tab tray i.e. Empty State", lastUpdated: .unknown)
     public static let NoOpenTabsLabelV2 = MZLocalizedString("TodayWidget.NoOpenTabsLabelV2", tableName: "Today", value: "No Open Tabs", comment: "Label that is shown when there are no tabs opened in tab tray i.e. Empty State", lastUpdated: .unknown)
 
@@ -1323,25 +1323,25 @@ extension String {
     public static let QuickViewLargeGalleryDescription = MZLocalizedString("TodayWidget.QuickViewLargeGalleryDescription", tableName: "Today", value: "Add shortcuts to your open tabs.", comment: "Description for Quick View widget in Gallery View where user can add it to home screen", lastUpdated: .unknown)
 
     // Pocket - Large - Medium Size Widget
-    public static let PocketWidgetSubLabel = MZLocalizedString("TodayWidget.PocketWidgetSubLabel", tableName: "Today", value: "Firefox - Recommended by Pocket", comment: "Sub label for medium size Firefox Pocket stories widge widget. Pocket is the name of another app.", lastUpdated: .unknown)
-    public static let ViewMoreDots = MZLocalizedString("TodayWidget.ViewMoreDots", tableName: "Today", value: "View More…", comment: "View More… for Firefox Pocket stories widget where we don't know how many articles are available.", lastUpdated: .unknown)
+    public static let PocketWidgetSubLabel = MZLocalizedString("TodayWidget.PocketWidgetSubLabel", tableName: "Today", value: "Decentr - Recommended by Pocket", comment: "Sub label for medium size Decentr Pocket stories widge widget. Pocket is the name of another app.", lastUpdated: .unknown)
+    public static let ViewMoreDots = MZLocalizedString("TodayWidget.ViewMoreDots", tableName: "Today", value: "View More…", comment: "View More… for Decentr Pocket stories widget where we don't know how many articles are available.", lastUpdated: .unknown)
 
     // Pocket - Large - Medium Size - Gallery View
-    public static let PocketWidgetGalleryTitle = MZLocalizedString("TodayWidget.PocketWidgetTitle", tableName: "Today", value: "Recommended by Pocket", comment: "Title for Firefox Pocket stories widget in Gallery View where user can add it to home screen. Pocket is the name of another app.", lastUpdated: .unknown)
-    public static let PocketWidgetGalleryDescription = MZLocalizedString("TodayWidget.PocketWidgetGalleryDescription", tableName: "Today", value: "Discover fascinating and thought-provoking stories from across the web, curated by Pocket.", comment: "Description for Firefox Pocket stories widget in Gallery View where user can add it to home screen. Pocket is the name of another app.", lastUpdated: .unknown)
+    public static let PocketWidgetGalleryTitle = MZLocalizedString("TodayWidget.PocketWidgetTitle", tableName: "Today", value: "Recommended by Pocket", comment: "Title for Decentr Pocket stories widget in Gallery View where user can add it to home screen. Pocket is the name of another app.", lastUpdated: .unknown)
+    public static let PocketWidgetGalleryDescription = MZLocalizedString("TodayWidget.PocketWidgetGalleryDescription", tableName: "Today", value: "Discover fascinating and thought-provoking stories from across the web, curated by Pocket.", comment: "Description for Decentr Pocket stories widget in Gallery View where user can add it to home screen. Pocket is the name of another app.", lastUpdated: .unknown)
 }
 
 // MARK: - Default Browser
 extension String {
-    public static let DefaultBrowserCardTitle = MZLocalizedString("DefaultBrowserCard.Title", tableName: "Default Browser", value: "Switch Your Default Browser", comment: "Title for small card shown that allows user to switch their default browser to Firefox.", lastUpdated: .unknown)
-    public static let DefaultBrowserCardDescription = MZLocalizedString("DefaultBrowserCard.Description", tableName: "Default Browser", value: "Set links from websites, emails, and Messages to open automatically in Firefox.", comment: "Description for small card shown that allows user to switch their default browser to Firefox.", lastUpdated: .unknown)
+    public static let DefaultBrowserCardTitle = MZLocalizedString("DefaultBrowserCard.Title", tableName: "Default Browser", value: "Switch Your Default Browser", comment: "Title for small card shown that allows user to switch their default browser to Decentr.", lastUpdated: .unknown)
+    public static let DefaultBrowserCardDescription = MZLocalizedString("DefaultBrowserCard.Description", tableName: "Default Browser", value: "Set links from websites, emails, and Messages to open automatically in Decentr.", comment: "Description for small card shown that allows user to switch their default browser to Decentr.", lastUpdated: .unknown)
     public static let DefaultBrowserCardButton = MZLocalizedString("DefaultBrowserCard.Button.v2", tableName: "Default Browser", value: "Learn How", comment: "Button string to learn how to set your default browser.", lastUpdated: .unknown)
-    public static let DefaultBrowserMenuItem = MZLocalizedString("Settings.DefaultBrowserMenuItem", tableName: "Default Browser", value: "Set as Default Browser", comment: "Menu option for setting Firefox as default browser.", lastUpdated: .unknown)
-    public static let DefaultBrowserOnboardingScreenshot = MZLocalizedString("DefaultBrowserOnboarding.Screenshot", tableName: "Default Browser", value: "Default Browser App", comment: "Text for the screenshot of the iOS system settings page for Firefox.", lastUpdated: .unknown)
+    public static let DefaultBrowserMenuItem = MZLocalizedString("Settings.DefaultBrowserMenuItem", tableName: "Default Browser", value: "Set as Default Browser", comment: "Menu option for setting Decentr as default browser.", lastUpdated: .unknown)
+    public static let DefaultBrowserOnboardingScreenshot = MZLocalizedString("DefaultBrowserOnboarding.Screenshot", tableName: "Default Browser", value: "Default Browser App", comment: "Text for the screenshot of the iOS system settings page for Decentr.", lastUpdated: .unknown)
     public static let DefaultBrowserOnboardingDescriptionStep1 = MZLocalizedString("DefaultBrowserOnboarding.Description1", tableName: "Default Browser", value: "1. Go to Settings", comment: "Description for default browser onboarding card.", lastUpdated: .unknown)
     public static let DefaultBrowserOnboardingDescriptionStep2 = MZLocalizedString("DefaultBrowserOnboarding.Description2", tableName: "Default Browser", value: "2. Tap Default Browser App", comment: "Description for default browser onboarding card.", lastUpdated: .unknown)
-    public static let DefaultBrowserOnboardingDescriptionStep3 = MZLocalizedString("DefaultBrowserOnboarding.Description3", tableName: "Default Browser", value: "3. Select Firefox", comment: "Description for default browser onboarding card.", lastUpdated: .unknown)
-    public static let DefaultBrowserOnboardingButton = MZLocalizedString("DefaultBrowserOnboarding.Button", tableName: "Default Browser", value: "Go to Settings", comment: "Button string to open settings that allows user to switch their default browser to Firefox.", lastUpdated: .unknown)
+    public static let DefaultBrowserOnboardingDescriptionStep3 = MZLocalizedString("DefaultBrowserOnboarding.Description3", tableName: "Default Browser", value: "3. Select Decentr", comment: "Description for default browser onboarding card.", lastUpdated: .unknown)
+    public static let DefaultBrowserOnboardingButton = MZLocalizedString("DefaultBrowserOnboarding.Button", tableName: "Default Browser", value: "Go to Settings", comment: "Button string to open settings that allows user to switch their default browser to Decentr.", lastUpdated: .unknown)
 }
 
 // MARK: - FxAWebViewController
@@ -1356,7 +1356,7 @@ extension String {
 
 // MARK: - CrashOptInAlert
 extension String {
-    public static let CrashOptInAlertTitle = MZLocalizedString("Oops! Firefox crashed", comment: "Title for prompt displayed to user after the app crashes", lastUpdated: .unknown)
+    public static let CrashOptInAlertTitle = MZLocalizedString("Oops! Decentr crashed", comment: "Title for prompt displayed to user after the app crashes", lastUpdated: .unknown)
     public static let CrashOptInAlertMessage = MZLocalizedString("Send a crash report so Mozilla can fix the problem?", comment: "Message displayed in the crash dialog above the buttons used to select when sending reports", lastUpdated: .unknown)
     public static let CrashOptInAlertSend = MZLocalizedString("Send Report", comment: "Used as a button label for crash dialog prompt", lastUpdated: .unknown)
     public static let CrashOptInAlertAlwaysSend = MZLocalizedString("Always Send", comment: "Used as a button label for crash dialog prompt", lastUpdated: .unknown)
@@ -1366,7 +1366,7 @@ extension String {
 // MARK: - RestoreTabsAlert
 extension String {
     public static let RestoreTabsAlertTitle = MZLocalizedString("Well, this is embarrassing.", comment: "Restore Tabs Prompt Title", lastUpdated: .unknown)
-    public static let RestoreTabsAlertMessage = MZLocalizedString("Looks like Firefox crashed previously. Would you like to restore your tabs?", comment: "Restore Tabs Prompt Description", lastUpdated: .unknown)
+    public static let RestoreTabsAlertMessage = MZLocalizedString("Looks like Decentr crashed previously. Would you like to restore your tabs?", comment: "Restore Tabs Prompt Description", lastUpdated: .unknown)
     public static let RestoreTabsAlertNo = MZLocalizedString("No", comment: "Restore Tabs Negative Action", lastUpdated: .unknown)
     public static let RestoreTabsAlertOkay = MZLocalizedString("Okay", comment: "Restore Tabs Affirmative Action", lastUpdated: .unknown)
 }
@@ -1498,7 +1498,7 @@ extension String {
     public static let TabTrayCloseAllTabsPromptCancel = MZLocalizedString("Cancel", comment: "Label for Cancel button", lastUpdated: .unknown)
     public static let TabTrayPrivateLearnMore = MZLocalizedString("Learn More", tableName: "PrivateBrowsing", comment: "Text button displayed when there are no tabs open while in private mode", lastUpdated: .unknown)
     public static let TabTrayPrivateBrowsingTitle = MZLocalizedString("Private Browsing", tableName: "PrivateBrowsing", comment: "Title displayed for when there are no open tabs while in private mode", lastUpdated: .unknown)
-    public static let TabTrayPrivateBrowsingDescription =  MZLocalizedString("Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.", tableName: "PrivateBrowsing", comment: "Description text displayed when there are no open tabs while in private mode", lastUpdated: .unknown)
+    public static let TabTrayPrivateBrowsingDescription =  MZLocalizedString("Decentr won’t remember any of your history or cookies, but new bookmarks will be saved.", tableName: "PrivateBrowsing", comment: "Description text displayed when there are no open tabs while in private mode", lastUpdated: .unknown)
     public static let TabTrayAddTabAccessibilityLabel = MZLocalizedString("Add Tab", comment: "Accessibility label for the Add Tab button in the Tab Tray.", lastUpdated: .unknown)
     public static let TabTrayCloseAccessibilityCustomAction = MZLocalizedString("Close", comment: "Accessibility label for action denoting closing a tab in tab list (tray)", lastUpdated: .unknown)
     public static let TabTraySwipeToCloseAccessibilityHint = MZLocalizedString("Swipe right or left with three fingers to close the tab.", comment: "Accessibility hint for tab tray's displayed tab.", lastUpdated: .unknown)
@@ -1550,7 +1550,7 @@ extension String {
     public static let RemoteTabEmptyStateInstructionsSyncTabsPasswordsString = MZLocalizedString("Sync your tabs, passwords and more.", comment: "Text displayed when the Sync home panel is empty, describing the features provided by Sync to invite the user to log in.", lastUpdated: .unknown)
     public static let RemoteTabEmptyStateInstructionsGetTabsBookmarksPasswordsString = MZLocalizedString("Get your open tabs, bookmarks, and passwords from your other devices.", comment: "A re-worded offer about Sync, displayed when the Sync home panel is empty, that emphasizes one-way data transfer, not syncing.", lastUpdated: .unknown)
 
-    public static let RemoteTabErrorNoTabs = MZLocalizedString("You don’t have any tabs open in Firefox on your other devices.", comment: "Error message in the remote tabs panel", lastUpdated: .unknown)
+    public static let RemoteTabErrorNoTabs = MZLocalizedString("You don’t have any tabs open in Decentr on your other devices.", comment: "Error message in the remote tabs panel", lastUpdated: .unknown)
     public static let RemoteTabErrorFailedToSync = MZLocalizedString("There was a problem accessing tabs from your other devices. Try again in a few moments.", comment: "Error message in the remote tabs panel", lastUpdated: .unknown)
     public static let RemoteTabLastSync = MZLocalizedString("Last synced: %@", comment: "Remote tabs last synced time. Argument is the relative date string.", lastUpdated: .unknown)
     public static let RemoteTabComputerAccessibilityLabel = MZLocalizedString("computer", comment: "Accessibility label for Desktop Computer (PC) image in remote tabs list", lastUpdated: .unknown)
@@ -1582,9 +1582,9 @@ extension String {
 
 // MARK: - Reader Mode Handler
 extension String {
-    public static let ReaderModeHandlerLoadingContent = MZLocalizedString("Loading content…", comment: "Message displayed when the reader mode page is loading. This message will appear only when sharing to Firefox reader mode from another app.", lastUpdated: .unknown)
-    public static let ReaderModeHandlerPageCantDisplay = MZLocalizedString("The page could not be displayed in Reader View.", comment: "Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Firefox reader mode from another app.", lastUpdated: .unknown)
-    public static let ReaderModeHandlerLoadOriginalPage = MZLocalizedString("Load original page", comment: "Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Firefox reader mode from another app.", lastUpdated: .unknown)
+    public static let ReaderModeHandlerLoadingContent = MZLocalizedString("Loading content…", comment: "Message displayed when the reader mode page is loading. This message will appear only when sharing to Decentr reader mode from another app.", lastUpdated: .unknown)
+    public static let ReaderModeHandlerPageCantDisplay = MZLocalizedString("The page could not be displayed in Reader View.", comment: "Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Decentr reader mode from another app.", lastUpdated: .unknown)
+    public static let ReaderModeHandlerLoadOriginalPage = MZLocalizedString("Load original page", comment: "Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Decentr reader mode from another app.", lastUpdated: .unknown)
     public static let ReaderModeHandlerError = MZLocalizedString("There was an error converting the page", comment: "Error displayed when reader mode cannot be enabled", lastUpdated: .unknown)
 }
 
@@ -1609,7 +1609,7 @@ extension String {
 extension String {
     public static let PrivateBrowsingLearnMore = MZLocalizedString("Learn More", tableName: "PrivateBrowsing", comment: "Text button displayed when there are no tabs open while in private mode", lastUpdated: .unknown)
     public static let PrivateBrowsingTitle = MZLocalizedString("Private Browsing", tableName: "PrivateBrowsing", comment: "Title displayed for when there are no open tabs while in private mode", lastUpdated: .unknown)
-    public static let PrivateBrowsingDescription = MZLocalizedString("Firefox won’t remember any of your history or cookies, but new bookmarks will be saved.", tableName: "PrivateBrowsing", comment: "Description text displayed when there are no open tabs while in private mode", lastUpdated: .unknown)
+    public static let PrivateBrowsingDescription = MZLocalizedString("Decentr won’t remember any of your history or cookies, but new bookmarks will be saved.", tableName: "PrivateBrowsing", comment: "Description text displayed when there are no open tabs while in private mode", lastUpdated: .unknown)
 }
 
 // MARK: - Advanced Account Setting
@@ -1625,7 +1625,7 @@ extension String {
     public static let AppSettingsSendFeedback = MZLocalizedString("Send Feedback", comment: "Menu item in settings used to open input.mozilla.org where people can submit feedback", lastUpdated: .unknown)
     public static let AppSettingsHelp = MZLocalizedString("Help", comment: "Show the SUMO support page from the Support section in the settings. see http://mzl.la/1dmM8tZ", lastUpdated: .unknown)
     public static let AppSettingsSearch = MZLocalizedString("Search", comment: "Open search section of settings", lastUpdated: .unknown)
-    public static let AppSettingsPrivacyPolicy = MZLocalizedString("Privacy Policy", comment: "Show Firefox Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/firefox/", lastUpdated: .unknown)
+    public static let AppSettingsPrivacyPolicy = MZLocalizedString("Privacy Policy", comment: "Show Decentr Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/decentr/", lastUpdated: .unknown)
 
     public static let AppSettingsTitle = MZLocalizedString("Settings", comment: "Title in the settings view controller title bar", lastUpdated: .unknown)
     public static let AppSettingsDone = MZLocalizedString("Done", comment: "Done button on left side of the Settings view controller title bar", lastUpdated: .unknown)
@@ -1697,7 +1697,7 @@ extension String {
     public static let MenuHelperCopy = MZLocalizedString("Copy", tableName: "LoginManager", comment: "Copy password text selection menu item", lastUpdated: .unknown)
     public static let MenuHelperOpenAndFill = MZLocalizedString("Open & Fill", tableName: "LoginManager", comment: "Open and Fill website text selection menu item", lastUpdated: .unknown)
     public static let MenuHelperFindInPage = MZLocalizedString("Find in Page", tableName: "FindInPage", comment: "Text selection menu item", lastUpdated: .unknown)
-    public static let MenuHelperSearchWithFirefox = MZLocalizedString("UIMenuItem.SearchWithFirefox", value: "Search with Firefox", comment: "Search in New Tab Text selection menu item", lastUpdated: .unknown)
+    public static let MenuHelperSearchWithFirefox = MZLocalizedString("UIMenuItem.SearchWithFirefox", value: "Search with Decentr", comment: "Search in New Tab Text selection menu item", lastUpdated: .unknown)
 }
 
 // MARK: - DeviceInfo
@@ -1732,7 +1732,7 @@ extension String {
 
 // MARK: - Credential Provider
 extension String {
-    public static let LoginsWelcomeViewTitle2 = MZLocalizedString("Logins.WelcomeView.Title2", value: "AutoFill Firefox Passwords", comment: "Label displaying welcome view title", lastUpdated: .unknown)
+    public static let LoginsWelcomeViewTitle2 = MZLocalizedString("Logins.WelcomeView.Title2", value: "AutoFill Decentr Passwords", comment: "Label displaying welcome view title", lastUpdated: .unknown)
     public static let LoginsWelcomeViewTagline = MZLocalizedString("Logins.WelcomeView.Tagline", value: "Take your passwords everywhere", comment: "Label displaying welcome view tagline under the title", lastUpdated: .unknown)
     public static let LoginsWelcomeTurnOnAutoFillButtonTitle = MZLocalizedString("Logins.WelcomeView.TurnOnAutoFill", value: "Turn on AutoFill", comment: "Title of the big blue button to enable AutoFill", lastUpdated: .unknown)
     public static let LoginsListSearchCancel = MZLocalizedString("LoginsList.Search.Cancel", value: "Cancel", comment: "Title for cancel button for user to stop searching for a particular login", lastUpdated: .unknown)
@@ -1741,8 +1741,8 @@ extension String {
     public static let LoginsListNoMatchingResultTitle = MZLocalizedString("LoginsList.NoMatchingResult.Title", value: "No matching logins", comment: "Label displayed when a user searches and no matches can be found against the search query", lastUpdated: .unknown)
     public static let LoginsListNoMatchingResultSubtitle = MZLocalizedString("LoginsList.NoMatchingResult.Subtitle", value: "There are no results matching your search.", comment: "Label that appears after the search if there are no logins matching the search", lastUpdated: .unknown)
     public static let LoginsListNoLoginsFoundTitle = MZLocalizedString("LoginsList.NoLoginsFound.Title", value: "No logins found", comment: "Label shown when there are no logins saved", lastUpdated: .unknown)
-    public static let LoginsListNoLoginsFoundDescription = MZLocalizedString("LoginsList.NoLoginsFound.Description", value: "Saved logins will show up here. If you saved your logins to Firefox on a different device, sign in to your Firefox Account.", comment: "Label shown when there are no logins to list", lastUpdated: .unknown)
-    public static let LoginsPasscodeRequirementWarning = MZLocalizedString("Logins.PasscodeRequirement.Warning", value: "To use the AutoFill feature for Firefox, you must have a device passcode enabled.", comment: "Warning message shown when you try to enable or use native AutoFill without a device passcode setup", lastUpdated: .unknown)
+    public static let LoginsListNoLoginsFoundDescription = MZLocalizedString("LoginsList.NoLoginsFound.Description", value: "Saved logins will show up here. If you saved your logins to Decentr on a different device, sign in to your Decentr Account.", comment: "Label shown when there are no logins to list", lastUpdated: .unknown)
+    public static let LoginsPasscodeRequirementWarning = MZLocalizedString("Logins.PasscodeRequirement.Warning", value: "To use the AutoFill feature for Decentr, you must have a device passcode enabled.", comment: "Warning message shown when you try to enable or use native AutoFill without a device passcode setup", lastUpdated: .unknown)
 }
 
 // MARK: - v35 Strings
@@ -1763,7 +1763,7 @@ extension String {
 
 extension String {
     // Customize homepage options
-    public static let SettingsCustomizeHomeTitle = MZLocalizedString("Settings.Home.Option.Title", value: "Firefox Homepage", comment: "In the settings menu, this is the title of the Firefox Homepage customization settings section", lastUpdated: .v39)
+    public static let SettingsCustomizeHomeTitle = MZLocalizedString("Settings.Home.Option.Title", value: "Decentr Homepage", comment: "In the settings menu, this is the title of the Decentr Homepage customization settings section", lastUpdated: .v39)
 
     // Home screen
     public static let RecentlyVisitedRemoveButtonTitle = MZLocalizedString("ActivityStream.RecentlyVisited.RemoveButton.Title", value: "Remove", comment: "When long pressing an item in the Recently Visited section, this is the title of the button that appears, letting the user know to remove that particular item from the menu.", lastUpdated: .v39)

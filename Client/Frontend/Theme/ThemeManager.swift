@@ -39,7 +39,7 @@ final class ThemeManager {
 
     /// The current theme set in the application.
     ///
-    /// Currently, the `currentTheme` simply returns the default Firefox theme.
+    /// Currently, the `currentTheme` simply returns the default Decentr theme.
     /// However, in the future, this is expandable to allow custom themes to
     /// be set by the user.
     public var currentTheme: Theme {

@@ -41,7 +41,7 @@ public struct PrefsKeys {
     public static let StartAtHome = "startAtHome"
     public static let PullToRefresh = "pullToRefresh"
 
-    // Firefox contextual hint
+    // Decentr contextual hint
     public static let ContextualHintJumpBackinKey = "ContextualHintJumpBackin"
 
     // Activity Stream

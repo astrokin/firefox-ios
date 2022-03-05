@@ -125,11 +125,11 @@ class WallpaperBackgroundView: UIView {
     ///
     /// `case .themed(type: .collectionName): gradientView.alpha = 1.0`
     ///
-    /// Both default and Firefox papers have no gradient.
+    /// Both default and Decentr papers have no gradient.
     private func updateGradientVisibilityForSelectedWallpaper() {
 
         switch wallpaperManager.currentWallpaper.type {
-        // No gradient exists for default wallpaper OR firefox default wallpapers.
+        // No gradient exists for default wallpaper OR decentr default wallpapers.
         default: gradientView.alpha = 0.0
         }
 

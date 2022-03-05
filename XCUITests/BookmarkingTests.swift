@@ -163,7 +163,7 @@ class BookmarkingTests: BaseTestCase {
         waitForExistence(app.cells.staticTexts["olx.ro"])
         XCTAssertNotEqual(app.tables["SiteTable"].cells.count, 0)
     }
-    /* Disable due to https://github.com/mozilla-mobile/firefox-ios/issues/7521
+    /* Disable due to https://github.com/mozilla-mobile/decentr-ios/issues/7521
     func testAddBookmark() {
         addNewBookmark()
         // Verify that clicking on bookmark opens the website

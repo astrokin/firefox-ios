@@ -9,7 +9,7 @@ public enum PushConfigurationLabel: String {
     case fennecEnterprise = "FennecEnterprise"
     case firefoxBeta = "FirefoxBeta"
     case firefoxNightlyEnterprise = "FirefoxNightly"
-    case firefox = "Firefox"
+    case decentr = "Decentr"
 
     public func toConfiguration() -> PushConfiguration {
         switch self {
@@ -17,7 +17,7 @@ public enum PushConfigurationLabel: String {
         case .fennecEnterprise: return FennecEnterprisePushConfiguration()
         case .firefoxBeta: return FirefoxBetaPushConfiguration()
         case .firefoxNightlyEnterprise: return FirefoxNightlyEnterprisePushConfiguration()
-        case .firefox: return FirefoxPushConfiguration()
+        case .decentr: return FirefoxPushConfiguration()
         }
     }
 }
@@ -29,7 +29,7 @@ public protocol PushConfiguration {
     /// http://autopush.readthedocs.io/en/latest/http.html#push-service-http-api
     /// /v1/{type}/{app_id}
     /// type == apns
-    /// app_id == the “platform” or “channel” of development (e.g. “firefox”, “beta”, “gecko”, etc.)
+    /// app_id == the “platform” or “channel” of development (e.g. “decentr”, “beta”, “gecko”, etc.)
     var endpointURL: NSURL { get }
 }
 
@@ -71,12 +71,12 @@ public struct FirefoxNightlyEnterprisePushConfiguration: PushConfiguration {
 
 public struct FirefoxPushConfiguration: PushConfiguration {
     public init() {}
-    public let label = PushConfigurationLabel.firefox
-    public let endpointURL = NSURL(string: "https://updates.push.services.mozilla.com/v1/apns/firefox")!
+    public let label = PushConfigurationLabel.decentr
+    public let endpointURL = NSURL(string: "https://updates.push.services.mozilla.com/v1/apns/decentr")!
 }
 
 public struct FirefoxStagingPushConfiguration: PushConfiguration {
     public init() {}
-    public let label = PushConfigurationLabel.firefox
-    public let endpointURL = NSURL(string: "https://updates-autopush.stage.mozaws.net/v1/apns/firefox")!
+    public let label = PushConfigurationLabel.decentr
+    public let endpointURL = NSURL(string: "https://updates-autopush.stage.mozaws.net/v1/apns/decentr")!
 }

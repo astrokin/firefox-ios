@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Isto te permitte prender e incargar photos.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Firefox require ID de facie pro acceder a tu credentiales salvate.";
+"NSFaceIDUsageDescription" = "Decentr require ID de facie pro acceder a tu credentiales salvate.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Le sitos web que tu visita pote requestar tu position geographic.";

@@ -4,7 +4,7 @@
 
 import XCTest
 
-let website = ["url": "www.mozilla.org", "value": "www.mozilla.org", "subDomain": "https://www.mozilla.org/en-US/firefox/products"]
+let website = ["url": "www.mozilla.org", "value": "www.mozilla.org", "subDomain": "https://www.mozilla.org/en-US/decentr/products"]
 
 let websiteExample = ["url": "www.example.com", "value": "www.example.com"]
 

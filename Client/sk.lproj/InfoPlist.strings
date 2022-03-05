@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Toto vám umožňuje tvoriť a nahrávať fotky.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Pre prístup k uloženým prihláseniam vyžaduje Firefox Face ID.";
+"NSFaceIDUsageDescription" = "Pre prístup k uloženým prihláseniam vyžaduje Decentr Face ID.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Stránky, ktoré navštevujete, môžu žiadať prezradiť vašu polohu.";

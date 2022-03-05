@@ -43,10 +43,10 @@
 /* Title for the Jump Back In section. This section allows users to jump back in to a recently viewed tab */
 "ActivityStream.JumpBackIn.SectionTitle" = "Gå tillbaka till";
 
-/* On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar. */
+/* On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar. */
 "ActivityStream.JumpBackIn.TabGroup.SiteCount" = "Flikar: %d";
 
-/* On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did. */
+/* On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did. */
 "ActivityStream.JumpBackIn.TabGroup.Title" = "Din sökning efter \"%@\"";
 
 /* A string used to signify the start of the Recently Saved section in Home Screen. */
@@ -209,7 +209,7 @@
 /* Description of what a breach is */
 "BreachAlerts.Description" = "Lösenord läcktes eller har stulits sedan du senast ändrade ditt lösenord. För att skydda detta konto, logga in på webbplatsen och ändra ditt lösenord.";
 
-/* Link to monitor.firefox.com to learn more about breached passwords */
+/* Link to monitor.decentr.com to learn more about breached passwords */
 "BreachAlerts.LearnMoreButton" = "Läs mer";
 
 /* Leads to a link to the breached website */
@@ -288,7 +288,7 @@
 "ContextMenu.ShareLinkButtonTitle" = "Dela länk";
 
 /* Contextual hints are little popups that appear for the users informing them of new features. This one talks about the more personalized home feature. */
-"ContextualHints.Homepage.PersonalizedHome" = "Din personliga Firefox-startsida gör det nu lättare att fortsätta där du slutade. Hitta dina senaste flikar, bokmärken och sökresultat.";
+"ContextualHints.Homepage.PersonalizedHome" = "Din personliga Decentr-startsida gör det nu lättare att fortsätta där du slutade. Hitta dina senaste flikar, bokmärken och sökresultat.";
 
 /* Contextual hints are little popups that appear for the users informing them of new features. This one talks about the inactive tabs feature. */
 "ContextualHints.TabTray.InactiveTabs" = "Flikar som du inte har besökt på två veckor flyttas hit.";
@@ -306,7 +306,7 @@
 "Could not load page." = "Kunde inte ladda sidan.";
 
 /* Description for the new dark mode change in the version 22 app release. It describes the new automatic dark theme and how to change the theme settings. */
-"CoverSheet.v22.DarkMode.Description" = "För iOS 13-användare växlar Firefox nu automatiskt till ett mörkt tema när din telefon är inställd på mörkt läge. För att ändra detta beteende går du till Inställningar > Tema.";
+"CoverSheet.v22.DarkMode.Description" = "För iOS 13-användare växlar Decentr nu automatiskt till ett mörkt tema när din telefon är inställd på mörkt läge. För att ändra detta beteende går du till Inställningar > Tema.";
 
 /* Title for the new dark mode change in the version 22 app release. */
 "CoverSheet.v22.DarkMode.Title" = "Mörkt tema innehåller nu ett mörkt tangentbord och en mörk startbild.";
@@ -361,8 +361,8 @@
 /* Alert dialog title when the user taps the cancel download icon. */
 "Downloads.CancelDialog.Title" = "Avbryt nedladdning";
 
-/* The message displayed to a user when they try and perform the download of an asset that Firefox cannot currently handle. */
-"Downloads.Error.Message" = "Nedladdningar stöds inte i Firefox ännu.";
+/* The message displayed to a user when they try and perform the download of an asset that Decentr cannot currently handle. */
+"Downloads.Error.Message" = "Nedladdningar stöds inte i Decentr ännu.";
 
 /* The label text in the Download Cancelled toast for showing confirmation that the download was cancelled. */
 "Downloads.Toast.Cancelled.LabelText" = "Nedladdning avbruten";
@@ -407,7 +407,7 @@
 "ErrorPages.AdvancedWarning2.Text" = "Det kan vara en felaktig konfiguration eller manipulering av en angripare. Fortsätt om du accepterar risken.";
 
 /* Warning text on the certificate error page */
-"ErrorPages.CertWarning.Description" = "Ägaren av %@ har konfigurerat sin webbplats felaktigt. För att skydda din information från att bli stulen har Firefox inte anslutit till denna webbplats.";
+"ErrorPages.CertWarning.Description" = "Ägaren av %@ har konfigurerat sin webbplats felaktigt. För att skydda din information från att bli stulen har Decentr inte anslutit till denna webbplats.";
 
 /* Title on the certificate error page */
 "ErrorPages.CertWarning.Title" = "Den här anslutningen är inte tillförlitlig";
@@ -427,10 +427,10 @@
 /* Tile title for Facebook */
 "Facebook" = "Facebook";
 
-/* Title for firefox about:home page in tab history list */
-"Firefox.HomePage.Title" = "Firefox startsida";
+/* Title for decentr about:home page in tab history list */
+"Decentr.HomePage.Title" = "Decentr startsida";
 
-/* A button at bottom of the Firefox homepage that, when clicked, takes users straight to the settings options, where they can customize the Firefox Home page */
+/* A button at bottom of the Decentr homepage that, when clicked, takes users straight to the settings options, where they can customize the Decentr Home page */
 "FirefoxHome.CustomizeHomeButton.Title" = "Anpassa startsidan";
 
 /* Accessibility Label for the tab toolbar Forward button */
@@ -442,16 +442,16 @@
 /* Label stating your account is not verified */
 "FxA.AccountVerificationRequired" = "Kontoverifiering krävs";
 
-/* Message explaining that user needs to check email for Firefox Account verfication link. */
-"FxA.AccountVerificationRequiredSurface" = "Du måste verifiera %@. Kontrollera din e-postadress efter verifieringslänken från Firefox.";
+/* Message explaining that user needs to check email for Decentr Account verfication link. */
+"FxA.AccountVerificationRequiredSurface" = "Du måste verifiera %@. Kontrollera din e-postadress efter verifieringslänken från Decentr.";
 
 /* Button label to connect another device to Sync */
 "FxA.ConnectAnotherDevice" = "Anslut en annan enhet";
 
-/* Settings section title for Firefox Account */
-"FxA.FirefoxAccount" = "Firefox-konto";
+/* Settings section title for Decentr Account */
+"FxA.FirefoxAccount" = "Decentr-konto";
 
-/* Button label to go to Firefox Account settings */
+/* Button label to go to Decentr Account settings */
 "FxA.ManageAccount" = "Hantera konton & enheter";
 
 /* Label when no internet is present */
@@ -461,15 +461,15 @@
 "FxA.OpenSyncPreferences" = "Öppna Sync-inställningar";
 
 /* Instructions shown on qr code scanning view */
-"fxa.qr-scanning-view.instructions" = "Skanna QR-koden som visas på firefox.com/pair";
+"fxa.qr-scanning-view.instructions" = "Skanna QR-koden som visas på decentr.com/pair";
 
-/* Remove button is displayed on firefox account page under certain scenarios where user would like to remove their account. */
+/* Remove button is displayed on decentr account page under certain scenarios where user would like to remove their account. */
 "FxA.RemoveAccount" = "Ta bort";
 
 /* Description string for alert view that gets presented when user tries to remove an account. */
-"FxA.RemoveAccountAlertMessage" = "Ta bort Firefox-kontot som är kopplat till den här enheten för att logga in som en annan användare.";
+"FxA.RemoveAccountAlertMessage" = "Ta bort Decentr-kontot som är kopplat till den här enheten för att logga in som en annan användare.";
 
-/* Remove account alert is the final confirmation before user removes their firefox account */
+/* Remove account alert is the final confirmation before user removes their decentr account */
 "FxA.RemoveAccountAlertTitle" = "Ta bort konto";
 
 /* Button label to resend email */
@@ -479,13 +479,13 @@
 "fxa.signin.camera-signin" = "Logga in med din kamera";
 
 /* FxA sign in create account label. */
-"fxa.signin.create-account-pt-1" = "Synkronisera Firefox mellan enheter med ett konto.";
+"fxa.signin.create-account-pt-1" = "Synkronisera Decentr mellan enheter med ett konto.";
 
 /* FxA sign in create account label. This will be linked to the site to create an account. */
-"fxa.signin.create-account-pt-2" = "Skapa ett Firefox-konto.";
+"fxa.signin.create-account-pt-2" = "Skapa ett Decentr-konto.";
 
 /* FxA sign in view qr code instructions */
-"fxa.signin.qr-link-instruction" = "Öppna Firefox på din dator och gå till firefox.com/pair";
+"fxa.signin.qr-link-instruction" = "Öppna Decentr på din dator och gå till decentr.com/pair";
 
 /* FxA sign in view qr code scan button */
 "fxa.signin.ready-to-scan" = "Redo att skanna";
@@ -502,14 +502,14 @@
 /* Label explaining what sync does */
 "FxA.SyncExplain" = "Få dina flikar, bokmärken och lösenord från dina andra enheter.";
 
-/* Button label to Sync your Firefox Account */
+/* Button label to Sync your Decentr Account */
 "FxA.SyncNow" = "Synkronisera nu";
 
 /* Call to action for sign into sync button */
 "FxA.TakeYourWebWithYou" = "Ta med dig webben";
 
 /* Title of a notification displayed when another device has connected to FxA. %@ refers to the name of the newly connected device. */
-"FxAPush_DeviceConnected_body" = "Firefox Sync har anslutit till %@";
+"FxAPush_DeviceConnected_body" = "Decentr Sync har anslutit till %@";
 
 /* Title of a notification displayed when another device has connected to FxA. */
 "FxAPush_DeviceConnected_title" = "Sync ansluten";
@@ -518,7 +518,7 @@
 "FxAPush_DeviceDisconnected_body" = "%@ har kopplats bort.";
 
 /* Body of a notification displayed when this device has been disconnected from FxA by another device. */
-"FxAPush_DeviceDisconnected_ThisDevice_body" = "Den här enheten har kopplats bort från Firefox Sync.";
+"FxAPush_DeviceDisconnected_ThisDevice_body" = "Den här enheten har kopplats bort från Decentr Sync.";
 
 /* Title of a notification displayed when this device has been disconnected by another device. */
 "FxAPush_DeviceDisconnected_ThisDevice_title" = "Sync frånkopplad";
@@ -527,7 +527,7 @@
 "FxAPush_DeviceDisconnected_title" = "Sync frånkopplad";
 
 /* Body of a notification displayed when unnamed device has been disconnected from FxA. */
-"FxAPush_DeviceDisconnected_UnknownDevice_body" = "En enhet har kopplats från Firefox Sync";
+"FxAPush_DeviceDisconnected_UnknownDevice_body" = "En enhet har kopplats från Decentr Sync";
 
 /* A re-worded offer about Sync, displayed when the Sync home panel is empty, that emphasizes one-way data transfer, not syncing. */
 "Get your open tabs, bookmarks, and passwords from your other devices." = "Få dina öppna flikar, bokmärken och lösenord från dina andra enheter.";
@@ -575,7 +575,7 @@
 "HistoryPanel.EmptySyncedTabsPanelTabSyncDisabledState.Description" = "Slå på fliksynkronisering för att visa en lista med flikar från dina andra enheter.";
 
 /* Title for the empty synced tabs state in the History Panel */
-"HistoryPanel.EmptySyncedTabsState.Title" = "Firefox Sync";
+"HistoryPanel.EmptySyncedTabsState.Title" = "Decentr Sync";
 
 /* Title for the Back to History button in the History Panel */
 "HistoryPanel.HistoryBackButton.Title" = "Historik";
@@ -665,7 +665,7 @@
 "InactiveTabs.TabTray.AutoClosePrompt.ButtonTitle" = "Aktivera automatisk stängning";
 
 /* In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This string describes what happens if you elect to turn on this option. */
-"InactiveTabs.TabTray.AutoClosePrompt.Content" = "Firefox kan stänga flikar som du inte har besökt under den senaste månaden.";
+"InactiveTabs.TabTray.AutoClosePrompt.Content" = "Decentr kan stänga flikar som du inte har besökt under den senaste månaden.";
 
 /* In the Tabs Tray, in the Inactive Tabs section, a prompt may come up about auto-closing tabs. This is the title of that Auto Close prompt */
 "InactiveTabs.TabTray.AutoClosePrompt.Title" = "Stäng automatiskt efter en månad?";
@@ -766,10 +766,10 @@
 /* Light theme setting in Reading View settings */
 "Light" = "Ljust";
 
-/* Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Decentr reader mode from another app. */
 "Load original page" = "Ladda den ursprungliga sidan";
 
-/* Message displayed when the reader mode page is loading. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Message displayed when the reader mode page is loading. This message will appear only when sharing to Decentr reader mode from another app. */
 "Loading content…" = "Laddar innehåll…";
 
 /* Authentication prompt log in button */
@@ -794,13 +794,13 @@
 "Logins.Onboarding.Message" = "Dina inloggningar och lösenord skyddas nu av Face-ID, Touch-ID eller ett enhetslösenord.";
 
 /* Warning message shown when you try to enable or use native AutoFill without a device passcode setup */
-"Logins.PasscodeRequirement.Warning" = "För att använda autofyll-funktionen för Firefox måste du ha ett enhetslösenord aktiverat.";
+"Logins.PasscodeRequirement.Warning" = "För att använda autofyll-funktionen för Decentr måste du ha ett enhetslösenord aktiverat.";
 
 /* Label displaying welcome view tagline under the title */
 "Logins.WelcomeView.Tagline" = "Ta med dina lösenord överallt";
 
 /* Label displaying welcome view title */
-"Logins.WelcomeView.Title2" = "Autofyll Firefox-lösenord";
+"Logins.WelcomeView.Title2" = "Autofyll Decentr-lösenord";
 
 /* Title of the big blue button to enable AutoFill */
 "Logins.WelcomeView.TurnOnAutoFill" = "Aktivera autofyll";
@@ -848,7 +848,7 @@
 "LoginsList.LoginsListSearchPlaceholder" = "Filter";
 
 /* Label shown when there are no logins to list */
-"LoginsList.NoLoginsFound.Description" = "Sparade inloggningar visas här. Om du har sparat dina inloggningar på Firefox på en annan enhet loggar du in på ditt Firefox-konto.";
+"LoginsList.NoLoginsFound.Description" = "Sparade inloggningar visas här. Om du har sparat dina inloggningar på Decentr på en annan enhet loggar du in på ditt Decentr-konto.";
 
 /* Label shown when there are no logins saved */
 "LoginsList.NoLoginsFound.Title" = "Inga inloggningar hittades";
@@ -872,7 +872,7 @@
 "LoginsList.Title" = "SPARADE INLOGGNINGAR";
 
 /* Restore Tabs Prompt Description */
-"Looks like Firefox crashed previously. Would you like to restore your tabs?" = "Verkar som Firefox kraschade tidigare. Vill du återställa dina flikar?";
+"Looks like Decentr crashed previously. Would you like to restore your tabs?" = "Verkar som Decentr kraschade tidigare. Vill du återställa dina flikar?";
 
 /* Name for Mark as read button in reader mode
    Title for the button that marks a reading list item as read */
@@ -916,10 +916,10 @@
 "Menu.EnhancedTrackingProtectionOn.Title" = "Förbättrat spårningsskydd är PÅ för den här webbplatsen.";
 
 /* Description for having standard ETP protection with ITP offered in iOS14+ */
-"Menu.EnhancedTrackingProtectionStandardWithITP.Title" = "Firefox blockerar globala spårare, sociala spårare, kryptogrävare och fingeravtrycksspårare.";
+"Menu.EnhancedTrackingProtectionStandardWithITP.Title" = "Decentr blockerar globala spårare, sociala spårare, kryptogrävare och fingeravtrycksspårare.";
 
 /* Description for having strict ETP protection with ITP offered in iOS14+ */
-"Menu.EnhancedTrackingProtectionStrictWithITP.Title" = "Firefox blockerar globala spårare, sociala spårare, kryptogrävare och fingeravtrycksspårare och spårningsinnehåll.";
+"Menu.EnhancedTrackingProtectionStrictWithITP.Title" = "Decentr blockerar globala spårare, sociala spårare, kryptogrävare och fingeravtrycksspårare och spårningsinnehåll.";
 
 /* Label for the button, displayed in the menu, takes you to to History screen when pressed. */
 "Menu.History.Label" = "Historik";
@@ -985,7 +985,7 @@
 "Menu.TrackingProtection.Details.Verifier" = "Verifierad av: %@";
 
 /* Message in menu when no trackers blocked. */
-"Menu.TrackingProtection.NoTrackersBlockedTitle" = "Inga kända spårare för Firefox upptäcktes på den här sidan.";
+"Menu.TrackingProtection.NoTrackersBlockedTitle" = "Inga kända spårare för Decentr upptäcktes på den här sidan.";
 
 /* The title for tracking protection settings */
 "Menu.TrackingProtection.ProtectionSettings.Title" = "Skyddsinställningar";
@@ -1000,7 +1000,7 @@
 "Menu.TrackingProtectionBlockedSocial.Title" = "Sociala spårare";
 
 /* Description of the Tracking protection menu when TP is blocking parts of the page */
-"Menu.TrackingProtectionBlocking.Description" = "Firefox blockerar delar av sidan som kan spåra din surfning.";
+"Menu.TrackingProtectionBlocking.Description" = "Decentr blockerar delar av sidan som kan spåra din surfning.";
 
 /* The description of the Tracking Protection menu item when tracking is enabled */
 "Menu.TrackingProtectionBlockingDisabled.Description" = "Blockera spårare online";
@@ -1102,33 +1102,33 @@
 /* Restore Tabs Affirmative Action */
 "Okay" = "Okej";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the title for the button, on the bottom of the card, used to get back to browsing on Firefox by dismissing the onboarding card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the title for the button, on the bottom of the card, used to get back to browsing on Decentr by dismissing the onboarding card */
 "Onboarding.WhatsNew.Button.Title" = "Börja surfa";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is a general description that appears under the title for what the card is about. */
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is a general description that appears under the title for what the card is about. */
 "Onboarding.WhatsNew.Description" = "Det är nu enklare att fortsätta där du slutade.";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is the description for the Jump Back In bullet point */
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is the description for the Jump Back In bullet point */
 "Onboarding.WhatsNew.PersonalizedHome.Description" = "Hoppa till dina öppna flikar, bokmärken och surfhistorik.";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the descripion of the Recent Searches bullet point on the card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the descripion of the Recent Searches bullet point on the card */
 "Onboarding.WhatsNew.RecentSearches.Description" = "Återbesök dina senaste sökningar från din startsida och flikar.";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the title for the Recent Searches bullet point on the card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the title for the Recent Searches bullet point on the card */
 "Onboarding.WhatsNew.RecentSearches.Title" = "Senaste sökningar";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the description for the Tab Group bullet point on the card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the description for the Tab Group bullet point on the card */
 "Onboarding.WhatsNew.TabGroups.Description" = "Sidor från samma sökning grupperas tillsammans.";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is the title for the Tab Group bullet point on the card */
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is the title for the Tab Group bullet point on the card */
 "Onboarding.WhatsNew.TabGroups.Title" = "Tydligare flikgrupper";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is the title for the Jump Back In bullet point on the card
-   The title for the new onboarding card letting users know what is new in Firefox iOS */
-"Onboarding.WhatsNew.Title" = "Vad är nytt i Firefox";
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is the title for the Jump Back In bullet point on the card
+   The title for the new onboarding card letting users know what is new in Decentr iOS */
+"Onboarding.WhatsNew.Title" = "Vad är nytt i Decentr";
 
 /* Title for prompt displayed to user after the app crashes */
-"Oops! Firefox crashed" = "Hoppsan! Firefox kraschade";
+"Oops! Decentr crashed" = "Hoppsan! Decentr kraschade";
 
 /* See http://mzl.la/1LXbDOL */
 "Open articles in Reader View by tapping the book icon when it appears in the title bar." = "Öppna artiklar i läsvyn genom att trycka på bokikonen när den visas i adressfältet.";
@@ -1139,8 +1139,8 @@
 /* Toggle tabs syncing setting */
 "Open Tabs" = "Öppna flikar";
 
-/* The message displayed to a user when they try to open a URL that cannot be handled by Firefox, or any external app. */
-"OpenURL.Error.Message" = "Firefox kan inte öppna sidan eftersom det har en ogiltig adress.";
+/* The message displayed to a user when they try to open a URL that cannot be handled by Decentr, or any external app. */
+"OpenURL.Error.Message" = "Decentr kan inte öppna sidan eftersom det har en ogiltig adress.";
 
 /* Title of the message shown when the user attempts to navigate to an invalid link. */
 "OpenURL.Error.Title" = "Kan inte öppna sida";
@@ -1155,19 +1155,19 @@
 "Password" = "Lösenord";
 
 /* Error message shown in the remote tabs panel */
-"PasswordAutoFill.NoPasswordsFoundTitle" = "Du har inga autentiseringsuppgifter synkroniserade från ditt Firefox-konto";
+"PasswordAutoFill.NoPasswordsFoundTitle" = "Du har inga autentiseringsuppgifter synkroniserade från ditt Decentr-konto";
 
 /* Header for the list of credentials table */
 "PasswordAutoFill.PasswordsListTitle" = "Tillgängliga autentiseringsuppgifter:";
 
-/* Title of the extension that shows firefox passwords */
-"PasswordAutoFill.SectionTitle" = "Firefox autentiseringsuppgifter";
+/* Title of the extension that shows decentr passwords */
+"PasswordAutoFill.SectionTitle" = "Decentr autentiseringsuppgifter";
 
 /* See http://mzl.la/1G7uHo7 */
 "PhotoLibrary.FirefoxWouldLikeAccessMessage" = "Detta låter dig spara bilden till din kamerarulle.";
 
 /* See http://mzl.la/1G7uHo7 */
-"PhotoLibrary.FirefoxWouldLikeAccessTitle" = "Firefox vill ha tillgång till dina foton";
+"PhotoLibrary.FirefoxWouldLikeAccessTitle" = "Decentr vill ha tillgång till dina foton";
 
 /* Button for closing the menu action sheet */
 "PhotonMenu.close" = "Stäng";
@@ -1175,7 +1175,7 @@
 /* Privacy section title */
 "Privacy" = "Integritet";
 
-/* Show Firefox Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/firefox/ */
+/* Show Decentr Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/decentr/ */
 "Privacy Policy" = "Integritetspolicy";
 
 /* This is the value for a label that indicates if a user is on an unencrypted website. */
@@ -1187,7 +1187,7 @@
 /* Title for quick-search engines settings section. */
 "Quick-Search Engines" = "Snabbsökmotorer";
 
-/* A label indicating the action that a user can rate the Firefox app in the App store. */
+/* A label indicating the action that a user can rate the Decentr app in the App store. */
 "Ratings.Settings.RateOnAppStore" = "Betygsätt på App Store";
 
 /* Accessibility label for read article in reading list. It's a past participle - functions as an adjective. */
@@ -1251,7 +1251,7 @@
 "ScanQRCode.InvalidDataError.Message" = "Felaktig data";
 
 /* Text of the prompt user to setup the camera authorization. */
-"ScanQRCode.PermissionError.Message" = "Vänligen tillåt Firefox att komma åt enhetens kamera i ‘Inställningar’ -> ‘Sekretess’ -> ‘Kamera’.";
+"ScanQRCode.PermissionError.Message" = "Vänligen tillåt Decentr att komma åt enhetens kamera i ‘Inställningar’ -> ‘Sekretess’ -> ‘Kamera’.";
 
 /* Title for the QR code scanner view. */
 "ScanQRCode.View.Title" = "Skanna QR-kod";
@@ -1335,19 +1335,19 @@
 "SendTo.NavBar.Title" = "Skicka flik";
 
 /* Error message shown in the remote tabs panel */
-"SendTo.NoDevicesFound.Message" = "Du har inga andra enheter anslutna till det här Firefox-kontot som är tillgängliga för synkronisering.";
+"SendTo.NoDevicesFound.Message" = "Du har inga andra enheter anslutna till det här Decentr-kontot som är tillgängliga för synkronisering.";
 
 /* See http://mzl.la/1ISlXnU */
-"SendTo.NotSignedIn.Message" = "Vänligen öppna Firefox, gå till Inställningar och logga in för att fortsätta.";
+"SendTo.NotSignedIn.Message" = "Vänligen öppna Decentr, gå till Inställningar och logga in för att fortsätta.";
 
 /* See http://mzl.la/1ISlXnU */
-"SendTo.NotSignedIn.Title" = "Du är inte inloggad med ditt Firefox-konto.";
+"SendTo.NotSignedIn.Title" = "Du är inte inloggad med ditt Decentr-konto.";
 
 /* Navigation bar button to Send the current page to a device */
 "SendTo.SendAction.Text" = "Skicka";
 
-/* The text for the button on the Send to Device page if you are not signed in to Firefox Accounts. */
-"SendTo.SignIn.Button" = "Logga in till Firefox";
+/* The text for the button on the Send to Device page if you are not signed in to Decentr Accounts. */
+"SendTo.SignIn.Button" = "Logga in till Decentr";
 
 /* Body of notification shown when the device is sent one or more tabs from an unnamed device. */
 "SentTab_TabArrivingNotification_NoDevice_body" = "Ny flik kom från en annan enhet.";
@@ -1371,7 +1371,7 @@
 "SentTab.NoTabArrivingNotification.body" = "Tryck för att starta";
 
 /* Title of notification received after a spurious message from FxA has been received. */
-"SentTab.NoTabArrivingNotification.title" = "Firefox Sync";
+"SentTab.NoTabArrivingNotification.title" = "Decentr Sync";
 
 /* Label for an action used to view one or more tabs from a notification. */
 "SentTab.ViewAction.title" = "Visa";
@@ -1434,7 +1434,7 @@
 "Settings.DataManagement.Title" = "Datahantering";
 
 /* Body of the alert when prompting the user asking to disconnect. */
-"Settings.Disconnect.Body" = "Firefox kommer att sluta synkronisera med ditt konto, men kommer inte att ta bort någon av dina webbinformation på den här enheten.";
+"Settings.Disconnect.Body" = "Decentr kommer att sluta synkronisera med ditt konto, men kommer inte att ta bort någon av dina webbinformation på den här enheten.";
 
 /* Button displayed at the bottom of settings page allowing users to Disconnect from FxA */
 "Settings.Disconnect.Button" = "Koppla från Sync";
@@ -1503,53 +1503,53 @@
 /* Label used for the device name settings section. */
 "Settings.FxA.DeviceName" = "Enhetens namn";
 
-/* Label used as a section title in the Firefox Accounts Settings screen. */
+/* Label used as a section title in the Decentr Accounts Settings screen. */
 "Settings.FxA.Sync.SectionName" = "Synkroniseringsinställningar";
 
 /* Title displayed in header of the FxA settings panel. */
-"Settings.FxA.Title" = "Firefox-konto";
+"Settings.FxA.Title" = "Decentr-konto";
 
 /* General settings section title */
 "Settings.General.SectionName" = "Allmänt";
 
-/* In the settings menu, on the Firefox homepage customization section, this is the description below the section, describing what the options in the section are for. */
-"Settings.Home.Option.Description" = "Välj innehåll som du ser på Firefox-startsida.";
+/* In the settings menu, on the Decentr homepage customization section, this is the description below the section, describing what the options in the section are for. */
+"Settings.Home.Option.Description" = "Välj innehåll som du ser på Decentr-startsida.";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle the Jump Back In section on homepage on or off */
 "Settings.Home.Option.JumpBackIn" = "Gå tillbaka till";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Decentr homepage on or off */
 "Settings.Home.Option.Pocket" = "Rekommenderas av Pocket";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Decentr homepage on or off */
 "Settings.Home.Option.RecentlySaved" = "Nyligen sparad";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off */
 "Settings.Home.Option.RecentlyVisited" = "Nyligen besökta";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Decentr homepage on or off */
 "Settings.Home.Option.RecentSearches" = "Senaste sökningar";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Decentr homepage on or off */
 "Settings.Home.Option.Shortcuts" = "Genvägar";
 
 /* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage after four hours of inactivity. */
 "Settings.Home.Option.StartAtHome.AfterFourHours" = "Startsida efter fyra timmars inaktivitet";
 
-/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Firefox */
+/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Decentr */
 "Settings.Home.Option.StartAtHome.Always" = "Startsida";
 
 /* In the settings menu, in the Start at Home customization options, this is text that appears below the section, describing what the section settings do. */
-"Settings.Home.Option.StartAtHome.Description" = "Välj vad som ska visas när du återvänder till Firefox.";
+"Settings.Home.Option.StartAtHome.Description" = "Välj vad som ska visas när du återvänder till Decentr.";
 
-/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Firefox */
+/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Decentr */
 "Settings.Home.Option.StartAtHome.Never" = "Senaste flik";
 
-/* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Firefox Homepage. */
+/* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Decentr Homepage. */
 "Settings.Home.Option.StartAtHome.Title" = "Öppningsskärm";
 
-/* In the settings menu, this is the title of the Firefox Homepage customization settings section */
-"Settings.Home.Option.Title" = "Firefox-startsida";
+/* In the settings menu, this is the title of the Decentr Homepage customization settings section */
+"Settings.Home.Option.Title" = "Decentr-startsida";
 
 /* Button in settings to clear the home page. */
 "Settings.HomePage.Clear.Button" = "Rensa";
@@ -1600,10 +1600,10 @@
 "Settings.NewTab.Option.CustomizeFooter2" = "Webbplatser du sparar eller besöker";
 
 /* The title for the section to customize top sites in the new tab settings page. */
-"Settings.NewTab.Option.CustomizeTitle" = "Anpassa Firefox startsida";
+"Settings.NewTab.Option.CustomizeTitle" = "Anpassa Decentr startsida";
 
-/* Option in settings to show Firefox Home when you open a new tab */
-"Settings.NewTab.Option.FirefoxHome" = "Firefox startsida";
+/* Option in settings to show Decentr Home when you open a new tab */
+"Settings.NewTab.Option.FirefoxHome" = "Decentr startsida";
 
 /* Option in the settings to turn off recent bookmarks in the Highlights section */
 "Settings.NewTab.Option.HighlightsBookmarks" = "Senaste bokmärken";
@@ -1645,7 +1645,7 @@
 "Settings.NewTab.TopSectionNameFooter" = "Välj vad som ska laddas när du öppnar en ny flik";
 
 /* Description displayed under the ”Offer to Open Copied Link” option. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349 */
-"Settings.OfferClipboardBar.Status" = "När du öppnar Firefox";
+"Settings.OfferClipboardBar.Status" = "När du öppnar Decentr";
 
 /* Title of setting to enable the Go to Copied URL feature. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349 */
 "Settings.OfferClipboardBar.Title" = "Erbjud att öppna kopierade länkar";
@@ -1669,7 +1669,7 @@
 "Settings.SendUsage.Link" = "Läs mer.";
 
 /* A short description that explains why mozilla collects usage data. */
-"Settings.SendUsage.Message" = "Mozilla strävar efter att endast samla in det vi behöver för att tillhandahålla och förbättra Firefox för alla.";
+"Settings.SendUsage.Message" = "Mozilla strävar efter att endast samla in det vi behöver för att tillhandahålla och förbättra Decentr för alla.";
 
 /* The title for the setting to send usage data. */
 "Settings.SendUsage.Title" = "Skicka användningsdata";
@@ -1687,7 +1687,7 @@
 "Settings.Siri.OpenTabShortcut" = "Öppna ny flik";
 
 /* The description that describes what siri shortcuts are */
-"Settings.Siri.SectionDescription" = "Använd Siri-genvägar för att snabbt öppna Firefox via Siri";
+"Settings.Siri.SectionDescription" = "Använd Siri-genvägar för att snabbt öppna Decentr via Siri";
 
 /* The option that takes you to the siri shortcuts settings page */
 "Settings.Siri.SectionName" = "Siri-genvägar";
@@ -1711,7 +1711,7 @@
 "Settings.Studies.Toggle.Link" = "Läs mer.";
 
 /* A short description that explains that Mozilla is running studies */
-"Settings.Studies.Toggle.Message" = "Firefox kan installera och köra undersökningar då och då.";
+"Settings.Studies.Toggle.Message" = "Decentr kan installera och köra undersökningar då och då.";
 
 /* Toggled OFF to opt-out of studies */
 "Settings.Studies.Toggle.Off" = "Av";
@@ -1728,7 +1728,7 @@
 /* In the settings menu, in the Tabs customization section, this is the title for the setting that toggles the Tab Groups feature - where tabs from related searches are grouped - on or off */
 "Settings.Tabs.CustomizeTabsSection.TabGroups" = "Flikgrupper";
 
-/* In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from firefox hompage */
+/* In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from decentr hompage */
 "Settings.Tabs.CustomizeTabsSection.Title" = "Anpassa flikraden";
 
 /* In the settings menu, this is the title for the Tabs customization section option */
@@ -1744,7 +1744,7 @@
 "Settings.TrackingProtection.Alert.Title" = "Varning!";
 
 /* Header description for tracking protection options section where Basic/Strict block list can be selected */
-"Settings.TrackingProtection.BlockListsHeader" = "Du kan välja vilken lista Firefox kommer att använda för att blockera webbelement som kan spåra din surfaktivitet.";
+"Settings.TrackingProtection.BlockListsHeader" = "Du kan välja vilken lista Decentr kommer att använda för att blockera webbelement som kan spåra din surfaktivitet.";
 
 /* Explanation of basic mode. */
 "Settings.TrackingProtection.Info.BasicTitle" = "Balanserad för skydd och prestanda.";
@@ -1839,32 +1839,32 @@
 /* Title displayed in header of the Data Management panel. */
 "Settings.WebsiteData.Title" = "Webbplatsdata";
 
-/* Action label on share extension to add page to the Firefox reading list. */
+/* Action label on share extension to add page to the Decentr reading list. */
 "ShareExtension.AddToReadingListAction.Title" = "Lägg till i läslistan";
 
 /* Share extension label shown after user has performed 'Add to Reading List' action. */
 "ShareExtension.AddToReadingListActionDone.Title" = "Tillagd i läslistan";
 
-/* Action label on share extension to bookmark the page in Firefox. */
+/* Action label on share extension to bookmark the page in Decentr. */
 "ShareExtension.BookmarkThisPageAction.Title" = "Bokmärk denna sida";
 
 /* Share extension label shown after user has performed 'Bookmark this Page' action. */
 "ShareExtension.BookmarkThisPageActionDone.Title" = "Bokmärkt";
 
-/* Action label on share extension to load the page in Firefox when user switches apps to bring it to foreground. */
+/* Action label on share extension to load the page in Decentr when user switches apps to bring it to foreground. */
 "ShareExtension.LoadInBackgroundAction.Title" = "Ladda i bakgrunden";
 
 /* Share extension label shown after user has performed 'Load in Background' action. */
-"ShareExtension.LoadInBackgroundActionDone.Title" = "Laddas i Firefox";
+"ShareExtension.LoadInBackgroundActionDone.Title" = "Laddas i Decentr";
 
-/* Action label on share extension to immediately open page in Firefox. */
-"ShareExtension.OpenInFirefoxAction.Title" = "Öppna i Firefox";
+/* Action label on share extension to immediately open page in Decentr. */
+"ShareExtension.OpenInFirefoxAction.Title" = "Öppna i Decentr";
 
-/* Action label on share extension to immediately open page in Firefox in private mode. */
+/* Action label on share extension to immediately open page in Decentr in private mode. */
 "ShareExtension.OpenInPrivateModeAction.Title" = "Öppna i privat läge";
 
-/* Action label on share extension to search for the selected text in Firefox. */
-"ShareExtension.SeachInFirefoxAction.Title" = "Sök i Firefox";
+/* Action label on share extension to search for the selected text in Decentr. */
+"ShareExtension.SeachInFirefoxAction.Title" = "Sök i Decentr";
 
 /* Label for show search suggestions setting. */
 "Show Search Suggestions" = "Visa sökförslag";
@@ -1901,7 +1901,7 @@
 "Sync.FirstTimeMessage.Label" = "Din första synkronisering kan ta en stund";
 
 /* String displayed on Sign In to Sync page that allows the user to create a new account. */
-"Sync.NoAccount.Description" = "Inget konto? Skapa ett för att synkronisera Firefox mellan enheter.";
+"Sync.NoAccount.Description" = "Inget konto? Skapa ett för att synkronisera Decentr mellan enheter.";
 
 /* Message displayed when the user's account is syncing with no ellipsis */
 "Sync.Syncing.Label" = "Synkroniserar";
@@ -2026,7 +2026,7 @@
 /* The section header for tabs opened yesterday */
 "TabTray.Yesterday.Header" = "Igår";
 
-/* Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Decentr reader mode from another app. */
 "The page could not be displayed in Reader View." = "Denna sida kunde inte visas i Läsvyn.";
 
 /* Error message in the remote tabs panel */
@@ -2084,13 +2084,13 @@
 "UIMenuItem.PasteGo" = "Klistra in och öppna";
 
 /* Search in New Tab Text selection menu item */
-"UIMenuItem.SearchWithFirefox" = "Sök med Firefox";
+"UIMenuItem.SearchWithFirefox" = "Sök med Decentr";
 
 /* Accessibility label for unread article in reading list. It's a past participle - functions as an adjective. */
 "unread" = "oläst";
 
 /* Text message in the settings table view */
-"Upgrade Firefox to connect" = "Uppgradera Firefox för att kunna ansluta";
+"Upgrade Decentr to connect" = "Uppgradera Decentr för att kunna ansluta";
 
 /* Debug option */
 "Use stage servers" = "Använd testserver";
@@ -2101,7 +2101,7 @@
 /* Text message in the settings table view */
 "Verify your email address" = "Verifiera din e-postadress";
 
-/* Version number of Firefox shown in settings */
+/* Version number of Decentr shown in settings */
 "Version %@ (%@)" = "Version %1$@ (%2$@)";
 
 /* Accessibility label for the main web content view */
@@ -2123,7 +2123,7 @@
 "Yesterday" = "Igår";
 
 /* Error message in the remote tabs panel */
-"You don’t have any tabs open in Firefox on your other devices." = "Du har inga flikar öppna i Firefox på dina andra enheter.";
+"You don’t have any tabs open in Decentr on your other devices." = "Du har inga flikar öppna i Decentr på dina andra enheter.";
 
 /* Your Rights settings section title */
 "Your Rights" = "Dina rättigheter";

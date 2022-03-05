@@ -46,7 +46,7 @@ class TelemetryWrapperTests: XCTestCase {
         XCTAssertFalse(GleanMetrics.Preferences.changed.testHasValue())
     }
 
-    // MARK: Firefox Home Page
+    // MARK: Decentr Home Page
 
     func test_recentlySavedBookmarkViewWithExtras_GleanIsCalled() {
         let extras: [String : Any] = [TelemetryWrapper.EventObject.recentlySavedBookmarkImpressions.rawValue: "\([].count)"]

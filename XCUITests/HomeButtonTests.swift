@@ -39,7 +39,7 @@ class HomeButtonTests: BaseTestCase {
 
         XCUIDevice.shared.orientation = .landscapeRight
         // TabToolbar.homeButton is 'masked' as 'Reload' for some reason
-        // Issue: https://github.com/mozilla-mobile/firefox-ios/issues/9083
+        // Issue: https://github.com/mozilla-mobile/decentr-ios/issues/9083
         XCTAssertTrue(app.buttons["Reload"].exists)
         app.buttons["Reload"].tap()
         navigator.nowAt(NewTabScreen)

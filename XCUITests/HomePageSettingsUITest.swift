@@ -33,7 +33,7 @@ class HomePageSettingsUITests: BaseTestCase {
         navigator.performAction(Action.CloseURLBarOpen)
         navigator.nowAt(NewTabScreen)
         navigator.goto(HomeSettings)
-        XCTAssertTrue(app.tables.cells["Firefox Home"].exists)
+        XCTAssertTrue(app.tables.cells["Decentr Home"].exists)
         XCTAssertTrue(app.tables.cells["HomeAsCustomURL"].exists)
         waitForExistence(app.tables.cells["TopSitesRows"])
         XCTAssertEqual(app.tables.cells["TopSitesRows"].label as String, "Shortcuts, Rows: 2")
@@ -178,7 +178,7 @@ class HomePageSettingsUITests: BaseTestCase {
         navigator.performAction(Action.SelectHomeAsFirefoxHomePage)
         navigator.nowAt(HomeSettings)
         navigator.goto(SettingsScreen)
-        XCTAssertEqual(app.tables.cells["Home"].label, "Homepage, Firefox Home")
+        XCTAssertEqual(app.tables.cells["Home"].label, "Homepage, Decentr Home")
     }
     //Function to check the number of top sites shown given a selected number of rows
     private func checkNumberOfExpectedTopSites(numberOfExpectedTopSites: Int) {

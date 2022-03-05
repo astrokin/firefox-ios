@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Näin voit ottaa ja ladata kuvia.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Firefox vaatii Face ID:n, jotta voit käyttää tallennettuja kirjautumistietoja.";
+"NSFaceIDUsageDescription" = "Decentr vaatii Face ID:n, jotta voit käyttää tallennettuja kirjautumistietoja.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Vierailemasi sivustot voivat kysyä lupaa sijaintiisi.";

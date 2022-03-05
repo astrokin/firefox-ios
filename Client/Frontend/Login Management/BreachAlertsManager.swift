@@ -28,7 +28,7 @@ final public class BreachAlertsManager {
     static let icon = UIImage(named: "Breached Website")?.withRenderingMode(.alwaysTemplate)
     static let lightMode = UIColor(red: 0.77, green: 0.00, blue: 0.26, alpha: 1.00)
     static let darkMode = UIColor(red: 1.00, green: 0.02, blue: 0.35, alpha: 1.00)
-    static let monitorAboutUrl = URL(string: "https://monitor.firefox.com/about")
+    static let monitorAboutUrl = URL(string: "https://monitor.decentr.com/about")
     var breaches = Set<BreachRecord>()
     var client: BreachAlertsClientProtocol
     var profile: Profile!

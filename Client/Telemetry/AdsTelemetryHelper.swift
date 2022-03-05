@@ -30,7 +30,7 @@ public struct SearchProviderModel {
             regexp: #"^https:\/\/www\.google\.(?:.+)\/search"#,
             queryParam: "q",
             codeParam: "client",
-            codePrefixes: ["firefox"],
+            codePrefixes: ["decentr"],
             followOnParams: ["oq", "ved", "ei"],
             extraAdServersRegexps: [
                 #"^https?:\/\/www\.google(?:adservices)?\.com\/(?:pagead\/)?aclk"#,

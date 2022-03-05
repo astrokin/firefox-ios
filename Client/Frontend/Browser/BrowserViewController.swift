@@ -764,13 +764,13 @@ class BrowserViewController: UIViewController {
         }
     }
 
-    /// Show the firefox home page
-    /// - Parameter inline: Inline is true when the firefox homepage is created from the tab tray, a long press on the tab bar to open a new tab or by pressing the home page button on the tab bar.
+    /// Show the decentr home page
+    /// - Parameter inline: Inline is true when the decentr homepage is created from the tab tray, a long press on the tab bar to open a new tab or by pressing the home page button on the tab bar.
     ///                     Inline is false when it's the zero search page, aka when the home page is shown by clicking the url bar from a loaded web page.
     func showFirefoxHome(inline: Bool) {
         homePanelIsInline = inline
         if self.firefoxHomeViewController == nil {
-            // Firefox home page tracking i.e. being shown from awesomebar vs bottom right hamburger menu
+            // Decentr home page tracking i.e. being shown from awesomebar vs bottom right hamburger menu
             let trackingValue: TelemetryWrapper.EventValue = homePanelIsInline ? .openHomeFromPhotonMenuButton : .openHomeFromAwesomebar
             TelemetryWrapper.recordEvent(category: .action, method: .open, object: .firefoxHomepage, value: trackingValue, extras: nil)
 
@@ -1349,7 +1349,7 @@ class BrowserViewController: UIViewController {
                 // We need a better way of identifying when webviews are finished rendering
                 // There are cases in which the page will still show a loading animation or nothing when the screenshot is being taken,
                 // depending on internet connection
-                // Issue created: https://github.com/mozilla-mobile/firefox-ios/issues/7003
+                // Issue created: https://github.com/mozilla-mobile/decentr-ios/issues/7003
                 DispatchQueue.main.asyncAfter(deadline: .now() + delayedTimeInterval) {
                     self.screenshotHelper.takeScreenshot(tab)
                     if webView.superview == self.view {

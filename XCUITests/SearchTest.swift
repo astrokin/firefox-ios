@@ -200,8 +200,8 @@ class SearchTests: BaseTestCase {
             app.menuItems["show.next.items.menu.button"].tap()
         }
         
-        waitForExistence(app.menuItems["Search with Firefox"])
-        app.menuItems["Search with Firefox"].tap()
+        waitForExistence(app.menuItems["Search with Decentr"])
+        app.menuItems["Search with Decentr"].tap()
         waitUntilPageLoad()
         waitForValueContains(app.textFields["url"], value: "google")
         // Now there should be two tabs open

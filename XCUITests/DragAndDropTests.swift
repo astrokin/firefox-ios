@@ -218,7 +218,7 @@ class DragAndDropTestIpad: IpadOnlyTestCase {
         XCTAssert(secondWebsite.url.contains(app.textFields["url"].value! as! String), "The tab has not been dropped correctly")
     }
         
-    // Disabled due to https://github.com/mozilla-mobile/firefox-ios/issues/8358
+    // Disabled due to https://github.com/mozilla-mobile/decentr-ios/issues/8358
     /* func testRearrangeTabsTabTrayIsKeptinTopTabs() {
         if skipPlatform { return }
         openTwoWebsites()

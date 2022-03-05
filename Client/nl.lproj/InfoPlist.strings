@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Hiermee kunt u foto’s maken en uploaden.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Firefox vereist Face ID om uw opgeslagen aanmeldingen te benaderen.";
+"NSFaceIDUsageDescription" = "Decentr vereist Face ID om uw opgeslagen aanmeldingen te benaderen.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Websites die u bezoekt kunnen om uw locatie vragen.";

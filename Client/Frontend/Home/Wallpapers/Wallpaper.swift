@@ -69,7 +69,7 @@ struct WallpaperImageSet {
 /// This enum will outline all types of different wallpaper collections we currently
 /// and may offer in the future. As such, there may be items here that are outdated.
 enum WallpaperCollectionType: String, Codable {
-    case firefox
+    case decentr
     case projectHouse
 }
 

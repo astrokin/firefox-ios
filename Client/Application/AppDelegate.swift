@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sendUsageData = NSUserDefaultsPrefs(prefix: "profile").boolForKey(AppConstants.PrefSendUsageData) ?? true
         Sentry.shared.setup(sendUsageData: sendUsageData)
 
-        // Set the Firefox UA for browsing.
+        // Set the Decentr UA for browsing.
         setUserAgent()
 
         // Start the keyboard helper to monitor and cache keyboard state.

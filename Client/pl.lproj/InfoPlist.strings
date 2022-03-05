@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Pozwoli to robić i wgrywać zdjęcia.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Firefox wymaga Face ID, by uzyskać dostęp do zachowanych danych logowania.";
+"NSFaceIDUsageDescription" = "Decentr wymaga Face ID, by uzyskać dostęp do zachowanych danych logowania.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Pozwoli to odwiedzanym stronom żądać informacji o położeniu.";

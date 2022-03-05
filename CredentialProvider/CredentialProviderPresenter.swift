@@ -73,7 +73,7 @@ class CredentialProviderPresenter {
     
 
     func credentialList(for serviceIdentifiers: [ASCredentialServiceIdentifier]) {
-        // Force a short delay before we trigger authentication. See https://github.com/mozilla-mobile/firefox-ios/issues/9354
+        // Force a short delay before we trigger authentication. See https://github.com/mozilla-mobile/decentr-ios/issues/9354
         DispatchQueue.main.asyncAfter(deadline: .now() + CredentialProviderAuthenticationDelay) {
             AppAuthenticator.authenticateWithDeviceOwnerAuthentication { result in
                 switch result {

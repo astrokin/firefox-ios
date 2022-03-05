@@ -9,7 +9,7 @@
 <Url type="text/html" method="GET" template="http://slovnik.azet.sk/">
   <Param name="q" value="{searchTerms}"/>
   <Param name="l" value="en-sk"/>
-  <Param name="sourceid" value="firefox"/>
+  <Param name="sourceid" value="decentr"/>
 </Url>
 <SearchForm>http://slovnik.azet.sk/</SearchForm>
 </SearchPlugin>

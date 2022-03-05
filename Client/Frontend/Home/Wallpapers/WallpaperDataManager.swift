@@ -74,7 +74,7 @@ struct WallpaperDataManager {
         return [WallpaperCollection(wallpaperFileNames: ["fxCerulean",
                                                          "fxAmethyst",
                                                          "fxSunrise"],
-                                    type: .themed(type: .firefox)),
+                                    type: .themed(type: .decentr)),
                 ]
     }
 }

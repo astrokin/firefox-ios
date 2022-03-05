@@ -58,7 +58,7 @@
 /* Label for the button, displayed in the menu, used to open the QR code scanner. */
 "Menu.ScanQRCodeAction.Title" = "QR кодны сканерлау";
 
-/* Label for the button, displayed in Firefox Home, used to see all Library panels. */
+/* Label for the button, displayed in Decentr Home, used to see all Library panels. */
 "Menu.SeeAllAction.Title" = "Барысын да карау";
 
 /* Label for the button, displayed in the menu, used to open the tabs tray */

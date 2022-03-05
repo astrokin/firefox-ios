@@ -192,7 +192,7 @@ class RustPlacesTests: XCTestCase {
         XCTAssertEqual(queryResults.successValue!.count, 2)
         
         // Able to query by url.
-        let metadataKey3 = HistoryMetadataKey(url: "https://www.firefox.ru/download", searchTerm: nil, referrerUrl: "https://www.mozilla.org")
+        let metadataKey3 = HistoryMetadataKey(url: "https://www.decentr.ru/download", searchTerm: nil, referrerUrl: "https://www.mozilla.org")
         XCTAssertTrue(places.noteHistoryMetadataObservation(
             key: metadataKey3,
             observation: HistoryMetadataObservation(
@@ -202,9 +202,9 @@ class RustPlacesTests: XCTestCase {
                 title: "Скачать Фаерфокс"
             )
         ).value.isSuccess)
-        queryResults = places.queryHistoryMetadata(query: "firefox", limit: 10).value
+        queryResults = places.queryHistoryMetadata(query: "decentr", limit: 10).value
         XCTAssertEqual(queryResults.successValue!.count, 1)
-        XCTAssertEqual(queryResults.successValue![0].url, "https://www.firefox.ru/download")
+        XCTAssertEqual(queryResults.successValue![0].url, "https://www.decentr.ru/download")
         XCTAssertEqual(queryResults.successValue![0].title, "Скачать Фаерфокс")
         
         // Able to query by search term.

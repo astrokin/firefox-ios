@@ -136,7 +136,7 @@ extension FxHomeRecentlySavedCollectionCell: UICollectionViewDelegate {
 
 private struct RecentlySavedCellUX {
     static let generalCornerRadius: CGFloat = 12
-    // TODO: Limiting font size to AX2 until we use compositional layout in all Firefox HomePage. Should be AX5.
+    // TODO: Limiting font size to AX2 until we use compositional layout in all Decentr HomePage. Should be AX5.
     static let bookmarkTitleMaxFontSize: CGFloat = 26 // Style caption1 - AX2
     static let generalSpacing: CGFloat = 8
     static let heroImageHeight: CGFloat = 92

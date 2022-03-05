@@ -43,10 +43,10 @@
 /* Title for the Jump Back In section. This section allows users to jump back in to a recently viewed tab */
 "ActivityStream.JumpBackIn.SectionTitle" = "পূর্বাবস্থায় ফিরে যান";
 
-/* On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar. */
+/* On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists underneath the search term for the tab group, there will be a subtitle with a number for how many tabs are in that group. The placeholder is for a number. It will read 'Tabs: 5' or similar. */
 "ActivityStream.JumpBackIn.TabGroup.SiteCount" = "ট্যাব: %d";
 
-/* On the Firefox homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did. */
+/* On the Decentr homepage in the Jump Back In section, if a Tab group item - a collection of grouped tabs from a related search - exists, the Tab Group item title will be 'Your search for \"video games\"'. The %@ sign is a placeholder for the actual search the user did. */
 "ActivityStream.JumpBackIn.TabGroup.Title" = "\"%@\" এর জন্য আপনার অনুসন্ধান";
 
 /* A string used to signify the start of the Recently Saved section in Home Screen. */
@@ -209,7 +209,7 @@
 /* Description of what a breach is */
 "BreachAlerts.Description" = "আপনি সর্বশেষ আপনার পাসওয়ার্ড পরিবর্তন করার পরে পাসওয়ার্ড ফাঁস বা চুরি হয়ে গেছে। এই অ্যাকাউন্টটি সুরক্ষিত করতে, সাইটে লগ ইন করুন এবং আপনার পাসওয়ার্ড পরিবর্তন করুন।";
 
-/* Link to monitor.firefox.com to learn more about breached passwords */
+/* Link to monitor.decentr.com to learn more about breached passwords */
 "BreachAlerts.LearnMoreButton" = "আরও জানুন";
 
 /* Leads to a link to the breached website */
@@ -300,7 +300,7 @@
 "Could not load page." = "পেজ লোড করা যাচ্ছে না";
 
 /* Description for the new dark mode change in the version 22 app release. It describes the new automatic dark theme and how to change the theme settings. */
-"CoverSheet.v22.DarkMode.Description" = "iOS 13 ব্যাবহারকারিদের জন্য, এখন আপনার ফোন ডার্ক মোডে সেট করা থাকলে, Firefox স্বয়ংক্রিয়ভাবেই ডার্ক থিমে পরিবর্তন করে নেয়। এই আচরণটি পরিবর্তন করার জন্য, সেটিংস> থিম এ যান।";
+"CoverSheet.v22.DarkMode.Description" = "iOS 13 ব্যাবহারকারিদের জন্য, এখন আপনার ফোন ডার্ক মোডে সেট করা থাকলে, Decentr স্বয়ংক্রিয়ভাবেই ডার্ক থিমে পরিবর্তন করে নেয়। এই আচরণটি পরিবর্তন করার জন্য, সেটিংস> থিম এ যান।";
 
 /* Title for the new dark mode change in the version 22 app release. */
 "CoverSheet.v22.DarkMode.Title" = "ডার্ক কীবোর্ড এবং ডার্ক স্প্ল্যাশ স্ক্রিন এখন ডার্ক থিম এর অন্তর্ভুক্ত।";
@@ -355,8 +355,8 @@
 /* Alert dialog title when the user taps the cancel download icon. */
 "Downloads.CancelDialog.Title" = "ডাউনলোড বাতিল করুন";
 
-/* The message displayed to a user when they try and perform the download of an asset that Firefox cannot currently handle. */
-"Downloads.Error.Message" = "Firefox এখনো ডাউনলোডসমূহকে সমর্থন করে না।";
+/* The message displayed to a user when they try and perform the download of an asset that Decentr cannot currently handle. */
+"Downloads.Error.Message" = "Decentr এখনো ডাউনলোডসমূহকে সমর্থন করে না।";
 
 /* The label text in the Download Cancelled toast for showing confirmation that the download was cancelled. */
 "Downloads.Toast.Cancelled.LabelText" = "ডাউনলোড বাতিল হয়েছে";
@@ -401,7 +401,7 @@
 "ErrorPages.AdvancedWarning2.Text" = "এটা কোন ভুল কনফিগারেশনের অথবা একটি আক্রমণকারী দ্বারা গরমিল হতে পারে। ঝুঁকি নিতে হলে এগিয়ে যান।";
 
 /* Warning text on the certificate error page */
-"ErrorPages.CertWarning.Description" = "%@ টির মালিক ওয়েবসাইট টাকে অন্যায় ভাবে কনফিগার করেছেন। আপানার তথ্য চুরি হওয়া থেকে রক্ষা করতে, Firefox ওয়েবসাইট টির সাথে সংযোগ করেনি।";
+"ErrorPages.CertWarning.Description" = "%@ টির মালিক ওয়েবসাইট টাকে অন্যায় ভাবে কনফিগার করেছেন। আপানার তথ্য চুরি হওয়া থেকে রক্ষা করতে, Decentr ওয়েবসাইট টির সাথে সংযোগ করেনি।";
 
 /* Title on the certificate error page */
 "ErrorPages.CertWarning.Title" = "এই সংযুক্তিটি বিশ্বাসযজ্ঞ নয়";
@@ -421,10 +421,10 @@
 /* Tile title for Facebook */
 "Facebook" = "ফেইসবুক";
 
-/* Title for firefox about:home page in tab history list */
-"Firefox.HomePage.Title" = "Firefox Home Page";
+/* Title for decentr about:home page in tab history list */
+"Decentr.HomePage.Title" = "Decentr Home Page";
 
-/* A button at bottom of the Firefox homepage that, when clicked, takes users straight to the settings options, where they can customize the Firefox Home page */
+/* A button at bottom of the Decentr homepage that, when clicked, takes users straight to the settings options, where they can customize the Decentr Home page */
 "FirefoxHome.CustomizeHomeButton.Title" = "হোমপেজ কাস্টমাইজ করুন";
 
 /* Accessibility Label for the tab toolbar Forward button */
@@ -436,16 +436,16 @@
 /* Label stating your account is not verified */
 "FxA.AccountVerificationRequired" = "অ্যাকাউন্ট যাচাইকরণ প্রয়োজন";
 
-/* Message explaining that user needs to check email for Firefox Account verfication link. */
-"FxA.AccountVerificationRequiredSurface" = "আপনাকে %@ যাচাই করতে হবে। Firefox থেকে প্রেরিত যাচাইকরণ লিঙ্কের জন্যে আপনার ইমেইল দেখুন।";
+/* Message explaining that user needs to check email for Decentr Account verfication link. */
+"FxA.AccountVerificationRequiredSurface" = "আপনাকে %@ যাচাই করতে হবে। Decentr থেকে প্রেরিত যাচাইকরণ লিঙ্কের জন্যে আপনার ইমেইল দেখুন।";
 
 /* Button label to connect another device to Sync */
 "FxA.ConnectAnotherDevice" = "আরেকটি ডিভাইস সংযুক্ত করুন";
 
-/* Settings section title for Firefox Account */
-"FxA.FirefoxAccount" = "Firefox অ্যাকাউন্ট";
+/* Settings section title for Decentr Account */
+"FxA.FirefoxAccount" = "Decentr অ্যাকাউন্ট";
 
-/* Button label to go to Firefox Account settings */
+/* Button label to go to Decentr Account settings */
 "FxA.ManageAccount" = "একাউন্ট এবং ডিভাইস ব্যবস্থাপনা করুন";
 
 /* Label when no internet is present */
@@ -455,15 +455,15 @@
 "FxA.OpenSyncPreferences" = "সিঙ্ক এর পছন্দের অপশন খুলুন";
 
 /* Instructions shown on qr code scanning view */
-"fxa.qr-scanning-view.instructions" = "firefox.com/pair এ QR কোডটি স্ক্যান করুন";
+"fxa.qr-scanning-view.instructions" = "decentr.com/pair এ QR কোডটি স্ক্যান করুন";
 
-/* Remove button is displayed on firefox account page under certain scenarios where user would like to remove their account. */
+/* Remove button is displayed on decentr account page under certain scenarios where user would like to remove their account. */
 "FxA.RemoveAccount" = "অপসারণ করুন";
 
 /* Description string for alert view that gets presented when user tries to remove an account. */
-"FxA.RemoveAccountAlertMessage" = "একজন পৃথক ব্যাবহারকারী হিসেবে সাইন ইন করতে এই ডিভাইসের সাথে যুক্ত Firefox Account টি অপসারণ করুন।";
+"FxA.RemoveAccountAlertMessage" = "একজন পৃথক ব্যাবহারকারী হিসেবে সাইন ইন করতে এই ডিভাইসের সাথে যুক্ত Decentr Account টি অপসারণ করুন।";
 
-/* Remove account alert is the final confirmation before user removes their firefox account */
+/* Remove account alert is the final confirmation before user removes their decentr account */
 "FxA.RemoveAccountAlertTitle" = "অ্যাকাউন্ট অপসারণ করুন";
 
 /* Button label to resend email */
@@ -473,13 +473,13 @@
 "fxa.signin.camera-signin" = "আপনার ক্যামেরা দিয়ে সাইন ইন করুন";
 
 /* FxA sign in create account label. */
-"fxa.signin.create-account-pt-1" = "অ্যাকাউন্টের মাধ্যমে ডিভাইসের মধ্যে Firefox সিঙ্ক করুন।";
+"fxa.signin.create-account-pt-1" = "অ্যাকাউন্টের মাধ্যমে ডিভাইসের মধ্যে Decentr সিঙ্ক করুন।";
 
 /* FxA sign in create account label. This will be linked to the site to create an account. */
-"fxa.signin.create-account-pt-2" = "Firefox অ্যাকাউন্ট খুলুন।";
+"fxa.signin.create-account-pt-2" = "Decentr অ্যাকাউন্ট খুলুন।";
 
 /* FxA sign in view qr code instructions */
-"fxa.signin.qr-link-instruction" = "আপনার কম্পিউটারে Firefox খুলুন এবং firefox.com/pair এ যান";
+"fxa.signin.qr-link-instruction" = "আপনার কম্পিউটারে Decentr খুলুন এবং decentr.com/pair এ যান";
 
 /* FxA sign in view qr code scan button */
 "fxa.signin.ready-to-scan" = "স্ক্যান করার জন্য প্রস্তুত";
@@ -496,14 +496,14 @@
 /* Label explaining what sync does */
 "FxA.SyncExplain" = "আপনার অন্যান্য ডিভাইস থেকে ট্যাব, বুকমার্ক এবং পাসওয়ার্ড এখানে উপভোগ করুন।";
 
-/* Button label to Sync your Firefox Account */
+/* Button label to Sync your Decentr Account */
 "FxA.SyncNow" = "এখন সিঙ্ক করুন";
 
 /* Call to action for sign into sync button */
 "FxA.TakeYourWebWithYou" = "আপনার সাথে আপনার ওয়েব নিন";
 
 /* Title of a notification displayed when another device has connected to FxA. %@ refers to the name of the newly connected device. */
-"FxAPush_DeviceConnected_body" = "Firefox সিঙ্ক %@ এর সাথে যুক্ত হয়েছে";
+"FxAPush_DeviceConnected_body" = "Decentr সিঙ্ক %@ এর সাথে যুক্ত হয়েছে";
 
 /* Title of a notification displayed when another device has connected to FxA. */
 "FxAPush_DeviceConnected_title" = "সিঙ্ক যুক্ত হয়েছে";
@@ -512,7 +512,7 @@
 "FxAPush_DeviceDisconnected_body" = "%@ সফলতার সহিত সংযোগ বিচ্ছিন্ন হয়েছে।";
 
 /* Body of a notification displayed when this device has been disconnected from FxA by another device. */
-"FxAPush_DeviceDisconnected_ThisDevice_body" = "এই ডিভাইসটি Firefox সিঙ্ক থেকে সফলভাবে সংযোগ বিচ্ছিন্ন করেছে।";
+"FxAPush_DeviceDisconnected_ThisDevice_body" = "এই ডিভাইসটি Decentr সিঙ্ক থেকে সফলভাবে সংযোগ বিচ্ছিন্ন করেছে।";
 
 /* Title of a notification displayed when this device has been disconnected by another device. */
 "FxAPush_DeviceDisconnected_ThisDevice_title" = "সিঙ্ক সংযোগ বিচ্ছিন্ন হয়েছে";
@@ -521,7 +521,7 @@
 "FxAPush_DeviceDisconnected_title" = "সিঙ্ক সংযোগ বিচ্ছিন্ন হয়েছে";
 
 /* Body of a notification displayed when unnamed device has been disconnected from FxA. */
-"FxAPush_DeviceDisconnected_UnknownDevice_body" = "একটি ডিভাইস Firefox সিঙ্ক থেকে সংযোগ বিচ্ছিন্ন হয়েছে";
+"FxAPush_DeviceDisconnected_UnknownDevice_body" = "একটি ডিভাইস Decentr সিঙ্ক থেকে সংযোগ বিচ্ছিন্ন হয়েছে";
 
 /* A re-worded offer about Sync, displayed when the Sync home panel is empty, that emphasizes one-way data transfer, not syncing. */
 "Get your open tabs, bookmarks, and passwords from your other devices." = "আপনার অন্য ডিভাইস থেকে খুলে রাখা ট্যাব, বুকমার্ক, এবং পাসওয়ার্ড পান।";
@@ -569,7 +569,7 @@
 "HistoryPanel.EmptySyncedTabsPanelTabSyncDisabledState.Description" = "আপনার অন্যান্য ডিভাইস থেকে ট্যাবের তালিকা দেখতে ট্যাব সিঙ্কিং চালু করুন।";
 
 /* Title for the empty synced tabs state in the History Panel */
-"HistoryPanel.EmptySyncedTabsState.Title" = "Firefox সিঙ্ক";
+"HistoryPanel.EmptySyncedTabsState.Title" = "Decentr সিঙ্ক";
 
 /* Title for the Back to History button in the History Panel */
 "HistoryPanel.HistoryBackButton.Title" = "পূর্ববর্তী তথ্য";
@@ -757,10 +757,10 @@
 /* Light theme setting in Reading View settings */
 "Light" = "আলো";
 
-/* Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Link for going to the non-reader page when the reader view could not be loaded. This message will appear only when sharing to Decentr reader mode from another app. */
 "Load original page" = "আসল পেজ লোড করুন";
 
-/* Message displayed when the reader mode page is loading. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Message displayed when the reader mode page is loading. This message will appear only when sharing to Decentr reader mode from another app. */
 "Loading content…" = "কন্টেন্ট লোড হচ্ছে...";
 
 /* Authentication prompt log in button */
@@ -782,7 +782,7 @@
 "Logins.WelcomeView.Tagline" = "আপনার পাসওয়ার্ড সর্বত্র নিন";
 
 /* Label displaying welcome view title */
-"Logins.WelcomeView.Title2" = "Firefox পাসওয়ার্ড AutoFill করুন";
+"Logins.WelcomeView.Title2" = "Decentr পাসওয়ার্ড AutoFill করুন";
 
 /* Title of the big blue button to enable AutoFill */
 "Logins.WelcomeView.TurnOnAutoFill" = "AutoFill চালু করুন";
@@ -830,7 +830,7 @@
 "LoginsList.LoginsListSearchPlaceholder" = "ফিল্টার";
 
 /* Label shown when there are no logins to list */
-"LoginsList.NoLoginsFound.Description" = "সংরক্ষিত লগইন গুলো এখানে দেখানো হবে। যদি অন্য কোনো ডিভাইস এ আপনার Firefox লগইন গুলো সংরক্ষণ করে থাকেন, তাহলে আপনার Firefox Account এ সাইন ইন করুন।";
+"LoginsList.NoLoginsFound.Description" = "সংরক্ষিত লগইন গুলো এখানে দেখানো হবে। যদি অন্য কোনো ডিভাইস এ আপনার Decentr লগইন গুলো সংরক্ষণ করে থাকেন, তাহলে আপনার Decentr Account এ সাইন ইন করুন।";
 
 /* Label shown when there are no logins saved */
 "LoginsList.NoLoginsFound.Title" = "কোন লগইন পাওয়া যায়নি";
@@ -854,7 +854,7 @@
 "LoginsList.Title" = "সংরক্ষিত লগইন";
 
 /* Restore Tabs Prompt Description */
-"Looks like Firefox crashed previously. Would you like to restore your tabs?" = "মনে হচ্ছে Firefox আগে ক্র্যাশ করেছে। আপনি কী আপনার ট্যাবগুলি পুনরুদ্ধার করতে চান?";
+"Looks like Decentr crashed previously. Would you like to restore your tabs?" = "মনে হচ্ছে Decentr আগে ক্র্যাশ করেছে। আপনি কী আপনার ট্যাবগুলি পুনরুদ্ধার করতে চান?";
 
 /* Name for Mark as read button in reader mode
    Title for the button that marks a reading list item as read */
@@ -898,10 +898,10 @@
 "Menu.EnhancedTrackingProtectionOn.Title" = "উন্নত ট্র্যাকিং সুরক্ষা এই সাইটের জন্য চালু আছে।";
 
 /* Description for having standard ETP protection with ITP offered in iOS14+ */
-"Menu.EnhancedTrackingProtectionStandardWithITP.Title" = "Firefox ক্রস-সাইট ট্র্যাকার, সোশ্যাল ট্র্যাকার, ক্রিপ্টোমিনিয়ারস এবং ফিঙ্গারপ্রিন্টারগুলিকে অবরুদ্ধ করে।";
+"Menu.EnhancedTrackingProtectionStandardWithITP.Title" = "Decentr ক্রস-সাইট ট্র্যাকার, সোশ্যাল ট্র্যাকার, ক্রিপ্টোমিনিয়ারস এবং ফিঙ্গারপ্রিন্টারগুলিকে অবরুদ্ধ করে।";
 
 /* Description for having strict ETP protection with ITP offered in iOS14+ */
-"Menu.EnhancedTrackingProtectionStrictWithITP.Title" = "Firefox ক্রস-সাইট ট্র্যাকার, সোশ্যাল ট্র্যাকার, ক্রিপ্টোমিনিয়ারস, ফিঙ্গারপ্রিন্টারগুলি ও ট্র্যাকিং কন্টেন্টকে অবরুদ্ধ করে।";
+"Menu.EnhancedTrackingProtectionStrictWithITP.Title" = "Decentr ক্রস-সাইট ট্র্যাকার, সোশ্যাল ট্র্যাকার, ক্রিপ্টোমিনিয়ারস, ফিঙ্গারপ্রিন্টারগুলি ও ট্র্যাকিং কন্টেন্টকে অবরুদ্ধ করে।";
 
 /* Label for the button, displayed in the menu, takes you to to History screen when pressed. */
 "Menu.History.Label" = "ইতিহাস";
@@ -967,7 +967,7 @@
 "Menu.TrackingProtection.Details.Verifier" = "%@ যাচাই করেছে";
 
 /* Message in menu when no trackers blocked. */
-"Menu.TrackingProtection.NoTrackersBlockedTitle" = "এই পাতায় Firefox এর পরিচিত কোনও ট্র্যাকার সনাক্ত করা যায়নি।";
+"Menu.TrackingProtection.NoTrackersBlockedTitle" = "এই পাতায় Decentr এর পরিচিত কোনও ট্র্যাকার সনাক্ত করা যায়নি।";
 
 /* The title for tracking protection settings */
 "Menu.TrackingProtection.ProtectionSettings.Title" = "সুরক্ষা সেটিংস";
@@ -982,7 +982,7 @@
 "Menu.TrackingProtectionBlockedSocial.Title" = "সামাজিক ট্র্যাকার";
 
 /* Description of the Tracking protection menu when TP is blocking parts of the page */
-"Menu.TrackingProtectionBlocking.Description" = "Firefox পেজের অংশবিশেষ ব্লক করছে, যা আপনার ব্রাউজিং ট্র্যাক করতে পারে।";
+"Menu.TrackingProtectionBlocking.Description" = "Decentr পেজের অংশবিশেষ ব্লক করছে, যা আপনার ব্রাউজিং ট্র্যাক করতে পারে।";
 
 /* The description of the Tracking Protection menu item when tracking is enabled */
 "Menu.TrackingProtectionBlockingDisabled.Description" = "অনলাইন ট্র্যাকার ব্লক করুন";
@@ -1084,18 +1084,18 @@
 /* Restore Tabs Affirmative Action */
 "Okay" = "ঠিক আছে";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the title for the button, on the bottom of the card, used to get back to browsing on Firefox by dismissing the onboarding card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the title for the button, on the bottom of the card, used to get back to browsing on Decentr by dismissing the onboarding card */
 "Onboarding.WhatsNew.Button.Title" = "ব্রাউজিং শুরু করুন";
 
-/* On the onboarding card letting users know what's new in this version of Firefox, this is the title for the Recent Searches bullet point on the card */
+/* On the onboarding card letting users know what's new in this version of Decentr, this is the title for the Recent Searches bullet point on the card */
 "Onboarding.WhatsNew.RecentSearches.Title" = "সাম্প্রতিক সার্চ";
 
-/* On the onboarding card, letting users know what's new in this version of Firefox, this is the title for the Jump Back In bullet point on the card
-   The title for the new onboarding card letting users know what is new in Firefox iOS */
-"Onboarding.WhatsNew.Title" = "Firefox এ নতুন কি";
+/* On the onboarding card, letting users know what's new in this version of Decentr, this is the title for the Jump Back In bullet point on the card
+   The title for the new onboarding card letting users know what is new in Decentr iOS */
+"Onboarding.WhatsNew.Title" = "Decentr এ নতুন কি";
 
 /* Title for prompt displayed to user after the app crashes */
-"Oops! Firefox crashed" = "ওহহ! Firefox ক্রাশ করেছে";
+"Oops! Decentr crashed" = "ওহহ! Decentr ক্রাশ করেছে";
 
 /* See http://mzl.la/1LXbDOL */
 "Open articles in Reader View by tapping the book icon when it appears in the title bar." = "টাইটেলবারে বইয়ের আইকনটি এলে সেটিতে ট্যাপ করে রিডার ভিউতে আর্টিকেলগুলি দেখুন।";
@@ -1106,8 +1106,8 @@
 /* Toggle tabs syncing setting */
 "Open Tabs" = "খোলা ট্যাব";
 
-/* The message displayed to a user when they try to open a URL that cannot be handled by Firefox, or any external app. */
-"OpenURL.Error.Message" = "Firefox পাতাটি খুলতে পাচ্ছে না কারণ এটিই অবৈধ ঠিকানা।";
+/* The message displayed to a user when they try to open a URL that cannot be handled by Decentr, or any external app. */
+"OpenURL.Error.Message" = "Decentr পাতাটি খুলতে পাচ্ছে না কারণ এটিই অবৈধ ঠিকানা।";
 
 /* Title of the message shown when the user attempts to navigate to an invalid link. */
 "OpenURL.Error.Title" = "পাতা খোলা সম্ভব নয়";
@@ -1122,19 +1122,19 @@
 "Password" = "পাসওয়ার্ড";
 
 /* Error message shown in the remote tabs panel */
-"PasswordAutoFill.NoPasswordsFoundTitle" = "আপনার Firefox অ্যাকাউন্ট থেকে আপনার কোনও লগইন তথ্য সিঙ্ক করা নেই";
+"PasswordAutoFill.NoPasswordsFoundTitle" = "আপনার Decentr অ্যাকাউন্ট থেকে আপনার কোনও লগইন তথ্য সিঙ্ক করা নেই";
 
 /* Header for the list of credentials table */
 "PasswordAutoFill.PasswordsListTitle" = "উপলব্ধ লগইন তথ্য:";
 
-/* Title of the extension that shows firefox passwords */
-"PasswordAutoFill.SectionTitle" = "Firefox লগইন তথ্য";
+/* Title of the extension that shows decentr passwords */
+"PasswordAutoFill.SectionTitle" = "Decentr লগইন তথ্য";
 
 /* See http://mzl.la/1G7uHo7 */
 "PhotoLibrary.FirefoxWouldLikeAccessMessage" = "এটা আপনার ছবি ক্যামেরা রোলে সংরক্ষণ অনুমোদন করবে।";
 
 /* See http://mzl.la/1G7uHo7 */
-"PhotoLibrary.FirefoxWouldLikeAccessTitle" = "Firefox আপনার ফোনে প্রবেশাধিকার চায়";
+"PhotoLibrary.FirefoxWouldLikeAccessTitle" = "Decentr আপনার ফোনে প্রবেশাধিকার চায়";
 
 /* Button for closing the menu action sheet */
 "PhotonMenu.close" = "বন্ধ করুন";
@@ -1142,7 +1142,7 @@
 /* Privacy section title */
 "Privacy" = "গোপনীয়তা";
 
-/* Show Firefox Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/firefox/ */
+/* Show Decentr Browser Privacy Policy page from the Privacy section in the settings. See https://www.mozilla.org/privacy/decentr/ */
 "Privacy Policy" = "গোপনীয়তা সংক্রান্ত নীতি";
 
 /* This is the value for a label that indicates if a user is on an unencrypted website. */
@@ -1154,7 +1154,7 @@
 /* Title for quick-search engines settings section. */
 "Quick-Search Engines" = "দ্রুত-অনুসন্ধানের ইঞ্জিন";
 
-/* A label indicating the action that a user can rate the Firefox app in the App store. */
+/* A label indicating the action that a user can rate the Decentr app in the App store. */
 "Ratings.Settings.RateOnAppStore" = "অ্যাপ স্টোরে রেট দিন";
 
 /* Accessibility label for read article in reading list. It's a past participle - functions as an adjective. */
@@ -1218,7 +1218,7 @@
 "ScanQRCode.InvalidDataError.Message" = "উপাত্তটি অশুদ্ধ";
 
 /* Text of the prompt user to setup the camera authorization. */
-"ScanQRCode.PermissionError.Message" = "অনুগ্রহ করে 'Settings' -> 'Privacy' -> 'Camera' গিয়ে Firefox কে আপনার ডিভাইস'র ক্যামেরা ব্যবহারের অনুমতি দিন।";
+"ScanQRCode.PermissionError.Message" = "অনুগ্রহ করে 'Settings' -> 'Privacy' -> 'Camera' গিয়ে Decentr কে আপনার ডিভাইস'র ক্যামেরা ব্যবহারের অনুমতি দিন।";
 
 /* Title for the QR code scanner view. */
 "ScanQRCode.View.Title" = "QR কোড স্ক্যান করুন";
@@ -1302,19 +1302,19 @@
 "SendTo.NavBar.Title" = "ট্যাব পাঠান";
 
 /* Error message shown in the remote tabs panel */
-"SendTo.NoDevicesFound.Message" = "সিঙ্ক করার জন্য আপনার কোন ডিভাইস এই Firefox Account এর সাথে যুক্ত নেই।";
+"SendTo.NoDevicesFound.Message" = "সিঙ্ক করার জন্য আপনার কোন ডিভাইস এই Decentr Account এর সাথে যুক্ত নেই।";
 
 /* See http://mzl.la/1ISlXnU */
-"SendTo.NotSignedIn.Message" = "অনুগ্রহ করে Firefox খুলুন, সেটিং এ যান এবং সাইন ইন করুন।";
+"SendTo.NotSignedIn.Message" = "অনুগ্রহ করে Decentr খুলুন, সেটিং এ যান এবং সাইন ইন করুন।";
 
 /* See http://mzl.la/1ISlXnU */
-"SendTo.NotSignedIn.Title" = "আপনি আপনার Firefox Account এ সাইন ইন করেননি।";
+"SendTo.NotSignedIn.Title" = "আপনি আপনার Decentr Account এ সাইন ইন করেননি।";
 
 /* Navigation bar button to Send the current page to a device */
 "SendTo.SendAction.Text" = "পাঠান";
 
-/* The text for the button on the Send to Device page if you are not signed in to Firefox Accounts. */
-"SendTo.SignIn.Button" = "Firefox এ সাইন ইন করুন";
+/* The text for the button on the Send to Device page if you are not signed in to Decentr Accounts. */
+"SendTo.SignIn.Button" = "Decentr এ সাইন ইন করুন";
 
 /* Body of notification shown when the device is sent one or more tabs from an unnamed device. */
 "SentTab_TabArrivingNotification_NoDevice_body" = "অন্য ডিভাইস থেকে নতুন ট্যাব এসেছে।";
@@ -1338,7 +1338,7 @@
 "SentTab.NoTabArrivingNotification.body" = "শুরু করতে স্পর্শ করুন";
 
 /* Title of notification received after a spurious message from FxA has been received. */
-"SentTab.NoTabArrivingNotification.title" = "Firefox সিঙ্ক";
+"SentTab.NoTabArrivingNotification.title" = "Decentr সিঙ্ক";
 
 /* Label for an action used to view one or more tabs from a notification. */
 "SentTab.ViewAction.title" = "দেখুন";
@@ -1398,7 +1398,7 @@
 "Settings.DataManagement.Title" = "ডাটা ব্যাবস্থাপনা";
 
 /* Body of the alert when prompting the user asking to disconnect. */
-"Settings.Disconnect.Body" = "Firefox আপনার অ্যাকাউন্টের সাথে সিঙ্ক করা বন্ধ করবে, কিন্তু এই ডিভাইসে আপনার ব্রাউজ করা কোন তথ্য মুছে ফেলা হবে না।";
+"Settings.Disconnect.Body" = "Decentr আপনার অ্যাকাউন্টের সাথে সিঙ্ক করা বন্ধ করবে, কিন্তু এই ডিভাইসে আপনার ব্রাউজ করা কোন তথ্য মুছে ফেলা হবে না।";
 
 /* Button displayed at the bottom of settings page allowing users to Disconnect from FxA */
 "Settings.Disconnect.Button" = "সিঙ্ক সংযোগ বিচ্ছিন্ন";
@@ -1467,41 +1467,41 @@
 /* Label used for the device name settings section. */
 "Settings.FxA.DeviceName" = "ডিভাইসের নাম";
 
-/* Label used as a section title in the Firefox Accounts Settings screen. */
+/* Label used as a section title in the Decentr Accounts Settings screen. */
 "Settings.FxA.Sync.SectionName" = "সিঙ্ক সেটিংস";
 
 /* Title displayed in header of the FxA settings panel. */
-"Settings.FxA.Title" = "Firefox অ্যাকাউন্ট";
+"Settings.FxA.Title" = "Decentr অ্যাকাউন্ট";
 
 /* General settings section title */
 "Settings.General.SectionName" = "সাধারণ";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to turn the Pocket Recommendations section on the Decentr homepage on or off */
 "Settings.Home.Option.Pocket" = "Pocket সুপারিশ করেছে";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Saved section on the Decentr homepage on or off */
 "Settings.Home.Option.RecentlySaved" = "সম্প্রতি সংরক্ষিত";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recently Visited section on the Firfox homepage on or off */
 "Settings.Home.Option.RecentlyVisited" = "সম্প্রতি দেখা হয়েছে";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Recent Searches section on the Decentr homepage on or off */
 "Settings.Home.Option.RecentSearches" = "সাম্প্রতিক সার্চ";
 
-/* In the settings menu, in the Firefox homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Firefox homepage on or off */
+/* In the settings menu, in the Decentr homepage customization section, this is the title for the option that allows users to toggle Shortcuts section on the Decentr homepage on or off */
 "Settings.Home.Option.Shortcuts" = "শর্টকাট";
 
-/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Firefox */
+/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the Homepage every time they open up Decentr */
 "Settings.Home.Option.StartAtHome.Always" = "হোমপেজ";
 
-/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Firefox */
+/* In the settings menu, on the Start at Home homepage customization option, this allows users to set this setting to return to the last tab they were on, every time they open up Decentr */
 "Settings.Home.Option.StartAtHome.Never" = "শেষ ট্যাব";
 
-/* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Firefox Homepage. */
+/* Title for the section in the settings menu where users can configure the behaviour of the Start at Home feature on the Decentr Homepage. */
 "Settings.Home.Option.StartAtHome.Title" = "খোলা পর্দা";
 
-/* In the settings menu, this is the title of the Firefox Homepage customization settings section */
-"Settings.Home.Option.Title" = "Firefox Homepage";
+/* In the settings menu, this is the title of the Decentr Homepage customization settings section */
+"Settings.Home.Option.Title" = "Decentr Homepage";
 
 /* Button in settings to clear the home page. */
 "Settings.HomePage.Clear.Button" = "মুছে দিন";
@@ -1552,10 +1552,10 @@
 "Settings.NewTab.Option.CustomizeFooter2" = "আপনার সংরক্ষণকৃত বা ভিজিট করা সাইট";
 
 /* The title for the section to customize top sites in the new tab settings page. */
-"Settings.NewTab.Option.CustomizeTitle" = "Firefox Home কাস্টমাইজ করুন";
+"Settings.NewTab.Option.CustomizeTitle" = "Decentr Home কাস্টমাইজ করুন";
 
-/* Option in settings to show Firefox Home when you open a new tab */
-"Settings.NewTab.Option.FirefoxHome" = "Firefox Home";
+/* Option in settings to show Decentr Home when you open a new tab */
+"Settings.NewTab.Option.FirefoxHome" = "Decentr Home";
 
 /* Option in the settings to turn off recent bookmarks in the Highlights section */
 "Settings.NewTab.Option.HighlightsBookmarks" = "সাম্প্রতিক বুকমার্ক";
@@ -1594,7 +1594,7 @@
 "Settings.NewTab.TopSectionNameFooter" = "নতুন ট্যাব খোলার পর কি দেখতে চান পছন্দ করুন";
 
 /* Description displayed under the ”Offer to Open Copied Link” option. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349 */
-"Settings.OfferClipboardBar.Status" = "Firefox চালু হওয়ার সময়";
+"Settings.OfferClipboardBar.Status" = "Decentr চালু হওয়ার সময়";
 
 /* Title of setting to enable the Go to Copied URL feature. See https://bug1223660.bmoattachments.org/attachment.cgi?id=8898349 */
 "Settings.OfferClipboardBar.Title" = "অনুলিপি করে রাখা লিঙ্ক খোলার প্রস্তাব";
@@ -1618,7 +1618,7 @@
 "Settings.SendUsage.Link" = "আরও জানুন।";
 
 /* A short description that explains why mozilla collects usage data. */
-"Settings.SendUsage.Message" = "Mozilla শুধু এমন কিছু সংগ্রহ করে যা অত্যাবশ্যক প্রয়োজনীয় এবং সকলের জন্যে আরও উন্নত Firefox সংস্করণ তৈরীতে ব্যবহার্য।";
+"Settings.SendUsage.Message" = "Mozilla শুধু এমন কিছু সংগ্রহ করে যা অত্যাবশ্যক প্রয়োজনীয় এবং সকলের জন্যে আরও উন্নত Decentr সংস্করণ তৈরীতে ব্যবহার্য।";
 
 /* The title for the setting to send usage data. */
 "Settings.SendUsage.Title" = "ব্যবহারের উপাত্ত প্রেরণ করুন";
@@ -1636,7 +1636,7 @@
 "Settings.Siri.OpenTabShortcut" = "নতুন ট্যাব খুলুন";
 
 /* The description that describes what siri shortcuts are */
-"Settings.Siri.SectionDescription" = "Siri ব্যবহার করে দ্রুত Firefox চালু করতে Siri শর্টকাট ব্যবহার করুন";
+"Settings.Siri.SectionDescription" = "Siri ব্যবহার করে দ্রুত Decentr চালু করতে Siri শর্টকাট ব্যবহার করুন";
 
 /* The option that takes you to the siri shortcuts settings page */
 "Settings.Siri.SectionName" = "Siri শর্টকাটসমূহ";
@@ -1660,7 +1660,7 @@
 "Settings.Studies.Toggle.Link" = "আরও জানুন।";
 
 /* A short description that explains that Mozilla is running studies */
-"Settings.Studies.Toggle.Message" = "কিছু দিন পর Firefox স্টাডিস ইনস্টল করতে এবং চালাতে পারে।";
+"Settings.Studies.Toggle.Message" = "কিছু দিন পর Decentr স্টাডিস ইনস্টল করতে এবং চালাতে পারে।";
 
 /* Toggled OFF to opt-out of studies */
 "Settings.Studies.Toggle.Off" = "বন্ধ";
@@ -1677,7 +1677,7 @@
 /* In the settings menu, in the Tabs customization section, this is the title for the setting that toggles the Tab Groups feature - where tabs from related searches are grouped - on or off */
 "Settings.Tabs.CustomizeTabsSection.TabGroups" = "ট্যাব গ্রুপ";
 
-/* In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from firefox hompage */
+/* In the settings menu, in the Tabs customization section, this is the title for the Tabs Tray customization section. The tabs tray is accessed from decentr hompage */
 "Settings.Tabs.CustomizeTabsSection.Title" = "ট্যাব ট্রে কাস্টমাইজ করুন";
 
 /* In the settings menu, this is the title for the Tabs customization section option */
@@ -1693,7 +1693,7 @@
 "Settings.TrackingProtection.Alert.Title" = "প্রস্তুত হোন!";
 
 /* Header description for tracking protection options section where Basic/Strict block list can be selected */
-"Settings.TrackingProtection.BlockListsHeader" = "আপনাকে ট্রাকিং করে এমন ওয়েব এলিমেন্টসমূহ ব্লক করতে, Firefox কোন তালিকা ব্যবহার করবে তা আপনি পছন্দ করে দিতে পারবেন।";
+"Settings.TrackingProtection.BlockListsHeader" = "আপনাকে ট্রাকিং করে এমন ওয়েব এলিমেন্টসমূহ ব্লক করতে, Decentr কোন তালিকা ব্যবহার করবে তা আপনি পছন্দ করে দিতে পারবেন।";
 
 /* Explanation of basic mode. */
 "Settings.TrackingProtection.Info.BasicTitle" = "সুরক্ষা এবং কর্মক্ষমতার মধ্যে ভারসাম্যপূর্ণ।";
@@ -1785,32 +1785,32 @@
 /* Title displayed in header of the Data Management panel. */
 "Settings.WebsiteData.Title" = "ওয়েবসাইট ডাটা";
 
-/* Action label on share extension to add page to the Firefox reading list. */
+/* Action label on share extension to add page to the Decentr reading list. */
 "ShareExtension.AddToReadingListAction.Title" = "পাঠ্য তালিকায় যোগ করুন";
 
 /* Share extension label shown after user has performed 'Add to Reading List' action. */
 "ShareExtension.AddToReadingListActionDone.Title" = "পাঠের তালিকাতে যোগ করা হয়েছে";
 
-/* Action label on share extension to bookmark the page in Firefox. */
+/* Action label on share extension to bookmark the page in Decentr. */
 "ShareExtension.BookmarkThisPageAction.Title" = "এই পাতা বুকমার্ক করুন";
 
 /* Share extension label shown after user has performed 'Bookmark this Page' action. */
 "ShareExtension.BookmarkThisPageActionDone.Title" = "বুকমার্ক করা হয়েছে";
 
-/* Action label on share extension to load the page in Firefox when user switches apps to bring it to foreground. */
+/* Action label on share extension to load the page in Decentr when user switches apps to bring it to foreground. */
 "ShareExtension.LoadInBackgroundAction.Title" = "ব্যাকগ্রাউন্ডে লোড করুন";
 
 /* Share extension label shown after user has performed 'Load in Background' action. */
-"ShareExtension.LoadInBackgroundActionDone.Title" = "Firefox এ লোড হচ্ছে";
+"ShareExtension.LoadInBackgroundActionDone.Title" = "Decentr এ লোড হচ্ছে";
 
-/* Action label on share extension to immediately open page in Firefox. */
-"ShareExtension.OpenInFirefoxAction.Title" = "Firefox এ খুলুন";
+/* Action label on share extension to immediately open page in Decentr. */
+"ShareExtension.OpenInFirefoxAction.Title" = "Decentr এ খুলুন";
 
-/* Action label on share extension to immediately open page in Firefox in private mode. */
+/* Action label on share extension to immediately open page in Decentr in private mode. */
 "ShareExtension.OpenInPrivateModeAction.Title" = "ব্যক্তিগত মোডে খুলুন";
 
-/* Action label on share extension to search for the selected text in Firefox. */
-"ShareExtension.SeachInFirefoxAction.Title" = "Firefox এ অনুসন্ধান করুন";
+/* Action label on share extension to search for the selected text in Decentr. */
+"ShareExtension.SeachInFirefoxAction.Title" = "Decentr এ অনুসন্ধান করুন";
 
 /* Label for show search suggestions setting. */
 "Show Search Suggestions" = "সার্চইঞ্জিন সাজেশন দেখাও";
@@ -1847,7 +1847,7 @@
 "Sync.FirstTimeMessage.Label" = "আপনার প্রথম সিঙ্কে একটু সময়ে নিতে পারে";
 
 /* String displayed on Sign In to Sync page that allows the user to create a new account. */
-"Sync.NoAccount.Description" = "কোন অ্যাকাউন্ট নেই? ডিভাইসের মধ্যে Firefox সিঙ্ক করতে একটি তৈরি করুন।";
+"Sync.NoAccount.Description" = "কোন অ্যাকাউন্ট নেই? ডিভাইসের মধ্যে Decentr সিঙ্ক করতে একটি তৈরি করুন।";
 
 /* Message displayed when the user's account is syncing with no ellipsis */
 "Sync.Syncing.Label" = "সিঙ্ক করা হচ্ছে";
@@ -1969,7 +1969,7 @@
 /* The section header for tabs opened yesterday */
 "TabTray.Yesterday.Header" = "গতকাল";
 
-/* Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Firefox reader mode from another app. */
+/* Message displayed when the reader mode page could not be loaded. This message will appear only when sharing to Decentr reader mode from another app. */
 "The page could not be displayed in Reader View." = "পেজটি রিডার ভিউতে দেখানো যাচ্ছে না।";
 
 /* Error message in the remote tabs panel */
@@ -2027,13 +2027,13 @@
 "UIMenuItem.PasteGo" = "পেস্ট করুন এবং যান";
 
 /* Search in New Tab Text selection menu item */
-"UIMenuItem.SearchWithFirefox" = "Firefox দিয়ে অনুসন্ধান করুন";
+"UIMenuItem.SearchWithFirefox" = "Decentr দিয়ে অনুসন্ধান করুন";
 
 /* Accessibility label for unread article in reading list. It's a past participle - functions as an adjective. */
 "unread" = "পড়া হয়নি";
 
 /* Text message in the settings table view */
-"Upgrade Firefox to connect" = "সংযোগ স্থাপন করতে Firefox আপগ্রেড করুন।";
+"Upgrade Decentr to connect" = "সংযোগ স্থাপন করতে Decentr আপগ্রেড করুন।";
 
 /* Debug option */
 "Use stage servers" = "স্টেজ সার্ভার ব্যবহার করুন";
@@ -2044,7 +2044,7 @@
 /* Text message in the settings table view */
 "Verify your email address" = "আপনার ইমেল যাচাই করুন।";
 
-/* Version number of Firefox shown in settings */
+/* Version number of Decentr shown in settings */
 "Version %@ (%@)" = "সংস্করণ %1$@ (%2$@)";
 
 /* Accessibility label for the main web content view */
@@ -2066,7 +2066,7 @@
 "Yesterday" = "গতকাল";
 
 /* Error message in the remote tabs panel */
-"You don’t have any tabs open in Firefox on your other devices." = "Firefox-এ আপনার কোনও ট্যাব আপনার অন্যান্য ডিভাইসে খোলা নেই।";
+"You don’t have any tabs open in Decentr on your other devices." = "Decentr-এ আপনার কোনও ট্যাব আপনার অন্যান্য ডিভাইসে খোলা নেই।";
 
 /* Your Rights settings section title */
 "Your Rights" = "আপনার অধিকার";

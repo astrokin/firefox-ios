@@ -699,7 +699,7 @@ open class BrowserProfile: Profile {
         public var syncDisplayState: SyncDisplayState?
 
         // The dispatch queue for coordinating syncing and resetting the database.
-        fileprivate let syncQueue = DispatchQueue(label: "com.mozilla.firefox.sync")
+        fileprivate let syncQueue = DispatchQueue(label: "com.mozilla.decentr.sync")
 
         fileprivate typealias EngineResults = [(EngineIdentifier, SyncStatus)]
         fileprivate typealias EngineTasks = [(EngineIdentifier, SyncFunction)]

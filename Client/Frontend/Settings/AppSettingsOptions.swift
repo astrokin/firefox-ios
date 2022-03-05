@@ -35,7 +35,7 @@ class HiddenSetting: Setting {
     }
 }
 
-// Sync setting for connecting a Firefox Account.  Shown when we don't have an account.
+// Sync setting for connecting a Decentr Account.  Shown when we don't have an account.
 class ConnectSetting: WithoutAccountSetting {
     override var accessoryView: UIImageView? { return disclosureIndicator }
 
@@ -293,7 +293,7 @@ class SyncNowSetting: WithAccountSetting {
     }
 }
 
-// Sync setting that shows the current Firefox Account status.
+// Sync setting that shows the current Decentr Account status.
 class AccountStatusSetting: WithAccountSetting {
     override init(settings: SettingsTableViewController) {
         super.init(settings: settings)
@@ -643,7 +643,7 @@ class OpenFiftyTabsDebugOption: HiddenSetting {
     }
 }
 
-// Show the current version of Firefox
+// Show the current version of Decentr
 class VersionSetting: Setting {
     unowned let settings: SettingsTableViewController
 
@@ -738,7 +738,7 @@ class YourRightsSetting: Setting {
     }
 
     override var url: URL? {
-        return URL(string: "https://www.mozilla.org/about/legal/terms/firefox/")
+        return URL(string: "https://www.mozilla.org/about/legal/terms/decentr/")
     }
 
     override func onClick(_ navigationController: UINavigationController?) {
@@ -1000,7 +1000,7 @@ class PrivacyPolicySetting: Setting {
     }
 
     override var url: URL? {
-        return URL(string: "https://www.mozilla.org/privacy/firefox/")
+        return URL(string: "https://www.mozilla.org/privacy/decentr/")
     }
 
     override func onClick(_ navigationController: UINavigationController?) {

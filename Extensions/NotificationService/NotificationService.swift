@@ -10,7 +10,7 @@ import UserNotifications
 import os.log
 
 func consoleLog(_ msg: String) {
-    os_log("%{public}@", log: OSLog(subsystem: "org.mozilla.firefox", category: "firefoxnotificationservice"), type: OSLogType.debug, msg)
+    os_log("%{public}@", log: OSLog(subsystem: "org.mozilla.decentr", category: "firefoxnotificationservice"), type: OSLogType.debug, msg)
 }
 
 class NotificationService: UNNotificationServiceExtension {

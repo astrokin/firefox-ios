@@ -47,7 +47,7 @@ NSString* const FSReadingListAddReadingListItemNotification = @"FSReadingListAdd
 // is instantiated. It swizzles defaultReadingList to our own implementation which returns a shared instance
 // of the FSReadingList. ("FirefoxServices" Reading List)
 
-@implementation SSReadingList (Firefox)
+@implementation SSReadingList (Decentr)
 + (void) initialize {
     if ([SSReadingList class] == self) {
         SwizzleClassMethods([SSReadingList class], @selector(defaultReadingList), @selector(defaultFSReadingList));

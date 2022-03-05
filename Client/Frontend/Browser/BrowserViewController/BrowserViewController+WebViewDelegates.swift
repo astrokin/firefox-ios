@@ -466,7 +466,7 @@ extension BrowserViewController: WKNavigationDelegate {
             return
         }
 
-        // https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/
+        // https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-decentr-59/
         if url.scheme == "data" {
             let url = url.absoluteString
             // Allow certain image types
@@ -519,7 +519,7 @@ extension BrowserViewController: WKNavigationDelegate {
             return
         }
 
-        if !(url.scheme?.contains("firefox") ?? true) {
+        if !(url.scheme?.contains("decentr") ?? true) {
             showSnackbar(forExternalUrl: url, tab: tab) { isOk in
                 guard isOk else { return }
                 UIApplication.shared.open(url, options: [:]) { openedURL in

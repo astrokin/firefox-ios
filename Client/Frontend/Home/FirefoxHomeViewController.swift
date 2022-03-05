@@ -787,7 +787,7 @@ extension FirefoxHomeViewController: UICollectionViewDelegateFlowLayout {
         case .pocket:
             return shouldShowPocketSection ? getHeaderSize(forSection: section) : .zero
         case .topSites:
-            // Only show a header for top sites if the Firefox Browser logo is not showing
+            // Only show a header for top sites if the Decentr Browser logo is not showing
             if isTopSitesSectionEnabled {
                 return shouldShowFxLogoHeader ? .zero : getHeaderSize(forSection: section)
             }

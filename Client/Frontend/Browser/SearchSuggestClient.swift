@@ -5,7 +5,7 @@
 import Foundation
 import Shared
 
-let SearchSuggestClientErrorDomain = "org.mozilla.firefox.SearchSuggestClient"
+let SearchSuggestClientErrorDomain = "org.mozilla.decentr.SearchSuggestClient"
 let SearchSuggestClientErrorInvalidEngine = 0
 let SearchSuggestClientErrorInvalidResponse = 1
 

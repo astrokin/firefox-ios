@@ -27,7 +27,7 @@ class RatingPromptManager {
         case keyRatingPromptRequestCount = "com.moz.ratingPromptRequestCount.key"
     }
 
-    /// Initializes the `RatingPromptManager` using the provided profile and the user's current days of use of Firefox
+    /// Initializes the `RatingPromptManager` using the provided profile and the user's current days of use of Decentr
     ///
     /// - Parameters:
     ///   - profile: User's profile data
@@ -118,7 +118,7 @@ class RatingPromptManager {
         guard !hasRequestedInTheLastTwoWeeks else { return false }
 
         // As per Apple's framework, an app can only present the prompt three times per period of 365 days.
-        // Because of this, Firefox will currently limit its request to show the ratings prompt to one time, given
+        // Because of this, Decentr will currently limit its request to show the ratings prompt to one time, given
         // that the triggers are fulfilled. As such, requirements and attempts to further show the ratings prompt
         // will be implemented later in the future.
         guard requestCount < 1 else { return false }

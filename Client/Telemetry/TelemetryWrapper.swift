@@ -195,7 +195,7 @@ class TelemetryWrapper {
         } else {
             GleanMetrics.Preferences.newTabExperience.set(NewTabAccessors.Default.rawValue)
         }
-        // Record `Home` setting, where Firefox Home is "Home", a custom URL is "other" and blank is "Blank".
+        // Record `Home` setting, where Decentr Home is "Home", a custom URL is "other" and blank is "Blank".
         let homePageSetting = NewTabAccessors.getHomePage(prefs)
         switch homePageSetting {
         case .topSites:
@@ -246,8 +246,8 @@ class TelemetryWrapper {
         // System theme enabled
         GleanMetrics.Theme.useSystemTheme.set(LegacyThemeManager.instance.systemThemeIsOn)
         // Installed Mozilla applications
-        GleanMetrics.InstalledMozillaProducts.focus.set(UIApplication.shared.canOpenURL(URL(string: "firefox-focus://")!))
-        GleanMetrics.InstalledMozillaProducts.klar.set(UIApplication.shared.canOpenURL(URL(string: "firefox-klar://")!))
+        GleanMetrics.InstalledMozillaProducts.focus.set(UIApplication.shared.canOpenURL(URL(string: "decentr-focus://")!))
+        GleanMetrics.InstalledMozillaProducts.klar.set(UIApplication.shared.canOpenURL(URL(string: "decentr-klar://")!))
         // Device Authentication
         GleanMetrics.Device.authentication.set(AppAuthenticator.canAuthenticateDeviceOwner())
     }
@@ -391,7 +391,7 @@ extension TelemetryWrapper {
         case requestMobileSite = "request-mobile-site"
         case pinToTopSites = "pin-to-top-sites"
         case removePinnedSite = "remove-pinned-site"
-        case firefoxHomepage = "firefox-homepage"
+        case firefoxHomepage = "decentr-homepage"
         case wallpaperSettings = "wallpaper-settings"
         case jumpBackInImpressions = "jump-back-in-impressions"
         case historyImpressions = "history-highlights-impressions"
@@ -447,7 +447,7 @@ extension TelemetryWrapper {
         case cycleWallpaperButton = "cycle-wallpaper-button"
         case toggleLogoWallpaperButton = "toggle-logo-wallpaper-button"
         case wallpaperSelected = "wallpaper-selected"
-        case fxHomepageOrigin = "firefox-homepage-origin"
+        case fxHomepageOrigin = "decentr-homepage-origin"
         case fxHomepageOriginZeroSearch = "zero-search"
         case fxHomepageOriginOther = "origin-other"
         case addBookmarkToast = "add-bookmark-toast"
@@ -715,7 +715,7 @@ extension TelemetryWrapper {
         case (.action, .tap, .groupedTabPerformSearch, _, _):
             GleanMetrics.Tabs.groupedTabSearch.add()
             
-        // Firefox Homepage
+        // Decentr Homepage
         case (.action, .view, .firefoxHomepage, EventValue.fxHomepageOrigin.rawValue, let extras):
             if let homePageOrigin = extras?[EventExtraKey.fxHomepageOrigin.rawValue] as? String {
                 GleanMetrics.FirefoxHomePage.firefoxHomepageOrigin[homePageOrigin].add()
@@ -829,7 +829,7 @@ extension TelemetryWrapper {
     }
 }
 
-// MARK: - Firefox Home Page
+// MARK: - Decentr Home Page
 extension TelemetryWrapper {
 
     /// Bundle the extras dictionnary for the home page origin

@@ -19,7 +19,7 @@ protocol BreachAlertsClientProtocol {
 public class BreachAlertsClient: BreachAlertsClientProtocol {
     private var dataTask: URLSessionDataTask?
     public enum Endpoint: String {
-        case breachedAccounts = "https://monitor.firefox.com/hibp/breaches"
+        case breachedAccounts = "https://monitor.decentr.com/hibp/breaches"
     }
     static let etagKey = "BreachAlertsDataEtag"
     static let etagDateKey = "BreachAlertsDataDate"

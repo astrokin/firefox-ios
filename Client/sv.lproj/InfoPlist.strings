@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Detta gör det möjligt att ta och ladda upp bilder.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Firefox kräver Face ID för att komma åt dina sparade inloggningar.";
+"NSFaceIDUsageDescription" = "Decentr kräver Face ID för att komma åt dina sparade inloggningar.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Webbsidor du besöker kan be om din plats.";

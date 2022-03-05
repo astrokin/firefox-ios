@@ -25,8 +25,8 @@ public struct SupportUtils {
         /// Construct a NSURL pointing to the webcompat.com server to report an issue.
         ///
         /// It specifies the source as mobile-reporter. This helps the webcompat server to classify the issue.
-        /// It also adds browser-firefox-ios to the labels in the URL to make it clear
-        /// that this about Firefox on iOS. It makes it easier for webcompat people doing triage and diagnostics.
+        /// It also adds browser-decentr-ios to the labels in the URL to make it clear
+        /// that this about Decentr on iOS. It makes it easier for webcompat people doing triage and diagnostics.
         /// It adds a device-type label to help discriminating in between tablet and mobile devices.
         let deviceType: String
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -38,6 +38,6 @@ public struct SupportUtils {
         else {
             return nil
         }
-        return URL(string: "https://webcompat.com/issues/new?src=mobile-reporter&label=browser-firefox-ios&label=\(deviceType)&url=\(escapedUrl)")
+        return URL(string: "https://webcompat.com/issues/new?src=mobile-reporter&label=browser-decentr-ios&label=\(deviceType)&url=\(escapedUrl)")
     }
 }

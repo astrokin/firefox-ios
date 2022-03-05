@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "Սա հնարավորություն է տալիս ստանալ և վերբեռնել լուսանկարներ:";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Ձեր պահված մուտքերը մուտք գործելու համար Firefox- ը պահանջում է Face ID:";
+"NSFaceIDUsageDescription" = "Ձեր պահված մուտքերը մուտք գործելու համար Decentr- ը պահանջում է Face ID:";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Ձեր այցելած կայքերը կարող են հարցնել ձեր տեղադրությունը։";

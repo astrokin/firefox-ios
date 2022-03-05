@@ -2,7 +2,7 @@
 "NSCameraUsageDescription" = "To vam omogoča slikati in pošiljati fotografije.";
 
 /* Privacy - Face ID Usage Description */
-"NSFaceIDUsageDescription" = "Firefox za dostop do shranjenih prijav zahteva Face ID.";
+"NSFaceIDUsageDescription" = "Decentr za dostop do shranjenih prijav zahteva Face ID.";
 
 /* Privacy - Location When In Use Usage Description */
 "NSLocationWhenInUseUsageDescription" = "Spletne strani lahko zahtevajo vašo lokacijo.";

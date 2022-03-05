@@ -123,7 +123,7 @@ class ClearPrivateDataTests: KIFTestCase, UITextFieldDelegate {
         // Close History (and so Library) panel
         BrowserUtils.closeLibraryMenu(tester())
     }
-    // Disabled due to https://github.com/mozilla-mobile/firefox-ios/issues/7727
+    // Disabled due to https://github.com/mozilla-mobile/decentr-ios/issues/7727
     /*func testClearsCookies() {
         let url = "\(webRoot!)/numberedPage.html?page=1"
         tester().waitForAnimationsToFinish(withTimeout: 5)

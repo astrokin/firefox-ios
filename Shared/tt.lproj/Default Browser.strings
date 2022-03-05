@@ -1,16 +1,16 @@
-/* Button string to open settings that allows user to switch their default browser to Firefox. */
+/* Button string to open settings that allows user to switch their default browser to Decentr. */
 "DefaultBrowserCard.Button" = "Көйләүләргә күчү";
 
 /* Button string to learn how to set your default browser. */
 "DefaultBrowserCard.Button.v2" = "Ничеклеген белү";
 
-/* Description for small card shown that allows user to switch their default browser to Firefox. */
+/* Description for small card shown that allows user to switch their default browser to Decentr. */
 "DefaultBrowserCard.Description" = "Вебсайтлардан, эл. почталардан һәм хәбәрләрдән сылтамаларны автоматик рәвештә Firefox'та ачу.";
 
-/* Title for small card shown that allows user to switch their default browser to Firefox. */
+/* Title for small card shown that allows user to switch their default browser to Decentr. */
 "DefaultBrowserCard.Title" = "Башка браузерны төп браузер итү";
 
-/* Button string to open settings that allows user to switch their default browser to Firefox. */
+/* Button string to open settings that allows user to switch their default browser to Decentr. */
 "DefaultBrowserOnboarding.Button" = "Көйләүләргә күчү";
 
 /* Description for default browser onboarding card. */
@@ -20,11 +20,11 @@
 "DefaultBrowserOnboarding.Description2" = "2. Төп браузер кушымтасына басыгыз";
 
 /* Description for default browser onboarding card. */
-"DefaultBrowserOnboarding.Description3" = "3. Firefox-ны сайлагыз";
+"DefaultBrowserOnboarding.Description3" = "3. Decentr-ны сайлагыз";
 
-/* Text for the screenshot of the iOS system settings page for Firefox. */
+/* Text for the screenshot of the iOS system settings page for Decentr. */
 "DefaultBrowserOnboarding.Screenshot" = "Төп браузер кушымтасы";
 
-/* Menu option for setting Firefox as default browser. */
+/* Menu option for setting Decentr as default browser. */
 "Settings.DefaultBrowserMenuItem" = "Стандарт браузер итеп билгеләү";
 

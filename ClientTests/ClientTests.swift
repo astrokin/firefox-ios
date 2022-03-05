@@ -18,7 +18,7 @@ class ClientTests: XCTestCase {
         let systemVersion = UIDevice.current.systemVersion
 
         if AppInfo.appVersion != "0.0.1" {
-            let expectedRegex = "^Firefox-iOS-Sync/[0-9\\.]+b[0-9]* \\(\(device); iPhone OS \(systemVersion)\\) \\([-_A-Za-z0-9= \\(\\)]+\\)$"
+            let expectedRegex = "^Decentr-iOS-Sync/[0-9\\.]+b[0-9]* \\(\(device); iPhone OS \(systemVersion)\\) \\([-_A-Za-z0-9= \\(\\)]+\\)$"
             let loc = ua.range(of: expectedRegex, options: .regularExpression)
             XCTAssertTrue(loc != nil, "Sync UA is as expected. Was \(ua)")
         } else {
@@ -34,7 +34,7 @@ class ClientTests: XCTestCase {
         XCTAssertTrue(compare(UserAgent.mobileUserAgent()), "User agent computes correctly.")
     }
 
-    // Disabling for now due to https://github.com/mozilla-mobile/firefox-ios/pull/6468
+    // Disabling for now due to https://github.com/mozilla-mobile/decentr-ios/pull/6468
     // This hard-codes the desktop UA, not much to test as a result of that
 //    func testDesktopUserAgent() {
 //        let compare: (String) -> Bool = { ua in
