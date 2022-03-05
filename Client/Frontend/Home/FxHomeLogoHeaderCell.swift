@@ -18,6 +18,8 @@ class FxHomeLogoHeaderCell: UICollectionViewCell, ReusableCell {
     lazy var logoButton: UIButton = .build { button in
         button.setTitle("", for: .normal)
         button.backgroundColor = .clear
+        button.imageView?.contentMode = .scaleAspectFit
+        button.imageEdgeInsets = .init(top: 0, left: -45, bottom: 0, right: 0)
         button.accessibilityIdentifier = a11y.logoButton
     }
 
