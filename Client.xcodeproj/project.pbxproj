@@ -908,6 +908,7 @@
 		E6F368291D7F594F008CDD67 /* SQLiteHistoryRecommendations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F368281D7F594F008CDD67 /* SQLiteHistoryRecommendations.swift */; };
 		E6F9653C1B2F1D5D0034B023 /* NSURLExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F9653B1B2F1D5D0034B023 /* NSURLExtensionsTests.swift */; };
 		E6FF6ACA1D873CFF0070C294 /* PageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF6AC91D873CFF0070C294 /* PageMetadata.swift */; };
+		E8679DE127D4192500DE1C8E /* API_Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8679DE027D4192500DE1C8E /* API_Integration.swift */; };
 		E8CB3BE827C5543600D9C339 /* SiriShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CD747216CF86A004FF5B0 /* SiriShortcuts.swift */; };
 		E8CB3BE927C5543600D9C339 /* ThemedWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A179E20E6C1A200B12184 /* ThemedWidgets.swift */; };
 		E8CB3BEA27C5543600D9C339 /* AppSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E39BD1C46F42000B85F42 /* AppSettingsTableViewController.swift */; };
@@ -1344,7 +1345,7 @@
 		E8CB3D9E27C5543600D9C339 /* XCGLogger.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 43AFC0D9279678920039DDF4 /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8CB3D9F27C5543600D9C339 /* Sentry.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4368F828279665220013419B /* Sentry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8CB3DA027C5543600D9C339 /* SDWebImage.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4368F87B27966E810013419B /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E8CB3DA127C5543600D9C339 /* Sync.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2827315E1ABC9BE600AA1954 /* Sync.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E8CB3DA127C5543600D9C339 /* Sync.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2827315E1ABC9BE600AA1954 /* Sync.framework */; };
 		E8CB3DA227C5543600D9C339 /* Shared.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 288A2D861AB8B3260023ABC3 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		E8CB3DAC27C5545700D9C339 /* DecentrAPI in Frameworks */ = {isa = PBXBuildFile; productRef = E8CB3DAB27C5545700D9C339 /* DecentrAPI */; };
 		E8E7AB7527C6E6D300BF47C5 /* Bagel in Frameworks */ = {isa = PBXBuildFile; productRef = E8E7AB7427C6E6D300BF47C5 /* Bagel */; };
@@ -4650,6 +4651,7 @@
 		E82D46FD8E094899DC4AED24 /* az */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = az; path = az.lproj/Storage.strings; sourceTree = "<group>"; };
 		E85641AFA2C435A982034DE0 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/FindInPage.strings; sourceTree = "<group>"; };
 		E860477AA15235F08D4D3D41 /* zh-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-TW"; path = "zh-TW.lproj/Default Browser.strings"; sourceTree = "<group>"; };
+		E8679DE027D4192500DE1C8E /* API_Integration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Integration.swift; sourceTree = "<group>"; };
 		E882DACC27C583D400D1C895 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configuration/Debug.xcconfig; sourceTree = "<group>"; };
 		E882DACD27C583D400D1C895 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = Configuration/Common.xcconfig; sourceTree = "<group>"; };
 		E882DACE27C583D500D1C895 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configuration/Release.xcconfig; sourceTree = "<group>"; };
@@ -6674,6 +6676,7 @@
 				EB9854FD2422686F0040F24B /* AppDelegate+PushNotifications.swift */,
 				EB98550024226EF60040F24B /* AppDelegate+SyncSentTabs.swift */,
 				D3BE7B451B054F8600641031 /* TestAppDelegate.swift */,
+				E8679DE027D4192500DE1C8E /* API_Integration.swift */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -7881,7 +7884,6 @@
 				TargetAttributes = {
 					047F9B2624E1FE1C00CD7DF7 = {
 						CreatedOnToolsVersion = 12.0;
-						DevelopmentTeam = 43AQ936H96;
 					};
 					2827315D1ABC9BE600AA1954 = {
 						CreatedOnToolsVersion = 6.2;
@@ -9385,6 +9387,7 @@
 				E8CB3CDF27C5543600D9C339 /* Tab+ChangeUserAgent.swift in Sources */,
 				E8CB3CE027C5543600D9C339 /* TabTrayButtonExtensions.swift in Sources */,
 				E8CB3CE127C5543600D9C339 /* AutocompleteTextField.swift in Sources */,
+				E8679DE127D4192500DE1C8E /* API_Integration.swift in Sources */,
 				E8CB3CE227C5543600D9C339 /* SlideoverPresentationController.swift in Sources */,
 				E8CB3CE327C5543600D9C339 /* ExperimentsTableView.swift in Sources */,
 				E8CB3CE427C5543600D9C339 /* BrowserViewController+URLBarDelegate.swift in Sources */,
@@ -12494,16 +12497,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "$(inherit)Extensions/Entitlements/Fennec.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = Extensions/Today/Info.plist;
 				MOZ_BUNDLE_ID = net.decentr.ios.browser;
 				OTHER_SWIFT_FLAGS = "-DMOZ_CHANNEL_FENNEC -DMOZ_TARGET_TODAY";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).$(PRODUCT_NAME)";
 				PRODUCT_NAME = Today;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.debug.Today;
 				SKIP_INSTALL = NO;
 			};
 			name = Fennec;
@@ -12514,13 +12517,13 @@
 				CODE_SIGN_ENTITLEMENTS = "$(inherit)Extensions/Entitlements/Firefox.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				INFOPLIST_FILE = Extensions/Today/Info.plist;
 				MOZ_BUNDLE_ID = net.decentr.ios.browser;
 				OTHER_SWIFT_FLAGS = "-DMOZ_CHANNEL_RELEASE -DMOZ_TARGET_TODAY";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).$(PRODUCT_NAME)";
 				PRODUCT_NAME = Today;
-				PROVISIONING_PROFILE_SPECIFIER = "org.mozilla.ios.Firefox.Today 2021-08-12";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.appsto.Today;
 				SKIP_INSTALL = NO;
 			};
 			name = Firefox;
@@ -12560,15 +12563,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "$(inherit)Extensions/Entitlements/Fennec.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = Extensions/NotificationService/Info.plist;
 				MOZ_BUNDLE_ID = net.decentr.ios.browser;
 				OTHER_SWIFT_FLAGS = "-DMOZ_CHANNEL_FENNEC -DMOZ_TARGET_NOTIFICATIONSERVICE";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).$(PRODUCT_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.debug.NotificationService;
 				SKIP_INSTALL = NO;
 			};
 			name = Fennec;
@@ -12579,12 +12582,12 @@
 				CODE_SIGN_ENTITLEMENTS = "$(inherit)Extensions/Entitlements/Firefox.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				INFOPLIST_FILE = Extensions/NotificationService/Info.plist;
 				MOZ_BUNDLE_ID = net.decentr.ios.browser;
 				OTHER_SWIFT_FLAGS = "-DMOZ_CHANNEL_RELEASE -DMOZ_TARGET_NOTIFICATIONSERVICE";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).$(PRODUCT_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "org.mozilla.ios.Firefox.NotificationService 210812";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.appsto.NotificationService;
 				SKIP_INSTALL = NO;
 			};
 			name = Firefox;
@@ -12677,16 +12680,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Extensions/Entitlements/Fennec.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = WidgetKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.0.1;
 				MOZ_BUNDLE_ID = net.decentr.ios.browser;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).WidgetKit";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.debug.WidgetKit;
 				SKIP_INSTALL = NO;
 			};
 			name = Fennec;
@@ -12713,13 +12716,13 @@
 				CODE_SIGN_ENTITLEMENTS = Extensions/Entitlements/Firefox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				INFOPLIST_FILE = WidgetKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.0.1;
 				MOZ_BUNDLE_ID = net.decentr.ios.browser;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).WidgetKit";
-				PROVISIONING_PROFILE_SPECIFIER = "org.mozilla.ios.Firefox.WidgetKit 2021-08-12";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.appsto.WidgetKit;
 				SKIP_INSTALL = NO;
 			};
 			name = Firefox;
@@ -13374,12 +13377,12 @@
 				CODE_SIGN_ENTITLEMENTS = "$(inherit)Extensions/Entitlements/Firefox.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				INFOPLIST_FILE = Extensions/ShareTo/Info.plist;
 				MOZ_BUNDLE_ID = net.decentr.ios.browser;
 				OTHER_SWIFT_FLAGS = "-DMOZ_CHANNEL_RELEASE -DMOZ_TARGET_SHARETO";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).$(PRODUCT_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "org.mozilla.ios.Firefox.ShareTo 2021-08-12";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.appsto.ShareTo;
 				SKIP_INSTALL = NO;
 			};
 			name = Firefox;
@@ -14249,11 +14252,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = CredentialProvider/CredentialProviderFennec.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -14285,7 +14288,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).CredentialProvider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.debug.Credential;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -14404,7 +14407,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -14428,7 +14431,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).CredentialProvider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Firefox.CredentialProvider 2021-10-12";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.appsto.Credential;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -14584,15 +14587,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "$(inherit)Extensions/Entitlements/Fennec.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 43AQ936H96;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6FTDXZ346N;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = Extensions/ShareTo/Info.plist;
 				MOZ_BUNDLE_ID = net.decentr.ios.browser;
 				OTHER_SWIFT_FLAGS = "-DMOZ_CHANNEL_FENNEC -DMOZ_TARGET_SHARETO";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(MOZ_BUNDLE_ID).$(PRODUCT_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = net.decentr.ios.browser.debug.ShareTo;
 				SKIP_INSTALL = NO;
 			};
 			name = Fennec;

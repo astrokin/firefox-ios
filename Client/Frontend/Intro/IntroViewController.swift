@@ -5,6 +5,7 @@
 import Foundation
 import UIKit
 import Shared
+import SnapKit
 
 class IntroViewController: UIViewController, OnViewDismissable {
     var onViewDismissed: (() -> Void)? = nil
@@ -16,12 +17,7 @@ class IntroViewController: UIViewController, OnViewDismissable {
         welcomeCardView.clipsToBounds = true
         return welcomeCardView
     }()
-    private lazy var syncCard: IntroScreenSyncView = {
-        let syncCardView = IntroScreenSyncView()
-        syncCardView.translatesAutoresizingMaskIntoConstraints = false
-        syncCardView.clipsToBounds = true
-        return syncCardView
-    }()
+    
     // Closure delegate
     var didFinishClosure: ((IntroViewController, FxAPageType?) -> Void)?
     
@@ -36,32 +32,15 @@ class IntroViewController: UIViewController, OnViewDismissable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialViewSetup()
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        onViewDismissed?()
-        onViewDismissed = nil
-    }
-    
-    // MARK: View setup
-    private func initialViewSetup() {
-        setupIntroView()
-    }
-    
-    //onboarding intro view
-    private func setupIntroView() {
-        // Initialize
-        view.addSubview(syncCard)
-        view.addSubview(welcomeCard)
         
-        // Constraints
-        setupWelcomeCard()
-        setupSyncCard()
-    }
-    
-    private func setupWelcomeCard() {
+        let bg = UIImageView(image: UIImage(named: "decentr-background"))
+        bg.contentMode = .scaleAspectFill
+        view.addSubview(bg)
+        bg.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        view.addSubview(welcomeCard)
         NSLayoutConstraint.activate([
             welcomeCard.topAnchor.constraint(equalTo: view.topAnchor),
             welcomeCard.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -69,18 +48,8 @@ class IntroViewController: UIViewController, OnViewDismissable {
             welcomeCard.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
-        // Buton action closures
-        // Next button action
-        welcomeCard.nextClosure = {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.welcomeCard.alpha = 0
-            }) { _ in
-                self.welcomeCard.isHidden = true
-                TelemetryWrapper.recordEvent(category: .action, method: .view, object: .syncScreenView)
-            }
-        }
-        // Close button action
-        welcomeCard.closeClosure = {
+        // Start browsing button action
+        welcomeCard.startBrowsing = {
             self.didFinishClosure?(self, nil)
         }
         // Sign in button closure
@@ -92,22 +61,12 @@ class IntroViewController: UIViewController, OnViewDismissable {
             self.didFinishClosure?(self, .emailLoginFlow)
         }
     }
-    
-    private func setupSyncCard() {
-        NSLayoutConstraint.activate([
-            syncCard.topAnchor.constraint(equalTo: view.topAnchor),
-            syncCard.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            syncCard.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            syncCard.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-        // Start browsing button action
-        syncCard.startBrowsing = {
-            self.didFinishClosure?(self, nil)
-        }
-        // Sign-up browsing button action
-        syncCard.signUp = {
-            self.didFinishClosure?(self, .emailLoginFlow)
-        }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        onViewDismissed?()
+        onViewDismissed = nil
     }
 }
 

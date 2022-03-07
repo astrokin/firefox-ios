@@ -311,6 +311,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         updateSessionCount()
         adjustHelper?.setupAdjust()
+        
+#if DEBUG && DECENTR
+        API_Integration.shared.start()
+#endif
 
         return shouldPerformAdditionalDelegateHandling
     }
