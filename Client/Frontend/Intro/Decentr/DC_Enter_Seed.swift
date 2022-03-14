@@ -9,6 +9,7 @@ import SnapKit
 final class DC_Enter_Seed: UIViewController {
 
     var seedPhrase: String?
+    var completion: (() -> ())?
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -38,10 +39,7 @@ final class DC_Enter_Seed: UIViewController {
     private var importUserButtonBottomConstraint: Constraint? = nil
     
     private lazy var importUserButton: UIButton = DC_UI.makeActionButton(text: "Import User") { [weak self] in
-        let vc = DC_Password(didSavePassword: { [weak self] in
-            self?.navigationController?.dismiss(animated: true, completion: nil)
-        })
-        self?.navigationController?.pushViewController(vc, animated: true)
+        self?.completion?()
     }
     
     private lazy var titleLabel: UILabel = DC_UI.makeTitleLabel("Import with seed phrase")

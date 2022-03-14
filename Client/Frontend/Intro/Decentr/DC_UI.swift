@@ -12,7 +12,7 @@ struct DC_UI {
     static let buttonEdgeInset = 15
     static let buttonHeight = 46
     
-    static func styleVC(_ vc: UIViewController) {
+    static func styleVC(_ vc: UIViewController, color: UIColor? = nil) {
         //        vc.addHideKeyboardWhenTappedAroundBehaviour()
         
         vc.view.backgroundColor = .white
@@ -22,11 +22,11 @@ struct DC_UI {
         appearance.backgroundColor = .clear
         appearance.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 16, weight: .regular),
                                           .kern: -0.67,
-                                          .foregroundColor: primaryColor]
+                                          .foregroundColor: color ?? primaryColor]
         vc.navigationController?.navigationBar.scrollEdgeAppearance = appearance
         vc.navigationController?.navigationBar.compactAppearance = appearance
         vc.navigationController?.navigationBar.standardAppearance = appearance
-        vc.navigationController?.navigationBar.tintColor = primaryColor
+        vc.navigationController?.navigationBar.tintColor = color ?? primaryColor
     }
     
     static func embedBackButton(on vc: UIViewController, color: UIColor? = nil) {

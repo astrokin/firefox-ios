@@ -2048,7 +2048,7 @@ extension BrowserViewController {
         let introViewController = IntroViewController()
         introViewController.didFinishClosure = { controller, fxaLoginFlow in
             self.profile.prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
-            controller.dismiss(animated: true) {
+            controller?.dismiss(animated: true) {
                 if self.navigationController?.viewControllers.count ?? 0 > 1 {
                     _ = self.navigationController?.popToRootViewController(animated: true)
                 }
@@ -2070,6 +2070,7 @@ extension BrowserViewController {
             introViewController.modalPresentationStyle = .fullScreen
         }
         let nav = UINavigationController(rootViewController: introViewController)
+        nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true) {
             // On first run (and forced) open up the homepage in the background.
             if let homePageURL = NewTabHomePageAccessors.getHomePage(self.profile.prefs), let tab = self.tabManager.selectedTab, DeviceInfo.hasConnectivity() {

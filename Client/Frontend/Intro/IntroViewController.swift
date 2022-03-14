@@ -19,8 +19,9 @@ class IntroViewController: UIViewController, OnViewDismissable {
     }()
     
     // Closure delegate
-    var didFinishClosure: ((IntroViewController, FxAPageType?) -> Void)?
+    var didFinishClosure: ((IntroViewController?, FxAPageType?) -> Void)?
     private var signUpFlow: DC_SignUp_Flow?
+    private var signInFlow: DC_SignIn_Flow?
     
     // MARK: Initializer
     init() {
@@ -55,15 +56,19 @@ class IntroViewController: UIViewController, OnViewDismissable {
         }
         // Sign in button closure
         welcomeCard.signInClosure = { [weak self] in
-            let vc = DC_Login()
-            self?.navigationController?.pushViewController(vc, animated: true)
-//            self.didFinishClosure?(self, .emailLoginFlow)
+            self?.signInFlow = DC_SignIn_Flow(navigationController: self?.navigationController)
+            self?.signInFlow?.startSignIn()
+            self?.signInFlow?.completion = { [weak self] in
+                self?.didFinishClosure?(self, nil)
+            }
         }
         // Sign up button closure
         welcomeCard.signUpClosure = { [weak self] in
             self?.signUpFlow = DC_SignUp_Flow(navigationController: self?.navigationController)
             self?.signUpFlow?.startSignUp()
-//            self.didFinishClosure?(self, .emailLoginFlow)
+            self?.signUpFlow?.completion = { [weak self] in
+                self?.didFinishClosure?(self, nil)
+            }
         }
     }
     

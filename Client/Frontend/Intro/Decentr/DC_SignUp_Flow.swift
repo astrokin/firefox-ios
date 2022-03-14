@@ -33,6 +33,7 @@ final class DC_SignUp_Flow {
     }
     
     weak var navigationController: UINavigationController?
+    var completion: (() -> ())?
     
     init(navigationController: UINavigationController?) {
         self.navigationController = navigationController

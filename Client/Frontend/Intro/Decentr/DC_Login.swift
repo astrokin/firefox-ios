@@ -8,23 +8,17 @@ import SnapKit
 
 final class DC_Login: UIViewController {
     
+    var completion: (() -> ())?
+    
     init() {
         super.init(nibName: nil, bundle: nil)
         
         title = "Sign in as existing user"
     }
     
-    private lazy var qrCodeScanner: UIViewController = {
+    private(set) lazy var qrCodeScanner: QRCodeViewController = {
         let vc = QRCodeViewController()
         vc.instructionsLabel.isHidden = true
-        vc.didScanQRCodeWithURL = { url in
-            
-        }
-        vc.didScanQRCodeWithText = { [weak self] text in
-            let vc = DC_Enter_Seed()
-            vc.seedPhrase = text
-            self?.navigationController?.pushViewController(vc, animated: true)
-        }
         return vc
     }()
     
@@ -38,8 +32,7 @@ final class DC_Login: UIViewController {
         button.setTitleColor(UIColor.Decentr.BlackText, for: .normal)
         button.titleLabel?.textAlignment = .center
         button.setAction { [weak self] in
-            let vc = DC_Enter_Seed()
-            self?.navigationController?.pushViewController(vc, animated: true)
+            self?.completion?()
         }
         return button
     }()
@@ -60,7 +53,7 @@ final class DC_Login: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DC_UI.styleVC(self)
+        DC_UI.styleVC(self, color: .white)
         
         addChild(qrCodeScanner)
         view.addSubview(qrCodeScanner.view)

@@ -908,6 +908,8 @@
 		E6F368291D7F594F008CDD67 /* SQLiteHistoryRecommendations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F368281D7F594F008CDD67 /* SQLiteHistoryRecommendations.swift */; };
 		E6F9653C1B2F1D5D0034B023 /* NSURLExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F9653B1B2F1D5D0034B023 /* NSURLExtensionsTests.swift */; };
 		E6FF6ACA1D873CFF0070C294 /* PageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF6AC91D873CFF0070C294 /* PageMetadata.swift */; };
+		E832DE2727DFE4880078F805 /* DC_SignIn_Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */; };
+		E832DE2827DFE4880078F805 /* DC_SignIn_Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */; };
 		E8679DE127D4192500DE1C8E /* API_Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8679DE027D4192500DE1C8E /* API_Integration.swift */; };
 		E8C072B727D6480300E40B21 /* DC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B627D6480300E40B21 /* DC_Login.swift */; };
 		E8C072B827D6480300E40B21 /* DC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B627D6480300E40B21 /* DC_Login.swift */; };
@@ -4678,6 +4680,7 @@
 		E7C4451C8940941CAEB33DED /* gd */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gd; path = gd.lproj/3DTouchActions.strings; sourceTree = "<group>"; };
 		E80F4C758FFD48EF54E04376 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/ClearPrivateDataConfirm.strings; sourceTree = "<group>"; };
 		E82D46FD8E094899DC4AED24 /* az */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = az; path = az.lproj/Storage.strings; sourceTree = "<group>"; };
+		E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignIn_Flow.swift; sourceTree = "<group>"; };
 		E85641AFA2C435A982034DE0 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/FindInPage.strings; sourceTree = "<group>"; };
 		E860477AA15235F08D4D3D41 /* zh-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-TW"; path = "zh-TW.lproj/Default Browser.strings"; sourceTree = "<group>"; };
 		E8679DE027D4192500DE1C8E /* API_Integration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Integration.swift; sourceTree = "<group>"; };
@@ -6831,6 +6834,7 @@
 			isa = PBXGroup;
 			children = (
 				E8C072CB27DB793D00E40B21 /* DC_SignUp_Flow.swift */,
+				E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */,
 				E8C072B627D6480300E40B21 /* DC_Login.swift */,
 				E8C072BF27D8F4C000E40B21 /* DC_Ext.swift */,
 				E8C072C227D8F81100E40B21 /* DC_Info.swift */,
@@ -9499,6 +9503,7 @@
 				E8CB3CFF27C5543600D9C339 /* ImageButtonWithLabel.swift in Sources */,
 				E8CB3D0027C5543600D9C339 /* GradientProgressBar.swift in Sources */,
 				E8CB3D0127C5543600D9C339 /* LibraryPanelViewState.swift in Sources */,
+				E832DE2727DFE4880078F805 /* DC_SignIn_Flow.swift in Sources */,
 				E8CB3D0227C5543600D9C339 /* ExperimentsSettingsView.swift in Sources */,
 				E8CB3D0327C5543600D9C339 /* RatingPromptManager.swift in Sources */,
 				E8C072BA27D6481400E40B21 /* DC_SignUp_Seed.swift in Sources */,
@@ -9820,6 +9825,7 @@
 				D51EA5CF26406D8300334331 /* ExperimentsViewController.swift in Sources */,
 				CA77ABFD24773C92005079F9 /* BreachAlertsManager.swift in Sources */,
 				C81A8F2526D3ED1900EBA539 /* UIWindowExtensions.swift in Sources */,
+				E832DE2827DFE4880078F805 /* DC_SignIn_Flow.swift in Sources */,
 				EBC4869E2195F58300CDA48D /* AboutHomeHandler.swift in Sources */,
 				DDA24A431FD84D630098F159 /* DefaultSearchPrefs.swift in Sources */,
 				23BD0E4E25533AE50038586B /* TabMoreMenuViewModel.swift in Sources */,
