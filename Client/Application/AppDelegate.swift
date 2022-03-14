@@ -460,12 +460,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     fileprivate func shutdownProfileWhenNotActive(_ application: UIApplication) {
-        // Only shutdown the profile if we are not in the foreground
-        guard application.applicationState != .active else {
-            return
-        }
+        DispatchQueue.main.async {
+            // Only shutdown the profile if we are not in the foreground
+            guard application.applicationState != .active else {
+                return
+            }
 
-        profile?._shutdown()
+            self.profile?._shutdown()
+        }
     }
 
     fileprivate func setUpWebServer(_ profile: Profile) {

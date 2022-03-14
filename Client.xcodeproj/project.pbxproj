@@ -909,6 +909,35 @@
 		E6F9653C1B2F1D5D0034B023 /* NSURLExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F9653B1B2F1D5D0034B023 /* NSURLExtensionsTests.swift */; };
 		E6FF6ACA1D873CFF0070C294 /* PageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF6AC91D873CFF0070C294 /* PageMetadata.swift */; };
 		E8679DE127D4192500DE1C8E /* API_Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8679DE027D4192500DE1C8E /* API_Integration.swift */; };
+		E8C072B727D6480300E40B21 /* DC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B627D6480300E40B21 /* DC_Login.swift */; };
+		E8C072B827D6480300E40B21 /* DC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B627D6480300E40B21 /* DC_Login.swift */; };
+		E8C072BA27D6481400E40B21 /* DC_SignUp_Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B927D6481300E40B21 /* DC_SignUp_Seed.swift */; };
+		E8C072BB27D6481400E40B21 /* DC_SignUp_Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B927D6481300E40B21 /* DC_SignUp_Seed.swift */; };
+		E8C072BD27D8F3BA00E40B21 /* DC_Enter_Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072BC27D8F3BA00E40B21 /* DC_Enter_Seed.swift */; };
+		E8C072BE27D8F3BA00E40B21 /* DC_Enter_Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072BC27D8F3BA00E40B21 /* DC_Enter_Seed.swift */; };
+		E8C072C027D8F4C000E40B21 /* DC_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072BF27D8F4C000E40B21 /* DC_Ext.swift */; };
+		E8C072C127D8F4C000E40B21 /* DC_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072BF27D8F4C000E40B21 /* DC_Ext.swift */; };
+		E8C072C327D8F81100E40B21 /* DC_Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072C227D8F81100E40B21 /* DC_Info.swift */; };
+		E8C072C427D8F81100E40B21 /* DC_Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072C227D8F81100E40B21 /* DC_Info.swift */; };
+		E8C072C627DA29D500E40B21 /* DC_Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072C527DA29D400E40B21 /* DC_Password.swift */; };
+		E8C072C727DA29D500E40B21 /* DC_Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072C527DA29D400E40B21 /* DC_Password.swift */; };
+		E8C072C927DAAE6500E40B21 /* DC_SignUp_Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072C827DAAE6500E40B21 /* DC_SignUp_Email.swift */; };
+		E8C072CA27DAAE6500E40B21 /* DC_SignUp_Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072C827DAAE6500E40B21 /* DC_SignUp_Email.swift */; };
+		E8C072CC27DB793D00E40B21 /* DC_SignUp_Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072CB27DB793D00E40B21 /* DC_SignUp_Flow.swift */; };
+		E8C072CD27DB793D00E40B21 /* DC_SignUp_Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072CB27DB793D00E40B21 /* DC_SignUp_Flow.swift */; };
+		E8C072CF27DB93C700E40B21 /* DC_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072CE27DB93C700E40B21 /* DC_UI.swift */; };
+		E8C072D027DB93C700E40B21 /* DC_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072CE27DB93C700E40B21 /* DC_UI.swift */; };
+		E8C072D227DBFE4E00E40B21 /* DC_Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072D127DBFE4E00E40B21 /* DC_Web.swift */; };
+		E8C072D327DBFE4E00E40B21 /* DC_Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072D127DBFE4E00E40B21 /* DC_Web.swift */; };
+		E8C072D627DD09C200E40B21 /* HDWalletKit in Frameworks */ = {isa = PBXBuildFile; productRef = E8C072D527DD09C200E40B21 /* HDWalletKit */; };
+		E8C072D827DD369E00E40B21 /* DC_SignUp_Email_Confirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072D727DD369E00E40B21 /* DC_SignUp_Email_Confirm.swift */; };
+		E8C072D927DD369E00E40B21 /* DC_SignUp_Email_Confirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072D727DD369E00E40B21 /* DC_SignUp_Email_Confirm.swift */; };
+		E8C072DC27DD3FA700E40B21 /* CHIOTPField in Frameworks */ = {isa = PBXBuildFile; productRef = E8C072DB27DD3FA700E40B21 /* CHIOTPField */; };
+		E8C072DF27DD63E500E40B21 /* AloeStackView in Frameworks */ = {isa = PBXBuildFile; productRef = E8C072DE27DD63E500E40B21 /* AloeStackView */; };
+		E8C072E127DD799D00E40B21 /* DC_SignUp_Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072E027DD799D00E40B21 /* DC_SignUp_Info.swift */; };
+		E8C072E227DD799E00E40B21 /* DC_SignUp_Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072E027DD799D00E40B21 /* DC_SignUp_Info.swift */; };
+		E8C072E427DE981E00E40B21 /* DC_SignUp_Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072E327DE981E00E40B21 /* DC_SignUp_Settings.swift */; };
+		E8C072E527DE981E00E40B21 /* DC_SignUp_Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072E327DE981E00E40B21 /* DC_SignUp_Settings.swift */; };
 		E8CB3BE827C5543600D9C339 /* SiriShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CD747216CF86A004FF5B0 /* SiriShortcuts.swift */; };
 		E8CB3BE927C5543600D9C339 /* ThemedWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A179E20E6C1A200B12184 /* ThemedWidgets.swift */; };
 		E8CB3BEA27C5543600D9C339 /* AppSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68E39BD1C46F42000B85F42 /* AppSettingsTableViewController.swift */; };
@@ -4658,6 +4687,19 @@
 		E882DACF27C585BC00D1C895 /* Decentr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Decentr.entitlements; path = Decentr/Decentr.entitlements; sourceTree = "<group>"; };
 		E88B487A9436F764525B0F64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AuthenticationManager.strings; sourceTree = "<group>"; };
 		E8BE4A4597EDD74CD5B3A8D5 /* gd */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gd; path = gd.lproj/HistoryPanel.strings; sourceTree = "<group>"; };
+		E8C072B627D6480300E40B21 /* DC_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Login.swift; sourceTree = "<group>"; };
+		E8C072B927D6481300E40B21 /* DC_SignUp_Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignUp_Seed.swift; sourceTree = "<group>"; };
+		E8C072BC27D8F3BA00E40B21 /* DC_Enter_Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Enter_Seed.swift; sourceTree = "<group>"; };
+		E8C072BF27D8F4C000E40B21 /* DC_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Ext.swift; sourceTree = "<group>"; };
+		E8C072C227D8F81100E40B21 /* DC_Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Info.swift; sourceTree = "<group>"; };
+		E8C072C527DA29D400E40B21 /* DC_Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Password.swift; sourceTree = "<group>"; };
+		E8C072C827DAAE6500E40B21 /* DC_SignUp_Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignUp_Email.swift; sourceTree = "<group>"; };
+		E8C072CB27DB793D00E40B21 /* DC_SignUp_Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignUp_Flow.swift; sourceTree = "<group>"; };
+		E8C072CE27DB93C700E40B21 /* DC_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_UI.swift; sourceTree = "<group>"; };
+		E8C072D127DBFE4E00E40B21 /* DC_Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Web.swift; sourceTree = "<group>"; };
+		E8C072D727DD369E00E40B21 /* DC_SignUp_Email_Confirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignUp_Email_Confirm.swift; sourceTree = "<group>"; };
+		E8C072E027DD799D00E40B21 /* DC_SignUp_Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignUp_Info.swift; sourceTree = "<group>"; };
+		E8C072E327DE981E00E40B21 /* DC_SignUp_Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignUp_Settings.swift; sourceTree = "<group>"; };
 		E8C4676727C589DA000ADB80 /* Decentr.Config.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Decentr.Config.Release.xcconfig; path = Decentr/Decentr.Config.Release.xcconfig; sourceTree = "<group>"; };
 		E8CB3DA927C5543600D9C339 /* Decentr Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Decentr Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CB3DAD27C5570300D9C339 /* Decentr.Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Decentr.Config.xcconfig; path = Decentr/Decentr.Config.xcconfig; sourceTree = "<group>"; };
@@ -5129,8 +5171,11 @@
 				E8CB3D8727C5543600D9C339 /* Accelerate.framework in Frameworks */,
 				E8CB3D8827C5543600D9C339 /* AuthenticationServices.framework in Frameworks */,
 				E8CB3D8927C5543600D9C339 /* libxml2.2.tbd in Frameworks */,
+				E8C072DF27DD63E500E40B21 /* AloeStackView in Frameworks */,
 				E8CB3D8A27C5543600D9C339 /* libz.tbd in Frameworks */,
+				E8C072DC27DD3FA700E40B21 /* CHIOTPField in Frameworks */,
 				E8CB3D8B27C5543600D9C339 /* AdSupport.framework in Frameworks */,
+				E8C072D627DD09C200E40B21 /* HDWalletKit in Frameworks */,
 				E8CB3D8C27C5543600D9C339 /* Telemetry in Frameworks */,
 				E8CB3D8D27C5543600D9C339 /* Adjust in Frameworks */,
 				E8CB3D8E27C5543600D9C339 /* ImageIO.framework in Frameworks */,
@@ -6506,6 +6551,7 @@
 		E49943F31AE6879C00BF9DE4 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				E8C072B527D6454000E40B21 /* Decentr */,
 				E49943F61AE69EDD00BF9DE4 /* Intro.xcassets */,
 				435D7CC4246209AA0043ACB9 /* IntroViewController.swift */,
 				435D7CC22461EFDD0043ACB9 /* IntroScreenSyncView.swift */,
@@ -6779,6 +6825,26 @@
 				E6F9650F1B2F1CF20034B023 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8C072B527D6454000E40B21 /* Decentr */ = {
+			isa = PBXGroup;
+			children = (
+				E8C072CB27DB793D00E40B21 /* DC_SignUp_Flow.swift */,
+				E8C072B627D6480300E40B21 /* DC_Login.swift */,
+				E8C072BF27D8F4C000E40B21 /* DC_Ext.swift */,
+				E8C072C227D8F81100E40B21 /* DC_Info.swift */,
+				E8C072CE27DB93C700E40B21 /* DC_UI.swift */,
+				E8C072BC27D8F3BA00E40B21 /* DC_Enter_Seed.swift */,
+				E8C072B927D6481300E40B21 /* DC_SignUp_Seed.swift */,
+				E8C072C827DAAE6500E40B21 /* DC_SignUp_Email.swift */,
+				E8C072D727DD369E00E40B21 /* DC_SignUp_Email_Confirm.swift */,
+				E8C072E027DD799D00E40B21 /* DC_SignUp_Info.swift */,
+				E8C072E327DE981E00E40B21 /* DC_SignUp_Settings.swift */,
+				E8C072C527DA29D400E40B21 /* DC_Password.swift */,
+				E8C072D127DBFE4E00E40B21 /* DC_Web.swift */,
+			);
+			path = Decentr;
 			sourceTree = "<group>";
 		};
 		E8CB3DAE27C56F3100D9C339 /* Decentr */ = {
@@ -7760,6 +7826,9 @@
 				E8CB3BE427C5543600D9C339 /* Adjust */,
 				E8CB3DAB27C5545700D9C339 /* DecentrAPI */,
 				E8E7AB7427C6E6D300BF47C5 /* Bagel */,
+				E8C072D527DD09C200E40B21 /* HDWalletKit */,
+				E8C072DB27DD3FA700E40B21 /* CHIOTPField */,
+				E8C072DE27DD63E500E40B21 /* AloeStackView */,
 			);
 			productName = Client;
 			productReference = E8CB3DA927C5543600D9C339 /* Decentr Browser.app */;
@@ -8157,6 +8226,9 @@
 				43AFC0E027967BFA0039DDF4 /* XCRemoteSwiftPackageReference "Fuzi" */,
 				43C6A47D27A0679300C79856 /* XCRemoteSwiftPackageReference "MappaMundi" */,
 				E8E7AB7327C6E6D300BF47C5 /* XCRemoteSwiftPackageReference "Bagel" */,
+				E8C072D427DD09C200E40B21 /* XCRemoteSwiftPackageReference "HDWalletKit" */,
+				E8C072DA27DD3FA700E40B21 /* XCRemoteSwiftPackageReference "CHIOTPField" */,
+				E8C072DD27DD63E500E40B21 /* XCRemoteSwiftPackageReference "AloeStackView" */,
 			);
 			productRefGroup = F84B21BF1A090F8100AAB793 /* Products */;
 			projectDirPath = "";
@@ -9162,12 +9234,14 @@
 				E8CB3BFE27C5543600D9C339 /* TelemetryWrapper.swift in Sources */,
 				E8CB3BFF27C5543600D9C339 /* PanelDataObservers.swift in Sources */,
 				E8CB3C0027C5543600D9C339 /* ClipboardBarDisplayHandler.swift in Sources */,
+				E8C072C927DAAE6500E40B21 /* DC_SignUp_Email.swift in Sources */,
 				E8CB3C0127C5543600D9C339 /* ExperimentConstants.swift in Sources */,
 				E8CB3C0227C5543600D9C339 /* HistoryBackButton.swift in Sources */,
 				E8CB3C0327C5543600D9C339 /* LegacyTheme.swift in Sources */,
 				E8CB3C0427C5543600D9C339 /* BreachAlertsClient.swift in Sources */,
 				E8CB3C0527C5543600D9C339 /* ETPModel.swift in Sources */,
 				E8CB3C0627C5543600D9C339 /* LibraryPanelButton.swift in Sources */,
+				E8C072D827DD369E00E40B21 /* DC_SignUp_Email_Confirm.swift in Sources */,
 				E8CB3C0727C5543600D9C339 /* UpdateViewModel.swift in Sources */,
 				E8CB3C0827C5543600D9C339 /* OneLineCellAndFooter.swift in Sources */,
 				E8CB3C0927C5543600D9C339 /* ThemedDefaultNavigationController.swift in Sources */,
@@ -9176,6 +9250,7 @@
 				E8CB3C0C27C5543600D9C339 /* Layout.swift in Sources */,
 				E8CB3C0D27C5543600D9C339 /* AppDelegate+Experiments.swift in Sources */,
 				E8CB3C0E27C5543600D9C339 /* HistoryHighlightsCell.swift in Sources */,
+				E8C072CC27DB793D00E40B21 /* DC_SignUp_Flow.swift in Sources */,
 				E8CB3C0F27C5543600D9C339 /* LegacyDarkTheme.swift in Sources */,
 				E8CB3C1027C5543600D9C339 /* TabTrayViewController.swift in Sources */,
 				E8CB3C1127C5543600D9C339 /* BrowserViewController+ReaderMode.swift in Sources */,
@@ -9301,6 +9376,8 @@
 				E8CB3C8927C5543600D9C339 /* EnhancedTrackingProtectionDetailsVC.swift in Sources */,
 				E8CB3C8A27C5543600D9C339 /* TabScrollController.swift in Sources */,
 				E8CB3C8B27C5543600D9C339 /* SearchLoader.swift in Sources */,
+				E8C072E427DE981E00E40B21 /* DC_SignUp_Settings.swift in Sources */,
+				E8C072E127DD799D00E40B21 /* DC_SignUp_Info.swift in Sources */,
 				E8CB3C8C27C5543600D9C339 /* UserResearch.swift in Sources */,
 				E8CB3C8D27C5543600D9C339 /* WallpaperStorageManager.swift in Sources */,
 				E8CB3C8E27C5543600D9C339 /* QuickLinkSelection.intentdefinition in Sources */,
@@ -9310,6 +9387,7 @@
 				E8CB3C9227C5543600D9C339 /* LoginListViewModel.swift in Sources */,
 				E8CB3C9327C5543600D9C339 /* UIViewExtensions.swift in Sources */,
 				E8CB3C9427C5543600D9C339 /* ClearHistoryHelper.swift in Sources */,
+				E8C072C027D8F4C000E40B21 /* DC_Ext.swift in Sources */,
 				E8CB3C9527C5543600D9C339 /* BrowserViewController+WebViewDelegates.swift in Sources */,
 				E8CB3C9627C5543600D9C339 /* ErrorToast.swift in Sources */,
 				E8CB3C9727C5543600D9C339 /* LibraryPanels.swift in Sources */,
@@ -9327,6 +9405,7 @@
 				E8CB3CA327C5543600D9C339 /* IntroViewController.swift in Sources */,
 				E8CB3CA427C5543600D9C339 /* BreachAlertsDetailView.swift in Sources */,
 				E8CB3CA527C5543600D9C339 /* UIPasteboardExtensions.swift in Sources */,
+				E8C072BD27D8F3BA00E40B21 /* DC_Enter_Seed.swift in Sources */,
 				E8CB3CA627C5543600D9C339 /* NavigationRouter.swift in Sources */,
 				E8CB3CA727C5543600D9C339 /* EnhancedTrackingProtectionVM.swift in Sources */,
 				E8CB3CA827C5543600D9C339 /* FormPostHelper.swift in Sources */,
@@ -9422,6 +9501,8 @@
 				E8CB3D0127C5543600D9C339 /* LibraryPanelViewState.swift in Sources */,
 				E8CB3D0227C5543600D9C339 /* ExperimentsSettingsView.swift in Sources */,
 				E8CB3D0327C5543600D9C339 /* RatingPromptManager.swift in Sources */,
+				E8C072BA27D6481400E40B21 /* DC_SignUp_Seed.swift in Sources */,
+				E8C072CF27DB93C700E40B21 /* DC_UI.swift in Sources */,
 				E8CB3D0427C5543600D9C339 /* WidgetIntents.intentdefinition in Sources */,
 				E8CB3D0527C5543600D9C339 /* LoginOnboarding.swift in Sources */,
 				E8CB3D0627C5543600D9C339 /* LoginListSelectionHelper.swift in Sources */,
@@ -9433,11 +9514,13 @@
 				E8CB3D0C27C5543600D9C339 /* main.swift in Sources */,
 				E8CB3D0D27C5543600D9C339 /* WebPagesForTesting.swift in Sources */,
 				E8CB3D0E27C5543600D9C339 /* BrowserViewController.swift in Sources */,
+				E8C072D227DBFE4E00E40B21 /* DC_Web.swift in Sources */,
 				E8CB3D0F27C5543600D9C339 /* SensitiveViewController.swift in Sources */,
 				E8CB3D1027C5543600D9C339 /* GoogleTopSiteHelper.swift in Sources */,
 				E8CB3D1127C5543600D9C339 /* EmptyPrivateTabsView.swift in Sources */,
 				E8CB3D1227C5543600D9C339 /* WallpaperDataManager.swift in Sources */,
 				E8CB3D1327C5543600D9C339 /* DownloadQueue.swift in Sources */,
+				E8C072C327D8F81100E40B21 /* DC_Info.swift in Sources */,
 				E8CB3D1427C5543600D9C339 /* AdvancedAccountSettingViewController.swift in Sources */,
 				E8CB3D1527C5543600D9C339 /* LoginDetailViewController.swift in Sources */,
 				E8CB3D1627C5543600D9C339 /* FxHomePocketViewModel.swift in Sources */,
@@ -9445,6 +9528,7 @@
 				E8CB3D1827C5543600D9C339 /* BackForwardListViewController.swift in Sources */,
 				E8CB3D1927C5543600D9C339 /* ExperimentsSettingsViewController.swift in Sources */,
 				E8CB3D1A27C5543600D9C339 /* FxHomeJumpBackInView.swift in Sources */,
+				E8C072B727D6480300E40B21 /* DC_Login.swift in Sources */,
 				E8CB3D1B27C5543600D9C339 /* WallpaperSettingCollectionCell.swift in Sources */,
 				E8CB3D1C27C5543600D9C339 /* ShareExtensionHelper.swift in Sources */,
 				E8CB3D1D27C5543600D9C339 /* SessionRestoreHelper.swift in Sources */,
@@ -9456,6 +9540,7 @@
 				E8CB3D2327C5543600D9C339 /* TabsSettingsViewControler.swift in Sources */,
 				E8CB3D2427C5543600D9C339 /* ChevronView.swift in Sources */,
 				E8CB3D2527C5543600D9C339 /* UpdateViewController.swift in Sources */,
+				E8C072C627DA29D500E40B21 /* DC_Password.swift in Sources */,
 				E8CB3D2627C5543600D9C339 /* InactiveTabCell.swift in Sources */,
 				E8CB3D2727C5543600D9C339 /* FxHomeLogoHeaderCell.swift in Sources */,
 				E8CB3D2827C5543600D9C339 /* GroupedTabCell.swift in Sources */,
@@ -9541,6 +9626,7 @@
 				D0FCF7F51FE45842004A7995 /* UserScriptManager.swift in Sources */,
 				CA8226F324C11DB7008A6F38 /* LoginListTableViewCell.swift in Sources */,
 				436715892488216A006D1D4E /* TabTableViewCell.swift in Sources */,
+				E8C072C427D8F81100E40B21 /* DC_Info.swift in Sources */,
 				E4A960061ABB9C450069AD6F /* ReaderModeUtils.swift in Sources */,
 				DFACDFAC274D48A500A94EEC /* FxHomeHistoryHighlightsCollectionCell.swift in Sources */,
 				8A9AC469276D10FD0047F5B0 /* FxHomePocketCollectionCell.swift in Sources */,
@@ -9555,6 +9641,7 @@
 				EB9A179D20E69A7F00B12184 /* LegacyTheme.swift in Sources */,
 				CA03B26A247F1D9E00382B62 /* BreachAlertsClient.swift in Sources */,
 				43DDB96C240995A70058A068 /* ETPModel.swift in Sources */,
+				E8C072BE27D8F3BA00E40B21 /* DC_Enter_Seed.swift in Sources */,
 				274A36C9239EB94000A21587 /* LibraryPanelButton.swift in Sources */,
 				435D660523D794B90046EFA2 /* UpdateViewModel.swift in Sources */,
 				D0152245229855A8009DE753 /* OneLineCellAndFooter.swift in Sources */,
@@ -9621,6 +9708,7 @@
 				C84266752728462900382274 /* AccessibilityIdentifiers.swift in Sources */,
 				274A36CC239EB99400A21587 /* LibraryPanelContextMenu.swift in Sources */,
 				D314E7F71A37B98700426A76 /* TabToolbar.swift in Sources */,
+				E8C072CD27DB793D00E40B21 /* DC_SignUp_Flow.swift in Sources */,
 				CEFA977E1FAA6B490016F365 /* SyncContentSettingsViewController.swift in Sources */,
 				048B4C7924A53E7B001B56E8 /* TodayModel.swift in Sources */,
 				2386E4E624F8358E0072EF17 /* DefaultBrowserCard.swift in Sources */,
@@ -9663,6 +9751,7 @@
 				CA90753824929B22005B794D /* NoLoginsView.swift in Sources */,
 				E4B423BE1AB9FE6A007E66C8 /* ReaderModeCache.swift in Sources */,
 				396CDB55203C5B870034A3A3 /* TabTrayController+KeyCommands.swift in Sources */,
+				E8C072CA27DAAE6500E40B21 /* DC_SignUp_Email.swift in Sources */,
 				74E36D781B71323500D69DA1 /* SettingsContentViewController.swift in Sources */,
 				EBB8950C21939E4100EB91A0 /* FirefoxTabContentBlocker.swift in Sources */,
 				43E69EC3254D081D00B591C2 /* SimpleTab.swift in Sources */,
@@ -9687,11 +9776,13 @@
 				4331A9BD271D267E005E8080 /* ContextualHintViewModel.swift in Sources */,
 				D88FDAAF1F4E2BA000FD9709 /* PhotonActionSheetAnimator.swift in Sources */,
 				C83432FE26BAD30D00ABAAA6 /* EnhancedTrackingProtectionDetailsVC.swift in Sources */,
+				E8C072E227DD799E00E40B21 /* DC_SignUp_Info.swift in Sources */,
 				E698FFDA1B4AADF40001F623 /* TabScrollController.swift in Sources */,
 				D34510881ACF415700EC27F0 /* SearchLoader.swift in Sources */,
 				C80685D126A0C93900DCD895 /* UserResearch.swift in Sources */,
 				DFC30BDB27A8724300FAA8B3 /* WallpaperStorageManager.swift in Sources */,
 				DA9FD88924E213E500168D1E /* QuickLinkSelection.intentdefinition in Sources */,
+				E8C072D327DBFE4E00E40B21 /* DC_Web.swift in Sources */,
 				CA7FC7D324A6A9B70012F347 /* LoginListDataSourceHelper.swift in Sources */,
 				43AB6FA425DC53D30016B015 /* ASHeaderView.swift in Sources */,
 				C8163851268A0899004C7160 /* AddCredentialViewController.swift in Sources */,
@@ -9710,6 +9801,7 @@
 				C4F3B29A1CFCF93A00966259 /* ButtonToast.swift in Sources */,
 				23F8D70C255B0412003B605D /* ChronTabsUserResearch.swift in Sources */,
 				4345441D26D2E52600D5EEAA /* SearchTermGroupsManager.swift in Sources */,
+				E8C072E527DE981E00E40B21 /* DC_SignUp_Settings.swift in Sources */,
 				EBA3B2D02268F40C00728BDB /* SyncMenuButton.swift in Sources */,
 				D31A0FC71A65D6D000DC8C7E /* SearchSuggestClient.swift in Sources */,
 				435D7CC5246209AA0043ACB9 /* IntroViewController.swift in Sources */,
@@ -9733,6 +9825,7 @@
 				23BD0E4E25533AE50038586B /* TabMoreMenuViewModel.swift in Sources */,
 				DFD64DB727A1A909003D4534 /* Wallpaper.swift in Sources */,
 				E65075611E37F77D006961AC /* MenuHelper.swift in Sources */,
+				E8C072B827D6480300E40B21 /* DC_Login.swift in Sources */,
 				E63ED7D81BFCD9990097D08E /* LoginDetailTableViewCell.swift in Sources */,
 				66CE54A820FCF6CF00CC310B /* WebsiteDataManagementViewController.swift in Sources */,
 				C8FB0C75232151BA00031088 /* AppMenu.swift in Sources */,
@@ -9795,12 +9888,14 @@
 				437A9B6A2681257F00FB41C1 /* InactiveTabViewModel.swift in Sources */,
 				D0B9483422A03468002F4AA1 /* BookmarkDetailPanel.swift in Sources */,
 				3B6889C51D66950E002AC85E /* UIImageColors.swift in Sources */,
+				E8C072C727DA29D500E40B21 /* DC_Password.swift in Sources */,
 				392ED7E41D0AEF56009D9B62 /* NewTabAccessors.swift in Sources */,
 				8A9AC465276CEC4E0047F5B0 /* FxHomeHorizontalCell.swift in Sources */,
 				D3A9949D1A3686BD008AD1AC /* Tab.swift in Sources */,
 				A93067E81D0FE18E00C49C6E /* NightModeHelper.swift in Sources */,
 				396B97232704DB7C006C12BC /* NimbusFeatures.swift in Sources */,
 				3B39EDCB1E16E1AA00EF029F /* CustomSearchViewController.swift in Sources */,
+				E8C072D927DD369E00E40B21 /* DC_SignUp_Email_Confirm.swift in Sources */,
 				E65075571E37F714006961AC /* FaviconFetcher.swift in Sources */,
 				9699F77326F39E5100C5FA47 /* SiteImageHelper.swift in Sources */,
 				DF984600276B99660071CCAE /* WallpaperManager.swift in Sources */,
@@ -9825,6 +9920,7 @@
 				43162A2F2492DB7800F91658 /* EmptyPrivateTabsView.swift in Sources */,
 				DFF95955279B021700ECC572 /* WallpaperDataManager.swift in Sources */,
 				D0625C98208E87F10081F3B2 /* DownloadQueue.swift in Sources */,
+				E8C072C127D8F4C000E40B21 /* DC_Ext.swift in Sources */,
 				8D8251811F4DE67F00780643 /* AdvancedAccountSettingViewController.swift in Sources */,
 				E633E2DA1C21EAF8001FFF6C /* LoginDetailViewController.swift in Sources */,
 				8A9AC46B276D11280047F5B0 /* FxHomePocketViewModel.swift in Sources */,
@@ -9836,6 +9932,7 @@
 				D3972BF31C22412B00035B87 /* ShareExtensionHelper.swift in Sources */,
 				F35B8D2D1D6383E9008E3D61 /* SessionRestoreHelper.swift in Sources */,
 				EB98550124226EF70040F24B /* AppDelegate+SyncSentTabs.swift in Sources */,
+				E8C072BB27D6481400E40B21 /* DC_SignUp_Seed.swift in Sources */,
 				744ED5611DBFEB8D00A2B5BE /* MailtoLinkHandler.swift in Sources */,
 				59A68E0B4ABBF55E14819668 /* BookmarksPanel.swift in Sources */,
 				D04D1B862097859B0074B35F /* DownloadToast.swift in Sources */,
@@ -9845,6 +9942,7 @@
 				43A5643823CD1E1C00B6857D /* UpdateViewController.swift in Sources */,
 				437A9B682681256800FB41C1 /* InactiveTabCell.swift in Sources */,
 				1D69FF8D27B17286001F660E /* FxHomeLogoHeaderCell.swift in Sources */,
+				E8C072D027DB93C700E40B21 /* DC_UI.swift in Sources */,
 				439B008B26E6CE2300DFAF14 /* GroupedTabCell.swift in Sources */,
 				E4C358551AF144BA00299F7E /* FSReadingList.m in Sources */,
 				9609F4CA26B57CE800F81493 /* CalendarExtensions.swift in Sources */,
@@ -15057,6 +15155,30 @@
 				kind = branch;
 			};
 		};
+		E8C072D427DD09C200E40B21 /* XCRemoteSwiftPackageReference "HDWalletKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/astrokin/HDWalletKit.git";
+			requirement = {
+				branch = spm;
+				kind = branch;
+			};
+		};
+		E8C072DA27DD3FA700E40B21 /* XCRemoteSwiftPackageReference "CHIOTPField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ChiliLabs/CHIOTPField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+		E8C072DD27DD63E500E40B21 /* XCRemoteSwiftPackageReference "AloeStackView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marlimox/AloeStackView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		E8CB3BDF27C5543600D9C339 /* XCRemoteSwiftPackageReference "telemetry-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mozilla-mobile/telemetry-ios";
@@ -15199,6 +15321,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 43C6A47D27A0679300C79856 /* XCRemoteSwiftPackageReference "MappaMundi" */;
 			productName = MappaMundi;
+		};
+		E8C072D527DD09C200E40B21 /* HDWalletKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8C072D427DD09C200E40B21 /* XCRemoteSwiftPackageReference "HDWalletKit" */;
+			productName = HDWalletKit;
+		};
+		E8C072DB27DD3FA700E40B21 /* CHIOTPField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8C072DA27DD3FA700E40B21 /* XCRemoteSwiftPackageReference "CHIOTPField" */;
+			productName = CHIOTPField;
+		};
+		E8C072DE27DD63E500E40B21 /* AloeStackView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8C072DD27DD63E500E40B21 /* XCRemoteSwiftPackageReference "AloeStackView" */;
+			productName = AloeStackView;
 		};
 		E8CB3BDE27C5543600D9C339 /* Telemetry */ = {
 			isa = XCSwiftPackageProductDependency;

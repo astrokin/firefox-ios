@@ -22,6 +22,9 @@ protocol QRCodeViewControllerDelegate {
 
 class QRCodeViewController: UIViewController {
     var qrCodeDelegate: QRCodeViewControllerDelegate?
+    
+    var didScanQRCodeWithURL: ((URL) -> ())?
+    var didScanQRCodeWithText: ((String) -> ())?
 
     fileprivate lazy var captureSession: AVCaptureSession = {
         let session = AVCaptureSession()
@@ -36,7 +39,7 @@ class QRCodeViewController: UIViewController {
     private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     private let scanLine = UIImageView(image: UIImage(named: "qrcode-scanLine"))
     private let scanBorder = UIImageView(image: UIImage(named: "qrcode-scanBorder"))
-    private lazy var instructionsLabel: UILabel = {
+    lazy var instructionsLabel: UILabel = {
         let label = UILabel()
         label.text = .ScanQRCodeInstructionsLabel
         label.textColor = UIColor.Photon.White100
@@ -291,8 +294,10 @@ extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
 
                 if let url = URIFixup.getURL(text) {
                     qrCodeDelegate.didScanQRCodeWithURL(url)
+                    self.didScanQRCodeWithURL?(url)
                 } else {
                     qrCodeDelegate.didScanQRCodeWithText(text)
+                    self.didScanQRCodeWithText?(text)
                 }
             })
         }

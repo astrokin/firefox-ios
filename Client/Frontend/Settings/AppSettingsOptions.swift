@@ -46,8 +46,11 @@ class ConnectSetting: WithoutAccountSetting {
     override var accessibilityIdentifier: String? { return "SignInToSync" }
 
     override func onClick(_ navigationController: UINavigationController?) {
-        let viewController = FirefoxAccountSignInViewController(profile: profile, parentType: .settings, deepLinkParams: nil)
-        TelemetryWrapper.recordEvent(category: .firefoxAccount, method: .view, object: .settings)
+        let viewController = IntroViewController()
+        viewController.didFinishClosure = { [weak navigationController] controller, fxaLoginFlow in
+            navigationController?.popViewController(animated: true)
+        }
+        TelemetryWrapper.recordEvent(category: .decentrAccount, method: .view, object: .settings)
         navigationController?.pushViewController(viewController, animated: true)
     }
 

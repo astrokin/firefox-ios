@@ -106,7 +106,7 @@ class AppSettingsTableViewController: SettingsTableViewController, FeatureFlagsP
 
         let accountSectionTitle = NSAttributedString(string: .FxAFirefoxAccount)
 
-        let footerText = !profile.hasAccount() ? NSAttributedString(string: .FxASyncUsageDetails) : nil
+        let footerText = DC_Shared_Info.shared.account == nil ? NSAttributedString(string: .FxASyncUsageDetails) : nil
         settings += [
             SettingSection(title: accountSectionTitle, footerTitle: footerText, children: [
                 // Without a Decentr Account:

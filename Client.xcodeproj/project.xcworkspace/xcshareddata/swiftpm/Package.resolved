@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "AloeStackView",
+        "repositoryURL": "https://github.com/marlimox/AloeStackView",
+        "state": {
+          "branch": "master",
+          "revision": "001e71afa4a74185d0811b76ca857ebebd387094",
+          "version": null
+        }
+      },
+      {
         "package": "Bagel",
         "repositoryURL": "https://github.com/swhitty/Bagel",
         "state": {
@@ -29,12 +38,30 @@
         }
       },
       {
+        "package": "CHIOTPField",
+        "repositoryURL": "https://github.com/ChiliLabs/CHIOTPField.git",
+        "state": {
+          "branch": null,
+          "revision": "a18c00e08af660338832c60e6a3789c9c2f4e11b",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "CocoaAsyncSocket",
         "repositoryURL": "https://github.com/robbiehanson/CocoaAsyncSocket.git",
         "state": {
           "branch": null,
           "revision": "dbdc00669c1ced63b27c3c5f052ee4d28f10150c",
           "version": "7.6.5"
+        }
+      },
+      {
+        "package": "CryptoSwift",
+        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "12f2389aca4a07e0dd54c86ec23d0721ed88b8db",
+          "version": "1.4.3"
         }
       },
       {
@@ -62,6 +89,15 @@
           "branch": null,
           "revision": "e8fef341610de380b55cd5a057f9a3adf7cebb44",
           "version": "43.0.2"
+        }
+      },
+      {
+        "package": "HDWalletKit",
+        "repositoryURL": "https://github.com/astrokin/HDWalletKit.git",
+        "state": {
+          "branch": "spm",
+          "revision": "83eebde6fb99dd476420975d481869866e3579ce",
+          "version": null
         }
       },
       {
@@ -107,6 +143,15 @@
           "branch": null,
           "revision": "7ef9a314b12c1a31edb0d09d41fcba93143fe772",
           "version": "5.4.0"
+        }
+      },
+      {
+        "package": "secp256k1",
+        "repositoryURL": "https://github.com/Boilertalk/secp256k1.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "45e458ec3be46cf0a6eb68bc947f797852dc65d8",
+          "version": "0.1.6"
         }
       },
       {

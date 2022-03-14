@@ -20,6 +20,7 @@ class IntroViewController: UIViewController, OnViewDismissable {
     
     // Closure delegate
     var didFinishClosure: ((IntroViewController, FxAPageType?) -> Void)?
+    private var signUpFlow: DC_SignUp_Flow?
     
     // MARK: Initializer
     init() {
@@ -53,13 +54,23 @@ class IntroViewController: UIViewController, OnViewDismissable {
             self.didFinishClosure?(self, nil)
         }
         // Sign in button closure
-        welcomeCard.signInClosure = {
-            self.didFinishClosure?(self, .emailLoginFlow)
+        welcomeCard.signInClosure = { [weak self] in
+            let vc = DC_Login()
+            self?.navigationController?.pushViewController(vc, animated: true)
+//            self.didFinishClosure?(self, .emailLoginFlow)
         }
         // Sign up button closure
-        welcomeCard.signUpClosure = {
-            self.didFinishClosure?(self, .emailLoginFlow)
+        welcomeCard.signUpClosure = { [weak self] in
+            self?.signUpFlow = DC_SignUp_Flow(navigationController: self?.navigationController)
+            self?.signUpFlow?.startSignUp()
+//            self.didFinishClosure?(self, .emailLoginFlow)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     override func viewDidDisappear(_ animated: Bool) {

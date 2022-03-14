@@ -266,6 +266,7 @@ extension TelemetryWrapper {
         case prompt = "prompt"
         case enrollment = "enrollment"
         case firefoxAccount = "firefox_account"
+        case decentrAccount = "decentr_account"
     }
 
     public enum EventMethod: String {
