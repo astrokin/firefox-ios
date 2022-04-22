@@ -911,6 +911,8 @@
 		E832DE2727DFE4880078F805 /* DC_SignIn_Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */; };
 		E832DE2827DFE4880078F805 /* DC_SignIn_Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */; };
 		E8679DE127D4192500DE1C8E /* API_Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8679DE027D4192500DE1C8E /* API_Integration.swift */; };
+		E8BE5BA228094C8B00BAD16E /* EVP_KDF_Salted.c in Sources */ = {isa = PBXBuildFile; fileRef = E8BE5B9F2809499A00BAD16E /* EVP_KDF_Salted.c */; };
+		E8BE5BA428094E3200BAD16E /* EVP_KDF_Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE5BA328094E3200BAD16E /* EVP_KDF_Util.swift */; };
 		E8C072B727D6480300E40B21 /* DC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B627D6480300E40B21 /* DC_Login.swift */; };
 		E8C072B827D6480300E40B21 /* DC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B627D6480300E40B21 /* DC_Login.swift */; };
 		E8C072BA27D6481400E40B21 /* DC_SignUp_Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B927D6481300E40B21 /* DC_SignUp_Seed.swift */; };
@@ -4690,6 +4692,9 @@
 		E882DACF27C585BC00D1C895 /* Decentr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Decentr.entitlements; path = Decentr/Decentr.entitlements; sourceTree = "<group>"; };
 		E88B487A9436F764525B0F64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AuthenticationManager.strings; sourceTree = "<group>"; };
 		E8BE4A4597EDD74CD5B3A8D5 /* gd */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gd; path = gd.lproj/HistoryPanel.strings; sourceTree = "<group>"; };
+		E8BE5B9E2809499A00BAD16E /* EVP_KDF_Salted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EVP_KDF_Salted.h; sourceTree = "<group>"; };
+		E8BE5B9F2809499A00BAD16E /* EVP_KDF_Salted.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = EVP_KDF_Salted.c; sourceTree = "<group>"; };
+		E8BE5BA328094E3200BAD16E /* EVP_KDF_Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVP_KDF_Util.swift; sourceTree = "<group>"; };
 		E8C072B627D6480300E40B21 /* DC_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Login.swift; sourceTree = "<group>"; };
 		E8C072B927D6481300E40B21 /* DC_SignUp_Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignUp_Seed.swift; sourceTree = "<group>"; };
 		E8C072BC27D8F3BA00E40B21 /* DC_Enter_Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Enter_Seed.swift; sourceTree = "<group>"; };
@@ -5504,6 +5509,7 @@
 				2F14E1391ABB890800FF98DB /* Account-Bridging-Header.h */,
 				3905B4D41E8E7A6B0027D953 /* FxAPushMessageHandler.swift */,
 				2FA436271ABB8436008031D1 /* HawkHelper.swift */,
+				E8BE5BA328094E3200BAD16E /* EVP_KDF_Util.swift */,
 				D047C55520E1640B001A3C07 /* KeyBundle.swift */,
 				2FDBCF601ABFC9DE00AFF7F0 /* SyncAuthState.swift */,
 				2FA436281ABB8436008031D1 /* TokenServerClient.swift */,
@@ -5954,6 +5960,8 @@
 		C8340B7224EC69EE00FE91A6 /* FxA */ = {
 			isa = PBXGroup;
 			children = (
+				E8BE5B9E2809499A00BAD16E /* EVP_KDF_Salted.h */,
+				E8BE5B9F2809499A00BAD16E /* EVP_KDF_Salted.c */,
 				C8340B7524EC69EE00FE91A6 /* NSData+Base16.h */,
 				C8340B7F24EC69EE00FE91A6 /* include */,
 				C8340BD624EC69EE00FE91A6 /* NSData+Base16.m */,
@@ -8897,7 +8905,9 @@
 				C8340C6224EC6A3500FE91A6 /* decrypt.c in Sources */,
 				C8340C6124EC6A3500FE91A6 /* keys.c in Sources */,
 				C8E2E80D23D20FB3005AACE6 /* RustFirefoxAccounts.swift in Sources */,
+				E8BE5BA428094E3200BAD16E /* EVP_KDF_Util.swift in Sources */,
 				C8E2E80C23D20FB3005AACE6 /* Avatar.swift in Sources */,
+				E8BE5BA228094C8B00BAD16E /* EVP_KDF_Salted.c in Sources */,
 				2FDBCF611ABFC9DE00AFF7F0 /* SyncAuthState.swift in Sources */,
 				C8340C4824EC69EE00FE91A6 /* NSData+Base16.m in Sources */,
 				39C22C291E89791C000C0E56 /* PushCrypto.swift in Sources */,

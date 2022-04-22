@@ -65,18 +65,7 @@ final class DC_SignUp_Seed: UIViewController {
         return textView
     }()
     
-    private lazy var aloeStackView: AloeStackView = {
-        let aloeStackView = AloeStackView()
-        aloeStackView.axis = .vertical
-        aloeStackView.isPagingEnabled = false
-        aloeStackView.hidesSeparatorsByDefault = true
-        aloeStackView.showsVerticalScrollIndicator = false
-        aloeStackView.contentInsetAdjustmentBehavior = .never
-        aloeStackView.rowInset = .zero
-        aloeStackView.backgroundColor = .clear
-        aloeStackView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
-        return aloeStackView
-    }()
+    private lazy var aloeStackView: AloeStackView = DC_UI.makeAloe()
     
     private var nextButtonBottomConstraint: Constraint? = nil
     
@@ -225,10 +214,15 @@ final class DC_SignUp_Seed: UIViewController {
     }
     
     private func generateSeed() {
-        let words = Mnemonic.create(strength: .hight, language: .english)
-        self.seedPhrase = words
-        self.textView.plainText = words
+        let mnemonic = Mnemonic.create(strength: .hight, language: .english)
+        self.seedPhrase = mnemonic
+        self.textView.plainText = mnemonic
         self.textView.isProtected = true
+
+        let seed = Mnemonic.createSeed(mnemonic: mnemonic, withPassphrase: "")
+
+        print("[TEST] \rmnemonic: \(mnemonic)")
+        print("[TEST] seed: \(seed.toHexString())")
     }
     
     override func viewWillAppear(_ animated: Bool) {

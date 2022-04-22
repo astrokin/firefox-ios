@@ -2,6 +2,7 @@
 #define Client_Account_Bridging_Header_h
 
 #include "NSData+Base16.h"
+#include "EVP_KDF_Salted.h"
 #include "ThirdParty/ecec/include/ece.h"
 
 #import <Foundation/Foundation.h>

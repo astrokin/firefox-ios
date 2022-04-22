@@ -5,6 +5,7 @@
 import Foundation
 import UIKit
 import SnapKit
+import AloeStackView
 
 struct DC_UI {
     
@@ -35,6 +36,22 @@ struct DC_UI {
             vc?.navigationController?.popViewController(animated: true)
         })
         vc.navigationItem.leftBarButtonItem = item
+    }
+    
+    static func makeAloe(
+        axis: NSLayoutConstraint.Axis = .vertical,
+        contentInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+    ) -> AloeStackView {
+        let aloeStackView = AloeStackView()
+        aloeStackView.axis = axis
+        aloeStackView.isPagingEnabled = false
+        aloeStackView.hidesSeparatorsByDefault = true
+        aloeStackView.showsVerticalScrollIndicator = false
+        aloeStackView.contentInsetAdjustmentBehavior = .never
+        aloeStackView.rowInset = .zero
+        aloeStackView.backgroundColor = .clear
+        aloeStackView.contentInset = contentInset
+        return aloeStackView
     }
     
     static func makeBackButton(color: UIColor? = nil, action: @escaping () -> ()) -> UIButton {

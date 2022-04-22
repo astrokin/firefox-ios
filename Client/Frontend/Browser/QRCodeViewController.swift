@@ -287,17 +287,23 @@ extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
             self.captureSession.stopRunning()
             stopScanLineAnimation()
             self.dismiss(animated: true, completion: {
-                guard let metaData = metadataObjects.first as? AVMetadataMachineReadableCodeObject, let qrCodeDelegate = self.qrCodeDelegate, let text = metaData.stringValue else {
+                guard let metaData = metadataObjects.first as? AVMetadataMachineReadableCodeObject, let text = metaData.stringValue else {
                         Sentry.shared.sendWithStacktrace(message: "Unable to scan QR code", tag: .general)
                         return
                 }
 
                 if let url = URIFixup.getURL(text) {
-                    qrCodeDelegate.didScanQRCodeWithURL(url)
-                    self.didScanQRCodeWithURL?(url)
+                    if let didScanQRCodeWithURL = self.didScanQRCodeWithURL {
+                        didScanQRCodeWithURL(url)
+                    } else {
+                        self.qrCodeDelegate?.didScanQRCodeWithURL(url)
+                    }
                 } else {
-                    qrCodeDelegate.didScanQRCodeWithText(text)
-                    self.didScanQRCodeWithText?(text)
+                    if let didScanQRCodeWithText = self.didScanQRCodeWithText {
+                        didScanQRCodeWithText(text)
+                    } else {
+                        self.qrCodeDelegate?.didScanQRCodeWithText(text)
+                    }
                 }
             })
         }

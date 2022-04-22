@@ -31,19 +31,7 @@ final class DC_SignUp_Info: UIViewController {
             self?.completion(info)
         }
     })
-    
-    private lazy var aloeStackView: AloeStackView = {
-        let aloeStackView = AloeStackView()
-        aloeStackView.axis = .vertical
-        aloeStackView.isPagingEnabled = false
-        aloeStackView.hidesSeparatorsByDefault = true
-        aloeStackView.showsVerticalScrollIndicator = false
-        aloeStackView.contentInsetAdjustmentBehavior = .never
-        aloeStackView.rowInset = .zero
-        aloeStackView.backgroundColor = .clear
-        aloeStackView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
-        return aloeStackView
-    }()
+    private lazy var aloeStackView: AloeStackView = DC_UI.makeAloe()
     
     private lazy var picSelector: ProfilePicSelector = {
        let view = ProfilePicSelector(selectedIndex: 1)
@@ -217,7 +205,6 @@ final class ProfilePicSelector: UIView {
             button.setImage(UIImage(named: "avatar-checkmark"), for: .selected)
             button.contentVerticalAlignment = .bottom
             button.contentHorizontalAlignment = .right
-//            button.imageEdgeInsets = .init(top: <#T##CGFloat#>, left: <#T##CGFloat#>, bottom: <#T##CGFloat#>, right: <#T##CGFloat#>)
             button.setAction { [weak self, weak button] in
                 self?.buttons.forEach({ $0.isSelected = false })
                 button?.isSelected = true
@@ -240,20 +227,7 @@ final class ProfilePicSelector: UIView {
         
         
     }
-    
-    private lazy var aloeStackView: AloeStackView = {
-        let aloeStackView = AloeStackView()
-        aloeStackView.axis = .horizontal
-        aloeStackView.isPagingEnabled = false
-        aloeStackView.hidesSeparatorsByDefault = true
-        aloeStackView.showsVerticalScrollIndicator = false
-        aloeStackView.showsHorizontalScrollIndicator = false
-        aloeStackView.contentInsetAdjustmentBehavior = .never
-        aloeStackView.rowInset = .zero
-        aloeStackView.backgroundColor = .clear
-        aloeStackView.contentInset = .zero
-        return aloeStackView
-    }()
+    private lazy var aloeStackView: AloeStackView = DC_UI.makeAloe(axis: .horizontal, contentInset: .zero)
     
     @available(*, unavailable)
     required init?(coder _: NSCoder) { fatalError("init(coder:) has not been implemented") }
