@@ -135,7 +135,7 @@ public extension DcntrAPI.ProfilesAPI {
     }
     
     class func getCheckPDVBalanceWithRequestBuilder(address: String) -> RequestBuilder<BalancePDV> {
-        var path = "/decentr/token/balance/{address}"
+        var path = "/cosmos/bank/v1beta1/balances/{address}"
         let addressPreEscape = "\(address)"
         let addressPostEscape = addressPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{address}", with: addressPostEscape, options: .literal, range: nil)

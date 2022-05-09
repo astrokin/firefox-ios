@@ -40,6 +40,7 @@ final class DC_Password: UIViewController {
                                                                            action: { [weak self] in
         if let pass = self?.passwordTextView.plainText {
             DC_Shared_Info.shared.savePassword(pass)
+            self?.view.endEditing(true)
             self?.didSavePassword(pass)
         }
     })

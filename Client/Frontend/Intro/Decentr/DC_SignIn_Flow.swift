@@ -105,7 +105,10 @@ private extension DC_SignIn_Flow {
     }
     
     private func getProfile(_ keys: KeyStore.Keys) {
+        
+        UIApplication.getKeyWindow()?.showLoader()
         DC_Shared_Info.shared.refreshAccountInfo(address: keys.address) { [weak self] result in
+            UIApplication.getKeyWindow()?.removeLoader()
             switch result {
             case let .failure(error):
                 self?.showLoginError(error)

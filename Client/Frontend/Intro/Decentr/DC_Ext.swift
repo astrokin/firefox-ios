@@ -4,6 +4,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 //MARK: - Actions
 
@@ -238,5 +239,84 @@ extension UIView {
         return renderer.image { context in
             layer.render(in: context.cgContext)
         }
+    }
+}
+
+public extension UIApplication {
+    static func getKeyWindow() -> UIWindow? {
+        if #available(iOS 13, *) {
+            return shared.windows.first(where: { $0.isKeyWindow })
+        } else {
+            return shared.keyWindow
+        }
+    }
+}
+
+public extension UIView {
+    var loader: LoaderView? {
+        subviews.first(where: { $0 is LoaderView }) as? LoaderView
+    }
+
+    func showLoader(title: String = "") {
+        let loader = LoaderView(frame: bounds, text: title)
+        if subviews.filter({ $0 is LoaderView }).isEmpty {
+            addSubview(loader)
+        }
+    }
+
+    func removeLoader() {
+        if let loader = subviews.first(where: { $0 is LoaderView }) {
+            loader.removeFromSuperview()
+        }
+    }
+}
+
+public class LoaderView: UIView {
+    public var blurEffectView: UIVisualEffectView?
+
+    public init(frame: CGRect, text: String = "") {
+        let blurEffect = UIBlurEffect(style: .regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = frame
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.blurEffectView = blurEffectView
+        super.init(frame: frame)
+        addSubview(blurEffectView)
+        addLoader(text: text)
+    }
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func addLoader(text: String) {
+        guard let blurEffectView = blurEffectView else { return }
+        var activityIndicator: UIActivityIndicatorView
+
+        if #available(iOS 13.0, *) {
+            activityIndicator = UIActivityIndicatorView(style: .large)
+        } else {
+            activityIndicator = UIActivityIndicatorView(style: .gray)
+        }
+        let label = UILabel()
+
+        label.text = text
+        label.textAlignment = .center
+        blurEffectView.contentView.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(50)
+            make.height.equalTo(30)
+        }
+
+        blurEffectView.contentView.addSubview(activityIndicator)
+        activityIndicator.snp.makeConstraints { make in
+            make.width.height.equalTo(50)
+            make.center.equalToSuperview()
+        }
+
+        activityIndicator.center = blurEffectView.contentView.center
+        activityIndicator.startAnimating()
     }
 }
