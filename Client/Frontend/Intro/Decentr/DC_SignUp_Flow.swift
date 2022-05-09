@@ -5,9 +5,11 @@
 import Foundation
 import UIKit
 import Shared
+import DecentrAPI
 
 struct SignUpData {
     var seedPhrase: String?
+    var address: String? //decentr address
     var firstName: String?
     var lastName: String?
     var bio: String?
@@ -42,7 +44,9 @@ final class DC_SignUp_Flow {
     
     func startSignUp() {
         goToStep(.seedPhrase)
-//        (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+        #if !DEBUG
+            (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+        #endif
     }
     
     private var currentStap: Step!
@@ -65,8 +69,13 @@ final class DC_SignUp_Flow {
             }
             navigationController?.pushViewController(vc, animated: true)
         case .password:
-            let vc = DC_Password(mode: .createPassword) { [weak self] _ in
-                self?.goToStep(.confirmEmail)
+            let vc = DC_Password(mode: .createPassword) { [weak self] password in
+                self?.data.currentPassword = password
+                self?.data.newPassword = password
+                self?.data.newConfirmPassword = password
+                self?.sendRegistration({ [weak self] in
+                    self?.goToStep(.confirmEmail)
+                })
             }
             navigationController?.pushViewController(vc, animated: true)
         case .confirmEmail:
@@ -76,7 +85,7 @@ final class DC_SignUp_Flow {
             navigationController?.pushViewController(vc, animated: true)
         case .userSettings:
             var _info = data
-            _info.currentPassword = DC_Shared_Info.shared.getPassword()
+            _info.currentPassword = DC_Shared_Info.shared.getPassword() //set if changed during settings
             let vc = DC_SignUp_Info(info: _info) { [weak self] info in
                 self?.data = info
                 self?.goToStep(.trackingSettings)
@@ -91,7 +100,54 @@ final class DC_SignUp_Flow {
         }
     }
     
+    private func sendRegistration(_ completion: @escaping (() -> ())) {
+        guard let seed = data.seedPhrase, let pass = data.newPassword, let email = data.email else {
+            showLoginError()
+            return
+        }
+        let keyStore = KeyStore(seedPhrase: seed, password: pass)
+        guard let keys = try? keyStore.loadKeys() else {
+            showLoginError()
+            return
+        }
+        VulcanAPI.register(body: RegisterRequest(address: keys.address, email: email, recaptchaResponse: "", referralCode: "")) { [weak self] data, error in
+            if let error = error {
+                self?.showLoginError(error)
+                return
+            } else if let _ = data {
+                self?.data.address = keys.address
+                completion()
+            } else {
+                self?.showLoginError()
+            }
+        }
+    }
+    
     private func finishSignUp() {
-        
+        guard let address = data.address else {
+            showLoginError()
+            return
+        }
+        VulcanAPI.trackBrowserInstallation(address: address) { [weak self] data, error in
+            if let error = error {
+                self?.showLoginError(error)
+                return
+            } else if let _ = data {
+                self?.completion?()
+            } else {
+                self?.showLoginError()
+            }
+        }
+    }
+    
+    private func showLoginError(_ error: Error? = nil) {
+        let errorMessage = (error as NSError?)?.localizedDescription
+        let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
+            self?.navigationController?.popToRootViewController(animated: true)
+        }))
+        navigationController?.present(alert, animated: true)
     }
 }
+
+

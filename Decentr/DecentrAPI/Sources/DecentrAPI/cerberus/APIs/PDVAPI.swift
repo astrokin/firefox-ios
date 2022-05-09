@@ -39,7 +39,7 @@ public extension CerberusAPI.PDVAPI {
      - returns: RequestBuilder<PDV> 
      */
     class func callGetWithRequestBuilder(address: String) -> RequestBuilder<PDV> {
-        var path = "/pdv/{owner}/{id}"
+        var path = "/pdv/{address}"
         let addressPreEscape = "\(address)"
         let addressPostEscape = addressPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{address}", with: addressPostEscape, options: .literal, range: nil)
@@ -84,7 +84,7 @@ public extension CerberusAPI.PDVAPI {
      - returns: RequestBuilder<PDVMeta> 
      */
     class func getMetaWithRequestBuilder(address: String) -> RequestBuilder<PDVMeta> {
-        var path = "/pdv/{owner}/{id}/meta"
+        var path = "/pdv/{address}/meta"
         let addressPreEscape = "\(address)"
         let addressPostEscape = addressPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{address}", with: addressPostEscape, options: .literal, range: nil)

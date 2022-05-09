@@ -71,7 +71,7 @@ open class VulcanAPI {
      - returns: RequestBuilder<ReferralCodeResponse> 
      */
     open class func getOwnReferralCodeWithRequestBuilder(code: String) -> RequestBuilder<ReferralCodeResponse> {
-        var path = "/v1/referral/code/{address}"
+        var path = "/v1/referral/code/{code}"
         let codePreEscape = "\(code)"
         let codePostEscape = codePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{code}", with: codePostEscape, options: .literal, range: nil)
@@ -115,7 +115,7 @@ open class VulcanAPI {
      - returns: RequestBuilder<ReferralTrackingStatsResponse> 
      */
     open class func getReferralTrackingStatsWithRequestBuilder(code: String) -> RequestBuilder<ReferralTrackingStatsResponse> {
-        var path = "/v1/referral/track/stats/{address}"
+        var path = "/v1/referral/track/stats/{code}"
         let codePreEscape = "\(code)"
         let codePostEscape = codePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{code}", with: codePostEscape, options: .literal, range: nil)
@@ -151,7 +151,7 @@ open class VulcanAPI {
      - returns: RequestBuilder<ReferralCodeResponse> 
      */
     open class func getRegistrationReferralCodeWithRequestBuilder(code: String) -> RequestBuilder<ReferralCodeResponse> {
-        var path = "/v1/referral/code/{address}/registration"
+        var path = "/v1/referral/code/{code}/registration"
         let codePreEscape = "\(code)"
         let codePostEscape = codePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{code}", with: codePostEscape, options: .literal, range: nil)
@@ -191,7 +191,7 @@ open class VulcanAPI {
      - returns: RequestBuilder<Void> 
      */
     open class func giveStakesWithRequestBuilder(code: String) -> RequestBuilder<Void> {
-        var path = "/v1/hesoyam/{address}"
+        var path = "/v1/hesoyam/{code}"
         let codePreEscape = "\(code)"
         let codePostEscape = codePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{code}", with: codePostEscape, options: .literal, range: nil)
@@ -359,8 +359,8 @@ open class VulcanAPI {
      - parameter code: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func trackBrowserInstallation(code: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        trackBrowserInstallationWithRequestBuilder(code: code).execute { (response, error) -> Void in
+    open class func trackBrowserInstallation(address: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        trackBrowserInstallationWithRequestBuilder(address: address).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -379,11 +379,11 @@ open class VulcanAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func trackBrowserInstallationWithRequestBuilder(code: String) -> RequestBuilder<Void> {
+    open class func trackBrowserInstallationWithRequestBuilder(address: String) -> RequestBuilder<Void> {
         var path = "/v1/referral/track/install/{address}"
-        let codePreEscape = "\(code)"
+        let codePreEscape = "\(address)"
         let codePostEscape = codePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{code}", with: codePostEscape, options: .literal, range: nil)
+        path = path.replacingOccurrences(of: "{address}", with: codePostEscape, options: .literal, range: nil)
         let URLString = VulcanAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)

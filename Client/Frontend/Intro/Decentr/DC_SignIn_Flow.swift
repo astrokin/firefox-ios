@@ -28,7 +28,9 @@ final class DC_SignIn_Flow {
     
     func startSignIn() {
         goToStep(.scanQR)
-//        (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+        #if !DEBUG
+            (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+        #endif
     }
     
     private func goToStep(_ step: Step) {
@@ -104,8 +106,7 @@ private extension DC_SignIn_Flow {
         navigationController?.present(alert, animated: true)
     }
     
-    private func getProfile(_ keys: KeyStore.Keys) {
-        
+    private func getProfile(_ keys: KeyStore.Keys) { 
         UIApplication.getKeyWindow()?.showLoader()
         DC_Shared_Info.shared.refreshAccountInfo(address: keys.address) { [weak self] result in
             UIApplication.getKeyWindow()?.removeLoader()

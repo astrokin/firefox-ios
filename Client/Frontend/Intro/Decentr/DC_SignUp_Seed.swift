@@ -5,7 +5,7 @@
 import Foundation
 import SnapKit
 import UIKit
-//import HDWalletKit
+import WalletKit
 import AloeStackView
 
 final class DC_SignUp_Seed: UIViewController {
@@ -36,13 +36,18 @@ final class DC_SignUp_Seed: UIViewController {
     private lazy var copyButton: UIButton = DC_UI.makeSmallButton(image: "decentr-copy", title: "Copy", action: { [weak self] in
         if let seed = self?.seedPhrase {
             UIPasteboard.general.string = seed
+            self?.showMessage("Copied")
         }
     })
-    private lazy var downloadButton: UIButton = DC_UI.makeSmallButton(image: "decentr-download", title: "Download txt", action: {
-        
-    })
-    private lazy var printButton: UIButton = DC_UI.makeSmallButton(image: "decentr-print", title: "Print", action: {
-        
+    private lazy var printButton: UIButton = DC_UI.makeSmallButton(image: "decentr-print", title: "Print", action: { [weak self] in
+        if let seed = self?.seedPhrase {
+            let vc = UIActivityViewController(activityItems: [seed], applicationActivities: nil)
+            vc.excludedActivityTypes = self?.excludedActivityTypes() ?? []
+            vc.completionWithItemsHandler = { _, _, _, _ in
+                // nothing
+            }
+            self?.present(vc, animated: true, completion: nil)
+        }
     })
     private lazy var eyeButton: UIButton = DC_UI.makeEyeButton(action: { [weak self] in
         guard let self = self else { return }
@@ -155,10 +160,8 @@ final class DC_SignUp_Seed: UIViewController {
         
         let textPlaceholder: UIView = DC_UI.makeTextInputComponent(fieldLabel: seedLabel,
                                                                       eyeButton: eyeButton,
-                                                                      textView: textView)
-        textPlaceholder.snp.makeConstraints { make in
-            make.height.equalTo(200)
-        }
+                                                                      textView: textView,
+                                                                   height: UIDevice.isSmall ? 220 : 200)
         aloeStackView.addRow(textPlaceholder)
         aloeStackView.setInset(forRow: textPlaceholder, inset: .init(top: 15, left: 0, bottom: 0, right: 0))
         
@@ -168,17 +171,10 @@ final class DC_SignUp_Seed: UIViewController {
             make.height.equalTo(48)
         }
         
-        textPlaceholder.addSubview(downloadButton)
-        downloadButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(16)
-            make.left.equalTo(self.copyButton.snp.right).offset(12)
-            make.height.equalTo(48)
-        }
-        
         textPlaceholder.addSubview(printButton)
         printButton.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(16)
-            make.left.equalTo(self.downloadButton.snp.right).offset(12)
+            make.left.equalTo(self.copyButton.snp.right).offset(12)
             make.height.equalTo(48)
         }
         
@@ -214,21 +210,49 @@ final class DC_SignUp_Seed: UIViewController {
     }
     
     private func generateSeed() {
-//        let mnemonic = Mnemonic.create(strength: .hight, language: .english)
-//        self.seedPhrase = mnemonic
-//        self.textView.plainText = mnemonic
-//        self.textView.isProtected = true
-//
-//        let seed = Mnemonic.createSeed(mnemonic: mnemonic, withPassphrase: "")
-//
-//        print("[TEST] \rmnemonic: \(mnemonic)")
-//        print("[TEST] seed: \(seed.toHexString())")
+        guard let mnemonic = try? Mnemonic() else {
+            showLoginError()
+            return
+        }
+        self.seedPhrase = mnemonic.phrase
+        self.textView.plainText = mnemonic.phrase
+        self.textView.isProtected = true
+    }
+    
+    private func showLoginError(_ error: Error? = nil) {
+        let errorMessage = (error as NSError?)?.localizedDescription
+        let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
+            self?.navigationController?.popToRootViewController(animated: true)
+        }))
+        navigationController?.present(alert, animated: true)
+    }
+    
+    private func showMessage(_ message: String) {
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
+        navigationController?.present(alert, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        [copyButton, downloadButton, printButton].forEach({ $0.invalidateIntrinsicContentSize() })
+        [copyButton, printButton].forEach({ $0.invalidateIntrinsicContentSize() })
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    private func excludedActivityTypes() -> [UIActivity.ActivityType] {
+        [
+            .postToFacebook,
+            .postToTwitter,
+            .postToWeibo,
+            .assignToContact,
+            .saveToCameraRoll,
+            .addToReadingList,
+            .postToFlickr,
+            .postToVimeo,
+            .postToTencentWeibo,
+            .openInIBooks
+        ]
     }
 }

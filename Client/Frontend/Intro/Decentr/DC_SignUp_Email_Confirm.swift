@@ -6,6 +6,7 @@ import Foundation
 import SnapKit
 import UIKit
 import CHIOTPField
+import DecentrAPI
 
 final class DC_SignUp_Email_Confirm: UIViewController {
     
@@ -60,7 +61,7 @@ final class DC_SignUp_Email_Confirm: UIViewController {
     
     private var nextButtonBottomConstraint: Constraint? = nil
     private lazy var nextButton: UIButton = DC_UI.makeActionButton(text: "Confirm", action: { [weak self] in
-        self?.completion()
+        self?.sendConfirmation()
     })
     
     private lazy var resendLabel: UILabel = {
@@ -182,5 +183,28 @@ final class DC_SignUp_Email_Confirm: UIViewController {
         } else {
             resendLabel.text = "We’ve resend the code to your email. You can get the new one in \(60 - tick)"
         }
+    }
+    
+    private func sendConfirmation() {
+        guard let code = field.text else {
+            return
+        }
+        UIApplication.getKeyWindow()?.showLoader()
+        DecentrAPI.VulcanAPI.confirm(body: ConfirmRequest(code: code, email: email)) { [weak self] data, error in
+            UIApplication.getKeyWindow()?.removeLoader()
+            if let error = error {
+                self?.showLoginError(error)
+            } else {
+                self?.completion()
+            }
+        }
+    }
+    
+    private func showLoginError(_ error: Error? = nil) {
+        let errorMessage = (error as NSError?)?.localizedDescription
+        let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { _ in
+        }))
+        navigationController?.present(alert, animated: true)
     }
 }

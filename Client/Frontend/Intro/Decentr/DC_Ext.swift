@@ -320,3 +320,68 @@ public class LoaderView: UIView {
         activityIndicator.startAnimating()
     }
 }
+
+public enum ScreenScale: CGFloat, Equatable {
+    case x1 = 1.0
+    case x2 = 2.0
+    case x3 = 3.0
+    case unknown = 0
+}
+
+//https://www.ios-resolution.com/
+public enum ScreenSize: Comparable {
+    /// iPhone 5, SE
+    case undefined_small
+    /// iPhone 6, 6s, 7, 8
+    case inches_4_7
+    /// iPhone 6+, 6s+, 7+, 8+
+    case inches_5_5
+    /// iPhone  X, Xs, 11 Pro, 12/13 Mini
+    case inches_5_8
+    /// iPhone Xr, 11, 12, 12, 13 Pro
+    case inches_6_1
+    /// iPhone Xs Max, 11 Pro Max
+    case inches_6_5
+    /// iPhone 12/13 Pro Max
+    case inches_6_7
+    /// iPhone with height > 926 points
+    case undefined_big
+}
+
+public extension UIScreen {
+    static var wpScale: ScreenScale {
+        switch UIScreen.main.scale {
+        case 1.0: return .x1
+        case 2.0: return .x2
+        case 3.0: return .x3
+        default: return .unknown
+        }
+    }
+    
+    static var isSmall: Bool {
+        UIScreen.screenSize < .inches_4_7
+    }
+
+    static var screenSize: ScreenSize {
+        let size = UIScreen.main.bounds.size
+        let height = max(size.width, size.height)
+
+        switch height {
+        case 0 ..< 667: return .undefined_small
+        case 667: return (wpScale == .x3 ? .inches_5_5 : .inches_4_7)
+        case 736: return .inches_5_5
+        case 812: return .inches_5_8
+        case 844: return .inches_6_1
+        case 896: return (wpScale == .x3 ? .inches_6_5 : .inches_6_1)
+        case 926: return .inches_6_7
+        case let x where x > 926: return .undefined_big
+        default: return .undefined_big
+        }
+    }
+}
+
+public extension UIDevice {
+    static var isSmall: Bool {
+        UIScreen.screenSize <= .inches_4_7
+    }
+}

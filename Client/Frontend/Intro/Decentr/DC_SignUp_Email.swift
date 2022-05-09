@@ -96,6 +96,8 @@ final class DC_SignUp_Email: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addHideKeyboardWhenTappedAroundBehaviour()
+        
         DC_UI.styleVC(self)
         
         DC_UI.layout(on: self, titleLabel: titleLabel, descriptionLabel: descriptionLabel)
