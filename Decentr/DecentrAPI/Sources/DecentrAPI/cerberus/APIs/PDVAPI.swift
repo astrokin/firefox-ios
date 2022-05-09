@@ -43,12 +43,12 @@ public extension CerberusAPI.PDVAPI {
         let addressPreEscape = "\(address)"
         let addressPostEscape = addressPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{address}", with: addressPostEscape, options: .literal, range: nil)
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<PDV>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PDV>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -88,12 +88,12 @@ public extension CerberusAPI.PDVAPI {
         let addressPreEscape = "\(address)"
         let addressPostEscape = addressPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{address}", with: addressPostEscape, options: .literal, range: nil)
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<PDVMeta>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PDVMeta>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -126,7 +126,7 @@ public extension CerberusAPI.PDVAPI {
         let ownerPreEscape = "\(owner)"
         let ownerPostEscape = ownerPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{owner}", with: ownerPostEscape, options: .literal, range: nil)
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
@@ -135,7 +135,7 @@ public extension CerberusAPI.PDVAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[Int]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[Int]>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -169,12 +169,12 @@ public extension CerberusAPI.PDVAPI {
      */
     class func saveWithRequestBuilder(body: PDV) -> RequestBuilder<SavePDVResponse> {
         let path = "/pdv"
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<SavePDVResponse>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SavePDVResponse>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }

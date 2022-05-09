@@ -34,12 +34,12 @@ public extension CerberusAPI.ConfigsAPI {
      */
     class func getBlacklistConfigWithRequestBuilder() -> RequestBuilder<Blacklist> {
         let path = "/configs/blacklist"
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<Blacklist>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Blacklist>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -71,12 +71,12 @@ public extension CerberusAPI.ConfigsAPI {
      */
     class func getRewardsConfigWithRequestBuilder() -> RequestBuilder<ObjectTypes> {
         let path = "/configs/rewards"
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<ObjectTypes>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ObjectTypes>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

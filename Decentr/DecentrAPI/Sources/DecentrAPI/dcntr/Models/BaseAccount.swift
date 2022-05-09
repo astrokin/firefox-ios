@@ -1,0 +1,72 @@
+//
+//  BaseAccount.swift
+//  
+//
+//  Created by Alexey Strokin on 5/7/22.
+//
+
+import Foundation
+
+//{
+//    "account": {
+//        "@type": "/cosmos.auth.v1beta1.BaseAccount",
+//        "address": "decentr17wr6f2fwdl05se4w5k5f20wql7lncn9ua7lm84",
+//        "pub_key": {
+//            "@type": "/cosmos.crypto.secp256k1.PubKey",
+//            "key": "Al92taAeA4YtHRuZP5XlWQVJW15cEyn50Lu6oO2bitZm"
+//        },
+//        "account_number": "21383",
+//        "sequence": "1"
+//    }
+//}
+
+public struct BaseAccount: Codable {
+    let account: BaseAccountInfo?
+}
+
+public struct BaseAccountInfo: Codable {
+    let address: String?
+    let pub_key: BaseAccountInfoKey?
+    let account_number: String?
+    let sequence: String?
+}
+
+public struct BaseAccountInfoKey: Codable {
+    let key: String?
+}
+
+//{
+//    "balance": {
+//        "dec": "1.003215000000000000"
+//    }
+//}
+
+public struct BalanceDEC: Codable {
+    let balance: DEC_Balance?
+}
+
+public struct DEC_Balance: Codable {
+    let dec: String?
+}
+
+//{
+//    "balances": [
+//        {
+//            "denom": "udec",
+//            "amount": "4803661"
+//        }
+//    ],
+//    "pagination": {
+//        "next_key": null,
+//        "total": "1"
+//    }
+//}
+
+public struct BalancePDV: Codable {
+    let balances: [PDV_Balance]?
+}
+
+public struct PDV_Balance: Codable {
+    let denom: String?
+    let amount: String?
+}

@@ -5,7 +5,7 @@
 import Foundation
 import SnapKit
 import UIKit
-import HDWalletKit
+//import HDWalletKit
 import AloeStackView
 
 final class DC_SignUp_Seed: UIViewController {
@@ -214,15 +214,15 @@ final class DC_SignUp_Seed: UIViewController {
     }
     
     private func generateSeed() {
-        let mnemonic = Mnemonic.create(strength: .hight, language: .english)
-        self.seedPhrase = mnemonic
-        self.textView.plainText = mnemonic
-        self.textView.isProtected = true
-
-        let seed = Mnemonic.createSeed(mnemonic: mnemonic, withPassphrase: "")
-
-        print("[TEST] \rmnemonic: \(mnemonic)")
-        print("[TEST] seed: \(seed.toHexString())")
+//        let mnemonic = Mnemonic.create(strength: .hight, language: .english)
+//        self.seedPhrase = mnemonic
+//        self.textView.plainText = mnemonic
+//        self.textView.isProtected = true
+//
+//        let seed = Mnemonic.createSeed(mnemonic: mnemonic, withPassphrase: "")
+//
+//        print("[TEST] \rmnemonic: \(mnemonic)")
+//        print("[TEST] seed: \(seed.toHexString())")
     }
     
     override func viewWillAppear(_ animated: Bool) {

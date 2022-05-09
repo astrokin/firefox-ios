@@ -56,7 +56,7 @@ public extension CerberusAPI.ProfileAPI {
      */
     class func getProfilesWithRequestBuilder(address: Any) -> RequestBuilder<[APIProfile]> {
         let path = "/profiles"
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
@@ -64,7 +64,7 @@ public extension CerberusAPI.ProfileAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[APIProfile]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[APIProfile]>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

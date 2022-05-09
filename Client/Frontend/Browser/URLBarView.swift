@@ -503,10 +503,12 @@ class URLBarView: UIView {
             }
         } else {
             DispatchQueue.main.async {
-                self.locationTextField?.becomeFirstResponder()
-                // Need to set location again so text could be immediately selected.
-                self.setLocation(locationText, search: search)
-                self.locationTextField?.selectAll(nil)
+                #if !DECENTR
+                    self.locationTextField?.becomeFirstResponder()
+                    // Need to set location again so text could be immediately selected.
+                    self.setLocation(locationText, search: search)
+                    self.locationTextField?.selectAll(nil)
+                #endif
             }
         }
     }

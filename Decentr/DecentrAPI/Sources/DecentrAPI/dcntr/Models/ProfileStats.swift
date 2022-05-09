@@ -12,9 +12,9 @@ import Foundation
 public struct ProfileStats: Codable {
 
     public var postsCount: Int?
-    public var stats: [TheseusAPI.StatsItem]?
+    public var stats: [DcntrAPI.StatsItem]?
 
-    public init(postsCount: Int? = nil, stats: [TheseusAPI.StatsItem]? = nil) {
+    public init(postsCount: Int? = nil, stats: [DcntrAPI.StatsItem]? = nil) {
         self.postsCount = postsCount
         self.stats = stats
     }

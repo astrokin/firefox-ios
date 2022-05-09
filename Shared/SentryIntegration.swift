@@ -24,7 +24,8 @@ public class Sentry {
     public static let shared = Sentry()
 
     public lazy var client: Client? = {
-        return Client.shared
+        return nil
+//        return Client.shared
     }()
 
     public var crashedLastLaunch: Bool {

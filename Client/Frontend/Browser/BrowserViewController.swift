@@ -13,7 +13,9 @@ import XCGLogger
 import Account
 import MobileCoreServices
 import SDWebImage
-import Telemetry
+#if !DECENTR
+    import Telemetry
+#endif
 import Sentry
 
 private let KVOs: [KVOConstants] = [

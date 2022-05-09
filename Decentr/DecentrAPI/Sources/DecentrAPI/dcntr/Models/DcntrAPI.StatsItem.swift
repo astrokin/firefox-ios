@@ -10,7 +10,7 @@ import Foundation
 
 /** Key is RFC3999 date, value is PDV. */
 
-public extension TheseusAPI {
+public extension DcntrAPI {
     
     struct StatsItem: Codable {
         

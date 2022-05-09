@@ -8,9 +8,16 @@ import UIKit
 
 final class DC_Password: UIViewController {
     
-    private let didSavePassword: () -> ()
+    enum Mode {
+        case createPassword
+        case enterPassword
+    }
     
-    init(didSavePassword: @escaping () -> ()) {
+    let mode: Mode
+    private let didSavePassword: (String) -> ()
+    
+    init(mode: Mode, didSavePassword: @escaping (String) -> ()) {
+        self.mode = mode
         self.didSavePassword = didSavePassword
         
         super.init(nibName: nil, bundle: nil)
@@ -29,12 +36,15 @@ final class DC_Password: UIViewController {
     
     private var savePasswordButtonBottomConstraint: Constraint? = nil
     
-    private lazy var savePasswordButton: UIButton = DC_UI.makeActionButton(text: "Save password", action: { [weak self] in
-        DC_Shared_Info.shared.savePassword(self?.passwordTextView.plainText)
-        self?.didSavePassword()
+    private lazy var savePasswordButton: UIButton = DC_UI.makeActionButton(text: mode == .createPassword ? "Save password" : "Done",
+                                                                           action: { [weak self] in
+        if let pass = self?.passwordTextView.plainText {
+            DC_Shared_Info.shared.savePassword(pass)
+            self?.didSavePassword(pass)
+        }
     })
-    private lazy var titleLabel: UILabel = DC_UI.makeTitleLabel("Create a new password")
-    private lazy var descriptionLabel: UILabel = DC_UI.makeDescriptionLabel("At least 8 symbols that you’ll use to log in to your account.")
+    private lazy var titleLabel: UILabel = DC_UI.makeTitleLabel(mode == .createPassword ? "Create a new password" : "Enter password")
+    private lazy var descriptionLabel: UILabel = DC_UI.makeDescriptionLabel(mode == .createPassword ? "At least 8 symbols that you’ll use to log in to your account." : "Your Decentr account password")
     private lazy var eyeButton: UIButton = DC_UI.makeEyeButton(action: { [weak self] in
         guard let self = self else { return }
         
@@ -64,19 +74,30 @@ final class DC_Password: UIViewController {
         
         DC_UI.layout(on: self, titleLabel: titleLabel, descriptionLabel: descriptionLabel)
         
-        let passwordPlaceholder: UIView = DC_UI.makeTextInputComponent(for: self,
-                                                                          topLayoutView: descriptionLabel,
-                                                                          fieldLabel: passwordLabel,
-                                                                          eyeButton: eyeButton,
-                                                                          textView: passwordTextView,
-                                                                          height: 80)
+        switch mode {
+        case .createPassword:
+            let passwordPlaceholder: UIView = DC_UI.makeTextInputComponent(for: self,
+                                                                              topLayoutView: descriptionLabel,
+                                                                              fieldLabel: passwordLabel,
+                                                                              eyeButton: eyeButton,
+                                                                              textView: passwordTextView,
+                                                                              height: 80)
+            DC_UI.makeTextInputComponent(for: self,
+                                            topLayoutView: passwordPlaceholder,
+                                            fieldLabel: repeatPasswordLabel,
+                                            eyeButton: nil,
+                                            textView: repeatPasswordTextView,
+                                            height: 80)
+        case .enterPassword:
+            DC_UI.makeTextInputComponent(for: self,
+                                            topLayoutView: descriptionLabel,
+                                            fieldLabel: passwordLabel,
+                                            eyeButton: eyeButton,
+                                            textView: passwordTextView,
+                                            height: 80)
+        }
         
-        DC_UI.makeTextInputComponent(for: self,
-                                        topLayoutView: passwordPlaceholder,
-                                        fieldLabel: repeatPasswordLabel,
-                                        eyeButton: nil,
-                                        textView: repeatPasswordTextView,
-                                        height: 80)
+        
         
         view.addSubview(savePasswordButton)
         savePasswordButton.snp.makeConstraints { make in
@@ -112,11 +133,16 @@ final class DC_Password: UIViewController {
 extension DC_Password {
     
     func isValidInput() -> Bool {
-        let passwdText = passwordTextView.plainText
-        let repeatPasswdText = repeatPasswordTextView.plainText
-        
-        guard passwdText.count > 7, repeatPasswdText.count > 7 else { return false}
-        
-        return passwdText == repeatPasswdText
+        switch mode {
+        case .createPassword:
+            let passwdText = passwordTextView.plainText
+            let repeatPasswdText = repeatPasswordTextView.plainText
+            guard passwdText.count > 7, repeatPasswdText.count > 7 else { return false}
+            return passwdText == repeatPasswdText
+        case .enterPassword:
+            let passwdText = passwordTextView.plainText
+            guard passwdText.count > 7 else { return false}
+            return true
+        }
     }
 }

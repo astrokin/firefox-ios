@@ -58,7 +58,7 @@ class IntroViewController: UIViewController, OnViewDismissable {
         welcomeCard.signInClosure = { [weak self] in
             self?.signInFlow = DC_SignIn_Flow(navigationController: self?.navigationController)
             self?.signInFlow?.startSignIn()
-            self?.signInFlow?.completion = { [weak self] in
+            self?.signInFlow?.completion = { [weak self] _ in
                 self?.didFinishClosure?(self, nil)
             }
         }
@@ -81,8 +81,8 @@ class IntroViewController: UIViewController, OnViewDismissable {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        onViewDismissed?()
-        onViewDismissed = nil
+//        onViewDismissed?()
+//        onViewDismissed = nil
     }
 }
 

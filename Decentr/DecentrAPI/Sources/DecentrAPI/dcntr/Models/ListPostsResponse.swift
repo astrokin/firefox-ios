@@ -15,9 +15,9 @@ public struct ListPostsResponse: Codable {
     /** ProfileStats contains profiles stats. */
     public var profileStats: [String:ProfileStats]?
     /** Posts&#x27; statistics dictionary where key is a full form ID (owner/uuid) and value is statistics */
-    public var stats: [String:[TheseusAPI.StatsItem]]?
+    public var stats: [String:[DcntrAPI.StatsItem]]?
 
-    public init(posts: [Post]? = nil, profileStats: [String:ProfileStats]? = nil, stats: [String:[TheseusAPI.StatsItem]]? = nil) {
+    public init(posts: [Post]? = nil, profileStats: [String:ProfileStats]? = nil, stats: [String:[DcntrAPI.StatsItem]]? = nil) {
         self.posts = posts
         self.profileStats = profileStats
         self.stats = stats

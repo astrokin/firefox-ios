@@ -4,6 +4,7 @@
 
 import Foundation
 import UIKit
+import Shared
 
 struct SignUpData {
     var seedPhrase: String?
@@ -41,6 +42,7 @@ final class DC_SignUp_Flow {
     
     func startSignUp() {
         goToStep(.seedPhrase)
+//        (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
     }
     
     private var currentStap: Step!
@@ -63,7 +65,7 @@ final class DC_SignUp_Flow {
             }
             navigationController?.pushViewController(vc, animated: true)
         case .password:
-            let vc = DC_Password { [weak self] in
+            let vc = DC_Password(mode: .createPassword) { [weak self] _ in
                 self?.goToStep(.confirmEmail)
             }
             navigationController?.pushViewController(vc, animated: true)
@@ -74,7 +76,7 @@ final class DC_SignUp_Flow {
             navigationController?.pushViewController(vc, animated: true)
         case .userSettings:
             var _info = data
-            _info.currentPassword = DC_Shared_Info.shared.password
+            _info.currentPassword = DC_Shared_Info.shared.getPassword()
             let vc = DC_SignUp_Info(info: _info) { [weak self] info in
                 self?.data = info
                 self?.goToStep(.trackingSettings)

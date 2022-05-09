@@ -9,7 +9,7 @@ import SnapKit
 final class DC_Enter_Seed: UIViewController {
 
     var seedPhrase: String?
-    var completion: (() -> ())?
+    var completion: ((String) -> ())?
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -39,7 +39,9 @@ final class DC_Enter_Seed: UIViewController {
     private var importUserButtonBottomConstraint: Constraint? = nil
     
     private lazy var importUserButton: UIButton = DC_UI.makeActionButton(text: "Import User") { [weak self] in
-        self?.completion?()
+        if let seed = self?.textView.plainText, Self.isValidSeed(seed) {
+            self?.completion?(seed)
+        }
     }
     
     private lazy var titleLabel: UILabel = DC_UI.makeTitleLabel("Import with seed phrase")
@@ -53,16 +55,23 @@ final class DC_Enter_Seed: UIViewController {
     })
     private lazy var textView: ProtectedTextView = {
         let textView = ProtectedTextView(textColor: DC_UI.primaryColor, onChangeText: { [weak self] text in
-            self?.importUserButton.isEnabled = text.count > 0
+            self?.importUserButton.isEnabled = Self.isValidSeed(text)
             self?.eyeButton.isEnabled = text.count > 0
         })
-        if let text = seedPhrase, text.count > 0 {
+        if let text = seedPhrase, Self.isValidSeed(text) {
             textView.plainText = text
             textView.isProtected = true
             importUserButton.isEnabled = true
         }
         return textView
     }()
+    
+    private static func isValidSeed(_ enteredPlainSeed: String) -> Bool {
+        enteredPlainSeed.removingMultipleSpaces()
+            .split(separator: " ")
+            .filter({ $0.count > 2 })
+            .count == 24
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,5 +128,20 @@ final class DC_Enter_Seed: UIViewController {
         if seedPhrase == nil, textView.canBecomeFirstResponder {
             textView.becomeFirstResponder()
         }
+    }
+}
+
+extension String {
+    
+    func removingMultipleSpaces() -> String {
+        let doubleSpace = "  "
+        if contains(doubleSpace) {
+            return replacingOccurrences(of: doubleSpace, with: " ").removingMultipleSpaces()
+        }
+        return self
+    }
+    
+    func removeLeadingZero() -> String {
+        replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
     }
 }

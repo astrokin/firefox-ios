@@ -42,12 +42,12 @@ public extension CerberusAPI.PDVRewardsAPI {
         let ownerPreEscape = "\(owner)"
         let ownerPostEscape = ownerPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{owner}", with: ownerPostEscape, options: .literal, range: nil)
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<PDVRewardDelta>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PDVRewardDelta>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -75,12 +75,12 @@ public extension CerberusAPI.PDVRewardsAPI {
      */
     class func pDVRewardsPoolWithRequestBuilder() -> RequestBuilder<PDVRewardsPool> {
         let path = "/pdv-rewards/pool"
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<PDVRewardsPool>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PDVRewardsPool>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

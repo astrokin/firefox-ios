@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 
-public extension TheseusAPI.CommunityAPI {
+public extension DcntrAPI.CommunityAPI {
     /**
      Get post by owner and uuid.
 
@@ -77,7 +77,7 @@ public extension TheseusAPI.CommunityAPI {
         let uuidPreEscape = "\(uuid)"
         let uuidPostEscape = uuidPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{uuid}", with: uuidPostEscape, options: .literal, range: nil)
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = DcntrAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
@@ -85,7 +85,7 @@ public extension TheseusAPI.CommunityAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<GetPostResponse>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<GetPostResponse>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -121,12 +121,12 @@ public extension TheseusAPI.CommunityAPI {
         let slugPreEscape = "\(slug)"
         let slugPostEscape = slugPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{slug}", with: slugPostEscape, options: .literal, range: nil)
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = DcntrAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<SharePost>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SharePost>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -236,7 +236,7 @@ public extension TheseusAPI.CommunityAPI {
      */
     class func listPostsWithRequestBuilder(category: Any? = nil, sortBy: SortBy_listPosts? = nil, orderBy: OrderBy_listPosts? = nil, owner: Any? = nil, likedBy: Any? = nil, followedBy: Any? = nil, limit: Any? = nil, after: Any? = nil, from: Any? = nil, to: Any? = nil, requestedBy: Any? = nil) -> RequestBuilder<ListPostsResponse> {
         let path = "/posts"
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = DcntrAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
@@ -254,7 +254,7 @@ public extension TheseusAPI.CommunityAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<ListPostsResponse>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ListPostsResponse>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

@@ -3,20 +3,21 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/
 
 import Foundation
-import CryptoSwift
-import Account
+import Shared
+import DecentrAPI
 
 final class DC_SignIn_Flow {
     
     enum Step {
         case scanQR
-        case enterSeed(base64Enc: String?)
+        case enterSeed
         case enterPassword
     }
     
     weak var navigationController: UINavigationController?
-    var completion: (() -> ())?
+    var completion: ((DecentrAccount) -> ())?
     
+    var enteredSeed: String?
     var decryptedSeed: String?
     var encryptedSeedFromQR: String?
     var password: String?
@@ -27,46 +28,64 @@ final class DC_SignIn_Flow {
     
     func startSignIn() {
         goToStep(.scanQR)
+//        (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
     }
     
     private func goToStep(_ step: Step) {
+        if step != .scanQR {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+                //remove camera to optimize resources
+                if let idx = self.navigationController?.viewControllers.firstIndex(where: { $0 is DC_Login }) {
+                    self.navigationController?.viewControllers.remove(at: idx)
+                }
+            }
+        }
         switch step {
         case .scanQR:
             let vc = DC_Login()
             vc.qrCodeScanner.didScanQRCodeWithURL = { url in
             }
-            vc.qrCodeScanner.didScanQRCodeWithText = { [weak self] text in
-                self?.goToStep(.enterSeed(base64Enc: text))
-            }
-            vc.completion = { [weak self] in
-                self?.goToStep(.enterSeed(base64Enc: nil))
-            }
-            navigationController?.pushViewController(vc, animated: true)
-        case let .enterSeed(base64EncryptedSeed):
-            let vc = DC_Enter_Seed()
-            vc.seedPhrase = nil
-            if let seed = base64EncryptedSeed {
+            vc.qrCodeScanner.didScanQRCodeWithText = { [weak self] seed in
                 var components = URLComponents(string: seed)
                 components?.scheme = "decentr"
                 if let enc = components?.queryItems?.first(where: { $0.name == "encryptedSeed" })?.value {
-                    self.encryptedSeedFromQR = enc
-                    do {
-                        print("AES encrypted: \(enc)")
-                        let testData: String = "" //password for base64 seed encryption
-                        let decryptedSeed = try Self.decrypt(enc, passwordUtf8: testData)
-                        vc.seedPhrase = decryptedSeed
-                    } catch {
-                        print("AES decrypted: error \(error)")
-                    }
+                    self?.encryptedSeedFromQR = enc
+                    self?.goToStep(.enterPassword)
                 }
             }
             vc.completion = { [weak self] in
+                self?.goToStep(.enterSeed)
+            }
+            navigationController?.pushViewController(vc, animated: true)
+        case .enterSeed:
+            let vc = DC_Enter_Seed()
+            vc.seedPhrase = nil
+            vc.completion = { [weak self] seed in
+                self?.enteredSeed = seed
                 self?.goToStep(.enterPassword)
             }
             navigationController?.pushViewController(vc, animated: true)
         case .enterPassword:
-            let vc = DC_Password(didSavePassword: { [weak self] in
-                self?.completion?()
+            let vc = DC_Password(mode: .enterPassword, didSavePassword: { [weak self] pass in
+                if let encryptedSeedFromQR = self?.encryptedSeedFromQR {
+                    do {
+                        let keyStore = KeyStore(encryptedSeed: encryptedSeedFromQR, password: pass)
+                        let keys = try keyStore.loadKeys()
+                        self?.getProfile(keys)
+                    } catch {
+                        self?.showLoginError()
+                    }
+                } else if let enteredSeed = self?.enteredSeed {
+                    do {
+                        let keyStore = KeyStore(seedPhrase: enteredSeed, password: pass)
+                        let keys = try keyStore.loadKeys()
+                        self?.getProfile(keys)
+                    } catch {
+                        self?.showLoginError()
+                    }
+                } else {
+                    self?.showLoginError()
+                }
             })
             navigationController?.pushViewController(vc, animated: true)
         }
@@ -75,19 +94,24 @@ final class DC_SignIn_Flow {
 
 private extension DC_SignIn_Flow {
     
-    static func decrypt(_ base64String: String, passwordUtf8: String) throws -> String {
-        let encrypted = Data(base64Encoded: base64String)!
-        let salt = [UInt8](encrypted[8 ..< 16])
-        let evp = try EVP_KDF_Util.generate_evp_kdf_aes256cbc_key_iv(pass: passwordUtf8, saltData: salt) // key + iv
-        let aes = try AES(key: Array<UInt8>.init(hex: evp.0),
-                          blockMode: CBC(iv: Array<UInt8>.init(hex: evp.1)),
-                          padding: .pkcs7)
-        let data = [UInt8](encrypted[16 ..< encrypted.count])
-        let decrypted = try aes.decrypt(data)
-        
-        guard let decryptedStr = String(bytes: decrypted, encoding: .utf8) else {
-            throw AES.Error.invalidData
+    private func showLoginError(_ error: Error? = nil) {
+        let errorMessage = (error as NSError?)?.localizedDescription
+        let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
+            self?.navigationController?.popToRootViewController(animated: true)
+            self?.startSignIn()
+        }))
+        navigationController?.present(alert, animated: true)
+    }
+    
+    private func getProfile(_ keys: KeyStore.Keys) {
+        DC_Shared_Info.shared.refreshAccountInfo(address: keys.address) { [weak self] result in
+            switch result {
+            case let .failure(error):
+                self?.showLoginError(error)
+            case let .success(account):
+                self?.completion?(account)
+            }
         }
-        return decryptedStr
     }
 }

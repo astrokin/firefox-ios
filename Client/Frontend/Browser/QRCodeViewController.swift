@@ -286,7 +286,8 @@ extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
         } else {
             self.captureSession.stopRunning()
             stopScanLineAnimation()
-            self.dismiss(animated: true, completion: {
+            
+            func processScanResults() {
                 guard let metaData = metadataObjects.first as? AVMetadataMachineReadableCodeObject, let text = metaData.stringValue else {
                         Sentry.shared.sendWithStacktrace(message: "Unable to scan QR code", tag: .general)
                         return
@@ -305,7 +306,15 @@ extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
                         self.qrCodeDelegate?.didScanQRCodeWithText(text)
                     }
                 }
-            })
+            }
+            
+            if self.navigationController == nil {
+                self.dismiss(animated: true, completion: {
+                    processScanResults()
+                })
+            } else {
+                processScanResults()
+            }
         }
     }
 }

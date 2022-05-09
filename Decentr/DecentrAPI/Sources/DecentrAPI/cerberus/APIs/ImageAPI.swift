@@ -39,12 +39,12 @@ public extension CerberusAPI.ImageAPI {
      */
     class func saveWithRequestBuilder() -> RequestBuilder<SaveImageResponse> {
         let path = "/images"
-        let URLString = SwaggerClientAPI.basePath + path
+        let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<SaveImageResponse>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SaveImageResponse>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

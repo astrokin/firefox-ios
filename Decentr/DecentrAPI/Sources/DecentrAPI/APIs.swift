@@ -6,11 +6,41 @@
 
 import Foundation
 
-open class SwaggerClientAPI {
-    public static var basePath = "/v1"
+public class APIs { ///super class for app APIs data
     public static var credential: URLCredential?
-    public static var customHeaders: [String:String] = [:]
-    public static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
+    public static var customHeaders: [String:String] {
+        let info = Bundle.main.infoDictionary
+        let appVersion = info?["CFBundleShortVersionString"] as? String ?? "Unknown"
+        let appBuild = info?["CFBundleVersion"] as? String ?? "Unknown"
+
+        return [
+            "Content-Type": "application/json",
+            "app-version-code": "\(appVersion)/\(appBuild)",
+            "platform": "ios",
+            "locale": "\(Locale.current.languageCode ?? "")"
+        ]
+    }
+}
+
+extension CerberusAPI {
+    open class Data {
+        public static var basePath = "https://cerberus.mainnet.decentr.xyz/v1"
+        public static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
+    }
+}
+
+extension VulcanAPI {
+    open class Data {
+        public static var basePath = "https://vulcan.mainnet.decentr.xyz"
+        public static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
+    }
+}
+
+extension DcntrAPI {
+    open class Data {
+        public static var basePath = "https://rest.mainnet.decentr.xyz"
+        public static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
+    }
 }
 
 open class RequestBuilder<T> {
@@ -31,7 +61,7 @@ open class RequestBuilder<T> {
         self.isBody = isBody
         self.headers = headers
 
-        addHeaders(SwaggerClientAPI.customHeaders)
+        addHeaders(APIs.customHeaders)
     }
 
     open func addHeaders(_ aHeaders:[String:String]) {
@@ -50,7 +80,7 @@ open class RequestBuilder<T> {
     }
 
     open func addCredential() -> Self {
-        self.credential = SwaggerClientAPI.credential
+        self.credential = APIs.credential
         return self
     }
 }

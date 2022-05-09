@@ -6,7 +6,9 @@ import UIKit
 import Shared
 import Storage
 import MozillaAppServices
-import Telemetry
+#if !DECENTR
+    import Telemetry
+#endif
 
 private enum SearchListSection: Int, CaseIterable {
     case searchSuggestions
@@ -290,10 +292,10 @@ class SearchViewController: SiteTableViewController, KeyboardHelperDelegate, Loa
             assertionFailure()
             return
         }
-
+        #if !DECENTR
         Telemetry.default.recordSearch(location: .quickSearch, searchEngine: engine.engineID ?? "other")
         GleanMetrics.Search.counts["\(engine.engineID ?? "custom").\(SearchesMeasurement.SearchLocation.quickSearch.rawValue)"].add()
-
+        #endif
         searchDelegate?.searchViewController(self, didSelectURL: url, searchTerm: "")
     }
 
@@ -469,9 +471,11 @@ class SearchViewController: SiteTableViewController, KeyboardHelperDelegate, Loa
             let engine = searchEngines.defaultEngine
             guard let suggestion = suggestions?[indexPath.row] else { return }
             if let url = engine.searchURLForQuery(suggestion) {
+                #if !DECENTR
                 Telemetry.default.recordSearch(location: .suggestion, searchEngine: engine.engineID ?? "other")
                 GleanMetrics.Search.counts["\(engine.engineID ?? "custom").\(SearchesMeasurement.SearchLocation.suggestion.rawValue)"].add()
                 searchDelegate?.searchViewController(self, didSelectURL: url, searchTerm: suggestion)
+                #endif
             }
         case .openedTabs:
             let tab = self.filteredOpenedTabs[indexPath.row]
