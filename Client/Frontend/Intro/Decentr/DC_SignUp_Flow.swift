@@ -110,7 +110,7 @@ final class DC_SignUp_Flow {
             showLoginError()
             return
         }
-        VulcanAPI.register(body: RegisterRequest(address: keys.address, email: email, recaptchaResponse: "", referralCode: "")) { [weak self] data, error in
+        VulcanAPI.register(body: RegisterRequest(address: keys.address, email: email)) { [weak self] data, error in
             if let error = error {
                 self?.showLoginError(error)
                 return
