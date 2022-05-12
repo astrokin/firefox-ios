@@ -103,10 +103,22 @@ class AppSettingsTableViewController: SettingsTableViewController, FeatureFlagsP
                 SettingSection(footerTitle: NSAttributedString(string: String.DefaultBrowserCardDescription), children: [DefaultBrowserSetting()])
             ]
         }
-
+        
+        #if DECENTR
         let accountSectionTitle = NSAttributedString(string: .FxAFirefoxAccount)
 
-        let footerText = DC_Shared_Info.shared.account == nil ? NSAttributedString(string: .FxASyncUsageDetails) : nil
+        let footerText = DC_Shared_Info.shared.isLoggedIn ? NSAttributedString(string: .FxASyncUsageDetails) : nil
+        settings += [
+            SettingSection(title: accountSectionTitle, footerTitle: footerText, children: [
+                // Without a Decentr Account:
+                DecentrConnectSetting(settings: self),
+                // With a Decentr Account:
+                DecentrAccountSetting(settings: self),
+            ])]
+        #else
+        let accountSectionTitle = NSAttributedString(string: .FxAFirefoxAccount)
+
+        let footerText = !profile.hasAccount() ? NSAttributedString(string: .FxASyncUsageDetails) : nil
         settings += [
             SettingSection(title: accountSectionTitle, footerTitle: footerText, children: [
                 // Without a Decentr Account:
@@ -116,7 +128,8 @@ class AppSettingsTableViewController: SettingsTableViewController, FeatureFlagsP
                 AccountStatusSetting(settings: self),
                 SyncNowSetting(settings: self)
             ] + accountChinaSyncSetting )]
-
+        #endif
+        
         settings += [ SettingSection(title: NSAttributedString(string: .SettingsGeneralSectionTitle), children: generalSettings)]
 
         var privacySettings = [Setting]()

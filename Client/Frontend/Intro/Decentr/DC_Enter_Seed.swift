@@ -102,7 +102,7 @@ final class DC_Enter_Seed: UIViewController {
             self.importUserButtonBottomConstraint = make.bottom.equalTo(self.scanQRButton.snp.top).offset(-16).constraint
         }
         
-        DC_UI.embedBackButton(on: self)
+        DC_UI.embedNavBackButton(on: self)
         
         addKeyboardChangeFrameObserver(willShow: { [weak self] height in
             guard let self = self else { return }

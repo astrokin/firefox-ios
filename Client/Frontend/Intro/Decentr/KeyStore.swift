@@ -18,37 +18,51 @@ struct KeyStore {
     enum Error: Swift.Error {
         case missingPassword
         case missingEncryptedSeed
+        case missingEncryptedSeedData
+        case invalidEncryptedSeedData
     }
     
     let seedPhrase: String //base64 encrypted seed phrase in case of encrypted init
     let password: String?
     private let isEncryptedSeed: Bool
     
-    init(encryptedSeed: String, password: String?) {
+    init(encryptedSeed: String, password: String) {
         self.seedPhrase = encryptedSeed
-        self.password = password ?? DC_Shared_Info.shared.getPassword()
+        self.password = password
         self.isEncryptedSeed = true
     }
     
-    init(seedPhrase: String, password: String?) {
+    init(seedPhrase: String) {
         self.seedPhrase = seedPhrase
-        self.password = password ?? DC_Shared_Info.shared.getPassword()
+        self.password = nil
         self.isEncryptedSeed = false
     }
     
     init(info: DecentrInfo = DC_Shared_Info.shared) throws {
-        guard let seed = info.getSeedPhrase() else {
-            throw Error.missingEncryptedSeed
+        if let seed = info.getSeedPhrase(), let password = info.getPassword() {
+            self.init(encryptedSeed: seed, password: password)
+        } else if let encryptedData = UserDefaults.standard.value(forKey: "Decentr.Seed.Enc") as? Data,
+                  let aesKey = info.getAESKey(),
+                    let aesIV = info.getAESIV() {
+            let aes = try AES(key: aesKey, iv: aesIV)
+            let decryptedBytes = try aes.decrypt(encryptedData.bytes)
+            let decryptedData = Data(decryptedBytes)
+            if let seed = String(data: decryptedData, encoding: .utf8) {
+                self.init(seedPhrase: seed)
+            } else {
+                throw Error.invalidEncryptedSeedData
+            }
+        } else {
+            throw Error.missingEncryptedSeedData
         }
-        self.init(encryptedSeed: seed, password: info.getPassword())
     }
     
     func loadKeys() throws -> Keys {
-        guard let password = password else {
-            throw Error.missingPassword
-        }
         let seed: String
         if isEncryptedSeed {
+            guard let password = password else {
+                throw Error.missingPassword
+            }
             seed = try Self.decrypt(seedPhrase, passwordUtf8: password)
         } else {
             seed = seedPhrase
@@ -85,3 +99,4 @@ struct KeyStore {
         return decryptedStr
     }
 }
+

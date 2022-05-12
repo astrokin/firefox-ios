@@ -15,11 +15,11 @@ public struct APIProfile: Codable {
     public var avatar: String?
     public var banned: Bool?
     public var bio: String?
-    public var birthday: String?
-    public var createdAt: Int64?
+    public var birthday: String? //"1986-03-09"
+    public var createdAt: Int64? //1644319784
     public var emails: [String]?
     public var firstName: String?
-    public var gender: String?
+    public var gender: String? //"male"
     public var lastName: String?
 
     public init(address: String? = nil, avatar: String? = nil, banned: Bool? = nil, bio: String? = nil, birthday: String? = nil, createdAt: Int64? = nil, emails: [String]? = nil, firstName: String? = nil, gender: String? = nil, lastName: String? = nil) {

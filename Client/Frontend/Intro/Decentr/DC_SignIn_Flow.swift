@@ -28,9 +28,6 @@ final class DC_SignIn_Flow {
     
     func startSignIn() {
         goToStep(.scanQR)
-        #if !DEBUG
-            (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
-        #endif
     }
     
     private func goToStep(_ step: Step) {
@@ -64,7 +61,17 @@ final class DC_SignIn_Flow {
             vc.seedPhrase = nil
             vc.completion = { [weak self] seed in
                 self?.enteredSeed = seed
-                self?.goToStep(.enterPassword)
+                if let enteredSeed = self?.enteredSeed {
+                    do {
+                        let keyStore = KeyStore(seedPhrase: enteredSeed)
+                        let keys = try keyStore.loadKeys()
+                        self?.getProfile(keys, onSuccess: {
+                            DC_Shared_Info.shared.savePlainSeedPhrase(enteredSeed)
+                        })
+                    } catch {
+                        self?.showLoginError()
+                    }
+                }
             }
             navigationController?.pushViewController(vc, animated: true)
         case .enterPassword:
@@ -73,15 +80,9 @@ final class DC_SignIn_Flow {
                     do {
                         let keyStore = KeyStore(encryptedSeed: encryptedSeedFromQR, password: pass)
                         let keys = try keyStore.loadKeys()
-                        self?.getProfile(keys)
-                    } catch {
-                        self?.showLoginError()
-                    }
-                } else if let enteredSeed = self?.enteredSeed {
-                    do {
-                        let keyStore = KeyStore(seedPhrase: enteredSeed, password: pass)
-                        let keys = try keyStore.loadKeys()
-                        self?.getProfile(keys)
+                        self?.getProfile(keys, onSuccess: {
+                            DC_Shared_Info.shared.saveEncryptedSeedPhrase(encryptedSeedFromQR)
+                        })
                     } catch {
                         self?.showLoginError()
                     }
@@ -106,7 +107,7 @@ private extension DC_SignIn_Flow {
         navigationController?.present(alert, animated: true)
     }
     
-    private func getProfile(_ keys: KeyStore.Keys) { 
+    private func getProfile(_ keys: KeyStore.Keys, onSuccess: @escaping (() -> ())) {
         UIApplication.getKeyWindow()?.showLoader()
         DC_Shared_Info.shared.refreshAccountInfo(address: keys.address) { [weak self] result in
             UIApplication.getKeyWindow()?.removeLoader()
@@ -114,7 +115,11 @@ private extension DC_SignIn_Flow {
             case let .failure(error):
                 self?.showLoginError(error)
             case let .success(account):
+                onSuccess()
                 self?.completion?(account)
+                #if !DEBUG
+                    (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+                #endif
             }
         }
     }

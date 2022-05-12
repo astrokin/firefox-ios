@@ -136,6 +136,7 @@ class BrowserViewController: UIViewController {
     let downloadQueue = DownloadQueue()
     var keyboardPressesHandler = KeyboardPressesHandler()
 
+    fileprivate var introScreenWasPresentedDuringCurrentSession: Bool = false
     fileprivate var shouldShowIntroScreen: Bool { profile.prefs.intForKey(PrefsKeys.IntroSeen) == nil }
 
     init(profile: Profile, tabManager: TabManager) {
@@ -467,7 +468,11 @@ class BrowserViewController: UIViewController {
         // not flash before we present. This change of alpha also participates in the animation when
         // the intro view is dismissed.
         if UIDevice.current.userInterfaceIdiom == .phone {
-            self.view.alpha = (profile.prefs.intForKey(PrefsKeys.IntroSeen) != nil) ? 1.0 : 0.0
+            if !introScreenWasPresentedDuringCurrentSession {
+                self.view.alpha = (profile.prefs.intForKey(PrefsKeys.IntroSeen) != nil) ? 1.0 : 0.0
+            } else {
+                self.view.alpha = 1.0
+            }
         }
 
         if !displayedRestoreTabsAlert && !cleanlyBackgrounded() && crashedLastLaunch() {
@@ -1945,7 +1950,13 @@ extension BrowserViewController: UIAdaptivePresentationControllerDelegate {
 extension BrowserViewController {
     func presentIntroViewController(_ alwaysShow: Bool = false) {
         if alwaysShow || shouldShowIntroScreen {
+            #if DECENTR
+            if !DC_Shared_Info.shared.isLoggedIn {
+                showProperIntroVC()
+            }
+            #else
             showProperIntroVC()
+            #endif
         }
     }
 
@@ -2047,9 +2058,17 @@ extension BrowserViewController {
     }
 
     private func showProperIntroVC() {
+        guard !introScreenWasPresentedDuringCurrentSession else { return }
+        
         let introViewController = IntroViewController()
         introViewController.didFinishClosure = { controller, fxaLoginFlow in
-            self.profile.prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+            #if DECENTR
+            if DC_Shared_Info.shared.isLoggedIn {
+                self.profile.prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+            }
+            #else
+                self.profile.prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+            #endif
             controller?.dismiss(animated: true) {
                 if self.navigationController?.viewControllers.count ?? 0 > 1 {
                     _ = self.navigationController?.popToRootViewController(animated: true)
@@ -2060,6 +2079,7 @@ extension BrowserViewController {
                 }
             }
         }
+        introScreenWasPresentedDuringCurrentSession = true
         self.introVCPresentHelper(introViewController: introViewController)
     }
 

@@ -79,7 +79,7 @@ final class DC_SignUp_Info: UIViewController {
         super.viewDidLoad()
         
         DC_UI.styleVC(self)
-        DC_UI.embedBackButton(on: self)
+        DC_UI.embedNavBackButton(on: self)
         
         view.addSubview(aloeStackView)
         aloeStackView.snp.makeConstraints { make in
@@ -109,7 +109,7 @@ final class DC_SignUp_Info: UIViewController {
         aloeStackView.addRow(subtitle2)
         aloeStackView.setInset(forRow: subtitle2, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
         
-        let fn = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("First name"), textView: firstName, height: 80)
+        let fn = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("First name *"), textView: firstName, height: 80)
         aloeStackView.addRow(fn)
         
         let ln = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Last name"), textView: lastName, height: 80)
@@ -120,17 +120,6 @@ final class DC_SignUp_Info: UIViewController {
         
         let gen = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Gender"), textView: gender, height: 80)
         aloeStackView.addRow(gen)
-        
-        let title3 = DC_UI.makeTitleLabel("Connected email")
-        aloeStackView.addRow(title3)
-        aloeStackView.setInset(forRow: title3, inset: .init(top: 15, left: 0, bottom: 0, right: 0))
-        
-        let subtitle3 = DC_UI.makeDescriptionLabel("We’ll use this email to sent the confirmation code, so be sure you have an access to it.")
-        aloeStackView.addRow(subtitle3)
-        aloeStackView.setInset(forRow: subtitle3, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
-        
-        let email = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Email"), textView: self.email, height: 80)
-        aloeStackView.addRow(email)
         
         let title4 = DC_UI.makeTitleLabel("Set new password")
         aloeStackView.addRow(title4)
@@ -149,14 +138,19 @@ final class DC_SignUp_Info: UIViewController {
         let npr = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("New password confirmation"), textView: newRepeatPassword, height: 80)
         aloeStackView.addRow(npr)
         
-        aloeStackView.setInset(forRows: [fn, ln, bio, gen, email, picSelector, cp, np, npr], inset: .init(top: 7, left: 0, bottom: 0, right: 0))
+        aloeStackView.setInset(forRows: [fn, ln, bio, gen, picSelector, cp, np, npr], inset: .init(top: 7, left: 0, bottom: 0, right: 0))
         
         firstName.plainText = info.firstName ?? ""
         lastName.plainText = info.lastName ?? ""
         self.bio.plainText = info.bio ?? ""
         gender.plainText = info.gender ?? ""
         self.email.plainText = info.email ?? ""
-        currentPassword.plainText = info.currentPassword ?? ""
+        
+        firstName.text = info.firstName ?? ""
+        lastName.text = info.lastName ?? ""
+        self.bio.text = info.bio ?? ""
+        gender.text = info.gender ?? ""
+        self.email.text = info.email ?? ""
         
         nextButton.isEnabled = false
         view.addSubview(nextButton)

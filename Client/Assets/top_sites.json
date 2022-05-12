@@ -1387,5 +1387,54 @@
     "image_url": "zillow-com.png",
     "background_color": "#98c554",
     "domain": "zillow.com"
+  },
+  {
+    "title": "decentr",
+    "url": "http://www.decentr.net/",
+    "image_url": "decentr-net.png",
+    "background_color": "#000000",
+    "domain": "decentr.net"
+  },
+  {
+    "title": "knwledge.base",
+    "url": "https://support.decentr.net/",
+    "image_url": "decentr-net.png",
+    "background_color": "#FFFFFF",
+    "domain": "support"
+  },
+  {
+    "title": "medium",
+    "url": "https://decentrnet.medium.com/",
+    "image_url": "medium-com.png",
+    "background_color": "#98c554",
+    "domain": "medium.com"
+  },
+  {
+    "title": "telegram",
+    "url": "https://t.me/DecentrNet",
+    "image_url": "telegram-org.png",
+    "background_color": "#98c554",
+    "domain": "telegram.org"
+  },
+  {
+    "title": "twitter",
+    "url": "https://twitter.com/decentrnet",
+    "image_url": "twitter-com.png",
+    "background_color": "#d83633",
+    "domain": "twitter.com"
+  },
+  {
+    "title": "github",
+    "url": "https://github.com/Decentr-net",
+    "image_url": "github-com.png",
+    "background_color": "#000",
+    "domain": "github.com"
+  },
+  {
+    "title": "discord",
+    "url": "https://discord.gg/VMUt7yw92B",
+    "image_url": "discord-gg.png",
+    "background_color": "#000",
+    "domain": "discord.gg"
   }
 ]

@@ -35,6 +35,65 @@ class HiddenSetting: Setting {
     }
 }
 
+// Decentr Account. Shown when we don't have an account.
+class DecentrAccountSetting: WithAccountSetting {
+    override var accessoryView: UIImageView? { return disclosureIndicator }
+
+    override var title: NSAttributedString? {
+        let title = DC_Shared_Info.shared.getAccount().name
+        return NSAttributedString(string: title, attributes: [NSAttributedString.Key.foregroundColor: UIColor.theme.tableView.rowText])
+    }
+
+    override var accessibilityIdentifier: String? { return "SignInToSync" }
+
+    override func onClick(_ navigationController: UINavigationController?) {
+        let data = SignUpData(account: DC_Shared_Info.shared.getAccount())
+        let viewController =  DC_SignUp_Info(info: data) { info in
+            
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    override func onConfigureCell(_ cell: UITableViewCell) {
+        super.onConfigureCell(cell)
+        cell.imageView?.image = UIImage(named: "decentr-settings-icon")
+        cell.imageView?.layer.cornerRadius = (cell.imageView?.frame.size.width)! / 2
+        cell.imageView?.layer.masksToBounds = true
+    }
+    
+    override var hidden: Bool { return !DC_Shared_Info.shared.isLoggedIn }
+}
+
+// Decentr Account. Shown when we don't have an account.
+class DecentrConnectSetting: WithoutAccountSetting {
+    override var accessoryView: UIImageView? { return disclosureIndicator }
+
+    override var title: NSAttributedString? {
+        return NSAttributedString(string: .FxASignInToSync, attributes: [NSAttributedString.Key.foregroundColor: UIColor.theme.tableView.rowText])
+    }
+
+    override var accessibilityIdentifier: String? { return "SignInToSync" }
+
+    override func onClick(_ navigationController: UINavigationController?) {
+        let viewController = IntroViewController()
+        viewController.shouldShowBackButton = true
+        viewController.didFinishClosure = { [weak navigationController] controller, fxaLoginFlow in
+            navigationController?.popViewController(animated: true)
+        }
+        TelemetryWrapper.recordEvent(category: .decentrAccount, method: .view, object: .settings)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    override func onConfigureCell(_ cell: UITableViewCell) {
+        super.onConfigureCell(cell)
+        cell.imageView?.image = UIImage(named: "decentr-settings-icon")
+        cell.imageView?.layer.cornerRadius = (cell.imageView?.frame.size.width)! / 2
+        cell.imageView?.layer.masksToBounds = true
+    }
+    
+    override var hidden: Bool { return DC_Shared_Info.shared.isLoggedIn }
+}
+
 // Sync setting for connecting a Decentr Account.  Shown when we don't have an account.
 class ConnectSetting: WithoutAccountSetting {
     override var accessoryView: UIImageView? { return disclosureIndicator }

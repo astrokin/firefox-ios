@@ -39,7 +39,7 @@ final class DC_SignUp_Seed: UIViewController {
             self?.showMessage("Copied")
         }
     })
-    private lazy var printButton: UIButton = DC_UI.makeSmallButton(image: "decentr-print", title: "Print", action: { [weak self] in
+    private lazy var printButton: UIButton = DC_UI.makeSmallButton(image: "decentr-print", title: "Share", action: { [weak self] in
         if let seed = self?.seedPhrase {
             let vc = UIActivityViewController(activityItems: [seed], applicationActivities: nil)
             vc.excludedActivityTypes = self?.excludedActivityTypes() ?? []
@@ -191,7 +191,7 @@ final class DC_SignUp_Seed: UIViewController {
             self.nextButtonBottomConstraint = make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-30).constraint
         }
         
-        DC_UI.embedBackButton(on: self)
+        DC_UI.embedNavBackButton(on: self)
         
         addKeyboardChangeFrameObserver(willShow: { [weak self] height in
             guard let self = self else { return }

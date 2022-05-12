@@ -72,7 +72,11 @@ struct TopSitesHandler {
     }
     
     static func defaultTopSites(_ profile: Profile) -> [Site] {
+        #if DECENTR
+        let suggested = DecentrSuggestedSites.asArray()
+        #else
         let suggested = SuggestedSites.asArray()
+        #endif
         let deleted = profile.prefs.arrayForKey(DefaultSuggestedSitesKey) as? [String] ?? []
         return suggested.filter({deleted.firstIndex(of: $0.url) == .none})
     }

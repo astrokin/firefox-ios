@@ -76,6 +76,10 @@ final class DC_Web: UIViewController {
             make.centerY.equalTo(titleLabel.snp.centerY)
             make.left.equalToSuperview().offset(10)
         }
+        
+        if let url = url {
+            webView.load(URLRequest(url: url))
+        }
     }
 }
 

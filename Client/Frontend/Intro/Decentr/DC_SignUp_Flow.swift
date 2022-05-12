@@ -16,12 +16,37 @@ struct SignUpData {
     var birthday: Date?
     var gender: String?
     var email: String?
-    var currentPassword: String?
-    var newPassword: String?
-    var newConfirmPassword: String?
     var avatarIndex: Int?
     
+    init(seedPhrase: String? = nil, address: String? = nil, firstName: String? = nil, lastName: String? = nil, bio: String? = nil, birthday: Date? = nil, gender: String? = nil, email: String? = nil, avatarIndex: Int? = nil) {
+        self.seedPhrase = seedPhrase
+        self.address = address
+        self.firstName = firstName
+        self.lastName = lastName
+        self.bio = bio
+        self.birthday = birthday
+        self.gender = gender
+        self.email = email
+        self.avatarIndex = avatarIndex
+    }
     
+    init(account: DecentrAccount) {
+        self.seedPhrase = nil
+        self.address = account.baseAccount?.account?.address
+        self.firstName = account.apiProfile?.firstName
+        self.lastName = account.apiProfile?.lastName
+        self.bio = account.apiProfile?.bio
+        let df = DateFormatter()
+        df.dateFormat = "YYYY-MM-DD"
+        if let dateString = account.apiProfile?.birthday {
+            self.birthday = df.date(from: dateString)
+        } else {
+            self.birthday = nil
+        }
+        self.gender = account.apiProfile?.gender
+        self.email = account.apiProfile?.emails?.first
+        self.avatarIndex = 1
+    }
 }
 
 final class DC_SignUp_Flow {
@@ -29,7 +54,6 @@ final class DC_SignUp_Flow {
     enum Step {
         case seedPhrase
         case email
-        case password
         case confirmEmail
         case userSettings
         case trackingSettings
@@ -44,9 +68,6 @@ final class DC_SignUp_Flow {
     
     func startSignUp() {
         goToStep(.seedPhrase)
-        #if !DEBUG
-            (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
-        #endif
     }
     
     private var currentStap: Step!
@@ -65,17 +86,7 @@ final class DC_SignUp_Flow {
         case .email:
             let vc = DC_SignUp_Email { [weak self] email in
                 self?.data.email = email
-                self?.goToStep(.password)
-            }
-            navigationController?.pushViewController(vc, animated: true)
-        case .password:
-            let vc = DC_Password(mode: .createPassword) { [weak self] password in
-                self?.data.currentPassword = password
-                self?.data.newPassword = password
-                self?.data.newConfirmPassword = password
-                self?.sendRegistration({ [weak self] in
-                    self?.goToStep(.confirmEmail)
-                })
+                self?.goToStep(.confirmEmail)
             }
             navigationController?.pushViewController(vc, animated: true)
         case .confirmEmail:
@@ -84,9 +95,7 @@ final class DC_SignUp_Flow {
             }
             navigationController?.pushViewController(vc, animated: true)
         case .userSettings:
-            var _info = data
-            _info.currentPassword = DC_Shared_Info.shared.getPassword() //set if changed during settings
-            let vc = DC_SignUp_Info(info: _info) { [weak self] info in
+            let vc = DC_SignUp_Info(info: data) { [weak self] info in
                 self?.data = info
                 self?.goToStep(.trackingSettings)
             }
@@ -101,11 +110,11 @@ final class DC_SignUp_Flow {
     }
     
     private func sendRegistration(_ completion: @escaping (() -> ())) {
-        guard let seed = data.seedPhrase, let pass = data.newPassword, let email = data.email else {
+        guard let seed = data.seedPhrase, let email = data.email else {
             showLoginError()
             return
         }
-        let keyStore = KeyStore(seedPhrase: seed, password: pass)
+        let keyStore = KeyStore(seedPhrase: seed)
         guard let keys = try? keyStore.loadKeys() else {
             showLoginError()
             return
@@ -132,8 +141,12 @@ final class DC_SignUp_Flow {
             if let error = error {
                 self?.showLoginError(error)
                 return
-            } else if let _ = data {
+            } else if let _ = data, let seed = self?.data.seedPhrase {
+                DC_Shared_Info.shared.savePlainSeedPhrase(seed)
                 self?.completion?()
+                #if !DEBUG
+                    (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+                #endif
             } else {
                 self?.showLoginError()
             }

@@ -6,12 +6,19 @@ import Foundation
 import Shared
 import DecentrAPI
 import Dispatch
+import CryptoSwift
 
 protocol DecentrInfo {
     
-    var account: DecentrAccount { get }
+    var isLoggedIn: Bool { get }
+
+    func getAccount() -> DecentrAccount
     
-    func saveEencryptedSeedPhrase(_ encryptedSeed: String?) //BIP39 Mnemonic
+    func savePlainSeedPhrase(_ seedPhrase: String)
+    func getAESKey() -> String?
+    func getAESIV() -> String?
+    
+    func saveEncryptedSeedPhrase(_ encryptedSeed: String?) //BIP39 Mnemonic
     func getSeedPhrase() -> String? //encrypted, use KeyStore then
     
     func savePassword(_ passwd: String?)
@@ -25,27 +32,77 @@ final class DC_Shared_Info: DecentrInfo {
     
     static let shared: DecentrInfo = DC_Shared_Info()
     
-    var account: DecentrAccount
+    private var account: DecentrAccount
     
     init() {
         self.account = .init()
     }
     
-    func saveEencryptedSeedPhrase(_ encryptedSeed: String?) {
-        KeychainStore.shared.setString(encryptedSeed, forKey: "Decentr.Seed")
+    var isLoggedIn: Bool {
+        guard let acc = account.apiProfile else {
+            return UserDefaults.standard.bool(forKey: "Decentr.Had.Login")
+        }
+        
+        return acc.banned != true
     }
     
+    func getAccount() -> DecentrAccount {
+        account
+    }
+    
+    func accountName() -> String {
+        account.name
+    }
+    
+    func saveEncryptedSeedPhrase(_ encryptedSeed: String?) {
+        KeychainStore.shared.setString(encryptedSeed, forKey: "Decentr.Seed.Web.Enc")
+    }
+    
+    func savePlainSeedPhrase(_ seedPhrase: String) {
+        let _aesKey = String(NSUUID().uuidString.md5().prefix(16))
+        let _aesIv = String(NSUUID().uuidString.md5().prefix(16))
+        
+        do {
+            let aes = try AES(key: _aesKey, iv: _aesIv)
+            let ciphertext = try aes.encrypt(Array(seedPhrase.utf8))
+            let encryptedData = Data(ciphertext)
+            UserDefaults.standard.set(encryptedData, forKey: "Decentr.Seed.Enc")
+            saveAESKey(_aesKey)
+            saveAESIV(_aesIv)
+        } catch {
+            print("error: \(error)")
+        }
+    }
+    
+    ///return encrypted seed phrase from local or remote encryption
     func getSeedPhrase() -> String? {
-        KeychainStore.shared.string(forKey: "Decentr.Seed")
+        KeychainStore.shared.string(forKey: "Decentr.Seed.Web.Enc")
     }
     
     func savePassword(_ passwd: String?) {
-        KeychainStore.shared.setString(passwd, forKey: "Decentr.Password")
+        KeychainStore.shared.setString(passwd, forKey: "Decentr.Password.Web")
+    }
+    
+    func saveAESKey(_ key: String?) {
+        KeychainStore.shared.setString(key, forKey: "Decentr.Seed.Local.Enc.Key")
+    }
+    
+    func saveAESIV(_ iv: String?) {
+        KeychainStore.shared.setString(iv, forKey: "Decentr.Seed.Local.Enc.IV")
+    }
+    
+    func getAESKey() -> String? {
+        KeychainStore.shared.string(forKey: "Decentr.Seed.Local.Enc.Key")
+    }
+    
+    func getAESIV() -> String? {
+        KeychainStore.shared.string(forKey: "Decentr.Seed.Local.Enc.IV")
     }
     
     func getPassword() -> String? {
-        KeychainStore.shared.string(forKey: "Decentr.Password")
+        KeychainStore.shared.string(forKey: "Decentr.Password.Web")
     }
+    
     
     /// - parameter completion: can be called multiple times
     func refreshAccountInfo(address: String?, _ completion: @escaping (Swift.Result<DecentrAccount, DecentrError>) -> ()) {
@@ -102,6 +159,7 @@ final class DC_Shared_Info: DecentrInfo {
             }
             
             group.notify(queue: .main) {
+                UserDefaults.standard.set(true, forKey: "Decentr.Had.Login")
                 completion(.success(self.account))
             }
         }
@@ -122,6 +180,12 @@ struct DecentrAccount {
         pdvBalance != nil &&
         baseAccount != nil &&
         apiProfile != nil
+    }
+    
+    var name: String {
+        let fi = (apiProfile?.firstName ?? "")
+        let na = (apiProfile?.lastName ?? "")
+        return fi + " " + na
     }
 }
 

@@ -412,6 +412,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.profile?.cleanupHistoryIfNeeded()
             self.browserViewController.ratingPromptManager.updateData()
         }
+        
+#if DECENTR
+    DC_Shared_Info.shared.refreshAccountInfo(address: nil, { _ in })
+#endif
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

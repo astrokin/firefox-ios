@@ -57,7 +57,7 @@ class IntroScreenWelcomeView: UIView, CardTheme {
         button.titleLabel?.textAlignment = .center
         return button
     }()
-    private lazy var startBrowsingButton: UIButton = {
+    private(set) lazy var startBrowsingButton: UIButton = {
         let button = UIButton()
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         button.backgroundColor = .clear

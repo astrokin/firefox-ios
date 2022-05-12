@@ -89,7 +89,7 @@ final class DC_SignUp_Settings: UIViewController {
         super.viewDidLoad()
         
         DC_UI.styleVC(self)
-        DC_UI.embedBackButton(on: self)
+        DC_UI.embedNavBackButton(on: self)
         
         view.addSubview(aloeStackView)
         aloeStackView.snp.makeConstraints { make in

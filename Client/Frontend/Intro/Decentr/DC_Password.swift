@@ -107,7 +107,7 @@ final class DC_Password: UIViewController {
             self.savePasswordButtonBottomConstraint = make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-30).constraint
         }
         
-        DC_UI.embedBackButton(on: self)
+        DC_UI.embedNavBackButton(on: self)
         
         addKeyboardChangeFrameObserver(willShow: { [weak self] height in
             guard let self = self else { return }

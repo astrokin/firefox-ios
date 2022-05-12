@@ -78,7 +78,7 @@ final class DC_Login: UIViewController {
             make.bottom.equalTo(self.enterSeedPhraseButton.snp.top).inset(-20)
         }
         
-        DC_UI.embedBackButton(on: self, color: .white)
+        DC_UI.embedNavBackButton(on: self, color: .white)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "sharing_share_icon_124236 copy 2.png",
+      "filename" : "dHub.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "sharing_share_icon_124236 copy.png",
+      "filename" : "dHub@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "sharing_share_icon_124236.png",
+      "filename" : "dHub@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

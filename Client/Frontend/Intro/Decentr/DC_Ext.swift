@@ -211,7 +211,14 @@ final class ProtectedTextView: UITextView, UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text as NSString).rangeOfCharacter(from: .newlines).location == NSNotFound {
-            plainText = (plainText as NSString).replacingCharacters(in: range, with: text)
+            SwiftTryCatch.try({
+                plainText = (plainText as NSString).replacingCharacters(in: range, with: text)
+            }, catch: { error in
+                
+            }, finally: {
+                
+            })
+            
             return true
         }
         textView.resignFirstResponder()

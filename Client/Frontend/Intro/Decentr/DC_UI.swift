@@ -30,12 +30,27 @@ struct DC_UI {
         vc.navigationController?.navigationBar.tintColor = color ?? primaryColor
     }
     
-    static func embedBackButton(on vc: UIViewController, color: UIColor? = nil) {
+    static func embedNavBackButton(on vc: UIViewController, color: UIColor? = nil) {
         let item = UIBarButtonItem(customView:
                                     makeBackButton(color: color) { [weak vc] in
-            vc?.navigationController?.popViewController(animated: true)
+            if vc?.navigationController?.popViewController(animated: true) == nil {
+                vc?.dismiss(animated: true, completion: nil)
+            }
         })
         vc.navigationItem.leftBarButtonItem = item
+    }
+    
+    static func embedBackButton(on vc: UIViewController, color: UIColor? = nil) {
+        let backButton = makeBackButton(color: color) { [weak vc] in
+            if vc?.navigationController?.popViewController(animated: true) == nil {
+                vc?.dismiss(animated: true, completion: nil)
+            }
+        }
+        vc.view.addSubview(backButton)
+        backButton.snp.makeConstraints { make in
+            make.top.equalTo(vc.view.safeAreaLayoutGuide.snp.top).inset(15)
+            make.leading.equalToSuperview().inset(15)
+        }
     }
     
     static func makeAloe(
@@ -84,6 +99,7 @@ struct DC_UI {
     static func makeFieldLabel(_ text: String) -> UILabel {
         let label = UILabel()
         label.text = text
+        label.adjustsFontSizeToFitWidth = true
         label.textColor = UIColor.hexColor("929297")
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         return label

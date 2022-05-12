@@ -29,7 +29,7 @@ final class DC_SignUp_Email: UIViewController {
     required init?(coder _: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     private lazy var titleLabel: UILabel = DC_UI.makeTitleLabel("Connect your email")
-    private lazy var descriptionLabel: UILabel = DC_UI.makeDescriptionLabel("We’ll use this email to sent the confirmation code, so be sure you have an access to it.")
+    private lazy var descriptionLabel: UILabel = DC_UI.makeDescriptionLabel("We’ll use this email to send the confirmation code, so be sure you have access to it.")
     private lazy var emailLabel: UILabel = DC_UI.makeFieldLabel("Email")
     private var nextButtonBottomConstraint: Constraint? = nil
     private lazy var nextButton: UIButton = DC_UI.makeActionButton(text: "Next", action: { [weak self] in
@@ -63,31 +63,14 @@ final class DC_SignUp_Email: UIViewController {
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         return label
     }()
-    private lazy var andLabel: UILabel = {
-        let label = UILabel()
-        label.text = "and"
-        label.textColor = DC_UI.primaryColor
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        return label
-    }()
+    
     private lazy var termsButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(.systemBlue, for: .normal)
         button.setTitle("Terms of use", for: .normal)
         button.contentEdgeInsets = .init(top: 0, left: 6, bottom: 0, right: 6)
         button.setAction { [weak self] in
-            let vc = DC_Web(title: button.title(for: .normal) ?? "", url: nil)
-            self?.present(vc, animated: true, completion: nil)
-        }
-        return button
-    }()
-    private lazy var privacyButton: UIButton = {
-        let button = UIButton()
-        button.setTitleColor(.systemBlue, for: .normal)
-        button.setTitle("Privacy policy", for: .normal)
-        button.contentEdgeInsets = .init(top: 0, left: 6, bottom: 0, right: 6)
-        button.setAction { [weak self] in
-            let vc = DC_Web(title: button.title(for: .normal) ?? "", url: nil)
+            let vc = DC_Web(title: button.title(for: .normal) ?? "", url: URL(string: "https://decentr.net/terms.html"))
             self?.present(vc, animated: true, completion: nil)
         }
         return button
@@ -128,18 +111,6 @@ final class DC_SignUp_Email: UIViewController {
             make.top.equalTo(termsLabel.snp.bottom).offset(5)
         }
         
-        view.addSubview(andLabel)
-        andLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(termsButton.snp.centerY)
-            make.left.equalTo(termsButton.snp.right).offset(2)
-        }
-        
-        view.addSubview(privacyButton)
-        privacyButton.snp.makeConstraints { make in
-            make.centerY.equalTo(termsButton.snp.centerY)
-            make.left.equalTo(andLabel.snp.right).offset(2)
-        }
-        
         view.addSubview(nextButton)
         nextButton.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
@@ -147,7 +118,7 @@ final class DC_SignUp_Email: UIViewController {
             self.nextButtonBottomConstraint = make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-30).constraint
         }
         
-        DC_UI.embedBackButton(on: self)
+        DC_UI.embedNavBackButton(on: self)
         
         addKeyboardChangeFrameObserver(willShow: { [weak self] height in
             guard let self = self else { return }

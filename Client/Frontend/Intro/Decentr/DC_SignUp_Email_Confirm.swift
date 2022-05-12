@@ -78,7 +78,7 @@ final class DC_SignUp_Email_Confirm: UIViewController {
         addHideKeyboardWhenTappedAroundBehaviour()
         
         DC_UI.styleVC(self)
-        DC_UI.embedBackButton(on: self)
+        DC_UI.embedNavBackButton(on: self)
         
         view.addSubview(icon)
         icon.snp.makeConstraints { make in
@@ -94,7 +94,7 @@ final class DC_SignUp_Email_Confirm: UIViewController {
             make.centerX.equalToSuperview()
         }
         
-        let subtitle = DC_UI.makeDescriptionLabel("We’ve send you the confirmation letter to the \(email) email.")
+        let subtitle = DC_UI.makeDescriptionLabel("We’ve sent you the confirmation letter to the \(email) email.")
         subtitle.textAlignment = .center
         view.addSubview(subtitle)
         subtitle.snp.makeConstraints { make in
@@ -104,6 +104,7 @@ final class DC_SignUp_Email_Confirm: UIViewController {
         }
         
         let hint = DC_UI.makeFieldLabel("Just want to ensure we deal with real people.")
+        hint.numberOfLines = UIDevice.isSmall ? 2 : 1
         hint.textAlignment = .center
         view.addSubview(hint)
         hint.snp.makeConstraints { make in

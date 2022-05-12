@@ -18,6 +18,8 @@ class IntroViewController: UIViewController, OnViewDismissable {
         return welcomeCardView
     }()
     
+    var shouldShowBackButton: Bool = false
+    
     // Closure delegate
     var didFinishClosure: ((IntroViewController?, FxAPageType?) -> Void)?
     private var signUpFlow: DC_SignUp_Flow?
@@ -69,6 +71,11 @@ class IntroViewController: UIViewController, OnViewDismissable {
             self?.signUpFlow?.completion = { [weak self] in
                 self?.didFinishClosure?(self, nil)
             }
+        }
+        
+        if shouldShowBackButton {
+            DC_UI.embedBackButton(on: self, color: .white)
+            welcomeCard.startBrowsingButton.isHidden = true
         }
     }
     

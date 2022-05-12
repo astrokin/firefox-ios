@@ -21,14 +21,14 @@ import Foundation
 //}
 
 public struct BaseAccount: Codable {
-    let account: BaseAccountInfo?
+    public let account: BaseAccountInfo?
 }
 
 public struct BaseAccountInfo: Codable {
-    let address: String?
-    let pub_key: BaseAccountInfoKey?
-    let account_number: String?
-    let sequence: String?
+    public let address: String?
+    public let pub_key: BaseAccountInfoKey?
+    public let account_number: String?
+    public let sequence: String?
 }
 
 public struct BaseAccountInfoKey: Codable {
@@ -42,11 +42,11 @@ public struct BaseAccountInfoKey: Codable {
 //}
 
 public struct BalanceDEC: Codable {
-    let balance: DEC_Balance?
+    public let balance: DEC_Balance?
 }
 
 public struct DEC_Balance: Codable {
-    let dec: String?
+    public let dec: String?
 }
 
 //{
@@ -63,10 +63,10 @@ public struct DEC_Balance: Codable {
 //}
 
 public struct BalancePDV: Codable {
-    let balances: [PDV_Balance]?
+    public let balances: [PDV_Balance]?
 }
 
 public struct PDV_Balance: Codable {
-    let denom: String?
-    let amount: String?
+    public let denom: String?
+    public let amount: String?
 }
