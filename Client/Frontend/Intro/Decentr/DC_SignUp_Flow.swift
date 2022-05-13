@@ -86,7 +86,9 @@ final class DC_SignUp_Flow {
         case .email:
             let vc = DC_SignUp_Email { [weak self] email in
                 self?.data.email = email
-                self?.goToStep(.confirmEmail)
+                self?.sendRegistration { [weak self] in
+                    self?.goToStep(.confirmEmail)
+                }
             }
             navigationController?.pushViewController(vc, animated: true)
         case .confirmEmail:
@@ -120,8 +122,20 @@ final class DC_SignUp_Flow {
             return
         }
         VulcanAPI.register(body: RegisterRequest(address: keys.address, email: email)) { [weak self] data, error in
-            if let error = error {
-                self?.showLoginError(error)
+            if let respErr = error as? DecentrAPI.ErrorResponse {
+                switch respErr {
+                case let .error(code, data, error):
+                    switch code {
+                    case 409:
+                        self?.showLoginError("A wallet has already been created for this email or wallet address")
+                    case 400:
+                        self?.showLoginError("Invalid email")
+                    case 429:
+                        self?.showLoginError("Too many requests")
+                    default:
+                        self?.showLoginError(error)
+                    }
+                }
                 return
             } else if let _ = data {
                 self?.data.address = keys.address
@@ -154,7 +168,10 @@ final class DC_SignUp_Flow {
     }
     
     private func showLoginError(_ error: Error? = nil) {
-        let errorMessage = (error as NSError?)?.localizedDescription
+        showLoginError((error as NSError?)?.localizedDescription)
+    }
+    
+    private func showLoginError(_ errorMessage: String?) {
         let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
             self?.navigationController?.popToRootViewController(animated: true)

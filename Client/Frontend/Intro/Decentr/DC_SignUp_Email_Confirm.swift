@@ -38,6 +38,11 @@ final class DC_SignUp_Email_Confirm: UIViewController {
     
     private lazy var field: CHIOTPFieldOne = {
         let field = CHIOTPFieldOne(frame: .zero)
+        field.autocorrectionType = .no
+        field.spellCheckingType = .no
+        field.autocapitalizationType = .none
+        field.smartDashesType = .no
+        field.keyboardType = .default
         field.numberOfDigits = 6
         field.cornerRadius = 4
         field.spacing = 4
