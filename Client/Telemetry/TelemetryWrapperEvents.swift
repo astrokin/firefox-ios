@@ -4,24 +4,6 @@
 
 import Foundation
 
-//mute any telemetry
-
-class TelemetryWrapper {
-    
-    let profile: Profile
-    
-    init(profile: Profile) {
-        self.profile = profile
-    }
-    
-    static func recordEvent(category: EventCategory, method: EventMethod, object: EventObject, value: EventValue? = nil, extras: [String: Any]? = nil) {
-        
-    }
-    
-    static func gleanRecordEvent(category: EventCategory, method: EventMethod, object: EventObject, value: EventValue? = nil, extras: [String: Any]? = nil) {
-    }
-}
-
 // Enums for Event telemetry.
 extension TelemetryWrapper {
     enum EventCategory: String {
@@ -248,14 +230,5 @@ extension TelemetryWrapper {
         var description: String {
             return self.rawValue
         }
-    }
-}
-
-// MARK: - Decentr Home Page
-extension TelemetryWrapper {
-    
-    /// Bundle the extras dictionnary for the home page origin
-    static func getOriginExtras(isZeroSearch: Bool) -> [String: String] {
-        [:]
     }
 }

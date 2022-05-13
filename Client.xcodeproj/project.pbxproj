@@ -914,6 +914,8 @@
 		E88B15D5282DBBAF00D2A55D /* QuickLinkSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E88B15D9282DBBAF00D2A55D /* QuickLinkSelection.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		E88B15D6282DBBAF00D2A55D /* QuickLinkSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E88B15D9282DBBAF00D2A55D /* QuickLinkSelection.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		E88B15D7282DBBAF00D2A55D /* QuickLinkSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E88B15D9282DBBAF00D2A55D /* QuickLinkSelection.intentdefinition */; };
+		E88B15DE282E688200D2A55D /* TelemetryWrapperEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88B15DD282E688200D2A55D /* TelemetryWrapperEvents.swift */; };
+		E88B15DF282E688200D2A55D /* TelemetryWrapperEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88B15DD282E688200D2A55D /* TelemetryWrapperEvents.swift */; };
 		E8BE5BA228094C8B00BAD16E /* EVP_KDF_Salted.c in Sources */ = {isa = PBXBuildFile; fileRef = E8BE5B9F2809499A00BAD16E /* EVP_KDF_Salted.c */; };
 		E8BE5BA428094E3200BAD16E /* EVP_KDF_Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE5BA328094E3200BAD16E /* EVP_KDF_Util.swift */; };
 		E8C072B727D6480300E40B21 /* DC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C072B627D6480300E40B21 /* DC_Login.swift */; };
@@ -4682,6 +4684,7 @@
 		E88B15D1282DA2D700D2A55D /* SwiftTryCatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftTryCatch.h; sourceTree = "<group>"; };
 		E88B15D2282DA30100D2A55D /* SwiftTryCatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftTryCatch.m; sourceTree = "<group>"; };
 		E88B15D8282DBBAF00D2A55D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/QuickLinkSelection.intentdefinition; sourceTree = "<group>"; };
+		E88B15DD282E688200D2A55D /* TelemetryWrapperEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryWrapperEvents.swift; sourceTree = "<group>"; };
 		E88B487A9436F764525B0F64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AuthenticationManager.strings; sourceTree = "<group>"; };
 		E8BE4A4597EDD74CD5B3A8D5 /* gd */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gd; path = gd.lproj/HistoryPanel.strings; sourceTree = "<group>"; };
 		E8BE5B9E2809499A00BAD16E /* EVP_KDF_Salted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EVP_KDF_Salted.h; sourceTree = "<group>"; };
@@ -6801,6 +6804,7 @@
 				43175DB726B87D2C00C41C31 /* AdsTelemetryHelper.swift */,
 				43F7952425795F69005AEE40 /* SearchTelemetry.swift */,
 				EBF47E6F1F7979DF00899189 /* TelemetryWrapper.swift */,
+				E88B15DD282E688200D2A55D /* TelemetryWrapperEvents.swift */,
 			);
 			path = Telemetry;
 			sourceTree = "<group>";
@@ -6831,27 +6835,51 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E8C072B527D6454000E40B21 /* Decentr */ = {
+		E88B15DA282E5BE900D2A55D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
 				E8C072CB27DB793D00E40B21 /* DC_SignUp_Flow.swift */,
-				E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */,
-				E8C072B627D6480300E40B21 /* DC_Login.swift */,
-				E8C072BF27D8F4C000E40B21 /* DC_Ext.swift */,
-				E8C072C227D8F81100E40B21 /* DC_Shared_Info.swift */,
-				E8C072CE27DB93C700E40B21 /* DC_UI.swift */,
-				E8C072BC27D8F3BA00E40B21 /* DC_Enter_Seed.swift */,
 				E8C072B927D6481300E40B21 /* DC_SignUp_Seed.swift */,
 				E8C072C827DAAE6500E40B21 /* DC_SignUp_Email.swift */,
 				E8C072D727DD369E00E40B21 /* DC_SignUp_Email_Confirm.swift */,
 				E8C072E027DD799D00E40B21 /* DC_SignUp_Info.swift */,
 				E8C072E327DE981E00E40B21 /* DC_SignUp_Settings.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		E88B15DB282E5C0300D2A55D /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				E8C072B627D6480300E40B21 /* DC_Login.swift */,
+				E8C072BC27D8F3BA00E40B21 /* DC_Enter_Seed.swift */,
 				E8C072C527DA29D400E40B21 /* DC_Password.swift */,
+				E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		E88B15DC282E5CF600D2A55D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E8C072BF27D8F4C000E40B21 /* DC_Ext.swift */,
+				E8C072CE27DB93C700E40B21 /* DC_UI.swift */,
 				E8C072D127DBFE4E00E40B21 /* DC_Web.swift */,
 				E87FDF47281CA16200FE827B /* KeyStore.swift */,
 				E8FBEE90281445B500A1A9B0 /* TelemetryWrapper.swift */,
 				E88B15D1282DA2D700D2A55D /* SwiftTryCatch.h */,
 				E88B15D2282DA30100D2A55D /* SwiftTryCatch.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E8C072B527D6454000E40B21 /* Decentr */ = {
+			isa = PBXGroup;
+			children = (
+				E8C072C227D8F81100E40B21 /* DC_Shared_Info.swift */,
+				E88B15DC282E5CF600D2A55D /* Helpers */,
+				E88B15DB282E5C0300D2A55D /* SignIn */,
+				E88B15DA282E5BE900D2A55D /* SignUp */,
 			);
 			path = Decentr;
 			sourceTree = "<group>";
@@ -9305,6 +9333,7 @@
 				E8CB3C3727C5543600D9C339 /* ASLibraryCell.swift in Sources */,
 				E8CB3C3827C5543600D9C339 /* FaviconFetcher+Non-Bundled.swift in Sources */,
 				E8CB3C3927C5543600D9C339 /* BottomSheetViewController.swift in Sources */,
+				E88B15DE282E688200D2A55D /* TelemetryWrapperEvents.swift in Sources */,
 				E8CB3C3A27C5543600D9C339 /* Clearables.swift in Sources */,
 				E8CB3C3B27C5543600D9C339 /* DefaultBrowserOnboardingViewModel.swift in Sources */,
 				E8CB3C3C27C5543600D9C339 /* ConfigurableGradientView.swift in Sources */,
@@ -9783,6 +9812,7 @@
 				E63ED8E11BFD25580097D08E /* LoginListViewController.swift in Sources */,
 				D0625CA8208FC47A0081F3B2 /* BrowserViewController+DownloadQueueDelegate.swift in Sources */,
 				2F44FCC71A9E8CF500FD20CC /* SearchSettingsTableViewController.swift in Sources */,
+				E88B15DF282E688200D2A55D /* TelemetryWrapperEvents.swift in Sources */,
 				C8417D222657F0600010B877 /* LibraryViewModel.swift in Sources */,
 				39A359E41BFCCE94006B9E87 /* UserActivityHandler.swift in Sources */,
 				4331A9BD271D267E005E8080 /* ContextualHintViewModel.swift in Sources */,

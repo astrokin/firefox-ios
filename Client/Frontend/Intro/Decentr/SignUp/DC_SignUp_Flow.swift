@@ -93,7 +93,8 @@ final class DC_SignUp_Flow {
             navigationController?.pushViewController(vc, animated: true)
         case .confirmEmail:
             let vc = DC_SignUp_Email_Confirm(email: data.email ?? "") { [weak self] in
-                self?.goToStep(.userSettings)
+//                self?.goToStep(.userSettings)
+                self?.finishSignUp()
             }
             navigationController?.pushViewController(vc, animated: true)
         case .userSettings:
