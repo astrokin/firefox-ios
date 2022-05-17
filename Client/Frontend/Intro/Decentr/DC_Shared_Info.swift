@@ -7,6 +7,7 @@ import Shared
 import DecentrAPI
 import Dispatch
 import CryptoSwift
+import UIKit
 
 protocol DecentrInfo {
     
@@ -26,6 +27,8 @@ protocol DecentrInfo {
     
     /// - parameter completion: can be called multiple times
     func refreshAccountInfo(address: String?, _ completion: @escaping (Swift.Result<DecentrAccount, DecentrError>) -> ())
+    
+    func purge()
 }
 
 final class DC_Shared_Info: DecentrInfo {
@@ -54,10 +57,6 @@ final class DC_Shared_Info: DecentrInfo {
         account.name
     }
     
-    func saveEncryptedSeedPhrase(_ encryptedSeed: String?) {
-        KeychainStore.shared.setString(encryptedSeed, forKey: "Decentr.Seed.Web.Enc")
-    }
-    
     func savePlainSeedPhrase(_ seedPhrase: String) {
         let _aesKey = String(NSUUID().uuidString.md5().prefix(16))
         let _aesIv = String(NSUUID().uuidString.md5().prefix(16))
@@ -74,9 +73,25 @@ final class DC_Shared_Info: DecentrInfo {
         }
     }
     
+    func getAESKey() -> String? {
+        KeychainStore.shared.string(forKey: "Decentr.Seed.Local.Enc.Key")
+    }
+    
+    func getAESIV() -> String? {
+        KeychainStore.shared.string(forKey: "Decentr.Seed.Local.Enc.IV")
+    }
+    
+    func getPassword() -> String? {
+        KeychainStore.shared.string(forKey: "Decentr.Password.Web")
+    }
+    
     ///return encrypted seed phrase from local or remote encryption
     func getSeedPhrase() -> String? {
         KeychainStore.shared.string(forKey: "Decentr.Seed.Web.Enc")
+    }
+    
+    func saveEncryptedSeedPhrase(_ encryptedSeed: String?) {
+        KeychainStore.shared.setString(encryptedSeed, forKey: "Decentr.Seed.Web.Enc")
     }
     
     func savePassword(_ passwd: String?) {
@@ -91,29 +106,31 @@ final class DC_Shared_Info: DecentrInfo {
         KeychainStore.shared.setString(iv, forKey: "Decentr.Seed.Local.Enc.IV")
     }
     
-    func getAESKey() -> String? {
-        KeychainStore.shared.string(forKey: "Decentr.Seed.Local.Enc.Key")
+    func purge() {
+        UserDefaults.standard.set(false, forKey: "Decentr.Had.Login")
+        KeychainStore.shared.setString(nil, forKey: "Decentr.Seed.Web.Enc")
+        KeychainStore.shared.setString(nil, forKey: "Decentr.Password.Web")
+        KeychainStore.shared.setString(nil, forKey: "Decentr.Seed.Local.Enc.Key")
+        KeychainStore.shared.setString(nil, forKey: "Decentr.Seed.Local.Enc.IV")
+        (UIApplication.shared.delegate as? AppDelegate)?.profile?.prefs.setInt(0, forKey: PrefsKeys.IntroSeen)
     }
-    
-    func getAESIV() -> String? {
-        KeychainStore.shared.string(forKey: "Decentr.Seed.Local.Enc.IV")
-    }
-    
-    func getPassword() -> String? {
-        KeychainStore.shared.string(forKey: "Decentr.Password.Web")
-    }
-    
     
     /// - parameter completion: can be called multiple times
     func refreshAccountInfo(address: String?, _ completion: @escaping (Swift.Result<DecentrAccount, DecentrError>) -> ()) {
-        guard let address = address ?? (try? KeyStore(info: self).loadKeys().address) else {
-            completion(.failure(.missingAddress))
-            return
-        }
+        DispatchQueue.global(qos: .utility).async {
+            guard let address = address ?? (try? KeyStore(info: self).loadKeys().address) else {
+                completion(.failure(.missingAddress))
+                return
+            }
 
-        if account.isValid {
-            completion(.success(account))
+            if self.account.isValid {
+                completion(.success(self.account))
+            }
+            self._refresh(address: address, completion)
         }
+    }
+    
+    private func _refresh(address: String, _ completion: @escaping (Swift.Result<DecentrAccount, DecentrError>) -> ()) {
         DcntrAPI.ProfilesAPI.getCheckAddress(address: address) { data, error in
             if let error = error {
                 completion(.failure(.underlying(error)))
@@ -122,6 +139,8 @@ final class DC_Shared_Info: DecentrInfo {
             if data == nil {
                 completion(.failure(.invalidData))
                 return
+            } else if let data = data {
+                self.account.baseAccount = data
             }
             
             let group = DispatchGroup()
@@ -138,14 +157,6 @@ final class DC_Shared_Info: DecentrInfo {
             DcntrAPI.ProfilesAPI.getCheckBalancePDV(address: address) { data, error in
                 if let data = data {
                     self.account.pdvBalance = data
-                }
-                group.leave()
-            }
-            
-            group.enter()
-            DcntrAPI.ProfilesAPI.getCheckAddress(address: address) { data, error in
-                if let data = data {
-                    self.account.baseAccount = data
                 }
                 group.leave()
             }

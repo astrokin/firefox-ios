@@ -55,7 +55,7 @@ public extension CerberusAPI.ProfileAPI {
      - returns: RequestBuilder<[APIProfile]> 
      */
     class func getProfilesWithRequestBuilder(address: Any) -> RequestBuilder<[APIProfile]> {
-        let path = "/profiles"
+        let path = "/v1/profiles"
         let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -66,6 +66,6 @@ public extension CerberusAPI.ProfileAPI {
 
         let requestBuilder: RequestBuilder<[APIProfile]>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
 }

@@ -220,18 +220,22 @@ final class DC_SignUp_Seed: UIViewController {
     }
     
     private func showLoginError(_ error: Error? = nil) {
-        let errorMessage = (error as NSError?)?.localizedDescription
-        let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
-            self?.navigationController?.popToRootViewController(animated: true)
-        }))
-        navigationController?.present(alert, animated: true)
+        DispatchQueue.main.async {
+            let errorMessage = (error as NSError?)?.localizedDescription
+            let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
+//                self?.navigationController?.popToRootViewController(animated: true)
+            }))
+            self.navigationController?.present(alert, animated: true)
+        }
     }
     
     private func showMessage(_ message: String) {
-        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
-        navigationController?.present(alert, animated: true)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
+            self.navigationController?.present(alert, animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

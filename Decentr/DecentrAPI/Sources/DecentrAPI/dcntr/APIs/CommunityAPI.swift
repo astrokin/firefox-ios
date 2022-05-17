@@ -87,7 +87,7 @@ public extension DcntrAPI.CommunityAPI {
 
         let requestBuilder: RequestBuilder<GetPostResponse>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Get post by slug.
@@ -128,7 +128,7 @@ public extension DcntrAPI.CommunityAPI {
 
         let requestBuilder: RequestBuilder<SharePost>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      * enum for parameter sortBy
@@ -256,6 +256,6 @@ public extension DcntrAPI.CommunityAPI {
 
         let requestBuilder: RequestBuilder<ListPostsResponse>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
 }

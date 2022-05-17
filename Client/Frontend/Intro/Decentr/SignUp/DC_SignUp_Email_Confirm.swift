@@ -197,20 +197,23 @@ final class DC_SignUp_Email_Confirm: UIViewController {
         }
         UIApplication.getKeyWindow()?.showLoader()
         DecentrAPI.VulcanAPI.confirm(body: ConfirmRequest(code: code, email: email)) { [weak self] data, error in
-            UIApplication.getKeyWindow()?.removeLoader()
             if let error = error {
+                UIApplication.getKeyWindow()?.removeLoader()
                 self?.showLoginError(error)
             } else {
+                //do not remove loader becase we need it after completion
                 self?.completion()
             }
         }
     }
     
     private func showLoginError(_ error: Error? = nil) {
-        let errorMessage = (error as NSError?)?.localizedDescription
-        let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { _ in
-        }))
-        navigationController?.present(alert, animated: true)
+        DispatchQueue.main.async {
+            let errorMessage = (error as NSError?)?.localizedDescription
+            let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { _ in
+            }))
+            self.navigationController?.present(alert, animated: true)
+        }
     }
 }

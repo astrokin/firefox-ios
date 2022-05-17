@@ -43,7 +43,7 @@ public extension DcntrAPI.ProfilesAPI {
 
         let requestBuilder: RequestBuilder<DecentrStats>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Get pdv stats by address.
@@ -89,7 +89,7 @@ public extension DcntrAPI.ProfilesAPI {
 
         let requestBuilder: RequestBuilder<ProfileStats>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     
     class func getCheckAddressWithRequestBuilder(address: String) -> RequestBuilder<BaseAccount> {
@@ -104,7 +104,7 @@ public extension DcntrAPI.ProfilesAPI {
 
         let requestBuilder: RequestBuilder<BaseAccount>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     
     class func getCheckAddress(address: String, completion: @escaping ((_ data: BaseAccount?,_ error: Error?) -> Void)) {
@@ -125,7 +125,7 @@ public extension DcntrAPI.ProfilesAPI {
 
         let requestBuilder: RequestBuilder<BalanceDEC>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     
     class func getCheckBalanceDEC(address: String, completion: @escaping ((_ data: BalanceDEC?,_ error: Error?) -> Void)) {
@@ -146,7 +146,7 @@ public extension DcntrAPI.ProfilesAPI {
 
         let requestBuilder: RequestBuilder<BalancePDV>.Type = DcntrAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     
     class func getCheckBalancePDV(address: String, completion: @escaping ((_ data: BalancePDV?,_ error: Error?) -> Void)) {

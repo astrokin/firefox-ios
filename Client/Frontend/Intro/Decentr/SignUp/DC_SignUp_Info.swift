@@ -38,42 +38,37 @@ final class DC_SignUp_Info: UIViewController {
         return view
     }()
     
-    private lazy var firstName: ProtectedTextView = makeInput()
-    private lazy var lastName: ProtectedTextView = makeInput()
-    private lazy var bio: ProtectedTextView = makeInput()
-    private lazy var birthDate: ProtectedTextView = makeInput()
-    private lazy var gender: ProtectedTextView = makeInput()
-    private lazy var email: ProtectedTextView = makeInput()
+    private lazy var firstName: ProtectedTextView = makeInput({ [weak self] value in
+        self?.info.firstName = value
+    })
+    private lazy var lastName: ProtectedTextView = makeInput({ [weak self] value in
+        self?.info.lastName = value
+    })
+    private lazy var bio: ProtectedTextView = makeInput({ [weak self] value in
+        self?.info.bio = value
+    })
+    private lazy var birthDate: ProtectedTextView = makeInput({ [weak self] value in
+        let df = DateFormatter()
+        df.dateFormat = "YYYY-MM-DD"
+        self?.info.birthday = df.date(from: value ?? "")
+    })
+    private lazy var gender: ProtectedTextView = makeInput({ [weak self] value in
+        self?.info.gender = value
+    })
+    private lazy var email: ProtectedTextView = makeInput({ [weak self] value in
+        self?.info.email = value
+    })
     
-    private func makeInput() -> ProtectedTextView {
+    private func makeInput(_ onChange: @escaping (String?) -> ()) -> ProtectedTextView {
         let field = ProtectedTextView(textColor: DC_UI.primaryColor, onChangeText: { [weak self] text in
             self?.nextButton.isEnabled = self?.isValidInput() ?? false
+            onChange(text)
         })
+        field.limit = 20
         field.keyboardType = .emailAddress
         field.isProtected = false
         return field
     }
-    
-    private lazy var currentPassword: ProtectedTextView = {
-        let field = ProtectedTextView(textColor: DC_UI.primaryColor, onChangeText: { [weak self] text in
-            self?.nextButton.isEnabled = self?.isValidInput() ?? false
-        })
-        return field
-    }()
-    
-    private lazy var newPassword: ProtectedTextView = {
-        let field = ProtectedTextView(textColor: DC_UI.primaryColor, onChangeText: { [weak self] text in
-            self?.nextButton.isEnabled = self?.isValidInput() ?? false
-        })
-        return field
-    }()
-    
-    private lazy var newRepeatPassword: ProtectedTextView = {
-        let field = ProtectedTextView(textColor: DC_UI.primaryColor, onChangeText: { [weak self] text in
-            self?.nextButton.isEnabled = self?.isValidInput() ?? false
-        })
-        return field
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,19 +83,19 @@ final class DC_SignUp_Info: UIViewController {
             make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
         }
         
-        let title = DC_UI.makeTitleLabel("Your profile picture")
-        aloeStackView.addRow(title)
-        aloeStackView.setInset(forRow: title, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
-        
-        let subtitle = DC_UI.makeDescriptionLabel("It will appear on your posts and comments across Decentr.")
-        aloeStackView.addRow(subtitle)
-        aloeStackView.setInset(forRow: subtitle, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
-        
-        aloeStackView.addRow(picSelector)
-        picSelector.snp.makeConstraints { make in
-            make.height.equalTo(40)
-        }
-        
+//        let title = DC_UI.makeTitleLabel("Your profile picture")
+//        aloeStackView.addRow(title)
+//        aloeStackView.setInset(forRow: title, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
+//
+//        let subtitle = DC_UI.makeDescriptionLabel("It will appear on your posts and comments across Decentr.")
+//        aloeStackView.addRow(subtitle)
+//        aloeStackView.setInset(forRow: subtitle, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
+//
+//        aloeStackView.addRow(picSelector)
+//        picSelector.snp.makeConstraints { make in
+//            make.height.equalTo(40)
+//        }
+//
         let title2 = DC_UI.makeTitleLabel("Personal info")
         aloeStackView.addRow(title2)
         aloeStackView.setInset(forRow: title2, inset: .init(top: 15, left: 0, bottom: 0, right: 0))
@@ -116,29 +111,30 @@ final class DC_SignUp_Info: UIViewController {
         aloeStackView.addRow(ln)
         
         let bio = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Your bio"), textView: self.bio, height: 80)
+        self.bio.limit = 80
         aloeStackView.addRow(bio)
         
         let gen = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Gender"), textView: gender, height: 80)
         aloeStackView.addRow(gen)
         
-        let title4 = DC_UI.makeTitleLabel("Set new password")
-        aloeStackView.addRow(title4)
-        aloeStackView.setInset(forRow: title4, inset: .init(top: 15, left: 0, bottom: 0, right: 0))
+//        let title4 = DC_UI.makeTitleLabel("Set new password")
+//        aloeStackView.addRow(title4)
+//        aloeStackView.setInset(forRow: title4, inset: .init(top: 15, left: 0, bottom: 0, right: 0))
+//
+//        let subtitle4 = DC_UI.makeDescriptionLabel("At least 8 symbols with 1 capital letter and 1 special symbol that you’ll use to log in to your account or lock/unlock it.")
+//        aloeStackView.addRow(subtitle4)
+//        aloeStackView.setInset(forRow: subtitle4, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
+//
+//        let cp = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Old password"), textView: currentPassword, height: 80)
+//        aloeStackView.addRow(cp)
+//
+//        let np = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("New password"), textView: newPassword, height: 80)
+//        aloeStackView.addRow(np)
+//
+//        let npr = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("New password confirmation"), textView: newRepeatPassword, height: 80)
+//        aloeStackView.addRow(npr)
         
-        let subtitle4 = DC_UI.makeDescriptionLabel("At least 8 symbols with 1 capital letter and 1 special symbol that you’ll use to log in to your account or lock/unlock it.")
-        aloeStackView.addRow(subtitle4)
-        aloeStackView.setInset(forRow: subtitle4, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
-        
-        let cp = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Old password"), textView: currentPassword, height: 80)
-        aloeStackView.addRow(cp)
-        
-        let np = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("New password"), textView: newPassword, height: 80)
-        aloeStackView.addRow(np)
-        
-        let npr = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("New password confirmation"), textView: newRepeatPassword, height: 80)
-        aloeStackView.addRow(npr)
-        
-        aloeStackView.setInset(forRows: [fn, ln, bio, gen, picSelector, cp, np, npr], inset: .init(top: 7, left: 0, bottom: 0, right: 0))
+        aloeStackView.setInset(forRows: [fn, ln, bio, gen], inset: .init(top: 7, left: 0, bottom: 0, right: 0))
         
         firstName.plainText = info.firstName ?? ""
         lastName.plainText = info.lastName ?? ""
@@ -173,7 +169,7 @@ final class DC_SignUp_Info: UIViewController {
     }
     
     private func isValidInput() -> Bool {
-        return false
+        return firstName.plainText.count > 0
     }
 }
 

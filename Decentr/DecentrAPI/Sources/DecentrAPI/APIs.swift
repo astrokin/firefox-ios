@@ -15,7 +15,8 @@ public class APIs { ///super class for app APIs data
 
         return [
             "Content-Type": "application/json",
-            "app-version-code": "\(appVersion)/\(appBuild)",
+            "app-version" : appVersion,
+            "app-version-code": appBuild,
             "platform": "ios",
             "locale": "\(Locale.current.languageCode ?? "")"
         ]
@@ -24,7 +25,7 @@ public class APIs { ///super class for app APIs data
 
 extension CerberusAPI {
     open class Data {
-        public static var basePath = "https://cerberus.mainnet.decentr.xyz/v1"
+        public static var basePath = "https://cerberus.mainnet.decentr.xyz"
         public static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
     }
 }
@@ -44,18 +45,20 @@ extension DcntrAPI {
 }
 
 open class RequestBuilder<T> {
-    var credential: URLCredential?
-    var headers: [String:String]
-    public let parameters: [String:Any]?
+    public private(set) var credential: URLCredential?
+    public private(set) var headers: [String:String]
+    public var parameters: [String:Any]?
     public let isBody: Bool
     public let method: String
     public let URLString: String
+    public let path: String
 
     /// Optional block to obtain a reference to the request's progress instance when available.
     public var onProgressReady: ((Progress) -> ())?
 
-    required public init(method: String, URLString: String, parameters: [String:Any]?, isBody: Bool, headers: [String:String] = [:]) {
+    required public init(method: String, path: String, URLString: String, parameters: [String:Any]?, isBody: Bool, headers: [String:String] = [:]) {
         self.method = method
+        self.path = path
         self.URLString = URLString
         self.parameters = parameters
         self.isBody = isBody
@@ -72,6 +75,7 @@ open class RequestBuilder<T> {
 
     open func execute(_ completion: @escaping (_ response: Response<T>?, _ error: Error?) -> Void) { }
 
+    @discardableResult
     public func addHeader(name: String, value: String) -> Self {
         if !value.isEmpty {
             headers[name] = value
@@ -79,6 +83,7 @@ open class RequestBuilder<T> {
         return self
     }
 
+    @discardableResult
     open func addCredential() -> Self {
         self.credential = APIs.credential
         return self

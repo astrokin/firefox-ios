@@ -61,33 +61,37 @@ final class DC_SignIn_Flow {
             vc.seedPhrase = nil
             vc.completion = { [weak self] seed in
                 self?.enteredSeed = seed
-                if let enteredSeed = self?.enteredSeed {
-                    do {
-                        let keyStore = KeyStore(seedPhrase: enteredSeed)
-                        let keys = try keyStore.loadKeys()
-                        self?.getProfile(keys, onSuccess: {
-                            DC_Shared_Info.shared.savePlainSeedPhrase(enteredSeed)
-                        })
-                    } catch {
-                        self?.showLoginError()
+                DispatchQueue.global(qos: .utility).async {
+                    if let enteredSeed = self?.enteredSeed {
+                        do {
+                            let keyStore = KeyStore(seedPhrase: enteredSeed)
+                            let keys = try keyStore.loadKeys()
+                            self?.getProfile(keys, onSuccess: {
+                                DC_Shared_Info.shared.savePlainSeedPhrase(enteredSeed)
+                            })
+                        } catch {
+                            self?.showLoginError()
+                        }
                     }
                 }
             }
             navigationController?.pushViewController(vc, animated: true)
         case .enterPassword:
             let vc = DC_Password(mode: .enterPassword, didSavePassword: { [weak self] pass in
-                if let encryptedSeedFromQR = self?.encryptedSeedFromQR {
-                    do {
-                        let keyStore = KeyStore(encryptedSeed: encryptedSeedFromQR, password: pass)
-                        let keys = try keyStore.loadKeys()
-                        self?.getProfile(keys, onSuccess: {
-                            DC_Shared_Info.shared.saveEncryptedSeedPhrase(encryptedSeedFromQR)
-                        })
-                    } catch {
+                DispatchQueue.global(qos: .utility).async {
+                    if let encryptedSeedFromQR = self?.encryptedSeedFromQR {
+                        do {
+                            let keyStore = KeyStore(encryptedSeed: encryptedSeedFromQR, password: pass)
+                            let keys = try keyStore.loadKeys()
+                            self?.getProfile(keys, onSuccess: {
+                                DC_Shared_Info.shared.saveEncryptedSeedPhrase(encryptedSeedFromQR)
+                            })
+                        } catch {
+                            self?.showLoginError()
+                        }
+                    } else {
                         self?.showLoginError()
                     }
-                } else {
-                    self?.showLoginError()
                 }
             })
             navigationController?.pushViewController(vc, animated: true)
@@ -98,28 +102,35 @@ final class DC_SignIn_Flow {
 private extension DC_SignIn_Flow {
     
     private func showLoginError(_ error: Error? = nil) {
-        let errorMessage = (error as NSError?)?.localizedDescription
-        let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
-            self?.navigationController?.popToRootViewController(animated: true)
-            self?.startSignIn()
-        }))
-        navigationController?.present(alert, animated: true)
+        DispatchQueue.main.async {
+            let errorMessage = (error as NSError?)?.localizedDescription
+            let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
+                self?.navigationController?.popToRootViewController(animated: true)
+                self?.startSignIn()
+            }))
+            self.navigationController?.present(alert, animated: true)
+        }
     }
     
     private func getProfile(_ keys: KeyStore.Keys, onSuccess: @escaping (() -> ())) {
-        UIApplication.getKeyWindow()?.showLoader()
-        DC_Shared_Info.shared.refreshAccountInfo(address: keys.address) { [weak self] result in
-            UIApplication.getKeyWindow()?.removeLoader()
-            switch result {
-            case let .failure(error):
-                self?.showLoginError(error)
-            case let .success(account):
-                onSuccess()
-                self?.completion?(account)
-                #if !DEBUG
-                    (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
-                #endif
+        DispatchQueue.main.async {
+            UIApplication.getKeyWindow()?.showLoader()
+            DC_Shared_Info.shared.refreshAccountInfo(address: keys.address) { [weak self] result in
+                UIApplication.getKeyWindow()?.removeLoader()
+                switch result {
+                case let .failure(error):
+                    self?.showLoginError(error)
+                case let .success(account):
+                    VulcanAPI.trackBrowserInstallation(address: keys.address) { [weak self] data, error in
+                        //ignore errors
+                        onSuccess()
+                        self?.completion?(account)
+                        #if !DEBUG
+                            (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+                        #endif
+                    }
+                }
             }
         }
     }

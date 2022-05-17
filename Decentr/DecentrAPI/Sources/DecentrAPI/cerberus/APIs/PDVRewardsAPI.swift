@@ -38,7 +38,7 @@ public extension CerberusAPI.PDVRewardsAPI {
      - returns: RequestBuilder<PDVRewardDelta> 
      */
     class func pDVRewardDeltaWithRequestBuilder(owner: String) -> RequestBuilder<PDVRewardDelta> {
-        var path = "/accounts/{owner}/pdv-delta"
+        var path = "/v1/accounts/{owner}/pdv-delta"
         let ownerPreEscape = "\(owner)"
         let ownerPostEscape = ownerPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{owner}", with: ownerPostEscape, options: .literal, range: nil)
@@ -49,7 +49,7 @@ public extension CerberusAPI.PDVRewardsAPI {
 
         let requestBuilder: RequestBuilder<PDVRewardDelta>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Get PDV rewards pool
@@ -74,7 +74,7 @@ public extension CerberusAPI.PDVRewardsAPI {
      - returns: RequestBuilder<PDVRewardsPool> 
      */
     class func pDVRewardsPoolWithRequestBuilder() -> RequestBuilder<PDVRewardsPool> {
-        let path = "/pdv-rewards/pool"
+        let path = "/v1/pdv-rewards/pool"
         let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
@@ -82,6 +82,6 @@ public extension CerberusAPI.PDVRewardsAPI {
 
         let requestBuilder: RequestBuilder<PDVRewardsPool>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
 }

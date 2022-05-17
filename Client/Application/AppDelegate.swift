@@ -215,10 +215,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         bagelConfig.device.deviceName = UIDevice.modelName
         bagelConfig.device.deviceDescription = "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
         
-        //        bagelConfig.netservicePort = 43434
-        //        bagelConfig.netserviceDomain = ""
-        //        bagelConfig.netserviceType = "_Bagel._tcp"
-        //        bagelConfig.netserviceName = ""
+        bagelConfig.netservicePort = 43435
+        bagelConfig.netserviceDomain = "local."
+        bagelConfig.netserviceType = "_Bagel._tcp."
+        bagelConfig.netserviceName = "alestromac (2)"
         
         Bagel.start(bagelConfig)
 #endif
@@ -311,10 +311,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         updateSessionCount()
         adjustHelper?.setupAdjust()
-        
-#if DEBUG && DECENTR
-        API_Integration.shared.start()
-#endif
 
         return shouldPerformAdditionalDelegateHandling
     }

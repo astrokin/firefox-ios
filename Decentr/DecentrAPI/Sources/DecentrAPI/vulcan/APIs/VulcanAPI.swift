@@ -46,7 +46,7 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<Void>.Type = VulcanAPI.Data.requestBuilderFactory.getNonDecodableBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+        return requestBuilder.init(method: "POST", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
     /**
 
@@ -82,7 +82,7 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<ReferralCodeResponse>.Type = VulcanAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
 
@@ -126,7 +126,7 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<ReferralTrackingStatsResponse>.Type = VulcanAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
 
@@ -162,7 +162,7 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<ReferralCodeResponse>.Type = VulcanAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Like a game cheat gives you test stakes. Works only for testnet.
@@ -202,7 +202,7 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<Void>.Type = VulcanAPI.Data.requestBuilderFactory.getNonDecodableBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Sends confirmation link via email. After confirmation stakes will be sent.
@@ -236,7 +236,7 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<EmptyResponse>.Type = VulcanAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+        return requestBuilder.init(method: "POST", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
     /**
 
@@ -274,7 +274,7 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<RegisterStats>.Type = VulcanAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
 
@@ -319,7 +319,7 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<Config>.Type = VulcanAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Returns sum of erc20 and native supply supply.
@@ -351,7 +351,7 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<Decimal>.Type = VulcanAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Tracks the Decentr browser installation.
@@ -391,6 +391,6 @@ open class VulcanAPI {
 
         let requestBuilder: RequestBuilder<Void>.Type = VulcanAPI.Data.requestBuilderFactory.getNonDecodableBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "POST", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
 }

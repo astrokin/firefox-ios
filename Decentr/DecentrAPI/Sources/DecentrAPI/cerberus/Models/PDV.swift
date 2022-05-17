@@ -16,6 +16,37 @@ public struct PDV: Codable {
     public init(version: String? = nil) {
         self.version = version
     }
+}
+public struct PDVRequest: Codable {
+    
+    public var version: String?
+    public var pdv: [PDVRequestProfile]?
 
+    public init(version: String? = nil, pdv: [PDVRequestProfile]? = nil) {
+        self.version = version
+        self.pdv = pdv
+    }
+}
 
+public struct PDVRequestProfile: Codable {
+    
+    public var type: String
+    public var avatar: String?
+    public var bio: String?
+    public var birthday: String? //object (Date in ISO-8601 format (yyyy-mm-dd).)
+    public var emails: [String]?
+    public var gender: String? //string (Gender can be male or female.)
+    public var firstName: String?
+    public var lastName: String?
+    
+    public init(type: String = "profile", avatar: String? = nil, bio: String? = nil, birthday: String? = nil, emails: [String]? = nil, gender: String? = nil, firstName: String? = nil, lastName: String? = nil) {
+        self.type = type
+        self.avatar = avatar
+        self.bio = bio
+        self.birthday = birthday
+        self.emails = emails
+        self.gender = gender
+        self.firstName = firstName
+        self.lastName = lastName
+    }
 }

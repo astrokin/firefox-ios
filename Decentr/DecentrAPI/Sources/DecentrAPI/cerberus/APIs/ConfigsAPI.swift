@@ -33,7 +33,7 @@ public extension CerberusAPI.ConfigsAPI {
      - returns: RequestBuilder<Blacklist> 
      */
     class func getBlacklistConfigWithRequestBuilder() -> RequestBuilder<Blacklist> {
-        let path = "/configs/blacklist"
+        let path = "/v1/configs/blacklist"
         let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
@@ -41,7 +41,7 @@ public extension CerberusAPI.ConfigsAPI {
 
         let requestBuilder: RequestBuilder<Blacklist>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Get rewards config
@@ -70,7 +70,7 @@ public extension CerberusAPI.ConfigsAPI {
      - returns: RequestBuilder<ObjectTypes> 
      */
     class func getRewardsConfigWithRequestBuilder() -> RequestBuilder<ObjectTypes> {
-        let path = "/configs/rewards"
+        let path = "/v1/configs/rewards"
         let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
@@ -78,6 +78,6 @@ public extension CerberusAPI.ConfigsAPI {
 
         let requestBuilder: RequestBuilder<ObjectTypes>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
 }

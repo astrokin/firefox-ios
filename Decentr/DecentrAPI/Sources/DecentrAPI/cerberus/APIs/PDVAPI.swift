@@ -39,7 +39,7 @@ public extension CerberusAPI.PDVAPI {
      - returns: RequestBuilder<PDV> 
      */
     class func callGetWithRequestBuilder(address: String) -> RequestBuilder<PDV> {
-        var path = "/pdv/{address}"
+        var path = "/v1/pdv/{address}"
         let addressPreEscape = "\(address)"
         let addressPostEscape = addressPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{address}", with: addressPostEscape, options: .literal, range: nil)
@@ -50,7 +50,7 @@ public extension CerberusAPI.PDVAPI {
 
         let requestBuilder: RequestBuilder<PDV>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Get meta
@@ -84,7 +84,7 @@ public extension CerberusAPI.PDVAPI {
      - returns: RequestBuilder<PDVMeta> 
      */
     class func getMetaWithRequestBuilder(address: String) -> RequestBuilder<PDVMeta> {
-        var path = "/pdv/{address}/meta"
+        var path = "/v1/pdv/{address}/meta"
         let addressPreEscape = "\(address)"
         let addressPostEscape = addressPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{address}", with: addressPostEscape, options: .literal, range: nil)
@@ -95,7 +95,7 @@ public extension CerberusAPI.PDVAPI {
 
         let requestBuilder: RequestBuilder<PDVMeta>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
 
@@ -122,7 +122,7 @@ public extension CerberusAPI.PDVAPI {
      - returns: RequestBuilder<[Int]> 
      */
     class func listWithRequestBuilder(owner: String, from: Int? = nil, limit: Int? = nil) -> RequestBuilder<[Int]> {
-        var path = "/pdv/{owner}"
+        var path = "/v1/pdv/{owner}"
         let ownerPreEscape = "\(owner)"
         let ownerPostEscape = ownerPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{owner}", with: ownerPostEscape, options: .literal, range: nil)
@@ -137,14 +137,14 @@ public extension CerberusAPI.PDVAPI {
 
         let requestBuilder: RequestBuilder<[Int]>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
 
      - parameter body: (body) batch of pdv 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    class func save(body: PDV, completion: @escaping ((_ data: SavePDVResponse?,_ error: Error?) -> Void)) {
+    class func save(body: PDVRequest, completion: @escaping ((_ data: SavePDVResponse?,_ error: Error?) -> Void)) {
         saveWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -167,8 +167,8 @@ public extension CerberusAPI.PDVAPI {
 
      - returns: RequestBuilder<SavePDVResponse> 
      */
-    class func saveWithRequestBuilder(body: PDV) -> RequestBuilder<SavePDVResponse> {
-        let path = "/pdv"
+    class func saveWithRequestBuilder(body: PDVRequest) -> RequestBuilder<SavePDVResponse> {
+        let path = "/v1/pdv"
         let URLString = CerberusAPI.Data.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
@@ -176,6 +176,6 @@ public extension CerberusAPI.PDVAPI {
 
         let requestBuilder: RequestBuilder<SavePDVResponse>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+        return requestBuilder.init(method: "POST", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 }

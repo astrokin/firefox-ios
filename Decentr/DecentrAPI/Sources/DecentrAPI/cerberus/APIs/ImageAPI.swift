@@ -38,7 +38,7 @@ public extension CerberusAPI.ImageAPI {
      - returns: RequestBuilder<SaveImageResponse> 
      */
     class func saveWithRequestBuilder() -> RequestBuilder<SaveImageResponse> {
-        let path = "/images"
+        let path = "/v1/images"
         let URLString = CerberusAPI.Data.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
@@ -46,6 +46,6 @@ public extension CerberusAPI.ImageAPI {
 
         let requestBuilder: RequestBuilder<SaveImageResponse>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "POST", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
 }

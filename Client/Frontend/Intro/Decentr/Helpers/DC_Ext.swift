@@ -174,6 +174,8 @@ extension UIViewController {
 
 final class ProtectedTextView: UITextView, UITextViewDelegate {
     
+    var limit: Int = 0
+    
     var isProtected = true {
         didSet {
             if isProtected {
@@ -211,6 +213,9 @@ final class ProtectedTextView: UITextView, UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text as NSString).rangeOfCharacter(from: .newlines).location == NSNotFound {
+            if limit > 0, plainText.count > limit {
+                return false
+            }
             SwiftTryCatch.try({
                 plainText = (plainText as NSString).replacingCharacters(in: range, with: text)
             }, catch: { error in
@@ -260,20 +265,24 @@ public extension UIApplication {
 }
 
 public extension UIView {
-    var loader: LoaderView? {
+    fileprivate var loader: LoaderView? {
         subviews.first(where: { $0 is LoaderView }) as? LoaderView
     }
 
     func showLoader(title: String = "") {
-        let loader = LoaderView(frame: bounds, text: title)
-        if subviews.filter({ $0 is LoaderView }).isEmpty {
-            addSubview(loader)
+        DispatchQueue.main.async {
+            let loader = LoaderView(frame: self.bounds, text: title)
+            if self.subviews.filter({ $0 is LoaderView }).isEmpty {
+                self.addSubview(loader)
+            }
         }
     }
 
     func removeLoader() {
-        if let loader = subviews.first(where: { $0 is LoaderView }) {
-            loader.removeFromSuperview()
+        DispatchQueue.main.async {
+            if let loader = self.subviews.first(where: { $0 is LoaderView }) {
+                loader.removeFromSuperview()
+            }
         }
     }
 }
