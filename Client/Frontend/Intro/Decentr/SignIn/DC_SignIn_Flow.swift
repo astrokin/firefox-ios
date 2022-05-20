@@ -31,14 +31,6 @@ final class DC_SignIn_Flow {
     }
     
     private func goToStep(_ step: Step) {
-        if step != .scanQR {
-            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
-                //remove camera to optimize resources
-                if let idx = self.navigationController?.viewControllers.firstIndex(where: { $0 is DC_Login }) {
-                    self.navigationController?.viewControllers.remove(at: idx)
-                }
-            }
-        }
         switch step {
         case .scanQR:
             let vc = DC_Login()
@@ -66,7 +58,7 @@ final class DC_SignIn_Flow {
                         do {
                             let keyStore = KeyStore(seedPhrase: enteredSeed)
                             let keys = try keyStore.loadKeys()
-                            self?.getProfile(keys, onSuccess: {
+                            self?.getProfile(keys, onSuccess: { _ in
                                 DC_Shared_Info.shared.savePlainSeedPhrase(enteredSeed)
                             })
                         } catch {
@@ -83,7 +75,7 @@ final class DC_SignIn_Flow {
                         do {
                             let keyStore = KeyStore(encryptedSeed: encryptedSeedFromQR, password: pass)
                             let keys = try keyStore.loadKeys()
-                            self?.getProfile(keys, onSuccess: {
+                            self?.getProfile(keys, onSuccess: { _ in
                                 DC_Shared_Info.shared.saveEncryptedSeedPhrase(encryptedSeedFromQR)
                             })
                         } catch {
@@ -113,7 +105,7 @@ private extension DC_SignIn_Flow {
         }
     }
     
-    private func getProfile(_ keys: KeyStore.Keys, onSuccess: @escaping (() -> ())) {
+    private func getProfile(_ keys: KeyStore.Keys, onSuccess: @escaping ((String?) -> ())) {
         DispatchQueue.main.async {
             UIApplication.getKeyWindow()?.showLoader()
             DC_Shared_Info.shared.refreshAccountInfo(address: keys.address) { [weak self] result in
@@ -124,7 +116,7 @@ private extension DC_SignIn_Flow {
                 case let .success(account):
                     VulcanAPI.trackBrowserInstallation(address: keys.address) { [weak self] data, error in
                         //ignore errors
-                        onSuccess()
+                        onSuccess(DC_Shared_Info.shared.getAccount().apiProfile?.firstName)
                         self?.completion?(account)
                         #if !DEBUG
                             (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
