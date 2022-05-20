@@ -11,16 +11,16 @@ import Foundation
 
 public struct APIProfile: Codable {
 
-    public var address: String?
-    public var avatar: String?
-    public var banned: Bool?
-    public var bio: String?
-    public var birthday: String? //"1986-03-09"
-    public var createdAt: Int64? //1644319784
-    public var emails: [String]?
-    public var firstName: String?
-    public var gender: String? //"male"
-    public var lastName: String?
+    public let address: String?
+    public let avatar: String?
+    public let banned: Bool?
+    public let bio: String?
+    public let birthday: String? //"1986-03-09"
+    public let createdAt: Int64? //1644319784
+    public let emails: [String]?
+    public let firstName: String?
+    public let gender: String? //"male"
+    public let lastName: String?
 
     public init(address: String? = nil, avatar: String? = nil, banned: Bool? = nil, bio: String? = nil, birthday: String? = nil, createdAt: Int64? = nil, emails: [String]? = nil, firstName: String? = nil, gender: String? = nil, lastName: String? = nil) {
         self.address = address

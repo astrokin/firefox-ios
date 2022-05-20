@@ -11,7 +11,7 @@ import Foundation
 
 public struct ReferralCodeResponse: Codable {
 
-    public var code: String?
+    public let code: String?
 
     public init(code: String? = nil) {
         self.code = code

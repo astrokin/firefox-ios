@@ -14,8 +14,8 @@ public extension DcntrAPI {
     
     struct StatsItem: Codable {
         
-        public var date: String?
-        public var value: Double?
+        public let date: String?
+        public let value: Double?
         
         public init(date: String? = nil, value: Double? = nil) {
             self.date = date

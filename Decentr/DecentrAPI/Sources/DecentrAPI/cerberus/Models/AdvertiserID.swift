@@ -18,10 +18,10 @@ public struct AdvertiserId: Codable {
         case searchhistory = "searchHistory"
         case location = "location"
     }
-    public var type: ModelType?
-    public var advertiser: String?
-    public var name: String?
-    public var value: String?
+    public let type: ModelType?
+    public let advertiser: String?
+    public let name: String?
+    public let value: String?
 
     public init(type: ModelType? = nil, advertiser: String? = nil, name: String? = nil, value: String? = nil) {
         self.type = type

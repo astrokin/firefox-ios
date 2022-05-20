@@ -18,7 +18,7 @@ public struct DataV1: Codable {
         case searchhistory = "searchHistory"
         case location = "location"
     }
-    public var type: ModelType?
+    public let type: ModelType?
 
     public init(type: ModelType? = nil) {
         self.type = type

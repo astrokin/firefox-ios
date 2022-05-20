@@ -11,9 +11,9 @@ import Foundation
 
 public struct PDVRewardsPool: Codable {
 
-    public var nextDistributionDate: Date?
-    public var size: Dec?
-    public var totalDelta: Dec?
+    public let nextDistributionDate: Date?
+    public let size: Dec?
+    public let totalDelta: Dec?
 
     public init(nextDistributionDate: Date? = nil, size: Dec? = nil, totalDelta: Dec? = nil) {
         self.nextDistributionDate = nextDistributionDate

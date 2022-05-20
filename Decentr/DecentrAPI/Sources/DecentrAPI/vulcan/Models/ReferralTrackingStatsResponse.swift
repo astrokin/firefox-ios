@@ -11,8 +11,8 @@ import Foundation
 
 public struct ReferralTrackingStatsResponse: Codable {
 
-    public var last30Days: ReferralTrackingStatsItem?
-    public var total: ReferralTrackingStatsItem?
+    public let last30Days: ReferralTrackingStatsItem?
+    public let total: ReferralTrackingStatsItem?
 
     public init(last30Days: ReferralTrackingStatsItem? = nil, total: ReferralTrackingStatsItem? = nil) {
         self.last30Days = last30Days

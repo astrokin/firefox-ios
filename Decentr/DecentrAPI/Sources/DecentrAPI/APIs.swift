@@ -48,10 +48,10 @@ open class RequestBuilder<T> {
     public private(set) var credential: URLCredential?
     public private(set) var headers: [String:String]
     public var parameters: [String:Any]?
-    public let isBody: Bool
-    public let method: String
-    public let URLString: String
-    public let path: String
+    public let  isBody: Bool
+    public let  method: String
+    public let  URLString: String
+    public let  path: String
 
     /// Optional block to obtain a reference to the request's progress instance when available.
     public var onProgressReady: ((Progress) -> ())?

@@ -12,9 +12,9 @@ import Foundation
 public struct Source: Codable {
 
     /** Domain of website where object was taken */
-    public var host: String?
+    public let host: String?
     /** Path of website&#x27;s url where object was taken */
-    public var path: String?
+    public let path: String?
 
     public init(host: String? = nil, path: String? = nil) {
         self.host = host

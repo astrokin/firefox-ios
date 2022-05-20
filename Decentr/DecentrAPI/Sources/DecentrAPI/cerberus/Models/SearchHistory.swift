@@ -18,11 +18,11 @@ public struct SearchHistory: Codable {
         case searchhistory = "searchHistory"
         case location = "location"
     }
-    public var type: ModelType?
-    public var domain: String?
-    public var engine: String?
-    public var query: String?
-    public var timestamp: Date?
+    public let type: ModelType?
+    public let domain: String?
+    public let engine: String?
+    public let query: String?
+    public let timestamp: Date?
 
     public init(type: ModelType? = nil, domain: String? = nil, engine: String? = nil, query: String? = nil, timestamp: Date? = nil) {
         self.type = type

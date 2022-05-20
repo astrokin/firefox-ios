@@ -11,8 +11,8 @@ import Foundation
 
 public struct RegisterStats: Codable {
 
-    public var stats: [VulcanAPI.StatsItem]?
-    public var total: Int64?
+    public let stats: [VulcanAPI.StatsItem]?
+    public let total: Int64?
 
     public init(stats: [VulcanAPI.StatsItem]? = nil, total: Int64? = nil) {
         self.stats = stats

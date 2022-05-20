@@ -11,8 +11,8 @@ import Foundation
 
 public struct V1: Codable {
 
-    public var version: String?
-    public var pdv: [DataV1]?
+    public let version: String?
+    public let pdv: [DataV1]?
 
     public init(version: String? = nil, pdv: [DataV1]? = nil) {
         self.version = version

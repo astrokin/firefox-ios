@@ -18,11 +18,11 @@ public struct Location: Codable {
         case searchhistory = "searchHistory"
         case location = "location"
     }
-    public var type: ModelType?
-    public var latitude: Double?
-    public var longitude: Double?
-    public var requestedBy: Source?
-    public var timestamp: Date?
+    public let type: ModelType?
+    public let latitude: Double?
+    public let longitude: Double?
+    public let requestedBy: Source?
+    public let timestamp: Date?
 
     public init(type: ModelType? = nil, latitude: Double? = nil, longitude: Double? = nil, requestedBy: Source? = nil, timestamp: Date? = nil) {
         self.type = type

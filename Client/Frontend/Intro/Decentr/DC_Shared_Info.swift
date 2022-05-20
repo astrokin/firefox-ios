@@ -43,7 +43,7 @@ final class DC_Shared_Info: DecentrInfo {
     
     var isLoggedIn: Bool {
         guard let acc = account.apiProfile else {
-            return UserDefaults.standard.bool(forKey: "Decentr.Had.Login")
+            return UserDefaults.standard.string(forKey: "Decentr.Last.Login.account_number") != nil
         }
         
         return acc.banned != true
@@ -107,7 +107,7 @@ final class DC_Shared_Info: DecentrInfo {
     }
     
     func purge() {
-        UserDefaults.standard.set(false, forKey: "Decentr.Had.Login")
+        UserDefaults.standard.removeObject(forKey: "Decentr.Last.Login.account_number")
         KeychainStore.shared.setString(nil, forKey: "Decentr.Seed.Web.Enc")
         KeychainStore.shared.setString(nil, forKey: "Decentr.Password.Web")
         KeychainStore.shared.setString(nil, forKey: "Decentr.Seed.Local.Enc.Key")
@@ -126,7 +126,11 @@ final class DC_Shared_Info: DecentrInfo {
             if self.account.isValid {
                 completion(.success(self.account))
             }
-            self._refresh(address: address, completion)
+            self._refresh(address: address, { result in
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            })
         }
     }
     
@@ -170,7 +174,7 @@ final class DC_Shared_Info: DecentrInfo {
             }
             
             group.notify(queue: .main) {
-                UserDefaults.standard.set(true, forKey: "Decentr.Had.Login")
+                UserDefaults.standard.set(self.account.baseAccount?.account?.account_number, forKey: "Decentr.Last.Login.account_number")
                 completion(.success(self.account))
             }
         }

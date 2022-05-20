@@ -11,8 +11,8 @@ import Foundation
 
 public struct ConfirmRequest: Codable {
 
-    public var code: String?
-    public var email: String?
+    public let code: String?
+    public let email: String?
 
     public init(code: String? = nil, email: String? = nil) {
         self.code = code

@@ -11,11 +11,11 @@ import Foundation
 
 public struct ObjectTypes: Codable {
 
-    public var advertiserId: Int?
-    public var cookie: Int?
-    public var location: Int?
-    public var profile: Int?
-    public var searchHistory: Int?
+    public let advertiserId: Int?
+    public let cookie: Int?
+    public let location: Int?
+    public let profile: Int?
+    public let searchHistory: Int?
 
     public init(advertiserId: Int? = nil, cookie: Int? = nil, location: Int? = nil, profile: Int? = nil, searchHistory: Int? = nil) {
         self.advertiserId = advertiserId

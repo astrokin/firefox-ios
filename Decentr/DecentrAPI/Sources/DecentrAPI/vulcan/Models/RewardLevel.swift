@@ -11,9 +11,9 @@ import Foundation
 
 public struct RewardLevel: Codable {
 
-    public var from: Int64?
-    public var reward: ModelInt?
-    public var to: Int64?
+    public let from: Int64?
+    public let reward: ModelInt?
+    public let to: Int64?
 
     public init(from: Int64? = nil, reward: ModelInt? = nil, to: Int64? = nil) {
         self.from = from

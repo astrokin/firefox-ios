@@ -11,11 +11,11 @@ import Foundation
 
 public struct ListPostsResponse: Codable {
 
-    public var posts: [Post]?
+    public let posts: [Post]?
     /** ProfileStats contains profiles stats. */
-    public var profileStats: [String:ProfileStats]?
+    public let profileStats: [String:ProfileStats]?
     /** Posts&#x27; statistics dictionary where key is a full form ID (owner/uuid) and value is statistics */
-    public var stats: [String:[DcntrAPI.StatsItem]]?
+    public let stats: [String:[DcntrAPI.StatsItem]]?
 
     public init(posts: [Post]? = nil, profileStats: [String:ProfileStats]? = nil, stats: [String:[DcntrAPI.StatsItem]]? = nil) {
         self.posts = posts

@@ -11,7 +11,7 @@ import Foundation
 
 public struct Blacklist: Codable {
 
-    public var cookieSource: [String]?
+    public let cookieSource: [String]?
 
     public init(cookieSource: [String]? = nil) {
         self.cookieSource = cookieSource

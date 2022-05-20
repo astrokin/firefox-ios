@@ -11,7 +11,7 @@ import Foundation
 
 public struct ModelError: Codable {
 
-    public var error: String?
+    public let error: String?
 
     public init(error: String? = nil) {
         self.error = error

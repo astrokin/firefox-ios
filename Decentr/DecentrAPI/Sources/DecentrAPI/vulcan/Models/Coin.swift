@@ -12,8 +12,8 @@ import Foundation
 
 public struct Coin: Codable {
 
-    public var amount: ModelInt?
-    public var denom: String?
+    public let amount: ModelInt?
+    public let denom: String?
 
     public init(amount: ModelInt? = nil, denom: String? = nil) {
         self.amount = amount

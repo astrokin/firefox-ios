@@ -11,8 +11,8 @@ import Foundation
 
 public struct DecentrStats: Codable {
 
-    public var adv: Double?
-    public var ddv: Double?
+    public let adv: Double?
+    public let ddv: Double?
 
     public init(adv: Double? = nil, ddv: Double? = nil) {
         self.adv = adv

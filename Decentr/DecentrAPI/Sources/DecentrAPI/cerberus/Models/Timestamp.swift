@@ -11,7 +11,7 @@ import Foundation
 
 public struct Timestamp: Codable {
 
-    public var timestamp: Date?
+    public let timestamp: Date?
 
     public init(timestamp: Date? = nil) {
         self.timestamp = timestamp

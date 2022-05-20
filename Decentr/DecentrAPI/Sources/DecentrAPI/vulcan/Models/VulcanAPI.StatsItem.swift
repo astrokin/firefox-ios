@@ -14,8 +14,8 @@ public extension VulcanAPI {
     
     struct StatsItem: Codable {
         
-        public var date: String?
-        public var value: Int64?
+        public let date: String?
+        public let value: Int64?
         
         public init(date: String? = nil, value: Int64? = nil) {
             self.date = date

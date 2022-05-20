@@ -11,18 +11,18 @@ import Foundation
 
 public struct Post: Codable {
 
-    public var category: Category?
-    public var createdAt: Int?
-    public var dislikesCount: Int?
-    public var likeWeight: LikeWeight?
-    public var likesCount: Int?
-    public var owner: String?
-    public var pdv: Double?
-    public var previewImage: String?
-    public var slug: String?
-    public var text: String?
-    public var title: String?
-    public var uuid: String?
+    public let category: Category?
+    public let createdAt: Int?
+    public let dislikesCount: Int?
+    public let likeWeight: LikeWeight?
+    public let likesCount: Int?
+    public let owner: String?
+    public let pdv: Double?
+    public let previewImage: String?
+    public let slug: String?
+    public let text: String?
+    public let title: String?
+    public let uuid: String?
 
     public init(category: Category? = nil, createdAt: Int? = nil, dislikesCount: Int? = nil, likeWeight: LikeWeight? = nil, likesCount: Int? = nil, owner: String? = nil, pdv: Double? = nil, previewImage: String? = nil, slug: String? = nil, text: String? = nil, title: String? = nil, uuid: String? = nil) {
         self.category = category

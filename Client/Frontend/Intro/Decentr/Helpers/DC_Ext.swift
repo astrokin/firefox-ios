@@ -401,3 +401,123 @@ public extension UIDevice {
         UIScreen.screenSize <= .inches_4_7
     }
 }
+
+extension UserDefaults {
+    enum Keys {}
+    
+    func typedValue<T>(forKey key: String) -> T? {
+        let result = value(forKey: key)
+        return result as? T
+    }
+}
+
+@propertyWrapper
+public struct UserDefault<T: Equatable> {
+    let key: String
+    let defaultValue: T
+    
+    public init(key: String, defaultValue: T) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
+    
+    public init<ValueType>(key: String) where T == Optional<ValueType> {
+        self.key = key
+        self.defaultValue = nil
+    }
+
+    public var wrappedValue: T {
+        get {
+            if let val: T = UserDefaults.standard.typedValue(forKey: key) {
+                return val
+            } else {
+                UserDefaults.standard.set(defaultValue, forKey: key)
+                return defaultValue
+            }
+        }
+        set {
+            if let metatype = T.self as? ExpressibleByNilLiteral.Type {
+                let metaNil = metatype.init(nilLiteral: ()) as? T
+                if metaNil == newValue {
+                    UserDefaults.standard.removeObject(forKey: key)
+                } else {
+                    UserDefaults.standard.set(newValue, forKey: key)
+                }
+                
+            } else {
+                UserDefaults.standard.set(newValue, forKey: key)
+            }
+        }
+    }
+}
+
+@propertyWrapper
+public struct UserDefaultData<T: Codable> {
+    let key: String
+    let defaultValue: T
+    
+    public init(key: String, defaultValue: T) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
+    
+    public init<ValueType>(key: String) where T == Optional<ValueType> {
+        self.key = key
+        self.defaultValue = nil
+    }
+    
+    public var wrappedValue: T {
+        get {
+            if let data = UserDefaults.standard.object(forKey: key) as? Data,
+               let user = try? JSONDecoder().decode(T.self, from: data) {
+                return user
+                
+            }
+            
+            return  defaultValue
+        }
+        set {
+            if let encoded = try? JSONEncoder().encode(newValue) {
+                UserDefaults.standard.set(encoded, forKey: key)
+            }
+        }
+    }
+}
+
+@propertyWrapper
+public struct FileCacheData<T: Codable> {
+    let fileUrl: URL
+    let defaultValue: T
+
+    public init<ValueType>(directory: FileManager.SearchPathDirectory, fileName: String) where T == ValueType? {
+        fileUrl = FileManager.default.urls(for: directory, in: .userDomainMask).first!.appendingPathComponent(fileName, isDirectory: false)
+        defaultValue = nil
+    }
+
+    public init(fileUrl: URL, defaultValue: T) {
+        self.fileUrl = fileUrl
+        self.defaultValue = defaultValue
+    }
+
+    public init<ValueType>(fileUrl: URL) where T == ValueType? {
+        self.fileUrl = fileUrl
+        defaultValue = nil
+    }
+
+    public var wrappedValue: T {
+        get {
+            if let data = try? Data(contentsOf: fileUrl),
+               let value = try? JSONDecoder().decode(T.self, from: data)
+            {
+                return value
+            }
+
+            return defaultValue
+        }
+        set {
+            if let encodedData = try? JSONEncoder().encode(newValue) {
+                try? encodedData.write(to: fileUrl, options: .atomic)
+            }
+        }
+    }
+}

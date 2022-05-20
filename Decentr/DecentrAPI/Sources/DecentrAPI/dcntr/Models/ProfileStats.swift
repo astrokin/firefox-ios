@@ -11,8 +11,8 @@ import Foundation
 
 public struct ProfileStats: Codable {
 
-    public var postsCount: Int?
-    public var stats: [DcntrAPI.StatsItem]?
+    public let postsCount: Int?
+    public let stats: [DcntrAPI.StatsItem]?
 
     public init(postsCount: Int? = nil, stats: [DcntrAPI.StatsItem]? = nil) {
         self.postsCount = postsCount

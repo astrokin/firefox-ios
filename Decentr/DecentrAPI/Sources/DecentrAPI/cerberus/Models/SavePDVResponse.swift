@@ -11,7 +11,7 @@ import Foundation
 
 public struct SavePDVResponse: Codable {
 
-    public var _id: Int?
+    public let _id: Int?
 
     public init(_id: Int? = nil) {
         self._id = _id

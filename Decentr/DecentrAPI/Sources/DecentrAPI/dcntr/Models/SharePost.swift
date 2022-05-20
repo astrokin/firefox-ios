@@ -11,9 +11,9 @@ import Foundation
 
 public struct SharePost: Codable {
 
-    public var owner: String?
-    public var title: String?
-    public var uuid: String?
+    public let owner: String?
+    public let title: String?
+    public let uuid: String?
 
     public init(owner: String? = nil, title: String? = nil, uuid: String? = nil) {
         self.owner = owner

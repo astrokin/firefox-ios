@@ -206,18 +206,18 @@ final class DC_SignUp_Flow {
             df.dateFormat = "YYYY-MM-DD"
             birthday = df.string(from: bd)
         }
-        let body = PDVRequest(version: "v1", pdv: [
-            PDVRequestProfile(avatar: nil,
-                              bio: data.bio,
-                              birthday: birthday,
-                              emails: [email],
-                              gender: data.gender,
-                              firstName: data.firstName,
-                              lastName: data.lastName)
+        let body = PDVPrifileRequest(version: "v1", pdv: [
+            PDVProfile(avatar: nil,
+                       bio: data.bio,
+                       birthday: birthday,
+                       emails: [email],
+                       gender: data.gender,
+                       firstName: data.firstName,
+                       lastName: data.lastName)
             
         ])
         
-        let reqBuilder: RequestBuilder<SavePDVResponse> = CerberusAPI.PDVAPI.saveWithRequestBuilder(body: body)
+        let reqBuilder = CerberusAPI.PDVAPI.saveProfileWithRequestBuilder(body: body)
         reqBuilder.executeSignRequest { response in
             success()
         } failed: { error in

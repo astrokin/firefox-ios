@@ -11,8 +11,8 @@ import Foundation
 
 public struct PDVRewardDelta: Codable {
 
-    public var delta: Dec?
-    public var pool: PDVRewardsPool?
+    public let delta: Dec?
+    public let pool: PDVRewardsPool?
 
     public init(delta: Dec? = nil, pool: PDVRewardsPool? = nil) {
         self.delta = delta

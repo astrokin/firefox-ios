@@ -653,6 +653,8 @@ class SettingsTableViewController: ThemedTableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(firefoxAccountDidChange), name: .FirefoxAccountChanged, object: nil)
 
         applyTheme()
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     override func applyTheme() {

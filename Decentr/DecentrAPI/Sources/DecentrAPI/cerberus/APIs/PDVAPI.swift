@@ -139,17 +139,6 @@ public extension CerberusAPI.PDVAPI {
 
         return requestBuilder.init(method: "GET", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
-    /**
-
-     - parameter body: (body) batch of pdv 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    class func save(body: PDVRequest, completion: @escaping ((_ data: SavePDVResponse?,_ error: Error?) -> Void)) {
-        saveWithRequestBuilder(body: body).execute { (response, error) -> Void in
-            completion(response?.body, error)
-        }
-    }
-
 
     /**
      - POST /pdv
@@ -167,7 +156,19 @@ public extension CerberusAPI.PDVAPI {
 
      - returns: RequestBuilder<SavePDVResponse> 
      */
-    class func saveWithRequestBuilder(body: PDVRequest) -> RequestBuilder<SavePDVResponse> {
+    class func saveProfileWithRequestBuilder(body: PDVPrifileRequest) -> RequestBuilder<SavePDVResponse> {
+        let path = "/v1/pdv"
+        let URLString = CerberusAPI.Data.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<SavePDVResponse>.Type = CerberusAPI.Data.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", path: path, URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    
+    class func saveDataWithRequestBuilder(body: PDVDataRequest) -> RequestBuilder<SavePDVResponse> {
         let path = "/v1/pdv"
         let URLString = CerberusAPI.Data.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

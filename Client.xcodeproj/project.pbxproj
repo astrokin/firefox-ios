@@ -907,6 +907,7 @@
 		E6F9653C1B2F1D5D0034B023 /* NSURLExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F9653B1B2F1D5D0034B023 /* NSURLExtensionsTests.swift */; };
 		E6FF6ACA1D873CFF0070C294 /* PageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF6AC91D873CFF0070C294 /* PageMetadata.swift */; };
 		E832DE2727DFE4880078F805 /* DC_SignIn_Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */; };
+		E843F1E02837B918006AF38A /* DC_PDV_Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843F1DE2837B7EB006AF38A /* DC_PDV_Monitor.swift */; };
 		E87FDF4A281D135900FE827B /* KeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87FDF47281CA16200FE827B /* KeyStore.swift */; };
 		E88B15D3282DA30100D2A55D /* SwiftTryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E88B15D2282DA30100D2A55D /* SwiftTryCatch.m */; };
 		E88B15D4282DA53100D2A55D /* SwiftTryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E88B15D2282DA30100D2A55D /* SwiftTryCatch.m */; };
@@ -4673,6 +4674,7 @@
 		E80F4C758FFD48EF54E04376 /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/ClearPrivateDataConfirm.strings; sourceTree = "<group>"; };
 		E82D46FD8E094899DC4AED24 /* az */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = az; path = az.lproj/Storage.strings; sourceTree = "<group>"; };
 		E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignIn_Flow.swift; sourceTree = "<group>"; };
+		E843F1DE2837B7EB006AF38A /* DC_PDV_Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_PDV_Monitor.swift; sourceTree = "<group>"; };
 		E85641AFA2C435A982034DE0 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/FindInPage.strings; sourceTree = "<group>"; };
 		E860477AA15235F08D4D3D41 /* zh-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-TW"; path = "zh-TW.lproj/Default Browser.strings"; sourceTree = "<group>"; };
 		E87FDF47281CA16200FE827B /* KeyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStore.swift; sourceTree = "<group>"; };
@@ -6876,6 +6878,7 @@
 			isa = PBXGroup;
 			children = (
 				E8C072C227D8F81100E40B21 /* DC_Shared_Info.swift */,
+				E843F1DE2837B7EB006AF38A /* DC_PDV_Monitor.swift */,
 				E88B15DC282E5CF600D2A55D /* Helpers */,
 				E88B15DB282E5C0300D2A55D /* SignIn */,
 				E88B15DA282E5BE900D2A55D /* SignUp */,
@@ -9295,6 +9298,7 @@
 				E8CB3C1127C5543600D9C339 /* BrowserViewController+ReaderMode.swift in Sources */,
 				E8CB3C1227C5543600D9C339 /* Throttler.swift in Sources */,
 				E8CB3C1327C5543600D9C339 /* PhotonActionSheetWidgets.swift in Sources */,
+				E843F1E02837B918006AF38A /* DC_PDV_Monitor.swift in Sources */,
 				E8CB3C1427C5543600D9C339 /* LocalRequestHelper.swift in Sources */,
 				E8CB3C1527C5543600D9C339 /* ReaderModeHandlers.swift in Sources */,
 				E8CB3C1627C5543600D9C339 /* SearchEngines.swift in Sources */,
@@ -14241,7 +14245,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "$(DEBUG_INFORMATION_FORMAT)";
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
@@ -14273,7 +14277,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "$(DEBUG_INFORMATION_FORMAT)";
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
@@ -14306,7 +14310,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "$(DEBUG_INFORMATION_FORMAT)";
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
@@ -14337,7 +14341,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "$(DEBUG_INFORMATION_FORMAT)";
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";

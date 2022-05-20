@@ -1306,6 +1306,16 @@ class BrowserViewController: UIViewController {
             info["visitType"] = visitType
         }
         info["isPrivate"] = tab.isPrivate
+        
+#if DECENTR
+        if !tab.isPrivate, navigation != nil, let v = info["visitType"] as? Int, let visitType = VisitType(rawValue: v) {
+            // We don't record a visit if no type was specified -- that means "ignore me".
+            let site = Site(url: tab.url?.displayURL?.absoluteString ?? "", title: tab.title ?? "")
+            let visit = SiteVisit(site: site, date: Date.nowMicroseconds(), type: visitType)
+            DC_PDV_Monitor.shared.trackVisit(visit)
+        }
+#endif
+
         notificationCenter.post(name: .OnLocationChange, object: self, userInfo: info)
     }
 

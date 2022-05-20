@@ -18,17 +18,17 @@ public struct Cookie: Codable {
         case searchhistory = "searchHistory"
         case location = "location"
     }
-    public var type: ModelType?
-    public var domain: String?
-    public var expirationDate: Int?
-    public var hostOnly: Bool?
-    public var name: String?
-    public var path: String?
-    public var sameSite: String?
-    public var secure: Bool?
-    public var source: Source?
-    public var timestamp: Date?
-    public var value: String?
+    public let type: ModelType?
+    public let domain: String?
+    public let expirationDate: Int?
+    public let hostOnly: Bool?
+    public let name: String?
+    public let path: String?
+    public let sameSite: String?
+    public let secure: Bool?
+    public let source: Source?
+    public let timestamp: Date?
+    public let value: String?
 
     public init(type: ModelType? = nil, domain: String? = nil, expirationDate: Int? = nil, hostOnly: Bool? = nil, name: String? = nil, path: String? = nil, sameSite: String? = nil, secure: Bool? = nil, source: Source? = nil, timestamp: Date? = nil, value: String? = nil) {
         self.type = type

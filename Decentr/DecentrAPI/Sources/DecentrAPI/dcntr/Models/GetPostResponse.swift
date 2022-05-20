@@ -11,9 +11,9 @@ import Foundation
 
 public struct GetPostResponse: Codable {
 
-    public var post: Post?
-    public var profileStats: ProfileStats?
-    public var stats: [DcntrAPI.StatsItem]?
+    public let post: Post?
+    public let profileStats: ProfileStats?
+    public let stats: [DcntrAPI.StatsItem]?
 
     public init(post: Post? = nil, profileStats: ProfileStats? = nil, stats: [DcntrAPI.StatsItem]? = nil) {
         self.post = post

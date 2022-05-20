@@ -11,10 +11,10 @@ import Foundation
 
 public struct RegisterRequest: Codable {
 
-    public var address: String?
-    public var email: String
-    public var recaptchaResponse: String?
-    public var referralCode: String?
+    public let address: String?
+    public let email: String
+    public let recaptchaResponse: String?
+    public let referralCode: String?
 
     public init(address: String? = nil, email: String, recaptchaResponse: String? = nil, referralCode: String? = nil) {
         self.address = address

@@ -18,14 +18,14 @@ public struct Profile: Codable {
         case searchhistory = "searchHistory"
         case location = "location"
     }
-    public var type: ModelType?
-    public var avatar: String?
-    public var bio: String?
-    public var birthday: Date?
-    public var emails: [String]?
-    public var firstName: String?
-    public var gender: Gender?
-    public var lastName: String?
+    public let type: ModelType?
+    public let avatar: String?
+    public let bio: String?
+    public let birthday: Date?
+    public let emails: [String]?
+    public let firstName: String?
+    public let gender: Gender?
+    public let lastName: String?
 
     public init(type: ModelType? = nil, avatar: String? = nil, bio: String? = nil, birthday: Date? = nil, emails: [String]? = nil, firstName: String? = nil, gender: Gender? = nil, lastName: String? = nil) {
         self.type = type

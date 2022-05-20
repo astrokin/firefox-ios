@@ -11,8 +11,8 @@ import Foundation
 
 public struct SaveImageResponse: Codable {
 
-    public var hd: String?
-    public var thumb: String?
+    public let hd: String?
+    public let thumb: String?
 
     public init(hd: String? = nil, thumb: String? = nil) {
         self.hd = hd

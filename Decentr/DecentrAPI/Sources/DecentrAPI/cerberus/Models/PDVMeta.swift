@@ -11,8 +11,8 @@ import Foundation
 
 public struct PDVMeta: Codable {
 
-    public var objectTypes: ObjectTypes?
-    public var reward: Int?
+    public let objectTypes: ObjectTypes?
+    public let reward: Int?
 
     public init(objectTypes: ObjectTypes? = nil, reward: Int? = nil) {
         self.objectTypes = objectTypes
