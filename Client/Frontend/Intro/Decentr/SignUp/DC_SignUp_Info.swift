@@ -11,11 +11,12 @@ final class DC_SignUp_Info: UIViewController {
     
     private let completion: (SignUpData) -> ()
     private var info: SignUpData
+    private let isEditingMode: Bool
     
-    init(info: SignUpData, completion: @escaping (SignUpData) -> ()) {
+    init(info: SignUpData, isEditingMode: Bool, completion: @escaping (SignUpData) -> ()) {
         self.info = info
         self.completion = completion
-        
+        self.isEditingMode = isEditingMode
         super.init(nibName: nil, bundle: nil)
         
         title = "User settings"
@@ -47,17 +48,53 @@ final class DC_SignUp_Info: UIViewController {
     private lazy var bio: ProtectedTextView = makeInput({ [weak self] value in
         self?.info.bio = value
     })
-    private lazy var birthDate: ProtectedTextView = makeInput({ [weak self] value in
+    
+    private lazy var email: ProtectedTextView = makeInput({ _ in })
+    
+    private lazy var datePicker: UIDatePicker = {
+       let dp = UIDatePicker()
+        dp.datePickerMode = .date
+        if #available(iOS 13.4, *) {
+            if #available(iOS 14.0, *) {
+                dp.preferredDatePickerStyle = .inline
+            } else {
+                dp.preferredDatePickerStyle = .wheels
+            }
+        }
+        dp.addTarget(self, action: #selector(dateChanged(_ :)), for: .valueChanged)
+        return dp
+    }()
+    
+    @objc func dateChanged(_ picker: UIDatePicker) {
+        let date = picker.date
         let df = DateFormatter()
-        df.dateFormat = "YYYY-MM-DD"
-        self?.info.birthday = df.date(from: value ?? "")
-    })
-    private lazy var gender: ProtectedTextView = makeInput({ [weak self] value in
-        self?.info.gender = value
-    })
-    private lazy var email: ProtectedTextView = makeInput({ [weak self] value in
-        self?.info.email = value
-    })
+        df.timeZone = .current
+        df.calendar = .current
+        df.dateFormat = "yyyy-MM-dd"
+        let dateString = df.string(from: date)
+        info.birthday = dateString
+        birthDate.text = dateString
+    }
+    
+    private lazy var birthDate: ProtectedTextView = {
+        let input = makeInput({ [weak self] value in
+        })
+        input.inputView = datePicker
+        return input
+    }()
+
+    private lazy var gender: UIButton = {
+        let gender: UIButton = .init(type: .custom)
+        gender.setTitleColor(.black, for: .normal)
+        gender.contentHorizontalAlignment = .left
+        gender.setAction { [weak self] in
+            self?.showGenderPicker({ value in
+                self?.info.gender = value
+                self?.gender.setTitle(value, for: .normal)
+            })
+        }
+        return gender
+    }()
     
     private func makeInput(_ onChange: @escaping (String?) -> ()) -> ProtectedTextView {
         let field = ProtectedTextView(textColor: DC_UI.primaryColor, onChangeText: { [weak self] text in
@@ -73,8 +110,12 @@ final class DC_SignUp_Info: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addHideKeyboardWhenTappedAroundBehaviour()
+        
         DC_UI.styleVC(self)
-        DC_UI.embedNavBackButton(on: self)
+        if !isEditingMode {
+            DC_UI.hideBackButton(from: self)
+        }
         
         view.addSubview(aloeStackView)
         aloeStackView.snp.makeConstraints { make in
@@ -83,19 +124,20 @@ final class DC_SignUp_Info: UIViewController {
             make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
         }
         
-//        let title = DC_UI.makeTitleLabel("Your profile picture")
-//        aloeStackView.addRow(title)
-//        aloeStackView.setInset(forRow: title, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
-//
-//        let subtitle = DC_UI.makeDescriptionLabel("It will appear on your posts and comments across Decentr.")
-//        aloeStackView.addRow(subtitle)
-//        aloeStackView.setInset(forRow: subtitle, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
-//
-//        aloeStackView.addRow(picSelector)
-//        picSelector.snp.makeConstraints { make in
-//            make.height.equalTo(40)
-//        }
-//
+        let title = DC_UI.makeTitleLabel("Your profile picture")
+        aloeStackView.addRow(title)
+        aloeStackView.setInset(forRow: title, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
+
+        let subtitle = DC_UI.makeDescriptionLabel("It will appear on your posts and comments across Decentr.")
+        aloeStackView.addRow(subtitle)
+        aloeStackView.setInset(forRow: subtitle, inset: .init(top: 10, left: 0, bottom: 10, right: 0))
+
+        aloeStackView.addRow(picSelector)
+        picSelector.selectedIndex = info.avatarIndex ?? 0
+        picSelector.snp.makeConstraints { make in
+            make.height.equalTo(40)
+        }
+
         let title2 = DC_UI.makeTitleLabel("Personal info")
         aloeStackView.addRow(title2)
         aloeStackView.setInset(forRow: title2, inset: .init(top: 15, left: 0, bottom: 0, right: 0))
@@ -104,18 +146,41 @@ final class DC_SignUp_Info: UIViewController {
         aloeStackView.addRow(subtitle2)
         aloeStackView.setInset(forRow: subtitle2, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
         
-        let fn = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("First name *"), textView: firstName, height: 80)
+        let fn = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("First name *"), textView: firstName)
         aloeStackView.addRow(fn)
         
-        let ln = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Last name"), textView: lastName, height: 80)
+        let ln = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Last name"), textView: lastName)
         aloeStackView.addRow(ln)
         
-        let bio = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Your bio"), textView: self.bio, height: 80)
-        self.bio.limit = 80
+        let bio = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Your bio"), textView: self.bio)
+        self.bio.limit = 70
         aloeStackView.addRow(bio)
         
-        let gen = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Gender"), textView: gender, height: 80)
+        let gen = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Gender"), textView: gender)
         aloeStackView.addRow(gen)
+        
+        let birth = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Your birth date"), textView: birthDate)
+        aloeStackView.addRow(birth)
+        if let dateString = info.birthday {
+            let df = DateFormatter()
+            df.dateFormat = "yyyy-MM-dd"
+            if let date = df.date(from: dateString) {
+                datePicker.date = date
+                birthDate.text = dateString
+            }
+        }
+        
+        if isEditingMode {
+            
+        } else {
+            let emailTitle = DC_UI.makeTitleLabel("Connected email")
+            aloeStackView.addRow(emailTitle)
+            aloeStackView.setInset(forRow: emailTitle, inset: .init(top: 30, left: 0, bottom: 10, right: 0))
+            
+            let email = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Email"), textView: self.email)
+            email.isUserInteractionEnabled = false
+            aloeStackView.addRow(email)
+        }
         
 //        let title4 = DC_UI.makeTitleLabel("Set new password")
 //        aloeStackView.addRow(title4)
@@ -125,30 +190,32 @@ final class DC_SignUp_Info: UIViewController {
 //        aloeStackView.addRow(subtitle4)
 //        aloeStackView.setInset(forRow: subtitle4, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
 //
-//        let cp = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Old password"), textView: currentPassword, height: 80)
+//        let cp = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Old password"), textView: currentPassword)
 //        aloeStackView.addRow(cp)
 //
-//        let np = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("New password"), textView: newPassword, height: 80)
+//        let np = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("New password"), textView: newPassword)
 //        aloeStackView.addRow(np)
 //
-//        let npr = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("New password confirmation"), textView: newRepeatPassword, height: 80)
+//        let npr = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("New password confirmation"), textView: newRepeatPassword)
 //        aloeStackView.addRow(npr)
         
-        aloeStackView.setInset(forRows: [fn, ln, bio, gen], inset: .init(top: 7, left: 0, bottom: 0, right: 0))
+        aloeStackView.setInset(forRows: [fn, ln, bio, birth, gen], inset: .init(top: 7, left: 0, bottom: 0, right: 0))
         
         firstName.plainText = info.firstName ?? ""
-        lastName.plainText = info.lastName ?? ""
-        self.bio.plainText = info.bio ?? ""
-        gender.plainText = info.gender ?? ""
-        self.email.plainText = info.email ?? ""
-        
         firstName.text = info.firstName ?? ""
-        lastName.text = info.lastName ?? ""
-        self.bio.text = info.bio ?? ""
-        gender.text = info.gender ?? ""
-        self.email.text = info.email ?? ""
         
-        nextButton.isEnabled = false
+        lastName.plainText = info.lastName ?? ""
+        lastName.text = info.lastName ?? ""
+        
+        self.bio.plainText = info.bio ?? ""
+        self.bio.text = info.bio ?? ""
+        
+        gender.setTitle(info.gender?.capitalizedFirst, for: .normal)
+        
+        self.email.plainText = (info.email ?? "").capitalizedFirst
+        self.email.text = (info.email ?? "").capitalizedFirst
+        
+        nextButton.isEnabled = isValidInput()
         view.addSubview(nextButton)
         nextButton.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
@@ -161,9 +228,11 @@ final class DC_SignUp_Info: UIViewController {
             let btnY = self.view.frame.height - self.nextButton.frame.origin.y - CGFloat(DC_UI.buttonHeight) - 40
             let h = height - btnY
             self.nextButtonBottomConstraint?.update(offset: -h)
+            self.aloeStackView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100 + h, right: 0)
             self.view.layoutIfNeeded()
         }, willHide: { [weak self] height in
             self?.nextButtonBottomConstraint?.update(offset: -30)
+            self?.aloeStackView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
             self?.view.layoutIfNeeded()
         })
     }
@@ -171,11 +240,30 @@ final class DC_SignUp_Info: UIViewController {
     private func isValidInput() -> Bool {
         return firstName.plainText.count > 0
     }
+    
+    private func showGenderPicker(_ completion: @escaping (String) -> ()) {
+        let alert = UIAlertController(title: "Gender", message: "Select your gender", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Male", style: .default, handler: { action in
+            completion(action.title ?? "")
+        }))
+        alert.addAction(UIAlertAction(title: "Female", style: .default, handler: { action in
+            completion(action.title ?? "")
+        }))
+        alert.addAction(UIAlertAction(title: "Unspecified", style: .default, handler: { action in
+            completion(action.title ?? "")
+        }))
+        present(alert, animated: true)
+    }
 }
 
 final class ProfilePicSelector: UIView {
     
-    var selectedIndex: Int
+    var selectedIndex: Int {
+        didSet {
+            buttons.forEach({ $0.isSelected = false })
+            buttons[selectedIndex].isSelected = true
+        }
+    }
     private var buttons: [UIButton] = []
     
     init(selectedIndex: Int) {
@@ -214,9 +302,10 @@ final class ProfilePicSelector: UIView {
                 self.aloeStackView.setInset(forRow: button, inset: .init(top: 0, left: 5, bottom: 0, right: 0))
             }
         }
-        
-        
     }
+    
+    
+    
     private lazy var aloeStackView: AloeStackView = DC_UI.makeAloe(axis: .horizontal, contentInset: .zero)
     
     @available(*, unavailable)

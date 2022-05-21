@@ -13,12 +13,12 @@ struct SignUpData {
     var firstName: String?
     var lastName: String?
     var bio: String?
-    var birthday: Date?
+    var birthday: String?
     var gender: String?
     var email: String?
     var avatarIndex: Int?
     
-    init(seedPhrase: String? = nil, address: String? = nil, firstName: String? = nil, lastName: String? = nil, bio: String? = nil, birthday: Date? = nil, gender: String? = nil, email: String? = nil, avatarIndex: Int? = nil) {
+    init(seedPhrase: String? = nil, address: String? = nil, firstName: String? = nil, lastName: String? = nil, bio: String? = nil, birthday: String? = nil, gender: String? = nil, email: String? = nil, avatarIndex: Int? = nil) {
         self.seedPhrase = seedPhrase
         self.address = address
         self.firstName = firstName
@@ -36,13 +36,7 @@ struct SignUpData {
         self.firstName = account.apiProfile?.firstName
         self.lastName = account.apiProfile?.lastName
         self.bio = account.apiProfile?.bio
-        let df = DateFormatter()
-        df.dateFormat = "YYYY-MM-DD"
-        if let dateString = account.apiProfile?.birthday {
-            self.birthday = df.date(from: dateString)
-        } else {
-            self.birthday = nil
-        }
+        self.birthday = account.apiProfile?.birthday
         self.gender = account.apiProfile?.gender
         self.email = account.apiProfile?.emails?.first
         self.avatarIndex = 1
@@ -57,6 +51,7 @@ final class DC_SignUp_Flow {
         case confirmEmail
         case userSettings
         case trackingSettings
+        case congrats
     }
     
     weak var navigationController: UINavigationController?
@@ -80,42 +75,48 @@ final class DC_SignUp_Flow {
         case .seedPhrase:
             let vc = DC_SignUp_Seed { [weak self] seed in
                 self?.data.seedPhrase = seed
-                if let seed = seed {
-                    DC_Shared_Info.shared.savePlainSeedPhrase(seed)
-                }
                 self?.goToStep(.email)
             }
+            vc.title = "Create a new account (1/2)"
             navigationController?.pushViewController(vc, animated: true)
         case .email:
             let vc = DC_SignUp_Email { [weak self] email in
                 self?.data.email = email
-                self?.sendRegistration { [weak self] in
+                self?.requestEmailConfirmationCode { [weak self] in
                     self?.goToStep(.confirmEmail)
                 }
             }
+            vc.title = "Create a new account (2/2)"
             navigationController?.pushViewController(vc, animated: true)
         case .confirmEmail:
-            let vc = DC_SignUp_Email_Confirm(email: data.email ?? "") { [weak self] in
-                self?.checkNewAddressCreatedOnBlockchain(retryCount: 10, success: {
+            let vc = DC_SignUp_Email_Confirm(email: data.email ?? "", completion: { [weak self] in
+                if let seed = self?.data.seedPhrase {
+                    DC_Shared_Info.shared.savePlainSeedPhrase(seed)
+                }
+                self?.checkNewAddressCreatedOnBlockchain(retryCount: 10, success: { //it takes time. so retry many times
                     UIApplication.getKeyWindow()?.removeLoader()
                     self?.goToStep(.userSettings)
                 }, failed: { [weak self] in
                     UIApplication.getKeyWindow()?.removeLoader()
                     self?.showLoginError()
                 })
-            }
+            }, registerAgain: { [weak self] in
+                self?.navigationController?.popToRootViewController(animated: false)
+                self?.goToStep(.seedPhrase)
+            })
             navigationController?.pushViewController(vc, animated: true)
         case .userSettings:
-            let vc = DC_SignUp_Info(info: data) { [weak self] info in
+            let vc = DC_SignUp_Info(info: data, isEditingMode: false) { [weak self] info in
                 self?.data = info
+                self?.data.gender = info.gender ?? "unspecified" //set gender anyway
                 UIApplication.getKeyWindow()?.showLoader()
                 self?.updateUserProfile(success: {
-                    self?.finishSignUp()
+                    UIApplication.getKeyWindow()?.removeLoader()
+                    self?.goToStep(.congrats)
                 }, failed: {
-                    DC_Shared_Info.shared.purge()
+//                    DC_Shared_Info.shared.purge()
                     self?.showLoginError()
                     UIApplication.getKeyWindow()?.removeLoader()
-                    self?.navigationController?.popToRootViewController(animated: true)
                 })
 //                self?.goToStep(.trackingSettings)
             }
@@ -124,6 +125,12 @@ final class DC_SignUp_Flow {
             let vc = DC_SignUp_Settings(info: data) { [weak self] info in
                 self?.data = info
                 self?.finishSignUp()
+            }
+            navigationController?.pushViewController(vc, animated: true)
+        case .congrats:
+            let vc = DC_Congrats() { [weak self] in
+                self?.finishSignUp()
+                DC_Shared_Info.shared.refreshAccountInfo(address: nil) { _ in }
             }
             navigationController?.pushViewController(vc, animated: true)
         }
@@ -156,7 +163,7 @@ final class DC_SignUp_Flow {
         }
     }
     
-    private func sendRegistration(_ completion: @escaping (() -> ())) {
+    private func requestEmailConfirmationCode(_ completion: @escaping (() -> ())) {
         DispatchQueue.global(qos: .utility).async {
             guard let seed = self.data.seedPhrase, let email = self.data.email else {
                 self.showLoginError()
@@ -200,18 +207,12 @@ final class DC_SignUp_Flow {
             failed()
             return
         }
-        var birthday: String? = nil
-        if let bd = data.birthday {
-            let df = DateFormatter()
-            df.dateFormat = "YYYY-MM-DD"
-            birthday = df.string(from: bd)
-        }
         let body = PDVPrifileRequest(version: "v1", pdv: [
-            PDVProfile(avatar: nil,
+            PDVProfile(avatar: "https://public.decentr.xyz/avatars/user-avatar-\(data.avatarIndex ?? 1).svg",
                        bio: data.bio,
-                       birthday: birthday,
+                       birthday: data.birthday,
                        emails: [email],
-                       gender: data.gender,
+                       gender: data.gender?.lowercased(),
                        firstName: data.firstName,
                        lastName: data.lastName)
             
@@ -232,11 +233,8 @@ final class DC_SignUp_Flow {
         }
         VulcanAPI.trackBrowserInstallation(address: address) { [weak self] data, error in
             //ignore any error for this api call
-            UIApplication.getKeyWindow()?.removeLoader()
             self?.completion?()
-            #if !DEBUG
-                (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
-            #endif
+            (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
         }
     }
     
@@ -248,7 +246,7 @@ final class DC_SignUp_Flow {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
-                self?.navigationController?.popToRootViewController(animated: true)
+//                self?.navigationController?.popToRootViewController(animated: true)
             }))
             self.navigationController?.present(alert, animated: true)
         }

@@ -12,6 +12,7 @@ final class DC_SignIn_Flow {
         case scanQR
         case enterSeed
         case enterPassword
+        case congrats
     }
     
     weak var navigationController: UINavigationController?
@@ -77,6 +78,7 @@ final class DC_SignIn_Flow {
                             let keys = try keyStore.loadKeys()
                             self?.getProfile(keys, onSuccess: { _ in
                                 DC_Shared_Info.shared.saveEncryptedSeedPhrase(encryptedSeedFromQR)
+                                self?.goToStep(.congrats)
                             })
                         } catch {
                             self?.showLoginError()
@@ -87,18 +89,29 @@ final class DC_SignIn_Flow {
                 }
             })
             navigationController?.pushViewController(vc, animated: true)
+        case .congrats:
+            UIApplication.getKeyWindow()?.removeLoader()
+            let vc = DC_Congrats() { [weak self] in
+                self?.finishSignIn()
+            }
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
 
 private extension DC_SignIn_Flow {
     
+    private func finishSignIn() {
+        completion?(DC_Shared_Info.shared.getAccount())
+        (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+    }
+    
     private func showLoginError(_ error: Error? = nil) {
         DispatchQueue.main.async {
             let errorMessage = (error as NSError?)?.localizedDescription
             let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
-                self?.navigationController?.popToRootViewController(animated: true)
+//                self?.navigationController?.popToRootViewController(animated: true)
                 self?.startSignIn()
             }))
             self.navigationController?.present(alert, animated: true)
@@ -109,18 +122,14 @@ private extension DC_SignIn_Flow {
         DispatchQueue.main.async {
             UIApplication.getKeyWindow()?.showLoader()
             DC_Shared_Info.shared.refreshAccountInfo(address: keys.address) { [weak self] result in
-                UIApplication.getKeyWindow()?.removeLoader()
                 switch result {
                 case let .failure(error):
+                    UIApplication.getKeyWindow()?.removeLoader()
                     self?.showLoginError(error)
                 case let .success(account):
-                    VulcanAPI.trackBrowserInstallation(address: keys.address) { [weak self] data, error in
+                    VulcanAPI.trackBrowserInstallation(address: keys.address) { data, error in
                         //ignore errors
-                        onSuccess(DC_Shared_Info.shared.getAccount().apiProfile?.firstName)
-                        self?.completion?(account)
-                        #if !DEBUG
-                            (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
-                        #endif
+                        onSuccess(account.apiProfile?.firstName)
                     }
                 }
             }

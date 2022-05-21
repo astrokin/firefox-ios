@@ -10,16 +10,16 @@ import DecentrAPI
 
 final class DC_SignUp_Email_Confirm: UIViewController {
     
+    private let registerAgain: () -> ()
     private let completion: () -> ()
     private let email: String
     
-    init(email: String, completion: @escaping () -> ()) {
+    init(email: String, completion: @escaping () -> (), registerAgain: @escaping () -> ()) {
         self.email = email
         self.completion = completion
+        self.registerAgain = registerAgain
         
         super.init(nibName: nil, bundle: nil)
-        
-        title = ""
     }
     
     deinit {
@@ -69,6 +69,10 @@ final class DC_SignUp_Email_Confirm: UIViewController {
         self?.sendConfirmation()
     })
     
+    private lazy var registerNewAcc: UIButton = DC_UI.makeTransparentActionButton(text: "Register new account", action: { [weak self] in
+        self?.registerAgain()
+    })
+    
     private lazy var resendLabel: UILabel = {
         let hint2 = DC_UI.makeDescriptionLabel("")
         hint2.textAlignment = .center
@@ -83,11 +87,11 @@ final class DC_SignUp_Email_Confirm: UIViewController {
         addHideKeyboardWhenTappedAroundBehaviour()
         
         DC_UI.styleVC(self)
-        DC_UI.embedNavBackButton(on: self)
+        DC_UI.hideBackButton(from: self)
         
         view.addSubview(icon)
         icon.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(30)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(UIDevice.isSmall ? 10 : 30)
             make.centerX.equalToSuperview()
         }
         
@@ -95,7 +99,7 @@ final class DC_SignUp_Email_Confirm: UIViewController {
         title.textAlignment = .center
         view.addSubview(title)
         title.snp.makeConstraints { make in
-            make.top.equalTo(icon.snp.bottom).offset(20)
+            make.top.equalTo(icon.snp.bottom).offset(UIDevice.isSmall ? 5 : 20)
             make.centerX.equalToSuperview()
         }
         
@@ -108,12 +112,12 @@ final class DC_SignUp_Email_Confirm: UIViewController {
             make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
         }
         
-        let hint = DC_UI.makeFieldLabel("Just want to ensure we deal with real people.")
+        let hint = DC_UI.makeFieldLabel("Just want to ensure we deal with real people. \r Please, check your spam folder in case email is missing.")
         hint.numberOfLines = UIDevice.isSmall ? 2 : 1
         hint.textAlignment = .center
         view.addSubview(hint)
         hint.snp.makeConstraints { make in
-            make.top.equalTo(subtitle.snp.bottom).offset(10)
+            make.top.equalTo(subtitle.snp.bottom).offset(UIDevice.isSmall ? 5 : 10)
             make.centerX.equalToSuperview()
             make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
         }
@@ -123,13 +127,13 @@ final class DC_SignUp_Email_Confirm: UIViewController {
             make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
             make.height.equalTo(60)
             make.centerX.equalToSuperview()
-            make.top.equalTo(hint.snp.bottom).offset(30)
+            make.top.equalTo(hint.snp.bottom).offset(UIDevice.isSmall ? 10 : 30)
         }
         
         
         view.addSubview(resendLabel)
         resendLabel.snp.makeConstraints { make in
-            make.top.equalTo(field.snp.bottom).offset(30)
+            make.top.equalTo(field.snp.bottom).offset(UIDevice.isSmall ? 10 : 30)
             make.centerX.equalToSuperview()
             make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
         }
@@ -147,6 +151,13 @@ final class DC_SignUp_Email_Confirm: UIViewController {
             make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
             make.height.equalTo(DC_UI.buttonHeight)
             self.nextButtonBottomConstraint = make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-30).constraint
+        }
+        
+        view.addSubview(registerNewAcc)
+        registerNewAcc.snp.makeConstraints { make in
+            make.left.right.equalToSuperview().inset(DC_UI.buttonEdgeInset)
+            make.height.equalTo(DC_UI.buttonHeight)
+            make.bottom.equalTo(self.nextButton.snp.top).offset(-10)
         }
         
         startTimer()
@@ -187,7 +198,7 @@ final class DC_SignUp_Email_Confirm: UIViewController {
             timer = nil
             resendLabel.text = "Didn’t get the code or couldn’t find it?"
         } else {
-            resendLabel.text = "We’ve resend the code to your email. You can get the new one in \(60 - tick)"
+            resendLabel.text = "Code can be resent in \(60 - tick) sec."
         }
     }
     

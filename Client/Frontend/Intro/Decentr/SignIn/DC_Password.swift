@@ -81,21 +81,18 @@ final class DC_Password: UIViewController {
                                                                               topLayoutView: descriptionLabel,
                                                                               fieldLabel: passwordLabel,
                                                                               eyeButton: eyeButton,
-                                                                              textView: passwordTextView,
-                                                                              height: 80)
+                                                                              textView: passwordTextView)
             DC_UI.makeTextInputComponent(for: self,
                                             topLayoutView: passwordPlaceholder,
                                             fieldLabel: repeatPasswordLabel,
                                             eyeButton: nil,
-                                            textView: repeatPasswordTextView,
-                                            height: 80)
+                                            textView: repeatPasswordTextView)
         case .enterPassword:
             DC_UI.makeTextInputComponent(for: self,
                                             topLayoutView: descriptionLabel,
                                             fieldLabel: passwordLabel,
                                             eyeButton: eyeButton,
-                                            textView: passwordTextView,
-                                            height: 80)
+                                            textView: passwordTextView)
         }
         
         

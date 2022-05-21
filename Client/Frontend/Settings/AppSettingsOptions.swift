@@ -48,7 +48,7 @@ class DecentrAccountSetting: WithAccountSetting {
 
     override func onClick(_ navigationController: UINavigationController?) {
         let data = SignUpData(account: DC_Shared_Info.shared.getAccount())
-        let viewController =  DC_SignUp_Info(info: data) { info in
+        let viewController =  DC_SignUp_Info(info: data, isEditingMode: true) { info in
             
         }
         navigationController?.pushViewController(viewController, animated: true)

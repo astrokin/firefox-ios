@@ -45,8 +45,8 @@ final class DC_Shared_Info: DecentrInfo {
         guard let acc = account.apiProfile else {
             return UserDefaults.standard.string(forKey: "Decentr.Last.Login.account_number") != nil
         }
-        
-        return acc.banned != true
+        return acc.firstName != nil
+//        return acc.banned != true
     }
     
     func getAccount() -> DecentrAccount {

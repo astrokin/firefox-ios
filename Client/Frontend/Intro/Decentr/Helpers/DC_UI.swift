@@ -53,6 +53,12 @@ struct DC_UI {
         }
     }
     
+    static func hideBackButton(from vc: UIViewController) {
+        vc.navigationItem.hidesBackButton = true
+        vc.navigationItem.backBarButtonItem = nil
+        vc.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+    
     static func makeAloe(
         axis: NSLayoutConstraint.Axis = .vertical,
         contentInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
@@ -121,6 +127,18 @@ struct DC_UI {
         return button
     }
     
+    static func makeTransparentActionButton(text: String, action: @escaping () -> ()) -> UIButton {
+        let button = UIButton()
+        button.setTitleColor(UIColor.hexColor("F6F6F7"), for: .disabled)
+        button.setTitleColor(.black, for: .normal)
+        button.setTitle(text, for: .normal)
+        button.setAction {
+            action()
+        }
+        return button
+    }
+    
+    
     static func makeEyeButton(action: @escaping () -> ()) -> UIButton {
         let button = UIButton()
         button.setImage(UIImage(named: "Eye Open"), for: .normal)
@@ -171,8 +189,8 @@ extension DC_UI {
         topLayoutView: UIView? = nil,
         fieldLabel: UILabel,
         eyeButton: UIButton? = nil,
-        textView: UITextView,
-        height: CGFloat = 180
+        textView: UIView,
+        height: CGFloat = 80
     ) -> UIView {
         let textPlaceholder: UIView = .init()
         textPlaceholder.backgroundColor = UIColor.hexColor("F6F6F7")

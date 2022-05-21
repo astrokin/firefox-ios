@@ -114,6 +114,14 @@ class QRCodeViewController: UIViewController {
         self.captureSession.stopRunning()
         stopScanLineAnimation()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+     
+        if !captureSession.isRunning {
+            captureSession.startRunning()
+        }
+    }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

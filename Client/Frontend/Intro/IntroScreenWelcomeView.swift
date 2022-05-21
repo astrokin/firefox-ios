@@ -40,7 +40,7 @@ class IntroScreenWelcomeView: UIView, CardTheme {
         button.accessibilityIdentifier = "signUpOnboardingButton"
         button.layer.cornerRadius = 12
         button.backgroundColor = .white
-        button.setTitle(.IntroSignUpButtonTitle, for: .normal)
+        button.setTitle("Sign up as a new user", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         button.setTitleColor(UIColor.Decentr.BlackText, for: .normal)
         button.titleLabel?.textAlignment = .center
@@ -51,7 +51,7 @@ class IntroScreenWelcomeView: UIView, CardTheme {
         button.accessibilityIdentifier = "signInOnboardingButton"
         button.layer.cornerRadius = 12
         button.backgroundColor = .white
-        button.setTitle(.IntroSignInButtonTitle, for: .normal)
+        button.setTitle("Sign in as an existing user", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         button.setTitleColor(UIColor.Decentr.BlackText, for: .normal)
         button.titleLabel?.textAlignment = .center
@@ -62,7 +62,7 @@ class IntroScreenWelcomeView: UIView, CardTheme {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         button.backgroundColor = .clear
         button.setTitleColor(.white, for: .normal)
-        button.setTitle(.StartBrowsingButtonTitle, for: .normal)
+        button.setTitle("Continue as a guest", for: .normal)
         button.titleLabel?.textAlignment = .center
         button.accessibilityIdentifier = "startBrowsingButtonSyncView"
         return button

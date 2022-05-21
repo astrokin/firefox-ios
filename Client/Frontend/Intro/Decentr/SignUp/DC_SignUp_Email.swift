@@ -88,8 +88,7 @@ final class DC_SignUp_Email: UIViewController {
         let textInputView = DC_UI.makeTextInputComponent(for: self,
                                                             topLayoutView: descriptionLabel,
                                                             fieldLabel: emailLabel,
-                                                            textView: textView,
-                                                            height: 80)
+                                                            textView: textView)
         textView.plainText = email ?? ""
         
         view.addSubview(checkbox)

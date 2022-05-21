@@ -17,8 +17,6 @@ final class DC_SignUp_Seed: UIViewController {
         self.completion = completion
         
         super.init(nibName: nil, bundle: nil)
-        
-        title = "Create a new account"
     }
     
     deinit {
@@ -39,16 +37,16 @@ final class DC_SignUp_Seed: UIViewController {
             self?.showMessage("Copied")
         }
     })
-    private lazy var printButton: UIButton = DC_UI.makeSmallButton(image: "decentr-print", title: "Share", action: { [weak self] in
-        if let seed = self?.seedPhrase {
-            let vc = UIActivityViewController(activityItems: [seed], applicationActivities: nil)
-            vc.excludedActivityTypes = self?.excludedActivityTypes() ?? []
-            vc.completionWithItemsHandler = { _, _, _, _ in
-                // nothing
-            }
-            self?.present(vc, animated: true, completion: nil)
-        }
-    })
+//    private lazy var printButton: UIButton = DC_UI.makeSmallButton(image: "decentr-print", title: "Share", action: { [weak self] in
+//        if let seed = self?.seedPhrase {
+//            let vc = UIActivityViewController(activityItems: [seed], applicationActivities: nil)
+//            vc.excludedActivityTypes = self?.excludedActivityTypes() ?? []
+//            vc.completionWithItemsHandler = { _, _, _, _ in
+//                // nothing
+//            }
+//            self?.present(vc, animated: true, completion: nil)
+//        }
+//    })
     private lazy var eyeButton: UIButton = DC_UI.makeEyeButton(action: { [weak self] in
         guard let self = self else { return }
         
@@ -159,8 +157,8 @@ final class DC_SignUp_Seed: UIViewController {
         aloeStackView.setInset(forRow: descriptionLabel, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
         
         let textPlaceholder: UIView = DC_UI.makeTextInputComponent(fieldLabel: seedLabel,
-                                                                      eyeButton: eyeButton,
-                                                                      textView: textView,
+                                                                   eyeButton: eyeButton,
+                                                                   textView: textView,
                                                                    height: UIDevice.isSmall ? 220 : 200)
         aloeStackView.addRow(textPlaceholder)
         aloeStackView.setInset(forRow: textPlaceholder, inset: .init(top: 15, left: 0, bottom: 0, right: 0))
@@ -171,12 +169,12 @@ final class DC_SignUp_Seed: UIViewController {
             make.height.equalTo(48)
         }
         
-        textPlaceholder.addSubview(printButton)
-        printButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(16)
-            make.left.equalTo(self.copyButton.snp.right).offset(12)
-            make.height.equalTo(48)
-        }
+//        textPlaceholder.addSubview(printButton)
+//        printButton.snp.makeConstraints { make in
+//            make.bottom.equalToSuperview().inset(16)
+//            make.left.equalTo(self.copyButton.snp.right).offset(12)
+//            make.height.equalTo(48)
+//        }
         
         aloeStackView.addRow(noticeView)
         aloeStackView.setInset(forRow: noticeView, inset: .init(top: 15, left: 0, bottom: 0, right: 0))
@@ -241,7 +239,7 @@ final class DC_SignUp_Seed: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        [copyButton, printButton].forEach({ $0.invalidateIntrinsicContentSize() })
+        [copyButton].forEach({ $0.invalidateIntrinsicContentSize() })
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     

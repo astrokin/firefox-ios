@@ -521,3 +521,61 @@ public struct FileCacheData<T: Codable> {
         }
     }
 }
+
+var uiBarButtonItemKey: UInt8 = 0
+
+extension UIBarButtonItem {
+    
+    
+    
+    func setActionClosure(_ action: @escaping (UIBarButtonItem) -> Void) {
+        let actionWrapperObject = BarButtonItemActionWrapper(action)
+        objc_setAssociatedObject(self, &uiBarButtonItemKey, actionWrapperObject, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        self.target = self
+        self.action = #selector(UIBarButtonItem.invokeActionClosure)
+    }
+    
+    @objc func invokeActionClosure() {
+        guard let actionWrapperObject = objc_getAssociatedObject(self, &uiBarButtonItemKey) as? BarButtonItemActionWrapper else {
+            return
+        }
+        actionWrapperObject.action(self)
+    }
+    
+    @discardableResult
+    static func make(with title: String, action: @escaping (UIBarButtonItem) -> Void) -> UIBarButtonItem {
+        let item = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
+        item.setActionClosure(action)
+        return item
+    }
+    
+    static var flexibleSpace: UIBarButtonItem {
+        return UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    }
+
+    static var fixedSpace: UIBarButtonItem {
+        return UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+    }
+
+    static func fixedSpaceWithWidth(_ w: CGFloat) -> UIBarButtonItem {
+        let item = fixedSpace
+        item.width = w
+        return item
+    }
+}
+
+class BarButtonItemActionWrapper: NSObject {
+    let action: (UIBarButtonItem) -> Void
+    
+    init(_ action: @escaping (UIBarButtonItem) -> Void) {
+        self.action = action
+    }
+}
+
+extension String {
+    var capitalizedFirst: String {
+        guard count > 1 else { return self }
+        let first = String(self[self.startIndex]).uppercased()
+        return "\(first)\(dropFirst())"
+    }
+}

@@ -76,8 +76,9 @@ final class DC_Enter_Seed: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addHideKeyboardWhenTappedAroundBehaviour()
+        
         DC_UI.styleVC(self)
-
         DC_UI.layout(on: self, titleLabel: titleLabel, descriptionLabel: descriptionLabel)
         
         DC_UI.makeTextInputComponent(
@@ -85,7 +86,8 @@ final class DC_Enter_Seed: UIViewController {
                topLayoutView: descriptionLabel,
                fieldLabel: seedLabel,
                eyeButton: eyeButton,
-               textView: textView
+               textView: textView,
+               height: 180
         )
         
         view.addSubview(scanQRButton)
