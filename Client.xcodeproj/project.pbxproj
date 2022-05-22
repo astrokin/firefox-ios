@@ -909,6 +909,7 @@
 		E832DE2727DFE4880078F805 /* DC_SignIn_Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */; };
 		E843F1E02837B918006AF38A /* DC_PDV_Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843F1DE2837B7EB006AF38A /* DC_PDV_Monitor.swift */; };
 		E843F1E2283934C4006AF38A /* DC_Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843F1E1283934C4006AF38A /* DC_Congrats.swift */; };
+		E843F1E4283ACC93006AF38A /* DC_Account_Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843F1E3283ACC92006AF38A /* DC_Account_Info.swift */; };
 		E87FDF4A281D135900FE827B /* KeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87FDF47281CA16200FE827B /* KeyStore.swift */; };
 		E88B15D3282DA30100D2A55D /* SwiftTryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E88B15D2282DA30100D2A55D /* SwiftTryCatch.m */; };
 		E88B15D4282DA53100D2A55D /* SwiftTryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E88B15D2282DA30100D2A55D /* SwiftTryCatch.m */; };
@@ -4677,6 +4678,7 @@
 		E832DE2627DFE4880078F805 /* DC_SignIn_Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_SignIn_Flow.swift; sourceTree = "<group>"; };
 		E843F1DE2837B7EB006AF38A /* DC_PDV_Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_PDV_Monitor.swift; sourceTree = "<group>"; };
 		E843F1E1283934C4006AF38A /* DC_Congrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Congrats.swift; sourceTree = "<group>"; };
+		E843F1E3283ACC92006AF38A /* DC_Account_Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DC_Account_Info.swift; sourceTree = "<group>"; };
 		E85641AFA2C435A982034DE0 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/FindInPage.strings; sourceTree = "<group>"; };
 		E860477AA15235F08D4D3D41 /* zh-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-TW"; path = "zh-TW.lproj/Default Browser.strings"; sourceTree = "<group>"; };
 		E87FDF47281CA16200FE827B /* KeyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStore.swift; sourceTree = "<group>"; };
@@ -6848,6 +6850,7 @@
 				E8C072E027DD799D00E40B21 /* DC_SignUp_Info.swift */,
 				E8C072E327DE981E00E40B21 /* DC_SignUp_Settings.swift */,
 				E843F1E1283934C4006AF38A /* DC_Congrats.swift */,
+				E843F1E3283ACC92006AF38A /* DC_Account_Info.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -9365,6 +9368,7 @@
 				E8CB3C4E27C5543600D9C339 /* UpdateCoverSheetTableViewCell.swift in Sources */,
 				E8CB3C4F27C5543600D9C339 /* TopTabsViews.swift in Sources */,
 				E8CB3C5027C5543600D9C339 /* QRCodeViewController.swift in Sources */,
+				E843F1E4283ACC93006AF38A /* DC_Account_Info.swift in Sources */,
 				E8CB3C5127C5543600D9C339 /* FocusHelper.swift in Sources */,
 				E8CB3C5227C5543600D9C339 /* TabLocationView.swift in Sources */,
 				E8CB3C5327C5543600D9C339 /* SnackBar.swift in Sources */,
@@ -14249,7 +14253,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "$(DEBUG_INFORMATION_FORMAT)";
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
@@ -14281,7 +14285,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "$(DEBUG_INFORMATION_FORMAT)";
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
@@ -14314,7 +14318,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "$(DEBUG_INFORMATION_FORMAT)";
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
@@ -14345,7 +14349,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "$(DEBUG_INFORMATION_FORMAT)";
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";

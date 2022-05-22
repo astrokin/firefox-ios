@@ -30,6 +30,9 @@ final class DC_SignUp_Info: UIViewController {
         if var info = self?.info {
             info.avatarIndex = self?.picSelector.selectedIndex
             self?.completion(info)
+            if self?.isEditingMode == true {
+                self?.navigationController?.popViewController(animated: false)
+            }
         }
     })
     private lazy var aloeStackView: AloeStackView = DC_UI.makeAloe()
@@ -133,7 +136,7 @@ final class DC_SignUp_Info: UIViewController {
         aloeStackView.setInset(forRow: subtitle, inset: .init(top: 10, left: 0, bottom: 10, right: 0))
 
         aloeStackView.addRow(picSelector)
-        picSelector.selectedIndex = info.avatarIndex ?? 0
+        picSelector.selectedIndex = info.avatarIndex ?? 1
         picSelector.snp.makeConstraints { make in
             make.height.equalTo(40)
         }
@@ -147,9 +150,11 @@ final class DC_SignUp_Info: UIViewController {
         aloeStackView.setInset(forRow: subtitle2, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
         
         let fn = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("First name *"), textView: firstName)
+        firstName.limit = 63
         aloeStackView.addRow(fn)
         
         let ln = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Last name"), textView: lastName)
+        lastName.limit = 63
         aloeStackView.addRow(ln)
         
         let bio = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Your bio"), textView: self.bio)
@@ -201,19 +206,25 @@ final class DC_SignUp_Info: UIViewController {
         
         aloeStackView.setInset(forRows: [fn, ln, bio, birth, gen], inset: .init(top: 7, left: 0, bottom: 0, right: 0))
         
-        firstName.plainText = info.firstName ?? ""
-        firstName.text = info.firstName ?? ""
-        
-        lastName.plainText = info.lastName ?? ""
-        lastName.text = info.lastName ?? ""
-        
-        self.bio.plainText = info.bio ?? ""
-        self.bio.text = info.bio ?? ""
+        if let fn = info.firstName {
+            firstName.plainText = fn
+            firstName.text = fn
+        }
+        if let ln = info.lastName {
+            lastName.plainText = ln
+            lastName.text = ln
+        }
+        if let bi = info.bio {
+            self.bio.plainText = bi
+            self.bio.text = bi
+        }
         
         gender.setTitle(info.gender?.capitalizedFirst, for: .normal)
         
-        self.email.plainText = (info.email ?? "").capitalizedFirst
-        self.email.text = (info.email ?? "").capitalizedFirst
+        if let em = info.email {
+            self.email.plainText = em.capitalizedFirst
+            self.email.text = em.capitalizedFirst
+        }
         
         nextButton.isEnabled = isValidInput()
         view.addSubview(nextButton)
@@ -261,7 +272,9 @@ final class ProfilePicSelector: UIView {
     var selectedIndex: Int {
         didSet {
             buttons.forEach({ $0.isSelected = false })
-            buttons[selectedIndex].isSelected = true
+            if let idx = buttons.firstIndex(where: { $0.tag ==  selectedIndex }) {
+                buttons[idx].isSelected = true
+            }
         }
     }
     private var buttons: [UIButton] = []

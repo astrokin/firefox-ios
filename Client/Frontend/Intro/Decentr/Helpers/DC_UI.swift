@@ -93,6 +93,22 @@ struct DC_UI {
         return label
     }
     
+    static func makeTitleSmallLabel(_ text: String) -> UILabel {
+        let label = UILabel()
+        label.text = text
+        label.textColor = primaryColor
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        return label
+    }
+    
+    static func makeInfoSmallLabel(_ text: String) -> UILabel {
+        let label = UILabel()
+        label.text = text
+        label.textColor = primaryColor
+        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        return label
+    }
+    
     static func makeDescriptionLabel(_ text: String) -> UILabel {
         let label = UILabel()
         label.text = text
@@ -121,6 +137,22 @@ struct DC_UI {
         button.layer.cornerRadius = 12
         button.clipsToBounds = true
         button.isEnabled = false
+        button.setAction {
+            action()
+        }
+        return button
+    }
+    
+    static func makeSecondaryActionButton(text: String, image: UIImage?, action: @escaping () -> ()) -> UIButton {
+        let button = UIButton()
+        button.setTitleColor(.lightGray, for: .disabled)
+        button.setBackgroundColor(.clear, forState: .disabled)
+        button.setTitleColor(.black, for: .normal)
+        button.setBackgroundColor(UIColor.hexColor("F6F6F7"), forState: .normal)
+        button.setTitle(text, for: .normal)
+        button.setImage(image, for: .normal)
+        button.layer.cornerRadius = 12
+        button.clipsToBounds = true
         button.setAction {
             action()
         }

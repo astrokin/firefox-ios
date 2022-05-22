@@ -82,7 +82,9 @@ final class DC_SignUp_Flow {
         case .email:
             let vc = DC_SignUp_Email { [weak self] email in
                 self?.data.email = email
+                UIApplication.getKeyWindow()?.showLoader()
                 self?.requestEmailConfirmationCode { [weak self] in
+                    UIApplication.getKeyWindow()?.removeLoader()
                     self?.goToStep(.confirmEmail)
                 }
             }
@@ -103,12 +105,13 @@ final class DC_SignUp_Flow {
             }, registerAgain: { [weak self] in
                 self?.navigationController?.popToRootViewController(animated: false)
                 self?.goToStep(.seedPhrase)
+            }, resendCode: { [weak self] completion in
+                self?.requestEmailConfirmationCode(completion)
             })
             navigationController?.pushViewController(vc, animated: true)
         case .userSettings:
             let vc = DC_SignUp_Info(info: data, isEditingMode: false) { [weak self] info in
                 self?.data = info
-                self?.data.gender = info.gender ?? "unspecified" //set gender anyway
                 UIApplication.getKeyWindow()?.showLoader()
                 self?.updateUserProfile(success: {
                     UIApplication.getKeyWindow()?.removeLoader()
@@ -203,21 +206,10 @@ final class DC_SignUp_Flow {
     }
     
     private func updateUserProfile(success: @escaping (() -> ()), failed: @escaping (() -> ())) {
-        guard let email = data.email else {
+        guard let body = PDVPrifileRequest(data: data) else {
             failed()
             return
         }
-        let body = PDVPrifileRequest(version: "v1", pdv: [
-            PDVProfile(avatar: "https://public.decentr.xyz/avatars/user-avatar-\(data.avatarIndex ?? 1).svg",
-                       bio: data.bio,
-                       birthday: data.birthday,
-                       emails: [email],
-                       gender: data.gender?.lowercased(),
-                       firstName: data.firstName,
-                       lastName: data.lastName)
-            
-        ])
-        
         let reqBuilder = CerberusAPI.PDVAPI.saveProfileWithRequestBuilder(body: body)
         reqBuilder.executeSignRequest { response in
             success()
@@ -233,8 +225,8 @@ final class DC_SignUp_Flow {
         }
         VulcanAPI.trackBrowserInstallation(address: address) { [weak self] data, error in
             //ignore any error for this api call
-            self?.completion?()
             (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+            self?.completion?()
         }
     }
     
@@ -253,4 +245,21 @@ final class DC_SignUp_Flow {
     }
 }
 
-
+extension PDVPrifileRequest {
+    
+    init?(data: SignUpData) {
+        guard let email = data.email, let fn = data.firstName else {
+            return nil
+        }
+        self = PDVPrifileRequest(version: "v1", pdv: [
+            PDVProfile(avatar: "https://public.decentr.xyz/avatars/user-avatar-\(data.avatarIndex ?? 1).svg",
+                       bio: data.bio,
+                       birthday: data.birthday,
+                       emails: [email],
+                       gender: data.gender?.lowercased(),
+                       firstName: fn,
+                       lastName: data.lastName)
+            
+        ])
+    }
+}

@@ -113,6 +113,8 @@ final class DC_Shared_Info: DecentrInfo {
         KeychainStore.shared.setString(nil, forKey: "Decentr.Seed.Local.Enc.Key")
         KeychainStore.shared.setString(nil, forKey: "Decentr.Seed.Local.Enc.IV")
         (UIApplication.shared.delegate as? AppDelegate)?.profile?.prefs.setInt(0, forKey: PrefsKeys.IntroSeen)
+        DC_PDV_Monitor.shared.purge()
+        account = .init()
     }
     
     /// - parameter completion: can be called multiple times

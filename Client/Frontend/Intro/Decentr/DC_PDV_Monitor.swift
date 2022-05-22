@@ -32,6 +32,10 @@ private enum DC_SearchEngine: String, CaseIterable {
 
 protocol DC_PDV {
     func trackVisit(_ visit: SiteVisit)
+    
+    func getPendingPDV() -> String
+    
+    func purge() //need for logout
 }
 
 final class DC_PDV_Monitor: DC_PDV {
@@ -75,6 +79,16 @@ final class DC_PDV_Monitor: DC_PDV {
                 }
             }
         }
+    }
+    
+    func purge() {
+        pdvStorage = []
+    }
+    
+    func getPendingPDV() -> String {
+        let pdv = Float(pdvStorage.count) * Float(0.000001)
+        let value = String(format: "%.6f", pdv)
+        return value
     }
     
     private func save(pdv: PDVItem) {

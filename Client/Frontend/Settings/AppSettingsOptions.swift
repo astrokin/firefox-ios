@@ -47,10 +47,7 @@ class DecentrAccountSetting: WithAccountSetting {
     override var accessibilityIdentifier: String? { return "SignInToSync" }
 
     override func onClick(_ navigationController: UINavigationController?) {
-        let data = SignUpData(account: DC_Shared_Info.shared.getAccount())
-        let viewController =  DC_SignUp_Info(info: data, isEditingMode: true) { info in
-            
-        }
+        let viewController =  DC_Account_Info(account: DC_Shared_Info.shared.getAccount())
         navigationController?.pushViewController(viewController, animated: true)
     }
 
@@ -78,7 +75,7 @@ class DecentrConnectSetting: WithoutAccountSetting {
         let viewController = IntroViewController()
         viewController.shouldShowBackButton = true
         viewController.didFinishClosure = { [weak navigationController] controller, fxaLoginFlow in
-            navigationController?.popViewController(animated: true)
+            navigationController?.dismiss(animated: true, completion: nil)
         }
         TelemetryWrapper.recordEvent(category: .decentrAccount, method: .view, object: .settings)
         navigationController?.pushViewController(viewController, animated: true)

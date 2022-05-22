@@ -10,14 +10,16 @@ import DecentrAPI
 
 final class DC_SignUp_Email_Confirm: UIViewController {
     
+    private let resendCode: (@escaping () -> ()) -> ()
     private let registerAgain: () -> ()
     private let completion: () -> ()
     private let email: String
     
-    init(email: String, completion: @escaping () -> (), registerAgain: @escaping () -> ()) {
+    init(email: String, completion: @escaping () -> (), registerAgain: @escaping () -> (), resendCode: @escaping (@escaping () -> ()) -> ()) {
         self.email = email
         self.completion = completion
         self.registerAgain = registerAgain
+        self.resendCode = resendCode
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -59,7 +61,7 @@ final class DC_SignUp_Email_Confirm: UIViewController {
         button.setTitleColor(.systemGray, for: .disabled)
         button.isEnabled = false
         button.setAction { [weak self] in
-            self?.startTimer()
+            self?.performResend()
         }
         return button
     }()
@@ -226,5 +228,11 @@ final class DC_SignUp_Email_Confirm: UIViewController {
             }))
             self.navigationController?.present(alert, animated: true)
         }
+    }
+    
+    private func performResend() {
+        resendCode({ [weak self] in
+            self?.startTimer()
+        })
     }
 }

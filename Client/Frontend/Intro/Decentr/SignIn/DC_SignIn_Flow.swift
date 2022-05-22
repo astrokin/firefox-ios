@@ -102,8 +102,8 @@ final class DC_SignIn_Flow {
 private extension DC_SignIn_Flow {
     
     private func finishSignIn() {
-        completion?(DC_Shared_Info.shared.getAccount())
         (UIApplication.shared.delegate as? AppDelegate)?.getProfile(UIApplication.shared).prefs.setInt(1, forKey: PrefsKeys.IntroSeen)
+        completion?(DC_Shared_Info.shared.getAccount())
     }
     
     private func showLoginError(_ error: Error? = nil) {
