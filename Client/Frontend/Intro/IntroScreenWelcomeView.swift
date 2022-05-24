@@ -146,7 +146,18 @@ class IntroScreenWelcomeView: UIView, CardTheme {
             make.bottom.equalToSuperview().inset(offset)
             make.height.equalTo(buttonHeight)
         }
+        
+        if !AppConfig.isAppStore {
+            bottomHolder.addSubview(testNetButton)
+            testNetButton.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().inset(buttonEdgeInset)
+                make.bottom.equalTo(signUpButton.snp.top).offset(-buttonSpacing)
+                make.height.equalTo(buttonHeight)
+            }
+        }
     }
+    
+    private lazy var testNetButton: UIButton = DC_UI.makeTestNetButton(UIApplication.topViewController)
 
     @objc func showEmailLoginFlow() {
         TelemetryWrapper.recordEvent(category: .action, method: .press, object: .dismissedOnboardingEmailLogin, extras: ["slide-num": currentPage])

@@ -104,5 +104,5 @@ open class AppInfo {
     }()
 
     // The App Store page identifier for the Decentr iOS application
-    public static var appStoreId = "id989804926"
+    public static var appStoreId = "id1609950309"
 }

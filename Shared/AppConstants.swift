@@ -6,7 +6,7 @@ import UIKit
 
 public enum AppName: String, CustomStringConvertible {
     case shortName = "Decentr"
-    case longName = "Decentr Daylight"
+    case longName = "Decentr iOS Browser"
 
     public var description: String {
         return self.rawValue

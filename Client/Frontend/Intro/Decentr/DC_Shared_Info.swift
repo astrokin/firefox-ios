@@ -112,7 +112,7 @@ final class DC_Shared_Info: DecentrInfo {
         KeychainStore.shared.setString(nil, forKey: "Decentr.Password.Web")
         KeychainStore.shared.setString(nil, forKey: "Decentr.Seed.Local.Enc.Key")
         KeychainStore.shared.setString(nil, forKey: "Decentr.Seed.Local.Enc.IV")
-        (UIApplication.shared.delegate as? AppDelegate)?.profile?.prefs.setInt(0, forKey: PrefsKeys.IntroSeen)
+        (UIApplication.shared.delegate as? AppDelegate)?.profile?.prefs.setObject(nil, forKey: PrefsKeys.IntroSeen)
         DC_PDV_Monitor.shared.purge()
         account = .init()
     }
@@ -136,7 +136,13 @@ final class DC_Shared_Info: DecentrInfo {
         }
     }
     
+    private var isRefreshing: Bool = false
+    
     private func _refresh(address: String, _ completion: @escaping (Swift.Result<DecentrAccount, DecentrError>) -> ()) {
+        guard !isRefreshing else { return }
+        
+        isRefreshing = true
+        
         DcntrAPI.ProfilesAPI.getCheckAddress(address: address) { data, error in
             if let error = error {
                 completion(.failure(.underlying(error)))
@@ -178,6 +184,7 @@ final class DC_Shared_Info: DecentrInfo {
             group.notify(queue: .main) {
                 UserDefaults.standard.set(self.account.baseAccount?.account?.account_number, forKey: "Decentr.Last.Login.account_number")
                 completion(.success(self.account))
+                self.isRefreshing = false
             }
         }
     }

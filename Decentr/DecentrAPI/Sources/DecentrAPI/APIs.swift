@@ -21,25 +21,27 @@ public class APIs { ///super class for app APIs data
             "locale": "\(Locale.current.languageCode ?? "")"
         ]
     }
+    
+    public static var isTestNet: Bool = UserDefaults.standard.bool(forKey: "Decentr.APIs.isTestNet")
 }
 
 extension CerberusAPI {
     open class Data {
-        public static var basePath = "https://cerberus.mainnet.decentr.xyz"
+        public static var basePath = APIs.isTestNet ? "https://cerberus.testnet.decentr.xyz" : "https://cerberus.mainnet.decentr.xyz"
         public static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
     }
 }
 
 extension VulcanAPI {
     open class Data {
-        public static var basePath = "https://vulcan.mainnet.decentr.xyz"
+        public static var basePath = APIs.isTestNet ? "https://vulcan.testnet.decentr.xyz" : "https://vulcan.mainnet.decentr.xyz"
         public static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
     }
 }
 
 extension DcntrAPI {
     open class Data {
-        public static var basePath = "https://rest.mainnet.decentr.xyz"
+        public static var basePath = APIs.isTestNet ? "https://rest.testnet.decentr.xyz" : "https://rest.mainnet.decentr.xyz"
         public static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
     }
 }

@@ -312,6 +312,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         updateSessionCount()
         adjustHelper?.setupAdjust()
 
+#if DECENTR
+    DC_Shared_Info.shared.refreshAccountInfo(address: nil, { _ in })
+#endif
+        
         return shouldPerformAdditionalDelegateHandling
     }
 

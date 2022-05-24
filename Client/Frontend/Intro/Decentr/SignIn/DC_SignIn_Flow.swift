@@ -61,6 +61,7 @@ final class DC_SignIn_Flow {
                             let keys = try keyStore.loadKeys()
                             self?.getProfile(keys, onSuccess: { _ in
                                 DC_Shared_Info.shared.savePlainSeedPhrase(enteredSeed)
+                                self?.goToStep(.congrats)
                             })
                         } catch {
                             self?.showLoginError()
@@ -108,11 +109,13 @@ private extension DC_SignIn_Flow {
     
     private func showLoginError(_ error: Error? = nil) {
         DispatchQueue.main.async {
+            UIApplication.getKeyWindow()?.removeLoader()
+            
             let errorMessage = (error as NSError?)?.localizedDescription
             let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
 //                self?.navigationController?.popToRootViewController(animated: true)
-                self?.startSignIn()
+//                self?.startSignIn()
             }))
             self.navigationController?.present(alert, animated: true)
         }
@@ -129,6 +132,7 @@ private extension DC_SignIn_Flow {
                 case let .success(account):
                     VulcanAPI.trackBrowserInstallation(address: keys.address) { data, error in
                         //ignore errors
+                        UIApplication.getKeyWindow()?.removeLoader()
                         onSuccess(account.apiProfile?.firstName)
                     }
                 }

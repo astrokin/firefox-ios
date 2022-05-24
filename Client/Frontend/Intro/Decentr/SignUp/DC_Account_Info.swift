@@ -32,10 +32,17 @@ final class DC_Account_Info: UIViewController {
         }
     })
     
+    private lazy var generateFakePDVsButton: UIButton = DC_UI.makeSecondaryActionButton(text: "Fake PDVs -> \(UserDefaults.standard.bool(forKey: "FAKE.PDVs") ? "ON" : "OFF")", image: UIImage(named: "decentr-copy"), action: { [weak self] _ in
+        guard let self = self else { return }
+        self.generateFakePDVsButton.isSelected = !self.generateFakePDVsButton.isSelected
+        self.generateFakePDVsButton.setTitle("Fake PDVs -> \(UserDefaults.standard.bool(forKey: "FAKE.PDVs") ? "ON" : "OFF")", for: .normal)
+        UserDefaults.standard.set(self.generateFakePDVsButton.isSelected, forKey: "FAKE.PDVs")
+    })
+    
+    private lazy var testNetButton: UIButton = DC_UI.makeTestNetButton(self)
+    
     private lazy var nextButton: UIButton = DC_UI.makeActionButton(text: "Return to Decentr Browser", action: { [weak self] in
-        if self?.navigationController?.popToRootViewController(animated: true) == nil {
-            self?.dismiss(animated: true, completion: nil)
-        }
+        self?.navigationController?.dismiss(animated: true, completion: nil)
     })
     
     override func viewDidLoad() {
@@ -61,9 +68,9 @@ final class DC_Account_Info: UIViewController {
         let balanceTitle = DC_UI.makeFieldLabel("Your balance")
         
         let dec = account.decBalance?.balance?.dec ?? ""
-        let pdv = account.pdvBalance?.balances?.first?.amount ?? ""
-        let nom = account.pdvBalance?.balances?.first?.denom ?? ""
-        let balanceValueLabel = DC_UI.makeTitleSmallLabel("\(dec.prefix(8)) DEC | \(pdv.prefix(7)) \(nom)")
+        let pdv = (Float(account.pdvBalance?.balances?.first?.amount ?? "") ?? 0) / 1_000_000
+        let pdvString = String(format: "%.6f", pdv)
+        let balanceValueLabel = DC_UI.makeTitleSmallLabel("\(dec.prefix(8)) PDV | \(pdvString) DEC")
         
         balancePlaceholder.addSubview(balanceTitle)
         balanceTitle.snp.makeConstraints { make in
@@ -96,7 +103,7 @@ final class DC_Account_Info: UIViewController {
             make.height.equalTo(145)
         }
         
-        let edit = DC_UI.makeSecondaryActionButton(text: "Edit account information", image: UIImage(named: "dc-edit-account")) { [weak self] in
+        let edit = DC_UI.makeSecondaryActionButton(text: "Edit account information", image: UIImage(named: "dc-edit-account")) { [weak self] _ in
             let data = SignUpData(account: DC_Shared_Info.shared.getAccount())
             let vc =  DC_SignUp_Info(info: data, isEditingMode: true) { info in
                 self?.performUpdateProfile(info)
@@ -104,11 +111,11 @@ final class DC_Account_Info: UIViewController {
             self?.navigationController?.pushViewController(vc, animated: true)
         }
         
-        let settings = DC_UI.makeSecondaryActionButton(text: "Settings", image: UIImage(named: "dc-profile-settings")) { [weak self] in
+        let settings = DC_UI.makeSecondaryActionButton(text: "Settings", image: UIImage(named: "dc-profile-settings")) { [weak self] _ in
 
         }
         
-        let logout = DC_UI.makeSecondaryActionButton(text: "Log out", image: UIImage(named: "dc-logout-account")) { [weak self] in
+        let logout = DC_UI.makeSecondaryActionButton(text: "Log out", image: UIImage(named: "dc-logout-account")) { [weak self] _ in
             self?.performLogoutAction()
         }
         
@@ -131,6 +138,20 @@ final class DC_Account_Info: UIViewController {
         aloeStackView.setInset(forRow: logout, inset: .init(top: 10, left: CGFloat(inset), bottom: 0, right: CGFloat(inset)))
         logout.snp.makeConstraints { make in
             make.height.equalTo(DC_UI.buttonHeight)
+        }
+        
+        if !AppConfig.isAppStore {
+            aloeStackView.addRow(generateFakePDVsButton)
+            aloeStackView.setInset(forRow: generateFakePDVsButton, inset: .init(top: 50, left: CGFloat(inset), bottom: 0, right: CGFloat(inset)))
+            generateFakePDVsButton.snp.makeConstraints { make in
+                make.height.equalTo(DC_UI.buttonHeight)
+            }
+            
+            aloeStackView.addRow(testNetButton)
+            aloeStackView.setInset(forRow: testNetButton, inset: .init(top: 10, left: CGFloat(inset), bottom: 0, right: CGFloat(inset)))
+            testNetButton.snp.makeConstraints { make in
+                make.height.equalTo(DC_UI.buttonHeight)
+            }
         }
         
         nextButton.isEnabled = true

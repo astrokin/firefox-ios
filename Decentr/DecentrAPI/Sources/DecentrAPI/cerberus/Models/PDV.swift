@@ -40,7 +40,7 @@ public struct PDVDataRequest: Codable {
     }
 }
 
-public struct PDVItem: Codable {
+public struct PDVItem: Codable, Equatable {
     
     public static let dateFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     
@@ -56,6 +56,12 @@ public struct PDVItem: Codable {
         self.engine = engine
         self.query = query
         self.timestamp = timestamp
+    }
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.domain == rhs.domain &&
+        lhs.engine == rhs.engine &&
+        lhs.query == rhs.query
     }
 }
 
@@ -81,4 +87,5 @@ public struct PDVProfile: Codable {
         self.lastName = lastName
     }
 }
+
 

@@ -28,6 +28,15 @@ private enum DC_SearchEngine: String, CaseIterable {
             return "q"
         }
     }
+
+    var domain: String {
+        switch self {
+        case .Archive, .Ecosia:
+            return rawValue + ".org"
+        default:
+            return rawValue + ".com"
+        }
+    }
 }
 
 protocol DC_PDV {
@@ -41,6 +50,8 @@ protocol DC_PDV {
 final class DC_PDV_Monitor: DC_PDV {
     
     static let shared: DC_PDV = DC_PDV_Monitor()
+    
+    private let queue: DispatchQueue = .init(label: "DC_PDV_Monitor.queue", qos: .userInitiated)
     
     private static var userDefaultDataKey: String {
         let accountId = DC_Shared_Info.shared.getAccount().baseAccount?.account?.account_number ?? UserDefaults.standard.string(forKey: "Decentr.Last.Login.account_number") ?? "account_number"
@@ -59,9 +70,7 @@ final class DC_PDV_Monitor: DC_PDV {
     var pdvStorage: [PDVItem]
     
     func trackVisit(_ visit: SiteVisit) {
-        print("[DC] type: \(visit.type.rawValue) visit \(visit.site.url)")
-        
-        DispatchQueue.global(qos: .utility).async {
+        queue.async {
             
             if let url = URL(string: visit.site.url),
                let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
@@ -92,12 +101,32 @@ final class DC_PDV_Monitor: DC_PDV {
     }
     
     private func save(pdv: PDVItem) {
+        if let idx = pdvStorage.firstIndex(where: { $0 == pdv }) {
+            pdvStorage.remove(at: idx)
+        }
         pdvStorage.append(pdv)
         
-        print("[DC] storage count \(pdvStorage.count)")
+        if UserDefaults.standard.bool(forKey: "FAKE.PDVs") {
+            for i in 0 ... (pdvBatchSize - 3) {
+                let eng = DC_SearchEngine.allCases.randomElement()!
+                let date = Date().addingTimeInterval(Double(2 * i))
+                let df = DateFormatter()
+                df.dateFormat = PDVItem.dateFormat
+                let timestamp = df.string(from: date)
+                let fake = PDVItem(domain: eng.rawValue,
+                                   engine: eng.domain,
+                                   query: UUID().uuidString,
+                                   timestamp: timestamp)
+                pdvStorage.append(fake)
+            }
+        }
         
-        if pdvStorage.count > pdvBatchSize {
-            sendPDV(Array(pdvStorage.prefix(pdvBatchSize)))
+        if pdvStorage.count > pdvBatchSize, !isSendingInProgress {
+            self.isSendingInProgress = true
+            
+            self.sendingNowPDVs = Array(pdvStorage.prefix(pdvBatchSize))
+            sendPDV(self.sendingNowPDVs)
+            pdvStorage.removeFirst(pdvBatchSize)
         }
     }
     
@@ -105,10 +134,13 @@ final class DC_PDV_Monitor: DC_PDV {
         let body = PDVDataRequest(version: "v1", pdv: pdvlist)
         let reqBuilder = CerberusAPI.PDVAPI.saveDataWithRequestBuilder(body: body)
         reqBuilder.executeSignRequest { _ in
-            print("[DC] send success")
-            self.pdvStorage.removeFirst(self.pdvBatchSize)
+            self.isSendingInProgress = false
         } failed: { error in
-            print("[DC] send error: \(error)")
+            self.pdvStorage.insert(contentsOf: self.sendingNowPDVs, at: 0)
+            self.isSendingInProgress = false
         }
     }
+    
+    private var isSendingInProgress: Bool = false
+    private var sendingNowPDVs: [PDVItem] = []
 }

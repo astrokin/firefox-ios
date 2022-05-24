@@ -143,7 +143,7 @@ struct DC_UI {
         return button
     }
     
-    static func makeSecondaryActionButton(text: String, image: UIImage?, action: @escaping () -> ()) -> UIButton {
+    static func makeSecondaryActionButton(text: String, image: UIImage?, action: @escaping (UIButton?) -> ()) -> UIButton {
         let button = UIButton()
         button.setTitleColor(.lightGray, for: .disabled)
         button.setBackgroundColor(.clear, forState: .disabled)
@@ -153,8 +153,8 @@ struct DC_UI {
         button.setImage(image, for: .normal)
         button.layer.cornerRadius = 12
         button.clipsToBounds = true
-        button.setAction {
-            action()
+        button.setAction { [weak button] in
+            action(button)
         }
         return button
     }
@@ -194,6 +194,28 @@ struct DC_UI {
             action()
         }
         return button
+    }
+    
+    static func makeTestNetButton(_ parent: UIViewController?) -> UIButton {
+        DC_UI.makeSecondaryActionButton(text: "Test Net -> \(UserDefaults.standard.bool(forKey: "Decentr.APIs.isTestNet") ? "ON" : "OFF")", image: UIImage(named: "decentr-loud"), action: { [weak parent] button in
+            
+            let alert = UIAlertController(title: "Switching network to: \(UserDefaults.standard.bool(forKey: "Decentr.APIs.isTestNet") ? "MAINNET" : "TESTNET")", message: "App will be logged out and force quit by pressing OK", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak button] _ in
+                guard let testNetButton = button else { return }
+                
+                DC_Shared_Info.shared.purge()
+                let isTestNet = UserDefaults.standard.bool(forKey: "Decentr.APIs.isTestNet")
+                UserDefaults.standard.set(!isTestNet, forKey: "Decentr.APIs.isTestNet")
+                testNetButton.setTitle("Test Net -> \(UserDefaults.standard.bool(forKey: "Decentr.APIs.isTestNet") ? "ON" : "OFF")", for: .normal)
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+                    exit(1)
+                }
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { _ in
+                
+            }))
+            parent?.present(alert, animated: true)
+        })
     }
 }
 

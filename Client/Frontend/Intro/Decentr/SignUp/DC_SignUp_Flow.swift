@@ -236,6 +236,8 @@ final class DC_SignUp_Flow {
     
     private func showLoginError(_ errorMessage: String?) {
         DispatchQueue.main.async {
+            UIApplication.getKeyWindow()?.removeLoader()
+            
             let alert = UIAlertController(title: .CustomEngineFormErrorTitle, message: errorMessage ?? .CustomEngineFormErrorMessage, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: .ThirdPartySearchCancelButton, style: .default, handler: { [weak self] _ in
 //                self?.navigationController?.popToRootViewController(animated: true)

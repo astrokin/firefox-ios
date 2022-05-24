@@ -92,7 +92,9 @@ final class DC_SignUp_Info: UIViewController {
         gender.contentHorizontalAlignment = .left
         gender.setAction { [weak self] in
             self?.showGenderPicker({ value in
-                self?.info.gender = value
+                if value != "Unspecified" {
+                    self?.info.gender = value
+                }
                 self?.gender.setTitle(value, for: .normal)
             })
         }
@@ -150,14 +152,14 @@ final class DC_SignUp_Info: UIViewController {
         aloeStackView.setInset(forRow: subtitle2, inset: .init(top: 10, left: 0, bottom: 0, right: 0))
         
         let fn = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("First name *"), textView: firstName)
-        firstName.limit = 63
+        firstName.limit = 20
         aloeStackView.addRow(fn)
         
         let ln = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Last name"), textView: lastName)
-        lastName.limit = 63
+        lastName.limit = 20
         aloeStackView.addRow(ln)
         
-        let bio = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Your bio"), textView: self.bio)
+        let bio = DC_UI.makeTextInputComponent(fieldLabel: DC_UI.makeFieldLabel("Your bio"), textView: self.bio, height: 120)
         self.bio.limit = 70
         aloeStackView.addRow(bio)
         
@@ -218,8 +220,12 @@ final class DC_SignUp_Info: UIViewController {
             self.bio.plainText = bi
             self.bio.text = bi
         }
+        if let gen = info.gender?.capitalizedFirst {
+            gender.setTitle(gen, for: .normal)
+        } else {
+            gender.setTitle("Unspecified", for: .normal)
+        }
         
-        gender.setTitle(info.gender?.capitalizedFirst, for: .normal)
         
         if let em = info.email {
             self.email.plainText = em.capitalizedFirst

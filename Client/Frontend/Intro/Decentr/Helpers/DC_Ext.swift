@@ -213,7 +213,7 @@ final class ProtectedTextView: UITextView, UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text as NSString).rangeOfCharacter(from: .newlines).location == NSNotFound {
-            if limit > 0, plainText.count > limit {
+            if limit > 0, plainText.count >= limit {
                 return false
             }
             SwiftTryCatch.try({
@@ -223,7 +223,6 @@ final class ProtectedTextView: UITextView, UITextViewDelegate {
             }, finally: {
                 
             })
-            
             return true
         }
         textView.resignFirstResponder()
@@ -579,3 +578,58 @@ extension String {
         return "\(first)\(dropFirst())"
     }
 }
+
+public enum AppConfig {
+    case debug
+    case testFlight
+    case appStore
+
+    private static let isTestFlight = Bundle.main.appStoreReceiptURL?.lastPathComponent == "sandboxReceipt"
+
+    public static var isDebug: Bool {
+        #if DEBUG
+            return true
+        #else
+            return false
+        #endif
+    }
+
+    public static var isAppStore: Bool {
+        true
+//        !isDebug && !AppConfig.isTestFlight
+    }
+}
+
+
+// MARK: - Top view controller
+
+public extension UIApplication {
+    static var topViewController: UIViewController? {
+        guard let rootController = getKeyWindow()?.rootViewController else {
+            return nil
+        }
+
+        return UIApplication.topViewController(rootController)
+    }
+}
+
+// MARK: private
+
+private extension UIApplication {
+    static func topViewController(_ viewController: UIViewController) -> UIViewController {
+        guard let presentedViewController = viewController.presentedViewController else {
+            return viewController
+        }
+        if let navigationController = presentedViewController as? UINavigationController {
+            if let visibleViewController = navigationController.visibleViewController {
+                return topViewController(visibleViewController)
+            }
+        } else if let tabBarController = presentedViewController as? UITabBarController {
+            if let selectedViewController = tabBarController.selectedViewController {
+                return topViewController(selectedViewController)
+            }
+        }
+        return topViewController(presentedViewController)
+    }
+}
+

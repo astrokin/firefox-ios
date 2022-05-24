@@ -112,15 +112,25 @@ class TabTrayViewController: UIViewController {
     }()
 
     lazy var iPadNavigationMenuIdentifiers: UISegmentedControl = {
+        #if DECENTR
+        return UISegmentedControl(items: [String.TabTraySegmentedControlTitlesTabs,
+                                          String.TabTraySegmentedControlTitlesPrivateTabs])
+        #else
         return UISegmentedControl(items: [String.TabTraySegmentedControlTitlesTabs,
                                           String.TabTraySegmentedControlTitlesPrivateTabs,
                                           String.TabTraySegmentedControlTitlesSyncedTabs])
+        #endif
     }()
 
     lazy var iPhoneNavigationMenuIdentifiers: UISegmentedControl = {
+        #if DECENTR
+        return UISegmentedControl(items: [UIImage(named: "nav-tabcounter")!.overlayWith(image: countLabel),
+                                          UIImage(named: "smallPrivateMask")!])
+        #else
         return UISegmentedControl(items: [UIImage(named: "nav-tabcounter")!.overlayWith(image: countLabel),
                                           UIImage(named: "smallPrivateMask")!,
                                           UIImage(named: "synced_devices")!])
+        #endif
     }()
 
     // Toolbars
